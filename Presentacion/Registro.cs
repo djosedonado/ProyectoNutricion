@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Login : Form
+    public partial class Registro : Form
     {
-        public Login()
+        public Registro()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Registro_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }
