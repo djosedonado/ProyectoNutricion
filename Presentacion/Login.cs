@@ -22,5 +22,22 @@ namespace Presentacion
 
         }
 
+
+        private void linkRegistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Registro().Show();
+            Hide();
+        }
+
+        private void pictureContinuar_Click(object sender, EventArgs e)
+        {
+            new PresentacionPrincipal().Show();
+            Hide();
+        }
+
+        private void pictureSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
