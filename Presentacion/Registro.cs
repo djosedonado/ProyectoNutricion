@@ -34,7 +34,10 @@ namespace Presentacion
             new Login().Show();
             Hide();
         }
-
+        private void checkTerminoCondiciones_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureGuardar.Enabled = true;
+        }
         private void pictureGuardar_Click(object sender, EventArgs e)
         {
             Persona persona = new Persona();
@@ -45,7 +48,9 @@ namespace Presentacion
             persona.Telefono = textTelefono.Text;
             persona.Sexo = comboSexo.Text;
             persona.Tipo = comboTipo.Text;
-            MessageBox.Show("Datos Guardados");
+            MessageBox.Show("Datos guardados correctamente");
+            pictureContinuar.Enabled = true;
         }
+
     }
 }

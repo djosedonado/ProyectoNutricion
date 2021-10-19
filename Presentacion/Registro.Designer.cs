@@ -50,6 +50,7 @@ namespace Presentacion
             this.pictureContinuar = new System.Windows.Forms.PictureBox();
             this.pictureGuardar = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.checkTerminoCondiciones = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGuardar)).BeginInit();
@@ -195,7 +196,7 @@ namespace Presentacion
             // pictureRegresar
             // 
             this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
-            this.pictureRegresar.Location = new System.Drawing.Point(262, 239);
+            this.pictureRegresar.Location = new System.Drawing.Point(262, 246);
             this.pictureRegresar.Name = "pictureRegresar";
             this.pictureRegresar.Size = new System.Drawing.Size(51, 50);
             this.pictureRegresar.TabIndex = 19;
@@ -206,7 +207,7 @@ namespace Presentacion
             // 
             this.pictureContinuar.Enabled = false;
             this.pictureContinuar.Image = ((System.Drawing.Image)(resources.GetObject("pictureContinuar.Image")));
-            this.pictureContinuar.Location = new System.Drawing.Point(331, 239);
+            this.pictureContinuar.Location = new System.Drawing.Point(331, 246);
             this.pictureContinuar.Name = "pictureContinuar";
             this.pictureContinuar.Size = new System.Drawing.Size(49, 50);
             this.pictureContinuar.TabIndex = 20;
@@ -215,6 +216,7 @@ namespace Presentacion
             // 
             // pictureGuardar
             // 
+            this.pictureGuardar.Enabled = false;
             this.pictureGuardar.Image = ((System.Drawing.Image)(resources.GetObject("pictureGuardar.Image")));
             this.pictureGuardar.Location = new System.Drawing.Point(118, 246);
             this.pictureGuardar.Name = "pictureGuardar";
@@ -232,11 +234,23 @@ namespace Presentacion
             this.label10.TabIndex = 22;
             this.label10.Text = "Guardar";
             // 
+            // checkTerminoCondiciones
+            // 
+            this.checkTerminoCondiciones.AutoSize = true;
+            this.checkTerminoCondiciones.Location = new System.Drawing.Point(227, 218);
+            this.checkTerminoCondiciones.Name = "checkTerminoCondiciones";
+            this.checkTerminoCondiciones.Size = new System.Drawing.Size(186, 17);
+            this.checkTerminoCondiciones.TabIndex = 23;
+            this.checkTerminoCondiciones.Text = "Acepte los terminos y condiciones";
+            this.checkTerminoCondiciones.UseVisualStyleBackColor = true;
+            this.checkTerminoCondiciones.CheckedChanged += new System.EventHandler(this.checkTerminoCondiciones_CheckedChanged);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 336);
+            this.Controls.Add(this.checkTerminoCondiciones);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureGuardar);
             this.Controls.Add(this.pictureContinuar);
@@ -289,5 +303,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureContinuar;
         private System.Windows.Forms.PictureBox pictureGuardar;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkTerminoCondiciones;
     }
 }
