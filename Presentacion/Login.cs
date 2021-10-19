@@ -31,8 +31,14 @@ namespace Presentacion
 
         private void pictureContinuar_Click(object sender, EventArgs e)
         {
-            new PresentacionPrincipal().Show();
-            Hide();
+            if (textIdentificacion==null) 
+            {
+                MessageBox.Show("Digite su identificacion");
+            }else 
+            {
+                new PresentacionPrincipal().Show();
+                Hide();
+            }
         }
 
         private void pictureSalir_Click(object sender, EventArgs e)

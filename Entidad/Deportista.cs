@@ -8,13 +8,9 @@ namespace Entidad
 {
     public class Deportista : Persona
     {
-        public Deportista()
-        {
-
-        }
         public string TipoDeporte { get; set; }
-        public string Peso { get; set; }
-        public string Altura { get; set; }
-        public string HorasPracticas { get; set; }
+        public double Peso { get; set; }
+        public double Altura { get; set; }
+        public DateTime HorasPracticas { get; set; }
     }
 }

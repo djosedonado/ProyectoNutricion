@@ -25,13 +25,13 @@ namespace Presentacion
 
         private void pictureRegresar_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            new PresentacionPrincipal().Show();
             Hide();
         }
 
         private void pictureContinuar_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            new PresentacionPrincipal().Show();
             Hide();
         }
         private void checkTerminoCondiciones_CheckedChanged(object sender, EventArgs e)
@@ -47,7 +47,6 @@ namespace Presentacion
             persona.Edad = int.Parse(textEdad.Text);
             persona.Telefono = textTelefono.Text;
             persona.Sexo = comboSexo.Text;
-            persona.Tipo = comboTipo.Text;
             MessageBox.Show("Datos guardados correctamente");
             pictureContinuar.Enabled = true;
         }
