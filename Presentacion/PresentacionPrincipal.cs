@@ -29,17 +29,25 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            new DeportistaGUI().Show();
+            Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            new Login().Show();
+            Hide();
         }
 
         private void BotonMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkRegistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Registro().Show();
+            Hide();
         }
     }
 }

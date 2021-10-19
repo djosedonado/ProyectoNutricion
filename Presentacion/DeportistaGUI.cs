@@ -21,5 +21,16 @@ namespace Presentacion
         {
 
         }
+
+        private void pictureRegresar_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
