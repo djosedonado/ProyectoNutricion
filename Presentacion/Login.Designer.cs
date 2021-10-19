@@ -37,11 +37,11 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.linkRegistrar = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureSalir = new System.Windows.Forms.PictureBox();
             this.pictureContinuar = new System.Windows.Forms.PictureBox();
+            this.pictureRegresar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
             this.SuspendLayout();
             // 
             // textIdentificacion
@@ -78,11 +78,11 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(226, 278);
+            this.label1.Location = new System.Drawing.Point(212, 278);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Salir";
+            this.label1.Text = "Regresar";
             // 
             // label2
             // 
@@ -112,7 +112,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.pictureSalir);
+            this.panel1.Controls.Add(this.pictureRegresar);
             this.panel1.Controls.Add(this.linkRegistrar);
             this.panel1.Controls.Add(this.pictureContinuar);
             this.panel1.Controls.Add(this.label2);
@@ -125,16 +125,6 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(600, 340);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureSalir
-            // 
-            this.pictureSalir.Image = ((System.Drawing.Image)(resources.GetObject("pictureSalir.Image")));
-            this.pictureSalir.Location = new System.Drawing.Point(215, 225);
-            this.pictureSalir.Name = "pictureSalir";
-            this.pictureSalir.Size = new System.Drawing.Size(48, 50);
-            this.pictureSalir.TabIndex = 12;
-            this.pictureSalir.TabStop = false;
-            this.pictureSalir.Click += new System.EventHandler(this.pictureSalir_Click);
             // 
             // pictureContinuar
             // 
@@ -149,6 +139,16 @@ namespace Presentacion
             this.pictureContinuar.TabStop = false;
             this.pictureContinuar.Click += new System.EventHandler(this.pictureContinuar_Click);
             // 
+            // pictureRegresar
+            // 
+            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
+            this.pictureRegresar.Location = new System.Drawing.Point(215, 225);
+            this.pictureRegresar.Name = "pictureRegresar";
+            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
+            this.pictureRegresar.TabIndex = 12;
+            this.pictureRegresar.TabStop = false;
+            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,8 +160,8 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,7 +174,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureContinuar;
         private System.Windows.Forms.LinkLabel linkRegistrar;
-        private System.Windows.Forms.PictureBox pictureSalir;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureRegresar;
     }
 }

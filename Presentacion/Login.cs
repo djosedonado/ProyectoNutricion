@@ -41,14 +41,15 @@ namespace Presentacion
             }
         }
 
-        private void pictureSalir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureRegresar_Click(object sender, EventArgs e)
+        {
+            new PresentacionPrincipal().Show();
+            Hide();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Presentacion
 
         private void pictureRegresar_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            new PresentacionPrincipal().Show();
             Hide();
         }
 
