@@ -19,6 +19,7 @@ namespace Entidad
         public string Sexo { get; set; }
         public int Edad { get; set; }
         public string Telefono { get; set; }
+        public string Tipo { get; set; }
 
 
     }

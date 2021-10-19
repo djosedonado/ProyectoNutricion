@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
 
 namespace Presentacion
 {
@@ -32,6 +33,19 @@ namespace Presentacion
         {
             new Login().Show();
             Hide();
+        }
+
+        private void pictureGuardar_Click(object sender, EventArgs e)
+        {
+            Persona persona = new Persona();
+            persona.Identificacion = textIdentificacion.Text;
+            persona.Nombre = textNombre.Text;
+            persona.Apellidó = textApellido.Text;
+            persona.Edad = int.Parse(textEdad.Text);
+            persona.Telefono = textTelefono.Text;
+            persona.Sexo = comboSexo.Text;
+            persona.Tipo = comboTipo.Text;
+            MessageBox.Show("Datos Guardados");
         }
     }
 }
