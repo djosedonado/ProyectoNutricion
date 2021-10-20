@@ -37,18 +37,21 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.linkRegistrar = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureContinuar = new System.Windows.Forms.PictureBox();
             this.pictureRegresar = new System.Windows.Forms.PictureBox();
+            this.pictureContinuar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textIdentificacion
             // 
-            this.textIdentificacion.Location = new System.Drawing.Point(269, 127);
+            this.textIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textIdentificacion.Location = new System.Drawing.Point(274, 137);
             this.textIdentificacion.Name = "textIdentificacion";
-            this.textIdentificacion.Size = new System.Drawing.Size(100, 20);
+            this.textIdentificacion.Size = new System.Drawing.Size(100, 21);
             this.textIdentificacion.TabIndex = 1;
             // 
             // Identificacion
@@ -56,7 +59,7 @@ namespace Presentacion
             this.Identificacion.AutoSize = true;
             this.Identificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Identificacion.ForeColor = System.Drawing.Color.White;
-            this.Identificacion.Location = new System.Drawing.Point(173, 127);
+            this.Identificacion.Location = new System.Drawing.Point(178, 137);
             this.Identificacion.Name = "Identificacion";
             this.Identificacion.Size = new System.Drawing.Size(90, 17);
             this.Identificacion.TabIndex = 2;
@@ -67,7 +70,7 @@ namespace Presentacion
             this.TituloLogin.AutoSize = true;
             this.TituloLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloLogin.ForeColor = System.Drawing.Color.LawnGreen;
-            this.TituloLogin.Location = new System.Drawing.Point(133, 53);
+            this.TituloLogin.Location = new System.Drawing.Point(159, 8);
             this.TituloLogin.Name = "TituloLogin";
             this.TituloLogin.Size = new System.Drawing.Size(322, 22);
             this.TituloLogin.TabIndex = 4;
@@ -78,7 +81,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(212, 278);
+            this.label1.Location = new System.Drawing.Point(212, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 7;
@@ -89,7 +92,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(331, 278);
+            this.label2.Location = new System.Drawing.Point(331, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 8;
@@ -97,11 +100,12 @@ namespace Presentacion
             // 
             // linkRegistrar
             // 
+            this.linkRegistrar.ActiveLinkColor = System.Drawing.Color.LawnGreen;
             this.linkRegistrar.AutoSize = true;
             this.linkRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.linkRegistrar.LinkColor = System.Drawing.Color.White;
-            this.linkRegistrar.Location = new System.Drawing.Point(184, 183);
+            this.linkRegistrar.Location = new System.Drawing.Point(184, 200);
             this.linkRegistrar.Name = "linkRegistrar";
             this.linkRegistrar.Size = new System.Drawing.Size(237, 17);
             this.linkRegistrar.TabIndex = 11;
@@ -112,6 +116,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureRegresar);
             this.panel1.Controls.Add(this.linkRegistrar);
             this.panel1.Controls.Add(this.pictureContinuar);
@@ -126,28 +131,39 @@ namespace Presentacion
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureRegresar
+            // 
+            this.pictureRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
+            this.pictureRegresar.Location = new System.Drawing.Point(215, 242);
+            this.pictureRegresar.Name = "pictureRegresar";
+            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
+            this.pictureRegresar.TabIndex = 12;
+            this.pictureRegresar.TabStop = false;
+            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
+            // 
             // pictureContinuar
             // 
             this.pictureContinuar.BackColor = System.Drawing.Color.Navy;
             this.pictureContinuar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureContinuar.Enabled = false;
+            this.pictureContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureContinuar.Image = ((System.Drawing.Image)(resources.GetObject("pictureContinuar.Image")));
-            this.pictureContinuar.Location = new System.Drawing.Point(334, 225);
+            this.pictureContinuar.Location = new System.Drawing.Point(334, 242);
             this.pictureContinuar.Name = "pictureContinuar";
             this.pictureContinuar.Size = new System.Drawing.Size(53, 50);
             this.pictureContinuar.TabIndex = 10;
             this.pictureContinuar.TabStop = false;
             this.pictureContinuar.Click += new System.EventHandler(this.pictureContinuar_Click);
             // 
-            // pictureRegresar
+            // pictureBox1
             // 
-            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
-            this.pictureRegresar.Location = new System.Drawing.Point(215, 225);
-            this.pictureRegresar.Name = "pictureRegresar";
-            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
-            this.pictureRegresar.TabIndex = 12;
-            this.pictureRegresar.TabStop = false;
-            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(289, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 64);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -160,8 +176,9 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,5 +193,6 @@ namespace Presentacion
         private System.Windows.Forms.LinkLabel linkRegistrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureRegresar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

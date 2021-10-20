@@ -38,31 +38,35 @@ namespace Presentacion
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimeHorasDiarias = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureAceptar = new System.Windows.Forms.PictureBox();
             this.pictureRegresar = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
             this.SuspendLayout();
             // 
             // textPeso
             // 
+            this.textPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPeso.Location = new System.Drawing.Point(71, 157);
             this.textPeso.Name = "textPeso";
-            this.textPeso.Size = new System.Drawing.Size(113, 20);
+            this.textPeso.Size = new System.Drawing.Size(113, 21);
             this.textPeso.TabIndex = 0;
             // 
             // textAltura
             // 
+            this.textAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textAltura.Location = new System.Drawing.Point(71, 222);
             this.textAltura.Name = "textAltura";
-            this.textAltura.Size = new System.Drawing.Size(113, 20);
+            this.textAltura.Size = new System.Drawing.Size(113, 21);
             this.textAltura.TabIndex = 1;
             // 
             // label1
@@ -92,7 +96,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 272);
+            this.label3.Location = new System.Drawing.Point(68, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(169, 17);
             this.label3.TabIndex = 5;
@@ -100,6 +104,8 @@ namespace Presentacion
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Futbol",
@@ -109,9 +115,9 @@ namespace Presentacion
             "Atletismo",
             "Natacion",
             "Ciclismo"});
-            this.comboBox1.Location = new System.Drawing.Point(317, 88);
+            this.comboBox1.Location = new System.Drawing.Point(332, 88);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(128, 23);
             this.comboBox1.TabIndex = 6;
             // 
             // label4
@@ -119,7 +125,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(348, 59);
+            this.label4.Location = new System.Drawing.Point(363, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 7;
@@ -128,12 +134,13 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dateTimeHorasDiarias);
             this.panel1.Controls.Add(this.pictureAceptar);
             this.panel1.Controls.Add(this.pictureRegresar);
             this.panel1.Controls.Add(this.label4);
@@ -149,76 +156,15 @@ namespace Presentacion
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dateTimeHorasDiarias
+            // pictureBox1
             // 
-            this.dateTimeHorasDiarias.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeHorasDiarias.CalendarForeColor = System.Drawing.Color.LawnGreen;
-            this.dateTimeHorasDiarias.CalendarMonthBackground = System.Drawing.Color.Navy;
-            this.dateTimeHorasDiarias.Location = new System.Drawing.Point(33, 317);
-            this.dateTimeHorasDiarias.MinDate = new System.DateTime(1979, 1, 1, 0, 0, 0, 0);
-            this.dateTimeHorasDiarias.Name = "dateTimeHorasDiarias";
-            this.dateTimeHorasDiarias.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeHorasDiarias.TabIndex = 11;
-            this.dateTimeHorasDiarias.Value = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
-            // 
-            // pictureAceptar
-            // 
-            this.pictureAceptar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAceptar.Image")));
-            this.pictureAceptar.Location = new System.Drawing.Point(416, 239);
-            this.pictureAceptar.Name = "pictureAceptar";
-            this.pictureAceptar.Size = new System.Drawing.Size(48, 50);
-            this.pictureAceptar.TabIndex = 9;
-            this.pictureAceptar.TabStop = false;
-            // 
-            // pictureRegresar
-            // 
-            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
-            this.pictureRegresar.Location = new System.Drawing.Point(317, 239);
-            this.pictureRegresar.Name = "pictureRegresar";
-            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
-            this.pictureRegresar.TabIndex = 8;
-            this.pictureRegresar.TabStop = false;
-            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label5.Location = new System.Drawing.Point(123, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(284, 25);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "BIENVENIDO A NUTRISOFT";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(314, 292);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Regresar";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(413, 292);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Aceptar";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(71, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 15;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(366, 157);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 73);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // label8
             // 
@@ -231,6 +177,83 @@ namespace Presentacion
             this.label8.TabIndex = 16;
             this.label8.Text = "Ingrese Identificacion";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(71, 89);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(136, 21);
+            this.textBox1.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(424, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Aceptar";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(325, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Regresar";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label5.Location = new System.Drawing.Point(123, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(284, 25);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "BIENVENIDO A NUTRISOFT";
+            // 
+            // pictureAceptar
+            // 
+            this.pictureAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureAceptar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAceptar.Image")));
+            this.pictureAceptar.Location = new System.Drawing.Point(427, 286);
+            this.pictureAceptar.Name = "pictureAceptar";
+            this.pictureAceptar.Size = new System.Drawing.Size(48, 50);
+            this.pictureAceptar.TabIndex = 9;
+            this.pictureAceptar.TabStop = false;
+            // 
+            // pictureRegresar
+            // 
+            this.pictureRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
+            this.pictureRegresar.Location = new System.Drawing.Point(328, 286);
+            this.pictureRegresar.Name = "pictureRegresar";
+            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
+            this.pictureRegresar.TabIndex = 8;
+            this.pictureRegresar.TabStop = false;
+            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Entre 1 y 3 veces a la semana",
+            "Entre 3 y 5 veces a la semana",
+            "Entre 6 y 7 veces a la semana",
+            "Entrenamiento fuerte y dos veces al dia"});
+            this.comboBox2.Location = new System.Drawing.Point(71, 304);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(225, 23);
+            this.comboBox2.TabIndex = 18;
+            // 
             // DeportistaGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +264,7 @@ namespace Presentacion
             this.Text = "Deportista";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
             this.ResumeLayout(false);
@@ -259,11 +283,12 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureRegresar;
         private System.Windows.Forms.PictureBox pictureAceptar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateTimeHorasDiarias;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

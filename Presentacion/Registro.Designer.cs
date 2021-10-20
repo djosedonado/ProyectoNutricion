@@ -47,10 +47,12 @@ namespace Presentacion
             this.label10 = new System.Windows.Forms.Label();
             this.checkTerminoCondiciones = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureGuardar = new System.Windows.Forms.PictureBox();
             this.pictureContinuar = new System.Windows.Forms.PictureBox();
             this.pictureRegresar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
@@ -58,30 +60,34 @@ namespace Presentacion
             // 
             // textIdentificacion
             // 
+            this.textIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textIdentificacion.Location = new System.Drawing.Point(101, 40);
             this.textIdentificacion.Name = "textIdentificacion";
-            this.textIdentificacion.Size = new System.Drawing.Size(100, 20);
+            this.textIdentificacion.Size = new System.Drawing.Size(100, 21);
             this.textIdentificacion.TabIndex = 1;
             // 
             // textNombre
             // 
+            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNombre.Location = new System.Drawing.Point(101, 66);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(100, 20);
+            this.textNombre.Size = new System.Drawing.Size(100, 21);
             this.textNombre.TabIndex = 2;
             // 
             // textApellido
             // 
+            this.textApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApellido.Location = new System.Drawing.Point(101, 92);
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(100, 20);
+            this.textApellido.Size = new System.Drawing.Size(100, 21);
             this.textApellido.TabIndex = 3;
             // 
             // textEdad
             // 
+            this.textEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdad.Location = new System.Drawing.Point(101, 118);
             this.textEdad.Name = "textEdad";
-            this.textEdad.Size = new System.Drawing.Size(100, 20);
+            this.textEdad.Size = new System.Drawing.Size(100, 21);
             this.textEdad.TabIndex = 4;
             // 
             // label1
@@ -139,9 +145,10 @@ namespace Presentacion
             // 
             // textTelefono
             // 
+            this.textTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTelefono.Location = new System.Drawing.Point(101, 144);
             this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(100, 20);
+            this.textTelefono.Size = new System.Drawing.Size(100, 21);
             this.textTelefono.TabIndex = 10;
             // 
             // label6
@@ -168,13 +175,15 @@ namespace Presentacion
             // 
             // comboSexo
             // 
+            this.comboSexo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSexo.FormattingEnabled = true;
             this.comboSexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
             this.comboSexo.Location = new System.Drawing.Point(101, 170);
             this.comboSexo.Name = "comboSexo";
-            this.comboSexo.Size = new System.Drawing.Size(121, 21);
+            this.comboSexo.Size = new System.Drawing.Size(121, 25);
             this.comboSexo.TabIndex = 15;
             // 
             // label8
@@ -202,11 +211,12 @@ namespace Presentacion
             // checkTerminoCondiciones
             // 
             this.checkTerminoCondiciones.AutoSize = true;
-            this.checkTerminoCondiciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkTerminoCondiciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkTerminoCondiciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkTerminoCondiciones.ForeColor = System.Drawing.Color.White;
-            this.checkTerminoCondiciones.Location = new System.Drawing.Point(62, 214);
+            this.checkTerminoCondiciones.Location = new System.Drawing.Point(40, 211);
             this.checkTerminoCondiciones.Name = "checkTerminoCondiciones";
-            this.checkTerminoCondiciones.Size = new System.Drawing.Size(186, 17);
+            this.checkTerminoCondiciones.Size = new System.Drawing.Size(231, 20);
             this.checkTerminoCondiciones.TabIndex = 23;
             this.checkTerminoCondiciones.Text = "Acepte los terminos y condiciones";
             this.checkTerminoCondiciones.UseVisualStyleBackColor = true;
@@ -215,6 +225,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.checkTerminoCondiciones);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureGuardar);
@@ -239,8 +250,19 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(426, 339);
             this.panel1.TabIndex = 24;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(292, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 59);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureGuardar
             // 
+            this.pictureGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureGuardar.Enabled = false;
             this.pictureGuardar.Image = ((System.Drawing.Image)(resources.GetObject("pictureGuardar.Image")));
             this.pictureGuardar.Location = new System.Drawing.Point(302, 170);
@@ -252,6 +274,7 @@ namespace Presentacion
             // 
             // pictureContinuar
             // 
+            this.pictureContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureContinuar.Enabled = false;
             this.pictureContinuar.Image = ((System.Drawing.Image)(resources.GetObject("pictureContinuar.Image")));
             this.pictureContinuar.Location = new System.Drawing.Point(341, 260);
@@ -263,6 +286,7 @@ namespace Presentacion
             // 
             // pictureRegresar
             // 
+            this.pictureRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
             this.pictureRegresar.Location = new System.Drawing.Point(259, 260);
             this.pictureRegresar.Name = "pictureRegresar";
@@ -282,6 +306,7 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
@@ -310,5 +335,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkTerminoCondiciones;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

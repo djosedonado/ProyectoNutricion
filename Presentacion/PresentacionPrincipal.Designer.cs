@@ -33,12 +33,14 @@ namespace Presentacion
             this.PanelFondo = new System.Windows.Forms.Panel();
             this.BotonMenu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkRegistrar = new System.Windows.Forms.LinkLabel();
             this.buttonNutricionista = new System.Windows.Forms.Button();
             this.buttonDeportista = new System.Windows.Forms.Button();
             this.mzButtonWindows1 = new BWCMM.MZButtonWindows();
-            this.linkRegistrar = new System.Windows.Forms.LinkLabel();
             this.PanelFondo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFondo
@@ -66,6 +68,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.linkRegistrar);
             this.panel1.Controls.Add(this.buttonNutricionista);
             this.panel1.Controls.Add(this.buttonDeportista);
@@ -74,9 +77,34 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(199, 433);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(83, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 53);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linkRegistrar
+            // 
+            this.linkRegistrar.ActiveLinkColor = System.Drawing.Color.LawnGreen;
+            this.linkRegistrar.AutoSize = true;
+            this.linkRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegistrar.LinkColor = System.Drawing.Color.White;
+            this.linkRegistrar.Location = new System.Drawing.Point(43, 321);
+            this.linkRegistrar.Name = "linkRegistrar";
+            this.linkRegistrar.Size = new System.Drawing.Size(127, 17);
+            this.linkRegistrar.TabIndex = 4;
+            this.linkRegistrar.TabStop = true;
+            this.linkRegistrar.Text = "Click para registrar";
+            this.linkRegistrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegistrar_LinkClicked);
+            // 
             // buttonNutricionista
             // 
             this.buttonNutricionista.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonNutricionista.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNutricionista.ForeColor = System.Drawing.Color.White;
             this.buttonNutricionista.Location = new System.Drawing.Point(56, 135);
             this.buttonNutricionista.Name = "buttonNutricionista";
@@ -89,6 +117,7 @@ namespace Presentacion
             // buttonDeportista
             // 
             this.buttonDeportista.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDeportista.ForeColor = System.Drawing.Color.White;
             this.buttonDeportista.Location = new System.Drawing.Point(56, 212);
             this.buttonDeportista.Name = "buttonDeportista";
@@ -113,19 +142,6 @@ namespace Presentacion
             this.mzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close;
             this.mzButtonWindows1.Paint += new System.Windows.Forms.PaintEventHandler(this.mzButtonWindows1_Paint);
             // 
-            // linkRegistrar
-            // 
-            this.linkRegistrar.AutoSize = true;
-            this.linkRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkRegistrar.LinkColor = System.Drawing.Color.White;
-            this.linkRegistrar.Location = new System.Drawing.Point(43, 321);
-            this.linkRegistrar.Name = "linkRegistrar";
-            this.linkRegistrar.Size = new System.Drawing.Size(127, 17);
-            this.linkRegistrar.TabIndex = 4;
-            this.linkRegistrar.TabStop = true;
-            this.linkRegistrar.Text = "Click para registrar";
-            this.linkRegistrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegistrar_LinkClicked);
-            // 
             // PresentacionPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +159,7 @@ namespace Presentacion
             this.PanelFondo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,6 +172,7 @@ namespace Presentacion
         private System.Windows.Forms.Button buttonNutricionista;
         private System.Windows.Forms.Button buttonDeportista;
         private System.Windows.Forms.LinkLabel linkRegistrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
