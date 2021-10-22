@@ -36,21 +36,38 @@ namespace Presentacion
             this.botonMaximizar = new System.Windows.Forms.PictureBox();
             this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.VentanaMenu = new System.Windows.Forms.Panel();
-            this.HomeContenedor = new System.Windows.Forms.Panel();
+            this.botonHome = new System.Windows.Forms.Button();
+            this.LogoHome = new System.Windows.Forms.PictureBox();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
-            this.botonHome = new System.Windows.Forms.PictureBox();
+            this.HomeContenedor = new System.Windows.Forms.Panel();
+            this.ContenidoRegistroPaciente = new System.Windows.Forms.Panel();
+            this.ValidacionTerminos = new System.Windows.Forms.CheckBox();
+            this.comoboRegistroSexo = new System.Windows.Forms.ComboBox();
+            this.labelRegistroTelefono = new System.Windows.Forms.Label();
+            this.textTelefono = new System.Windows.Forms.TextBox();
+            this.textEdad = new System.Windows.Forms.TextBox();
+            this.textApellido = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textIdentificacion = new System.Windows.Forms.TextBox();
+            this.labelRegistroSexo = new System.Windows.Forms.Label();
+            this.labelRegistroEdad = new System.Windows.Forms.Label();
+            this.labelRegistroApellido = new System.Windows.Forms.Label();
+            this.labelRegistroNombre = new System.Windows.Forms.Label();
+            this.labelRegistroIdentificacion = new System.Windows.Forms.Label();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
             this.VentanaMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.botonHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).BeginInit();
+            this.HomeContenedor.SuspendLayout();
+            this.ContenidoRegistroPaciente.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabeza
             // 
-            this.panelCabeza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelCabeza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
             this.panelCabeza.Controls.Add(this.botonRestaurar);
             this.panelCabeza.Controls.Add(this.botonMinimizar);
             this.panelCabeza.Controls.Add(this.botonMaximizar);
@@ -110,8 +127,9 @@ namespace Presentacion
             // 
             // VentanaMenu
             // 
-            this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
             this.VentanaMenu.Controls.Add(this.botonHome);
+            this.VentanaMenu.Controls.Add(this.LogoHome);
             this.VentanaMenu.Controls.Add(this.botonRegistarPaciente);
             this.VentanaMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.VentanaMenu.Location = new System.Drawing.Point(0, 35);
@@ -119,40 +137,201 @@ namespace Presentacion
             this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
             this.VentanaMenu.TabIndex = 1;
             // 
+            // botonHome
+            // 
+            this.botonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonHome.FlatAppearance.BorderSize = 0;
+            this.botonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonHome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonHome.ForeColor = System.Drawing.Color.White;
+            this.botonHome.Image = ((System.Drawing.Image)(resources.GetObject("botonHome.Image")));
+            this.botonHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.botonHome.Location = new System.Drawing.Point(3, 109);
+            this.botonHome.Name = "botonHome";
+            this.botonHome.Size = new System.Drawing.Size(197, 38);
+            this.botonHome.TabIndex = 2;
+            this.botonHome.Text = "Home";
+            this.botonHome.UseVisualStyleBackColor = false;
+            this.botonHome.Click += new System.EventHandler(this.botonHome_Click);
+            // 
+            // LogoHome
+            // 
+            this.LogoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoHome.Image = ((System.Drawing.Image)(resources.GetObject("LogoHome.Image")));
+            this.LogoHome.Location = new System.Drawing.Point(0, 0);
+            this.LogoHome.Name = "LogoHome";
+            this.LogoHome.Size = new System.Drawing.Size(200, 113);
+            this.LogoHome.TabIndex = 1;
+            this.LogoHome.TabStop = false;
+            // 
+            // botonRegistarPaciente
+            // 
+            this.botonRegistarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonRegistarPaciente.FlatAppearance.BorderSize = 0;
+            this.botonRegistarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonRegistarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRegistarPaciente.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRegistarPaciente.ForeColor = System.Drawing.Color.White;
+            this.botonRegistarPaciente.Image = global::Presentacion.Properties.Resources.usuario;
+            this.botonRegistarPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.botonRegistarPaciente.Location = new System.Drawing.Point(1, 153);
+            this.botonRegistarPaciente.Name = "botonRegistarPaciente";
+            this.botonRegistarPaciente.Size = new System.Drawing.Size(197, 38);
+            this.botonRegistarPaciente.TabIndex = 0;
+            this.botonRegistarPaciente.Text = "RegistarPaciente";
+            this.botonRegistarPaciente.UseVisualStyleBackColor = false;
+            this.botonRegistarPaciente.Click += new System.EventHandler(this.botonRegistarPaciente_Click);
+            // 
             // HomeContenedor
             // 
-            this.HomeContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.HomeContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.HomeContenedor.Controls.Add(this.ContenidoRegistroPaciente);
             this.HomeContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomeContenedor.Location = new System.Drawing.Point(200, 35);
             this.HomeContenedor.Name = "HomeContenedor";
             this.HomeContenedor.Size = new System.Drawing.Size(1100, 615);
             this.HomeContenedor.TabIndex = 2;
             // 
-            // botonRegistarPaciente
+            // ContenidoRegistroPaciente
             // 
-            this.botonRegistarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.botonRegistarPaciente.FlatAppearance.BorderSize = 0;
-            this.botonRegistarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.botonRegistarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRegistarPaciente.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRegistarPaciente.ForeColor = System.Drawing.Color.White;
-            this.botonRegistarPaciente.Image = ((System.Drawing.Image)(resources.GetObject("botonRegistarPaciente.Image")));
-            this.botonRegistarPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonRegistarPaciente.Location = new System.Drawing.Point(3, 119);
-            this.botonRegistarPaciente.Name = "botonRegistarPaciente";
-            this.botonRegistarPaciente.Size = new System.Drawing.Size(197, 38);
-            this.botonRegistarPaciente.TabIndex = 0;
-            this.botonRegistarPaciente.Text = "RegistarPaciente";
-            this.botonRegistarPaciente.UseVisualStyleBackColor = false;
+            this.ContenidoRegistroPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenidoRegistroPaciente.Controls.Add(this.ValidacionTerminos);
+            this.ContenidoRegistroPaciente.Controls.Add(this.comoboRegistroSexo);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroTelefono);
+            this.ContenidoRegistroPaciente.Controls.Add(this.textTelefono);
+            this.ContenidoRegistroPaciente.Controls.Add(this.textEdad);
+            this.ContenidoRegistroPaciente.Controls.Add(this.textApellido);
+            this.ContenidoRegistroPaciente.Controls.Add(this.textNombre);
+            this.ContenidoRegistroPaciente.Controls.Add(this.textIdentificacion);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroSexo);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroEdad);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroApellido);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroNombre);
+            this.ContenidoRegistroPaciente.Controls.Add(this.labelRegistroIdentificacion);
+            this.ContenidoRegistroPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContenidoRegistroPaciente.Location = new System.Drawing.Point(0, 0);
+            this.ContenidoRegistroPaciente.Name = "ContenidoRegistroPaciente";
+            this.ContenidoRegistroPaciente.Size = new System.Drawing.Size(1100, 615);
+            this.ContenidoRegistroPaciente.TabIndex = 0;
+            this.ContenidoRegistroPaciente.Visible = false;
             // 
-            // botonHome
+            // ValidacionTerminos
             // 
-            this.botonHome.Image = ((System.Drawing.Image)(resources.GetObject("botonHome.Image")));
-            this.botonHome.Location = new System.Drawing.Point(0, 0);
-            this.botonHome.Name = "botonHome";
-            this.botonHome.Size = new System.Drawing.Size(200, 88);
-            this.botonHome.TabIndex = 1;
-            this.botonHome.TabStop = false;
+            this.ValidacionTerminos.AutoSize = true;
+            this.ValidacionTerminos.ForeColor = System.Drawing.Color.White;
+            this.ValidacionTerminos.Location = new System.Drawing.Point(180, 395);
+            this.ValidacionTerminos.Name = "ValidacionTerminos";
+            this.ValidacionTerminos.Size = new System.Drawing.Size(186, 17);
+            this.ValidacionTerminos.TabIndex = 12;
+            this.ValidacionTerminos.Text = "Acepte los terminos y condiciones";
+            this.ValidacionTerminos.UseVisualStyleBackColor = true;
+            // 
+            // comoboRegistroSexo
+            // 
+            this.comoboRegistroSexo.FormattingEnabled = true;
+            this.comoboRegistroSexo.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.comoboRegistroSexo.Location = new System.Drawing.Point(193, 306);
+            this.comoboRegistroSexo.Name = "comoboRegistroSexo";
+            this.comoboRegistroSexo.Size = new System.Drawing.Size(100, 21);
+            this.comoboRegistroSexo.TabIndex = 11;
+            // 
+            // labelRegistroTelefono
+            // 
+            this.labelRegistroTelefono.AutoSize = true;
+            this.labelRegistroTelefono.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroTelefono.Location = new System.Drawing.Point(117, 346);
+            this.labelRegistroTelefono.Name = "labelRegistroTelefono";
+            this.labelRegistroTelefono.Size = new System.Drawing.Size(49, 13);
+            this.labelRegistroTelefono.TabIndex = 10;
+            this.labelRegistroTelefono.Text = "Telefono";
+            // 
+            // textTelefono
+            // 
+            this.textTelefono.Location = new System.Drawing.Point(193, 346);
+            this.textTelefono.Name = "textTelefono";
+            this.textTelefono.Size = new System.Drawing.Size(100, 20);
+            this.textTelefono.TabIndex = 9;
+            // 
+            // textEdad
+            // 
+            this.textEdad.Location = new System.Drawing.Point(193, 268);
+            this.textEdad.Name = "textEdad";
+            this.textEdad.Size = new System.Drawing.Size(100, 20);
+            this.textEdad.TabIndex = 8;
+            // 
+            // textApellido
+            // 
+            this.textApellido.Location = new System.Drawing.Point(193, 230);
+            this.textApellido.Name = "textApellido";
+            this.textApellido.Size = new System.Drawing.Size(100, 20);
+            this.textApellido.TabIndex = 7;
+            // 
+            // textNombre
+            // 
+            this.textNombre.Location = new System.Drawing.Point(193, 192);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(100, 20);
+            this.textNombre.TabIndex = 6;
+            // 
+            // textIdentificacion
+            // 
+            this.textIdentificacion.Location = new System.Drawing.Point(193, 153);
+            this.textIdentificacion.Name = "textIdentificacion";
+            this.textIdentificacion.Size = new System.Drawing.Size(100, 20);
+            this.textIdentificacion.TabIndex = 5;
+            // 
+            // labelRegistroSexo
+            // 
+            this.labelRegistroSexo.AutoSize = true;
+            this.labelRegistroSexo.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroSexo.Location = new System.Drawing.Point(117, 306);
+            this.labelRegistroSexo.Name = "labelRegistroSexo";
+            this.labelRegistroSexo.Size = new System.Drawing.Size(31, 13);
+            this.labelRegistroSexo.TabIndex = 4;
+            this.labelRegistroSexo.Text = "Sexo";
+            // 
+            // labelRegistroEdad
+            // 
+            this.labelRegistroEdad.AutoSize = true;
+            this.labelRegistroEdad.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroEdad.Location = new System.Drawing.Point(116, 268);
+            this.labelRegistroEdad.Name = "labelRegistroEdad";
+            this.labelRegistroEdad.Size = new System.Drawing.Size(32, 13);
+            this.labelRegistroEdad.TabIndex = 3;
+            this.labelRegistroEdad.Text = "Edad";
+            // 
+            // labelRegistroApellido
+            // 
+            this.labelRegistroApellido.AutoSize = true;
+            this.labelRegistroApellido.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroApellido.Location = new System.Drawing.Point(117, 230);
+            this.labelRegistroApellido.Name = "labelRegistroApellido";
+            this.labelRegistroApellido.Size = new System.Drawing.Size(44, 13);
+            this.labelRegistroApellido.TabIndex = 2;
+            this.labelRegistroApellido.Text = "Apellido";
+            // 
+            // labelRegistroNombre
+            // 
+            this.labelRegistroNombre.AutoSize = true;
+            this.labelRegistroNombre.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroNombre.Location = new System.Drawing.Point(116, 192);
+            this.labelRegistroNombre.Name = "labelRegistroNombre";
+            this.labelRegistroNombre.Size = new System.Drawing.Size(44, 13);
+            this.labelRegistroNombre.TabIndex = 1;
+            this.labelRegistroNombre.Text = "Nombre";
+            // 
+            // labelRegistroIdentificacion
+            // 
+            this.labelRegistroIdentificacion.AutoSize = true;
+            this.labelRegistroIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.labelRegistroIdentificacion.Location = new System.Drawing.Point(116, 153);
+            this.labelRegistroIdentificacion.Name = "labelRegistroIdentificacion";
+            this.labelRegistroIdentificacion.Size = new System.Drawing.Size(70, 13);
+            this.labelRegistroIdentificacion.TabIndex = 0;
+            this.labelRegistroIdentificacion.Text = "Identificacion";
             // 
             // PresentacionPrincipal
             // 
@@ -172,7 +351,10 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).EndInit();
             this.VentanaMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.botonHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).EndInit();
+            this.HomeContenedor.ResumeLayout(false);
+            this.ContenidoRegistroPaciente.ResumeLayout(false);
+            this.ContenidoRegistroPaciente.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -187,6 +369,21 @@ namespace Presentacion
         private System.Windows.Forms.Panel VentanaMenu;
         private System.Windows.Forms.Panel HomeContenedor;
         private System.Windows.Forms.Button botonRegistarPaciente;
-        private System.Windows.Forms.PictureBox botonHome;
+        private System.Windows.Forms.Panel ContenidoRegistroPaciente;
+        private System.Windows.Forms.Label labelRegistroIdentificacion;
+        private System.Windows.Forms.Label labelRegistroApellido;
+        private System.Windows.Forms.Label labelRegistroNombre;
+        private System.Windows.Forms.Label labelRegistroEdad;
+        private System.Windows.Forms.Label labelRegistroSexo;
+        private System.Windows.Forms.TextBox textTelefono;
+        private System.Windows.Forms.TextBox textEdad;
+        private System.Windows.Forms.TextBox textApellido;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textIdentificacion;
+        private System.Windows.Forms.Label labelRegistroTelefono;
+        private System.Windows.Forms.ComboBox comoboRegistroSexo;
+        private System.Windows.Forms.PictureBox LogoHome;
+        private System.Windows.Forms.CheckBox ValidacionTerminos;
+        private System.Windows.Forms.Button botonHome;
     }
 }

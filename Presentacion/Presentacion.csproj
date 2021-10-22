@@ -123,5 +123,44 @@
       <Name>Entidad</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo NutriSoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manzana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregue-el-simbolo-de-la-interfaz-de-personas-de-la-persona-negra-de-cerca-con-el-signo-mas-en-un-circulo-pequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dupdo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dupdo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-cerrar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

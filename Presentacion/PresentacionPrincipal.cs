@@ -56,6 +56,7 @@ namespace Presentacion
         {
 
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -65,6 +66,17 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void botonRegistarPaciente_Click(object sender, EventArgs e)
+        {
+            ContenidoRegistroPaciente.Visible = true;
+        }
+
+        private void botonHome_Click(object sender, EventArgs e)
+        {
+            ContenidoRegistroPaciente.Visible = false;
+            HomeContenedor.Visible = true;
         }
     }
 }
