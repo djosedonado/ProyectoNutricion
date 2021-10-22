@@ -30,7 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentacionPrincipal));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCabeza = new System.Windows.Forms.Panel();
             this.botonRestaurar = new System.Windows.Forms.PictureBox();
             this.botonMinimizar = new System.Windows.Forms.PictureBox();
             this.botonMaximizar = new System.Windows.Forms.PictureBox();
@@ -38,7 +38,7 @@ namespace Presentacion
             this.VentanaMenu = new System.Windows.Forms.Panel();
             this.HomeContenedor = new System.Windows.Forms.Panel();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).BeginInit();
@@ -46,18 +46,20 @@ namespace Presentacion
             this.VentanaMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelCabeza
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Controls.Add(this.botonRestaurar);
-            this.panel1.Controls.Add(this.botonMinimizar);
-            this.panel1.Controls.Add(this.botonMaximizar);
-            this.panel1.Controls.Add(this.botonCerrar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1300, 35);
-            this.panel1.TabIndex = 0;
+            this.panelCabeza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelCabeza.Controls.Add(this.botonRestaurar);
+            this.panelCabeza.Controls.Add(this.botonMinimizar);
+            this.panelCabeza.Controls.Add(this.botonMaximizar);
+            this.panelCabeza.Controls.Add(this.botonCerrar);
+            this.panelCabeza.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCabeza.Location = new System.Drawing.Point(0, 0);
+            this.panelCabeza.Name = "panelCabeza";
+            this.panelCabeza.Size = new System.Drawing.Size(1300, 35);
+            this.panelCabeza.TabIndex = 0;
+            this.panelCabeza.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            this.panelCabeza.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeza_MouseDown);
             // 
             // botonRestaurar
             // 
@@ -147,12 +149,12 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(1300, 650);
             this.Controls.Add(this.HomeContenedor);
             this.Controls.Add(this.VentanaMenu);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCabeza);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PresentacionPrincipal";
             this.Text = "PresentacionPrincipal";
             this.Load += new System.EventHandler(this.PresentacionPrincipal_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelCabeza.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).EndInit();
@@ -164,7 +166,7 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelCabeza;
         private System.Windows.Forms.PictureBox botonRestaurar;
         private System.Windows.Forms.PictureBox botonMinimizar;
         private System.Windows.Forms.PictureBox botonMaximizar;
