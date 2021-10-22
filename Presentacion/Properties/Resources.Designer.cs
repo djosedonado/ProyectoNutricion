@@ -124,6 +124,26 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HomeImagen {
+            get {
+                object obj = ResourceManager.GetObject("HomeImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HomeImagen1 {
+            get {
+                object obj = ResourceManager.GetObject("HomeImagen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lista {
             get {
                 object obj = ResourceManager.GetObject("lista", resourceCulture);
@@ -137,6 +157,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Logo_NutriSoft {
             get {
                 object obj = ResourceManager.GetObject("Logo NutriSoft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa_de_Busqueda {
+            get {
+                object obj = ResourceManager.GetObject("Lupa de Busqueda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

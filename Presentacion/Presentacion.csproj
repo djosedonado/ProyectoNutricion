@@ -162,5 +162,14 @@
   <ItemGroup>
     <None Include="Resources\boton-cerrar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeImagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeImagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa de Busqueda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

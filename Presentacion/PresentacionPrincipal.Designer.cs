@@ -31,14 +31,7 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentacionPrincipal));
             this.panelCabeza = new System.Windows.Forms.Panel();
-            this.botonRestaurar = new System.Windows.Forms.PictureBox();
-            this.botonMinimizar = new System.Windows.Forms.PictureBox();
-            this.botonMaximizar = new System.Windows.Forms.PictureBox();
-            this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.VentanaMenu = new System.Windows.Forms.Panel();
-            this.botonHome = new System.Windows.Forms.Button();
-            this.LogoHome = new System.Windows.Forms.PictureBox();
-            this.botonRegistarPaciente = new System.Windows.Forms.Button();
             this.HomeContenedor = new System.Windows.Forms.Panel();
             this.ContenidoRegistroPaciente = new System.Windows.Forms.Panel();
             this.ValidacionTerminos = new System.Windows.Forms.CheckBox();
@@ -54,15 +47,25 @@ namespace Presentacion
             this.labelRegistroApellido = new System.Windows.Forms.Label();
             this.labelRegistroNombre = new System.Windows.Forms.Label();
             this.labelRegistroIdentificacion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.botonHome = new System.Windows.Forms.Button();
+            this.LogoHome = new System.Windows.Forms.PictureBox();
+            this.botonRegistarPaciente = new System.Windows.Forms.Button();
+            this.botonRestaurar = new System.Windows.Forms.PictureBox();
+            this.botonMinimizar = new System.Windows.Forms.PictureBox();
+            this.botonMaximizar = new System.Windows.Forms.PictureBox();
+            this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.panelCabeza.SuspendLayout();
+            this.VentanaMenu.SuspendLayout();
+            this.HomeContenedor.SuspendLayout();
+            this.ContenidoRegistroPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
-            this.VentanaMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).BeginInit();
-            this.HomeContenedor.SuspendLayout();
-            this.ContenidoRegistroPaciente.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabeza
@@ -80,54 +83,10 @@ namespace Presentacion
             this.panelCabeza.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             this.panelCabeza.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeza_MouseDown);
             // 
-            // botonRestaurar
-            // 
-            this.botonRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("botonRestaurar.Image")));
-            this.botonRestaurar.Location = new System.Drawing.Point(1241, 3);
-            this.botonRestaurar.Name = "botonRestaurar";
-            this.botonRestaurar.Size = new System.Drawing.Size(25, 25);
-            this.botonRestaurar.TabIndex = 0;
-            this.botonRestaurar.TabStop = false;
-            this.botonRestaurar.Visible = false;
-            this.botonRestaurar.Click += new System.EventHandler(this.botonRestaurar_Click);
-            // 
-            // botonMinimizar
-            // 
-            this.botonMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMinimizar.Image")));
-            this.botonMinimizar.Location = new System.Drawing.Point(1210, 4);
-            this.botonMinimizar.Name = "botonMinimizar";
-            this.botonMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.botonMinimizar.TabIndex = 0;
-            this.botonMinimizar.TabStop = false;
-            this.botonMinimizar.Click += new System.EventHandler(this.botonMinimizar_Click);
-            // 
-            // botonMaximizar
-            // 
-            this.botonMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMaximizar.Image")));
-            this.botonMaximizar.Location = new System.Drawing.Point(1241, 4);
-            this.botonMaximizar.Name = "botonMaximizar";
-            this.botonMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.botonMaximizar.TabIndex = 0;
-            this.botonMaximizar.TabStop = false;
-            this.botonMaximizar.Click += new System.EventHandler(this.botonMaximizar_Click);
-            // 
-            // botonCerrar
-            // 
-            this.botonCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("botonCerrar.Image")));
-            this.botonCerrar.Location = new System.Drawing.Point(1272, 4);
-            this.botonCerrar.Name = "botonCerrar";
-            this.botonCerrar.Size = new System.Drawing.Size(25, 25);
-            this.botonCerrar.TabIndex = 0;
-            this.botonCerrar.TabStop = false;
-            this.botonCerrar.Click += new System.EventHandler(this.botonCerrar_Click);
-            // 
             // VentanaMenu
             // 
             this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.VentanaMenu.Controls.Add(this.button1);
             this.VentanaMenu.Controls.Add(this.botonHome);
             this.VentanaMenu.Controls.Add(this.LogoHome);
             this.VentanaMenu.Controls.Add(this.botonRegistarPaciente);
@@ -137,56 +96,11 @@ namespace Presentacion
             this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
             this.VentanaMenu.TabIndex = 1;
             // 
-            // botonHome
-            // 
-            this.botonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonHome.FlatAppearance.BorderSize = 0;
-            this.botonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonHome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonHome.ForeColor = System.Drawing.Color.White;
-            this.botonHome.Image = ((System.Drawing.Image)(resources.GetObject("botonHome.Image")));
-            this.botonHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonHome.Location = new System.Drawing.Point(3, 109);
-            this.botonHome.Name = "botonHome";
-            this.botonHome.Size = new System.Drawing.Size(197, 38);
-            this.botonHome.TabIndex = 2;
-            this.botonHome.Text = "Home";
-            this.botonHome.UseVisualStyleBackColor = false;
-            this.botonHome.Click += new System.EventHandler(this.botonHome_Click);
-            // 
-            // LogoHome
-            // 
-            this.LogoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LogoHome.Image = ((System.Drawing.Image)(resources.GetObject("LogoHome.Image")));
-            this.LogoHome.Location = new System.Drawing.Point(0, 0);
-            this.LogoHome.Name = "LogoHome";
-            this.LogoHome.Size = new System.Drawing.Size(200, 113);
-            this.LogoHome.TabIndex = 1;
-            this.LogoHome.TabStop = false;
-            // 
-            // botonRegistarPaciente
-            // 
-            this.botonRegistarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonRegistarPaciente.FlatAppearance.BorderSize = 0;
-            this.botonRegistarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonRegistarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRegistarPaciente.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRegistarPaciente.ForeColor = System.Drawing.Color.White;
-            this.botonRegistarPaciente.Image = global::Presentacion.Properties.Resources.usuario;
-            this.botonRegistarPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonRegistarPaciente.Location = new System.Drawing.Point(1, 153);
-            this.botonRegistarPaciente.Name = "botonRegistarPaciente";
-            this.botonRegistarPaciente.Size = new System.Drawing.Size(197, 38);
-            this.botonRegistarPaciente.TabIndex = 0;
-            this.botonRegistarPaciente.Text = "RegistarPaciente";
-            this.botonRegistarPaciente.UseVisualStyleBackColor = false;
-            this.botonRegistarPaciente.Click += new System.EventHandler(this.botonRegistarPaciente_Click);
-            // 
             // HomeContenedor
             // 
             this.HomeContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.HomeContenedor.Controls.Add(this.ContenidoRegistroPaciente);
+            this.HomeContenedor.Controls.Add(this.pictureBox1);
             this.HomeContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomeContenedor.Location = new System.Drawing.Point(200, 35);
             this.HomeContenedor.Name = "HomeContenedor";
@@ -333,6 +247,123 @@ namespace Presentacion
             this.labelRegistroIdentificacion.TabIndex = 0;
             this.labelRegistroIdentificacion.Text = "Identificacion";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.HomeImagen1;
+            this.pictureBox1.Location = new System.Drawing.Point(261, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(579, 483);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Presentacion.Properties.Resources.Lupa_de_Busqueda;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(3, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = " Consultar Paciente";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // botonHome
+            // 
+            this.botonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonHome.FlatAppearance.BorderSize = 0;
+            this.botonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonHome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonHome.ForeColor = System.Drawing.Color.White;
+            this.botonHome.Image = global::Presentacion.Properties.Resources.home__1_;
+            this.botonHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.botonHome.Location = new System.Drawing.Point(3, 109);
+            this.botonHome.Name = "botonHome";
+            this.botonHome.Size = new System.Drawing.Size(197, 38);
+            this.botonHome.TabIndex = 2;
+            this.botonHome.Text = "Home";
+            this.botonHome.UseVisualStyleBackColor = false;
+            this.botonHome.Click += new System.EventHandler(this.botonHome_Click);
+            // 
+            // LogoHome
+            // 
+            this.LogoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoHome.Image = global::Presentacion.Properties.Resources.Logo_NutriSoft;
+            this.LogoHome.Location = new System.Drawing.Point(0, 0);
+            this.LogoHome.Name = "LogoHome";
+            this.LogoHome.Size = new System.Drawing.Size(200, 113);
+            this.LogoHome.TabIndex = 1;
+            this.LogoHome.TabStop = false;
+            // 
+            // botonRegistarPaciente
+            // 
+            this.botonRegistarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonRegistarPaciente.FlatAppearance.BorderSize = 0;
+            this.botonRegistarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonRegistarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRegistarPaciente.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRegistarPaciente.ForeColor = System.Drawing.Color.White;
+            this.botonRegistarPaciente.Image = global::Presentacion.Properties.Resources.usuario;
+            this.botonRegistarPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.botonRegistarPaciente.Location = new System.Drawing.Point(1, 153);
+            this.botonRegistarPaciente.Name = "botonRegistarPaciente";
+            this.botonRegistarPaciente.Size = new System.Drawing.Size(197, 38);
+            this.botonRegistarPaciente.TabIndex = 0;
+            this.botonRegistarPaciente.Text = "RegistarPaciente";
+            this.botonRegistarPaciente.UseVisualStyleBackColor = false;
+            this.botonRegistarPaciente.Click += new System.EventHandler(this.botonRegistarPaciente_Click);
+            // 
+            // botonRestaurar
+            // 
+            this.botonRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("botonRestaurar.Image")));
+            this.botonRestaurar.Location = new System.Drawing.Point(1241, 3);
+            this.botonRestaurar.Name = "botonRestaurar";
+            this.botonRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.botonRestaurar.TabIndex = 0;
+            this.botonRestaurar.TabStop = false;
+            this.botonRestaurar.Visible = false;
+            this.botonRestaurar.Click += new System.EventHandler(this.botonRestaurar_Click);
+            // 
+            // botonMinimizar
+            // 
+            this.botonMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMinimizar.Image")));
+            this.botonMinimizar.Location = new System.Drawing.Point(1210, 4);
+            this.botonMinimizar.Name = "botonMinimizar";
+            this.botonMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.botonMinimizar.TabIndex = 0;
+            this.botonMinimizar.TabStop = false;
+            this.botonMinimizar.Click += new System.EventHandler(this.botonMinimizar_Click);
+            // 
+            // botonMaximizar
+            // 
+            this.botonMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMaximizar.Image")));
+            this.botonMaximizar.Location = new System.Drawing.Point(1241, 4);
+            this.botonMaximizar.Name = "botonMaximizar";
+            this.botonMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.botonMaximizar.TabIndex = 0;
+            this.botonMaximizar.TabStop = false;
+            this.botonMaximizar.Click += new System.EventHandler(this.botonMaximizar_Click);
+            // 
+            // botonCerrar
+            // 
+            this.botonCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("botonCerrar.Image")));
+            this.botonCerrar.Location = new System.Drawing.Point(1272, 4);
+            this.botonCerrar.Name = "botonCerrar";
+            this.botonCerrar.Size = new System.Drawing.Size(25, 25);
+            this.botonCerrar.TabIndex = 0;
+            this.botonCerrar.TabStop = false;
+            this.botonCerrar.Click += new System.EventHandler(this.botonCerrar_Click);
+            // 
             // PresentacionPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,15 +377,16 @@ namespace Presentacion
             this.Text = "PresentacionPrincipal";
             this.Load += new System.EventHandler(this.PresentacionPrincipal_Load);
             this.panelCabeza.ResumeLayout(false);
+            this.VentanaMenu.ResumeLayout(false);
+            this.HomeContenedor.ResumeLayout(false);
+            this.ContenidoRegistroPaciente.ResumeLayout(false);
+            this.ContenidoRegistroPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).EndInit();
-            this.VentanaMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).EndInit();
-            this.HomeContenedor.ResumeLayout(false);
-            this.ContenidoRegistroPaciente.ResumeLayout(false);
-            this.ContenidoRegistroPaciente.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,5 +417,7 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox LogoHome;
         private System.Windows.Forms.CheckBox ValidacionTerminos;
         private System.Windows.Forms.Button botonHome;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
