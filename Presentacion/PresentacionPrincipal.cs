@@ -17,37 +17,38 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void PresentacionPrincipal_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void mzButtonWindows1_Paint(object sender, PaintEventArgs e)
+        private void botonCerrar_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botonMaximizar_Click(object sender, EventArgs e)
         {
-            new DeportistaGUI().Show();
-            Hide();
+            this.WindowState = FormWindowState.Maximized;
+            botonMaximizar.Visible = false;
+            botonRestaurar.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botonRestaurar_Click(object sender, EventArgs e)
         {
-            new Login().Show();
-            Hide();
+            this.WindowState = FormWindowState.Normal;
+            botonRestaurar.Visible = false;
+            botonMaximizar.Visible = true;
         }
 
-        private void BotonMenu_Click(object sender, EventArgs e)
+        private void botonMinimizar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void linkRegistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new Registro().Show();
-            Hide();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

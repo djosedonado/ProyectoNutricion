@@ -38,6 +38,7 @@ namespace Presentacion
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@ namespace Presentacion
             this.label5 = new System.Windows.Forms.Label();
             this.pictureAceptar = new System.Windows.Forms.PictureBox();
             this.pictureRegresar = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.mzButtonWindows1 = new BWCMM.MZButtonWindows();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAceptar)).BeginInit();
@@ -134,6 +135,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.mzButtonWindows1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
@@ -155,6 +157,21 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(531, 401);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Entre 1 y 3 veces a la semana",
+            "Entre 3 y 5 veces a la semana",
+            "Entre 6 y 7 veces a la semana",
+            "Entrenamiento fuerte y dos veces al dia"});
+            this.comboBox2.Location = new System.Drawing.Point(71, 304);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(225, 23);
+            this.comboBox2.TabIndex = 18;
             // 
             // pictureBox1
             // 
@@ -239,20 +256,19 @@ namespace Presentacion
             this.pictureRegresar.TabStop = false;
             this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
             // 
-            // comboBox2
+            // mzButtonWindows1
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Entre 1 y 3 veces a la semana",
-            "Entre 3 y 5 veces a la semana",
-            "Entre 6 y 7 veces a la semana",
-            "Entrenamiento fuerte y dos veces al dia"});
-            this.comboBox2.Location = new System.Drawing.Point(71, 304);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(225, 23);
-            this.comboBox2.TabIndex = 18;
+            this.mzButtonWindows1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mzButtonWindows1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mzButtonWindows1.BackgroundImage")));
+            this.mzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows;
+            this.mzButtonWindows1.Location = new System.Drawing.Point(491, 3);
+            this.mzButtonWindows1.Name = "mzButtonWindows1";
+            this.mzButtonWindows1.ParentControl = this;
+            this.mzButtonWindows1.Size = new System.Drawing.Size(40, 24);
+            this.mzButtonWindows1.TabIndex = 19;
+            this.mzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Null;
             // 
             // DeportistaGUI
             // 
@@ -260,6 +276,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 401);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeportistaGUI";
             this.Text = "Deportista";
             this.panel1.ResumeLayout(false);
@@ -290,5 +307,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private BWCMM.MZButtonWindows mzButtonWindows1;
     }
 }
