@@ -38,12 +38,14 @@ namespace Presentacion
             this.VentanaMenu = new System.Windows.Forms.Panel();
             this.HomeContenedor = new System.Windows.Forms.Panel();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
+            this.botonHome = new System.Windows.Forms.PictureBox();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
             this.VentanaMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.botonHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabeza
@@ -109,6 +111,7 @@ namespace Presentacion
             // VentanaMenu
             // 
             this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.VentanaMenu.Controls.Add(this.botonHome);
             this.VentanaMenu.Controls.Add(this.botonRegistarPaciente);
             this.VentanaMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.VentanaMenu.Location = new System.Drawing.Point(0, 35);
@@ -142,6 +145,15 @@ namespace Presentacion
             this.botonRegistarPaciente.Text = "RegistarPaciente";
             this.botonRegistarPaciente.UseVisualStyleBackColor = false;
             // 
+            // botonHome
+            // 
+            this.botonHome.Image = ((System.Drawing.Image)(resources.GetObject("botonHome.Image")));
+            this.botonHome.Location = new System.Drawing.Point(0, 0);
+            this.botonHome.Name = "botonHome";
+            this.botonHome.Size = new System.Drawing.Size(200, 88);
+            this.botonHome.TabIndex = 1;
+            this.botonHome.TabStop = false;
+            // 
             // PresentacionPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +172,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).EndInit();
             this.VentanaMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.botonHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +187,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel VentanaMenu;
         private System.Windows.Forms.Panel HomeContenedor;
         private System.Windows.Forms.Button botonRegistarPaciente;
+        private System.Windows.Forms.PictureBox botonHome;
     }
 }
