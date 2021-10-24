@@ -78,5 +78,16 @@ namespace Presentacion
             ContenidoRegistroPaciente.Visible = false;
             HomeContenedor.Visible = true;
         }
+
+        private void ValidacionTerminos_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureGuardar.Enabled = true;
+        }
+
+        private void pictureGuardar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Paciente guardado");
+            pictureGuardar.Enabled = false;
+        }
     }
 }
