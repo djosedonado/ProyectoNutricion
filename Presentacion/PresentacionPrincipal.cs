@@ -70,5 +70,10 @@ namespace Presentacion
         {
             abrirFormatoHija(new Registro());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new Consultar());
+        }
     }
 }
