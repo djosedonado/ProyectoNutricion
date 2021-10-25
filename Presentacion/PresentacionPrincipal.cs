@@ -18,16 +18,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PresentacionPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void botonCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,11 +42,6 @@ namespace Presentacion
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -67,27 +52,23 @@ namespace Presentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void abrirFormatoHija(object FormatoHija)
+        {
+            if (PanelContenedor.Controls.Count > 0)
+                PanelContenedor.Controls.RemoveAt(0);
+
+            Form formatohija = FormatoHija as Form;
+            formatohija.TopLevel = false;
+            formatohija.Dock = DockStyle.Fill;
+            PanelContenedor.Controls.Add(formatohija);
+            PanelContenedor.Tag = formatohija;
+            formatohija.Show();
+            
+        }
 
         private void botonRegistarPaciente_Click(object sender, EventArgs e)
         {
-            ContenidoRegistroPaciente.Visible = true;
-        }
-
-        private void botonHome_Click(object sender, EventArgs e)
-        {
-            ContenidoRegistroPaciente.Visible = false;
-            HomeContenedor.Visible = true;
-        }
-
-        private void ValidacionTerminos_CheckedChanged(object sender, EventArgs e)
-        {
-            pictureGuardar.Enabled = true;
-        }
-
-        private void pictureGuardar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Paciente guardado");
-            pictureGuardar.Enabled = false;
+            abrirFormatoHija(new Registro());
         }
     }
 }

@@ -37,21 +37,17 @@ namespace Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ContenedorDeportista = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureAceptar = new System.Windows.Forms.PictureBox();
-            this.pictureRegresar = new System.Windows.Forms.PictureBox();
-            this.mzButtonWindows1 = new BWCMM.MZButtonWindows();
-            this.panel1.SuspendLayout();
+            this.ContenedorDeportista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
             this.SuspendLayout();
             // 
             // textPeso
@@ -132,31 +128,29 @@ namespace Presentacion
             this.label4.TabIndex = 7;
             this.label4.Text = "Deporte";
             // 
-            // panel1
+            // ContenedorDeportista
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.mzButtonWindows1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.pictureAceptar);
-            this.panel1.Controls.Add(this.pictureRegresar);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textAltura);
-            this.panel1.Controls.Add(this.textPeso);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(531, 401);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.ContenedorDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorDeportista.Controls.Add(this.comboBox2);
+            this.ContenedorDeportista.Controls.Add(this.pictureBox1);
+            this.ContenedorDeportista.Controls.Add(this.label8);
+            this.ContenedorDeportista.Controls.Add(this.textBox1);
+            this.ContenedorDeportista.Controls.Add(this.label7);
+            this.ContenedorDeportista.Controls.Add(this.label5);
+            this.ContenedorDeportista.Controls.Add(this.pictureAceptar);
+            this.ContenedorDeportista.Controls.Add(this.label4);
+            this.ContenedorDeportista.Controls.Add(this.comboBox1);
+            this.ContenedorDeportista.Controls.Add(this.label3);
+            this.ContenedorDeportista.Controls.Add(this.label2);
+            this.ContenedorDeportista.Controls.Add(this.label1);
+            this.ContenedorDeportista.Controls.Add(this.textAltura);
+            this.ContenedorDeportista.Controls.Add(this.textPeso);
+            this.ContenedorDeportista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContenedorDeportista.Location = new System.Drawing.Point(0, 0);
+            this.ContenedorDeportista.Name = "ContenedorDeportista";
+            this.ContenedorDeportista.Size = new System.Drawing.Size(532, 401);
+            this.ContenedorDeportista.TabIndex = 11;
+            this.ContenedorDeportista.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox2
             // 
@@ -213,17 +207,6 @@ namespace Presentacion
             this.label7.TabIndex = 14;
             this.label7.Text = "Aceptar";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(325, 339);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Regresar";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -244,46 +227,21 @@ namespace Presentacion
             this.pictureAceptar.Size = new System.Drawing.Size(48, 50);
             this.pictureAceptar.TabIndex = 9;
             this.pictureAceptar.TabStop = false;
-            // 
-            // pictureRegresar
-            // 
-            this.pictureRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
-            this.pictureRegresar.Location = new System.Drawing.Point(328, 286);
-            this.pictureRegresar.Name = "pictureRegresar";
-            this.pictureRegresar.Size = new System.Drawing.Size(49, 50);
-            this.pictureRegresar.TabIndex = 8;
-            this.pictureRegresar.TabStop = false;
-            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
-            // 
-            // mzButtonWindows1
-            // 
-            this.mzButtonWindows1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mzButtonWindows1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mzButtonWindows1.BackgroundImage")));
-            this.mzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows;
-            this.mzButtonWindows1.Location = new System.Drawing.Point(491, 3);
-            this.mzButtonWindows1.Name = "mzButtonWindows1";
-            this.mzButtonWindows1.ParentControl = this;
-            this.mzButtonWindows1.Size = new System.Drawing.Size(40, 24);
-            this.mzButtonWindows1.TabIndex = 19;
-            this.mzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Null;
+            this.pictureAceptar.Click += new System.EventHandler(this.pictureAceptar_Click);
             // 
             // DeportistaGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 401);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ContenedorDeportista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeportistaGUI";
             this.Text = "Deportista";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ContenedorDeportista.ResumeLayout(false);
+            this.ContenedorDeportista.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,16 +255,13 @@ namespace Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureRegresar;
         private System.Windows.Forms.PictureBox pictureAceptar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ContenedorDeportista;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private BWCMM.MZButtonWindows mzButtonWindows1;
     }
 }

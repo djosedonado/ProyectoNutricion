@@ -32,5 +32,10 @@ namespace Presentacion
         {
 
         }
+
+        private void pictureAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

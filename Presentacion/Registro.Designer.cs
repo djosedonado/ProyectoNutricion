@@ -37,7 +37,6 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textTelefono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,16 +45,16 @@ namespace Presentacion
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.checkTerminoCondiciones = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelRegistro = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureGuardar = new System.Windows.Forms.PictureBox();
             this.pictureContinuar = new System.Windows.Forms.PictureBox();
-            this.pictureRegresar = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.ContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.PanelRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).BeginInit();
             this.SuspendLayout();
             // 
             // textIdentificacion
@@ -122,15 +121,6 @@ namespace Presentacion
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Apellido";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 8;
             // 
             // label5
             // 
@@ -202,7 +192,7 @@ namespace Presentacion
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(299, 223);
+            this.label10.Location = new System.Drawing.Point(321, 324);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 17);
             this.label10.TabIndex = 22;
@@ -222,33 +212,42 @@ namespace Presentacion
             this.checkTerminoCondiciones.UseVisualStyleBackColor = true;
             this.checkTerminoCondiciones.CheckedChanged += new System.EventHandler(this.checkTerminoCondiciones_CheckedChanged);
             // 
-            // panel1
+            // label4
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.checkTerminoCondiciones);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.pictureGuardar);
-            this.panel1.Controls.Add(this.pictureContinuar);
-            this.panel1.Controls.Add(this.pictureRegresar);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.comboSexo);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textTelefono);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textEdad);
-            this.panel1.Controls.Add(this.textApellido);
-            this.panel1.Controls.Add(this.textNombre);
-            this.panel1.Controls.Add(this.textIdentificacion);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 339);
-            this.panel1.TabIndex = 24;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 8;
+            // 
+            // PanelRegistro
+            // 
+            this.PanelRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelRegistro.Controls.Add(this.label4);
+            this.PanelRegistro.Controls.Add(this.pictureBox1);
+            this.PanelRegistro.Controls.Add(this.checkTerminoCondiciones);
+            this.PanelRegistro.Controls.Add(this.label10);
+            this.PanelRegistro.Controls.Add(this.pictureGuardar);
+            this.PanelRegistro.Controls.Add(this.pictureContinuar);
+            this.PanelRegistro.Controls.Add(this.label8);
+            this.PanelRegistro.Controls.Add(this.comboSexo);
+            this.PanelRegistro.Controls.Add(this.label7);
+            this.PanelRegistro.Controls.Add(this.label6);
+            this.PanelRegistro.Controls.Add(this.textTelefono);
+            this.PanelRegistro.Controls.Add(this.label5);
+            this.PanelRegistro.Controls.Add(this.label3);
+            this.PanelRegistro.Controls.Add(this.label2);
+            this.PanelRegistro.Controls.Add(this.label1);
+            this.PanelRegistro.Controls.Add(this.textEdad);
+            this.PanelRegistro.Controls.Add(this.textApellido);
+            this.PanelRegistro.Controls.Add(this.textNombre);
+            this.PanelRegistro.Controls.Add(this.textIdentificacion);
+            this.PanelRegistro.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelRegistro.Location = new System.Drawing.Point(0, 0);
+            this.PanelRegistro.Name = "PanelRegistro";
+            this.PanelRegistro.Size = new System.Drawing.Size(521, 551);
+            this.PanelRegistro.TabIndex = 24;
             // 
             // pictureBox1
             // 
@@ -265,7 +264,7 @@ namespace Presentacion
             this.pictureGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureGuardar.Enabled = false;
             this.pictureGuardar.Image = ((System.Drawing.Image)(resources.GetObject("pictureGuardar.Image")));
-            this.pictureGuardar.Location = new System.Drawing.Point(302, 170);
+            this.pictureGuardar.Location = new System.Drawing.Point(324, 260);
             this.pictureGuardar.Name = "pictureGuardar";
             this.pictureGuardar.Size = new System.Drawing.Size(46, 50);
             this.pictureGuardar.TabIndex = 21;
@@ -277,44 +276,44 @@ namespace Presentacion
             this.pictureContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureContinuar.Enabled = false;
             this.pictureContinuar.Image = ((System.Drawing.Image)(resources.GetObject("pictureContinuar.Image")));
-            this.pictureContinuar.Location = new System.Drawing.Point(341, 260);
+            this.pictureContinuar.Location = new System.Drawing.Point(421, 260);
             this.pictureContinuar.Name = "pictureContinuar";
             this.pictureContinuar.Size = new System.Drawing.Size(49, 50);
             this.pictureContinuar.TabIndex = 20;
             this.pictureContinuar.TabStop = false;
             this.pictureContinuar.Click += new System.EventHandler(this.pictureContinuar_Click);
             // 
-            // pictureRegresar
+            // ContenedorPrincipal
             // 
-            this.pictureRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureRegresar.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegresar.Image")));
-            this.pictureRegresar.Location = new System.Drawing.Point(259, 260);
-            this.pictureRegresar.Name = "pictureRegresar";
-            this.pictureRegresar.Size = new System.Drawing.Size(51, 50);
-            this.pictureRegresar.TabIndex = 19;
-            this.pictureRegresar.TabStop = false;
-            this.pictureRegresar.Click += new System.EventHandler(this.pictureRegresar_Click);
+            this.ContenedorPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContenedorPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.ContenedorPrincipal.Name = "ContenedorPrincipal";
+            this.ContenedorPrincipal.Size = new System.Drawing.Size(1033, 551);
+            this.ContenedorPrincipal.TabIndex = 25;
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 336);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1033, 551);
+            this.Controls.Add(this.PanelRegistro);
+            this.Controls.Add(this.ContenedorPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
             this.Text = "Registrar";
             this.Load += new System.EventHandler(this.Registro_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PanelRegistro.ResumeLayout(false);
+            this.PanelRegistro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureContinuar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRegresar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.TextBox textIdentificacion;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textApellido;
@@ -322,19 +321,19 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textTelefono;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboSexo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureRegresar;
         private System.Windows.Forms.PictureBox pictureContinuar;
         private System.Windows.Forms.PictureBox pictureGuardar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkTerminoCondiciones;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel PanelRegistro;
+        private System.Windows.Forms.Panel ContenedorPrincipal;
     }
 }

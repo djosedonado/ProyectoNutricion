@@ -50,17 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar.Designer.cs">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeportistaGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeportistaGUI.Designer.cs">
       <DependentUpon>DeportistaGUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentacionPrincipal.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,11 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultar.resx">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeportistaGUI.resx">
       <DependentUpon>DeportistaGUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentacionPrincipal.resx">
       <DependentUpon>PresentacionPrincipal.cs</DependentUpon>

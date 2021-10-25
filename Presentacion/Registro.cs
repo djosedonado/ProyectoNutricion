@@ -29,10 +29,24 @@ namespace Presentacion
             Hide();
         }
 
+        private void abrirFormatoHija(object FormatoHija)
+        {
+
+            if (ContenedorPrincipal.Controls.Count > 0)
+                ContenedorPrincipal.Controls.RemoveAt(0);
+
+            Form formatohija = FormatoHija as Form;
+            formatohija.TopLevel = false;
+            formatohija.Dock = DockStyle.Fill;
+            ContenedorPrincipal.Controls.Add(formatohija);
+            ContenedorPrincipal.Tag = formatohija;
+            formatohija.Show();
+            PanelRegistro.Visible = false;
+            
+        }
         private void pictureContinuar_Click(object sender, EventArgs e)
         {
-            new PresentacionPrincipal().Show();
-            Hide();
+            abrirFormatoHija(new DeportistaGUI());
         }
         private void checkTerminoCondiciones_CheckedChanged(object sender, EventArgs e)
         {
@@ -44,7 +58,7 @@ namespace Presentacion
             persona.Identificacion = textIdentificacion.Text;
             persona.Nombre = textNombre.Text;
             persona.Apellidó = textApellido.Text;
-            persona.Edad = int.Parse(textEdad.Text);
+            //persona.Edad = int.Parse(textEdad.Text);
             persona.Telefono = textTelefono.Text;
             persona.Sexo = comboSexo.Text;
             MessageBox.Show("Datos guardados correctamente");
