@@ -34,7 +34,6 @@ namespace Presentacion
             this.VentanaMenu = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.botonHome = new System.Windows.Forms.Button();
             this.LogoHome = new System.Windows.Forms.PictureBox();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
             this.botonRestaurar = new System.Windows.Forms.PictureBox();
@@ -68,7 +67,6 @@ namespace Presentacion
             // 
             this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
             this.VentanaMenu.Controls.Add(this.button1);
-            this.VentanaMenu.Controls.Add(this.botonHome);
             this.VentanaMenu.Controls.Add(this.LogoHome);
             this.VentanaMenu.Controls.Add(this.botonRegistarPaciente);
             this.VentanaMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -96,30 +94,13 @@ namespace Presentacion
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Presentacion.Properties.Resources.Lupa_de_Busqueda;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(3, 197);
+            this.button1.Location = new System.Drawing.Point(3, 163);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 38);
             this.button1.TabIndex = 3;
             this.button1.Text = " Consultar Paciente";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // botonHome
-            // 
-            this.botonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonHome.FlatAppearance.BorderSize = 0;
-            this.botonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonHome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonHome.ForeColor = System.Drawing.Color.White;
-            this.botonHome.Image = global::Presentacion.Properties.Resources.home__1_;
-            this.botonHome.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonHome.Location = new System.Drawing.Point(3, 109);
-            this.botonHome.Name = "botonHome";
-            this.botonHome.Size = new System.Drawing.Size(197, 38);
-            this.botonHome.TabIndex = 2;
-            this.botonHome.Text = "Home";
-            this.botonHome.UseVisualStyleBackColor = false;
             // 
             // LogoHome
             // 
@@ -130,6 +111,7 @@ namespace Presentacion
             this.LogoHome.Size = new System.Drawing.Size(200, 113);
             this.LogoHome.TabIndex = 1;
             this.LogoHome.TabStop = false;
+            this.LogoHome.Click += new System.EventHandler(this.LogoHome_Click);
             // 
             // botonRegistarPaciente
             // 
@@ -142,7 +124,7 @@ namespace Presentacion
             this.botonRegistarPaciente.ForeColor = System.Drawing.Color.White;
             this.botonRegistarPaciente.Image = global::Presentacion.Properties.Resources.usuario;
             this.botonRegistarPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonRegistarPaciente.Location = new System.Drawing.Point(1, 153);
+            this.botonRegistarPaciente.Location = new System.Drawing.Point(0, 119);
             this.botonRegistarPaciente.Name = "botonRegistarPaciente";
             this.botonRegistarPaciente.Size = new System.Drawing.Size(197, 38);
             this.botonRegistarPaciente.TabIndex = 0;
@@ -228,7 +210,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.Button botonRegistarPaciente;
         private System.Windows.Forms.PictureBox LogoHome;
-        private System.Windows.Forms.Button botonHome;
         private System.Windows.Forms.Button button1;
     }
 }

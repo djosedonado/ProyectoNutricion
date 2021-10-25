@@ -62,6 +62,12 @@
     <Compile Include="DeportistaGUI.Designer.cs">
       <DependentUpon>DeportistaGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentacionPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeportistaGUI.resx">
       <DependentUpon>DeportistaGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentacionPrincipal.resx">
       <DependentUpon>PresentacionPrincipal.cs</DependentUpon>

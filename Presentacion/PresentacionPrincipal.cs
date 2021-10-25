@@ -75,5 +75,10 @@ namespace Presentacion
         {
             abrirFormatoHija(new Consultar());
         }
+
+        private void LogoHome_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new Home());
+        }
     }
 }
