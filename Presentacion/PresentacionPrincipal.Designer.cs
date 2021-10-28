@@ -36,13 +36,14 @@ namespace Presentacion
             this.botonMaximizar = new System.Windows.Forms.PictureBox();
             this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.VentanaMenu = new System.Windows.Forms.Panel();
+            this.botonMacroNutrientes = new System.Windows.Forms.Button();
+            this.botonEstimacionGastosEnergeticos = new System.Windows.Forms.Button();
+            this.botonConsultaBasal = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.LogoHome = new System.Windows.Forms.PictureBox();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.botonConsultaBasal = new System.Windows.Forms.Button();
-            this.botonEstimacionGastosEnergeticos = new System.Windows.Forms.Button();
-            this.botonMacroNutrientes = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
@@ -50,6 +51,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
             this.VentanaMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).BeginInit();
+            this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabeza
@@ -126,6 +128,50 @@ namespace Presentacion
             this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
             this.VentanaMenu.TabIndex = 1;
             // 
+            // botonMacroNutrientes
+            // 
+            this.botonMacroNutrientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonMacroNutrientes.FlatAppearance.BorderSize = 0;
+            this.botonMacroNutrientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonMacroNutrientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonMacroNutrientes.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonMacroNutrientes.ForeColor = System.Drawing.Color.White;
+            this.botonMacroNutrientes.Location = new System.Drawing.Point(50, 283);
+            this.botonMacroNutrientes.Name = "botonMacroNutrientes";
+            this.botonMacroNutrientes.Size = new System.Drawing.Size(150, 32);
+            this.botonMacroNutrientes.TabIndex = 6;
+            this.botonMacroNutrientes.Text = "Reparto de Macros Nutrientes";
+            this.botonMacroNutrientes.UseVisualStyleBackColor = false;
+            // 
+            // botonEstimacionGastosEnergeticos
+            // 
+            this.botonEstimacionGastosEnergeticos.FlatAppearance.BorderSize = 0;
+            this.botonEstimacionGastosEnergeticos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonEstimacionGastosEnergeticos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonEstimacionGastosEnergeticos.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonEstimacionGastosEnergeticos.ForeColor = System.Drawing.Color.White;
+            this.botonEstimacionGastosEnergeticos.Location = new System.Drawing.Point(50, 245);
+            this.botonEstimacionGastosEnergeticos.Name = "botonEstimacionGastosEnergeticos";
+            this.botonEstimacionGastosEnergeticos.Size = new System.Drawing.Size(150, 32);
+            this.botonEstimacionGastosEnergeticos.TabIndex = 5;
+            this.botonEstimacionGastosEnergeticos.Text = "Gastos Energetico";
+            this.botonEstimacionGastosEnergeticos.UseVisualStyleBackColor = true;
+            // 
+            // botonConsultaBasal
+            // 
+            this.botonConsultaBasal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonConsultaBasal.FlatAppearance.BorderSize = 0;
+            this.botonConsultaBasal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonConsultaBasal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonConsultaBasal.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonConsultaBasal.ForeColor = System.Drawing.Color.White;
+            this.botonConsultaBasal.Location = new System.Drawing.Point(49, 207);
+            this.botonConsultaBasal.Name = "botonConsultaBasal";
+            this.botonConsultaBasal.Size = new System.Drawing.Size(150, 32);
+            this.botonConsultaBasal.TabIndex = 4;
+            this.botonConsultaBasal.Text = "Tasa Metabolistica Basal";
+            this.botonConsultaBasal.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
@@ -177,55 +223,19 @@ namespace Presentacion
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelContenedor.Controls.Add(this.flowLayoutPanel1);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(200, 35);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1100, 615);
             this.PanelContenedor.TabIndex = 2;
             // 
-            // botonConsultaBasal
+            // flowLayoutPanel1
             // 
-            this.botonConsultaBasal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonConsultaBasal.FlatAppearance.BorderSize = 0;
-            this.botonConsultaBasal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonConsultaBasal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonConsultaBasal.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonConsultaBasal.ForeColor = System.Drawing.Color.White;
-            this.botonConsultaBasal.Location = new System.Drawing.Point(49, 207);
-            this.botonConsultaBasal.Name = "botonConsultaBasal";
-            this.botonConsultaBasal.Size = new System.Drawing.Size(150, 32);
-            this.botonConsultaBasal.TabIndex = 4;
-            this.botonConsultaBasal.Text = "Tasa Metabolistica Basal";
-            this.botonConsultaBasal.UseVisualStyleBackColor = false;
-            // 
-            // botonEstimacionGastosEnergeticos
-            // 
-            this.botonEstimacionGastosEnergeticos.FlatAppearance.BorderSize = 0;
-            this.botonEstimacionGastosEnergeticos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonEstimacionGastosEnergeticos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonEstimacionGastosEnergeticos.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonEstimacionGastosEnergeticos.ForeColor = System.Drawing.Color.White;
-            this.botonEstimacionGastosEnergeticos.Location = new System.Drawing.Point(50, 245);
-            this.botonEstimacionGastosEnergeticos.Name = "botonEstimacionGastosEnergeticos";
-            this.botonEstimacionGastosEnergeticos.Size = new System.Drawing.Size(150, 32);
-            this.botonEstimacionGastosEnergeticos.TabIndex = 5;
-            this.botonEstimacionGastosEnergeticos.Text = "Gastos Energetico";
-            this.botonEstimacionGastosEnergeticos.UseVisualStyleBackColor = true;
-            // 
-            // botonMacroNutrientes
-            // 
-            this.botonMacroNutrientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonMacroNutrientes.FlatAppearance.BorderSize = 0;
-            this.botonMacroNutrientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonMacroNutrientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonMacroNutrientes.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonMacroNutrientes.ForeColor = System.Drawing.Color.White;
-            this.botonMacroNutrientes.Location = new System.Drawing.Point(50, 283);
-            this.botonMacroNutrientes.Name = "botonMacroNutrientes";
-            this.botonMacroNutrientes.Size = new System.Drawing.Size(150, 32);
-            this.botonMacroNutrientes.TabIndex = 6;
-            this.botonMacroNutrientes.Text = "Reparto de Macros Nutrientes";
-            this.botonMacroNutrientes.UseVisualStyleBackColor = false;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(179, 144);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // PresentacionPrincipal
             // 
@@ -245,6 +255,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).EndInit();
             this.VentanaMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).EndInit();
+            this.PanelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -264,5 +275,6 @@ namespace Presentacion
         private System.Windows.Forms.Button botonConsultaBasal;
         private System.Windows.Forms.Button botonMacroNutrientes;
         private System.Windows.Forms.Button botonEstimacionGastosEnergeticos;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
