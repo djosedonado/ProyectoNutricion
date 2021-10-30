@@ -57,12 +57,6 @@
     <Compile Include="Consultar.Designer.cs">
       <DependentUpon>Consultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeportistaGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeportistaGUI.Designer.cs">
-      <DependentUpon>DeportistaGUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     </Compile>
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeportistaGUI.resx">
-      <DependentUpon>DeportistaGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
