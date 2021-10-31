@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alimentos.cs" />
+    <Compile Include="CalcularGastoEnergeticoHombre.cs" />
+    <Compile Include="CalcularGastoEnergeticoMujer.cs" />
     <Compile Include="Deportista.cs" />
     <Compile Include="Dieta.cs" />
-    <Compile Include="Nutricionista.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

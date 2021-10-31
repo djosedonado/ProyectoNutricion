@@ -40,10 +40,6 @@ namespace Presentacion
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.PanelFondoTasa = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TextEntrenamientoAerobicos = new System.Windows.Forms.TextBox();
-            this.textEntrenamientoFuerza = new System.Windows.Forms.TextBox();
             this.GraficaBarraEnergetica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.LabelIdentificacion = new System.Windows.Forms.Label();
             this.textTasaIdentificacion = new System.Windows.Forms.TextBox();
@@ -53,10 +49,6 @@ namespace Presentacion
             this.TasaBasalAltura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TasaBasalEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TasaBasalTMB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisaSemanaFuerza = new System.Windows.Forms.CheckedListBox();
-            this.DiasSemanaAerobico = new System.Windows.Forms.CheckedListBox();
-            this.HorasEntrenamientosFuerza = new System.Windows.Forms.ComboBox();
-            this.HorasEntremanientoAerobicos = new System.Windows.Forms.ComboBox();
             this.PanelFondoTasa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GraficaBarraEnergetica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,15 +57,7 @@ namespace Presentacion
             // PanelFondoTasa
             // 
             this.PanelFondoTasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.PanelFondoTasa.Controls.Add(this.HorasEntremanientoAerobicos);
-            this.PanelFondoTasa.Controls.Add(this.HorasEntrenamientosFuerza);
-            this.PanelFondoTasa.Controls.Add(this.DiasSemanaAerobico);
-            this.PanelFondoTasa.Controls.Add(this.DisaSemanaFuerza);
             this.PanelFondoTasa.Controls.Add(this.button1);
-            this.PanelFondoTasa.Controls.Add(this.label2);
-            this.PanelFondoTasa.Controls.Add(this.label1);
-            this.PanelFondoTasa.Controls.Add(this.TextEntrenamientoAerobicos);
-            this.PanelFondoTasa.Controls.Add(this.textEntrenamientoFuerza);
             this.PanelFondoTasa.Controls.Add(this.GraficaBarraEnergetica);
             this.PanelFondoTasa.Controls.Add(this.LabelIdentificacion);
             this.PanelFondoTasa.Controls.Add(this.textTasaIdentificacion);
@@ -94,51 +78,13 @@ namespace Presentacion
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Entrenamineto Aerobicos";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 15);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Entrenamiento de Fuerza";
-            // 
-            // TextEntrenamientoAerobicos
-            // 
-            this.TextEntrenamientoAerobicos.Location = new System.Drawing.Point(209, 225);
-            this.TextEntrenamientoAerobicos.Name = "TextEntrenamientoAerobicos";
-            this.TextEntrenamientoAerobicos.Size = new System.Drawing.Size(100, 20);
-            this.TextEntrenamientoAerobicos.TabIndex = 7;
-            this.TextEntrenamientoAerobicos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextEntrenamientoAerobicos_KeyPress);
-            // 
-            // textEntrenamientoFuerza
-            // 
-            this.textEntrenamientoFuerza.Location = new System.Drawing.Point(50, 225);
-            this.textEntrenamientoFuerza.Name = "textEntrenamientoFuerza";
-            this.textEntrenamientoFuerza.Size = new System.Drawing.Size(99, 20);
-            this.textEntrenamientoFuerza.TabIndex = 6;
-            this.textEntrenamientoFuerza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEntrenamientoFuerza_KeyPress);
-            // 
             // GraficaBarraEnergetica
             // 
             chartArea1.Name = "GRAFO";
             this.GraficaBarraEnergetica.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.GraficaBarraEnergetica.Legends.Add(legend1);
-            this.GraficaBarraEnergetica.Location = new System.Drawing.Point(603, 73);
+            this.GraficaBarraEnergetica.Location = new System.Drawing.Point(612, 34);
             this.GraficaBarraEnergetica.Name = "GraficaBarraEnergetica";
             this.GraficaBarraEnergetica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "GRAFO";
@@ -235,81 +181,6 @@ namespace Presentacion
             this.TasaBasalTMB.HeaderText = "TMB";
             this.TasaBasalTMB.Name = "TasaBasalTMB";
             // 
-            // DisaSemanaFuerza
-            // 
-            this.DisaSemanaFuerza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.DisaSemanaFuerza.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisaSemanaFuerza.ForeColor = System.Drawing.Color.White;
-            this.DisaSemanaFuerza.FormattingEnabled = true;
-            this.DisaSemanaFuerza.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miercoles",
-            "Jueves",
-            "Viernes"});
-            this.DisaSemanaFuerza.Location = new System.Drawing.Point(50, 251);
-            this.DisaSemanaFuerza.Name = "DisaSemanaFuerza";
-            this.DisaSemanaFuerza.Size = new System.Drawing.Size(77, 89);
-            this.DisaSemanaFuerza.TabIndex = 21;
-            // 
-            // DiasSemanaAerobico
-            // 
-            this.DiasSemanaAerobico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.DiasSemanaAerobico.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiasSemanaAerobico.ForeColor = System.Drawing.Color.White;
-            this.DiasSemanaAerobico.FormattingEnabled = true;
-            this.DiasSemanaAerobico.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miercoles",
-            "Jueves",
-            "Viernes"});
-            this.DiasSemanaAerobico.Location = new System.Drawing.Point(209, 251);
-            this.DiasSemanaAerobico.Name = "DiasSemanaAerobico";
-            this.DiasSemanaAerobico.Size = new System.Drawing.Size(77, 89);
-            this.DiasSemanaAerobico.TabIndex = 22;
-            // 
-            // HorasEntrenamientosFuerza
-            // 
-            this.HorasEntrenamientosFuerza.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.HorasEntrenamientosFuerza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.HorasEntrenamientosFuerza.FormattingEnabled = true;
-            this.HorasEntrenamientosFuerza.Location = new System.Drawing.Point(50, 346);
-            this.HorasEntrenamientosFuerza.Name = "HorasEntrenamientosFuerza";
-            this.HorasEntrenamientosFuerza.Size = new System.Drawing.Size(79, 21);
-            this.HorasEntrenamientosFuerza.TabIndex = 23;
-            this.HorasEntrenamientosFuerza.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // HorasEntremanientoAerobicos
-            // 
-            this.HorasEntremanientoAerobicos.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.HorasEntremanientoAerobicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.HorasEntremanientoAerobicos.FormattingEnabled = true;
-            this.HorasEntremanientoAerobicos.Location = new System.Drawing.Point(209, 351);
-            this.HorasEntremanientoAerobicos.Name = "HorasEntremanientoAerobicos";
-            this.HorasEntremanientoAerobicos.Size = new System.Drawing.Size(79, 21);
-            this.HorasEntremanientoAerobicos.TabIndex = 24;
-            // 
             // TasaMetablistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,13 +211,5 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textTasaIdentificacion;
         private System.Windows.Forms.Button botonBuscarIdentificacion;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TextEntrenamientoAerobicos;
-        private System.Windows.Forms.TextBox textEntrenamientoFuerza;
-        private System.Windows.Forms.ComboBox HorasEntrenamientosFuerza;
-        private System.Windows.Forms.CheckedListBox DiasSemanaAerobico;
-        private System.Windows.Forms.CheckedListBox DisaSemanaFuerza;
-        private System.Windows.Forms.ComboBox HorasEntremanientoAerobicos;
     }
 }

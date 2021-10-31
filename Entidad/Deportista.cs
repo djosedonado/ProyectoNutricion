@@ -8,44 +8,50 @@ namespace Entidad
 {
     public class Deportista : Persona
     {
-        public string TipoDeporte { get; set; }
+        public Deportista()
+        {
+            Peso = 0;
+            Altura = 0;
+            CaloriasDiarias = 0;
+            MetabolismoBasal = 0;
+
+        }
+        public string Deporte { get; set; }
         public double Peso { get; set; }
         public double Altura { get; set; }
         public string HorasPracticas { get; set; }
         public double CaloriasDiarias { get; set; }
-        public double CalcularMB { get; set; }
+        public double MetabolismoBasal { get; set; }
+        public string TermogenesisActividadFisica { get; set; }
+        public double ActividadFisica { get; set; }
 
-        public void MetabolismoBasal()
+
+
+        private void CalcularMetabolismoBasal()
         {
+            MetabolismoBasal = 24 * Peso;
+        }
 
-            if (Sexo == "Femenino")
+        private void CalcularActividadFisica()
+        {
+            if (TermogenesisActividadFisica.Equals("Leve"))
             {
-                CalcularMB = 655 + (9.6 * Peso) + (1.8 * Altura) - (4.7 * Edad);
+                ActividadFisica = 0.2;
             }
-            else if (Sexo == "Maculino")
+
+            if (TermogenesisActividadFisica.Equals("Moderada"))
             {
-                CalcularMB = 66 + (13.7 * Peso) + (5 * Altura) - (6.5 * Edad);
+                ActividadFisica = 0.3;
+            }
+            if (TermogenesisActividadFisica.Equals("Intensa"))
+            {
+                ActividadFisica = 0.4;
+            }
+            if (TermogenesisActividadFisica.Equals("Extrema"))
+            {
+                ActividadFisica = 1;
             }
         }
 
-        public void CalcularCalorias()
-        {
-            if (HorasPracticas == "Entre 1 y 3 veces a la semana")
-            {
-                CaloriasDiarias = CalcularMB * 1.375;
-            }
-            else if (HorasPracticas == "Entre 3 y 5 veces a la semana")
-            {
-                CaloriasDiarias = CalcularMB * 1.55;
-            }
-            else if (HorasPracticas == "Entre 6 y 7 veces a la semana")
-            {
-                CaloriasDiarias = CalcularMB * 1.725;
-            }
-            else if (HorasPracticas == "Entrenamiento fuerte y dos veces al dia")
-            {
-                CaloriasDiarias = CalcularMB * 1.9;
-            }
-        }
     }
 }

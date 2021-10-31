@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class Dieta
+    public abstract class Dieta : Deportista
     {
-        public string codigoAlimento { get; set; }
-        public double Porcion { get; set; }
-        public DateTime TiempoDieta { get; set; }
-        public double CalortiaDiaria { get; set; }
-
-        public void CalcularCaloriasDiarias()
+        public Dieta()
         {
-
+            GastoEnergeticoDiario = 0;
+            AcciónDinámicaEspecíficaAlimentos = 0.1;
         }
+        
+        public double AcciónDinámicaEspecíficaAlimentos { get; set; }
+        public double GastoEnergeticoDiario { get; set; }
+
+        public abstract void CalculoPorSexo();
+
     }
 }
