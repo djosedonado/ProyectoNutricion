@@ -32,14 +32,14 @@ namespace Presentacion
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.botonConsultar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Identificacion = new System.Windows.Forms.Label();
-            this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
             this.ConsultaIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Identificacion = new System.Windows.Forms.Label();
+            this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,23 +81,6 @@ namespace Presentacion
             this.dataGridView1.Size = new System.Drawing.Size(641, 290);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Identificacion
-            // 
-            this.Identificacion.AutoSize = true;
-            this.Identificacion.ForeColor = System.Drawing.Color.White;
-            this.Identificacion.Location = new System.Drawing.Point(98, 31);
-            this.Identificacion.Name = "Identificacion";
-            this.Identificacion.Size = new System.Drawing.Size(70, 13);
-            this.Identificacion.TabIndex = 1;
-            this.Identificacion.Text = "Identificacion";
-            // 
-            // TextboxIdentificacion
-            // 
-            this.TextboxIdentificacion.Location = new System.Drawing.Point(79, 47);
-            this.TextboxIdentificacion.Name = "TextboxIdentificacion";
-            this.TextboxIdentificacion.Size = new System.Drawing.Size(100, 20);
-            this.TextboxIdentificacion.TabIndex = 0;
-            // 
             // ConsultaIdentificacion
             // 
             this.ConsultaIdentificacion.HeaderText = "Identificacion";
@@ -127,6 +110,24 @@ namespace Presentacion
             // 
             this.ConsultaDeporte.HeaderText = "Deporte";
             this.ConsultaDeporte.Name = "ConsultaDeporte";
+            // 
+            // Identificacion
+            // 
+            this.Identificacion.AutoSize = true;
+            this.Identificacion.ForeColor = System.Drawing.Color.White;
+            this.Identificacion.Location = new System.Drawing.Point(98, 31);
+            this.Identificacion.Name = "Identificacion";
+            this.Identificacion.Size = new System.Drawing.Size(70, 13);
+            this.Identificacion.TabIndex = 1;
+            this.Identificacion.Text = "Identificacion";
+            // 
+            // TextboxIdentificacion
+            // 
+            this.TextboxIdentificacion.Location = new System.Drawing.Point(79, 47);
+            this.TextboxIdentificacion.Name = "TextboxIdentificacion";
+            this.TextboxIdentificacion.Size = new System.Drawing.Size(100, 20);
+            this.TextboxIdentificacion.TabIndex = 0;
+            this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
             // 
             // Consultar
             // 

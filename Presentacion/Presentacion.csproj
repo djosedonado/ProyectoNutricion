@@ -181,5 +181,11 @@
   <ItemGroup>
     <None Include="Resources\Lupa de Busqueda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

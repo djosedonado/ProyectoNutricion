@@ -16,6 +16,7 @@ namespace Presentacion
         public PresentacionPrincipal()
         {
             InitializeComponent();
+            abrirFormatoHija(new Home());
         }
 
         private void botonCerrar_Click(object sender, EventArgs e)
@@ -79,6 +80,11 @@ namespace Presentacion
         private void LogoHome_Click(object sender, EventArgs e)
         {
             abrirFormatoHija(new Home());
+        }
+
+        private void botonConsultaBasal_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new TasaMetablistica());
         }
     }
 }
