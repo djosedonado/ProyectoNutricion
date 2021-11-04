@@ -36,12 +36,12 @@ namespace Presentacion
             this.botonMaximizar = new System.Windows.Forms.PictureBox();
             this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.VentanaMenu = new System.Windows.Forms.Panel();
+            this.botonRecomendacionNutricional = new System.Windows.Forms.Button();
             this.botonConsultaBasal = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.LogoHome = new System.Windows.Forms.PictureBox();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.botonRecomendacionNutricional = new System.Windows.Forms.Button();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
@@ -124,6 +124,23 @@ namespace Presentacion
             this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
             this.VentanaMenu.TabIndex = 1;
             // 
+            // botonRecomendacionNutricional
+            // 
+            this.botonRecomendacionNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonRecomendacionNutricional.FlatAppearance.BorderSize = 0;
+            this.botonRecomendacionNutricional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonRecomendacionNutricional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRecomendacionNutricional.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRecomendacionNutricional.ForeColor = System.Drawing.Color.White;
+            this.botonRecomendacionNutricional.Location = new System.Drawing.Point(50, 245);
+            this.botonRecomendacionNutricional.Name = "botonRecomendacionNutricional";
+            this.botonRecomendacionNutricional.Size = new System.Drawing.Size(150, 32);
+            this.botonRecomendacionNutricional.TabIndex = 5;
+            this.botonRecomendacionNutricional.Text = "Recomendacion Nutricional";
+            this.botonRecomendacionNutricional.UseVisualStyleBackColor = false;
+            this.botonRecomendacionNutricional.Visible = false;
+            this.botonRecomendacionNutricional.Click += new System.EventHandler(this.botonRecomendacionNutricional_Click);
+            // 
             // botonConsultaBasal
             // 
             this.botonConsultaBasal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
@@ -198,22 +215,6 @@ namespace Presentacion
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(880, 615);
             this.PanelContenedor.TabIndex = 2;
-            // 
-            // botonRecomendacionNutricional
-            // 
-            this.botonRecomendacionNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonRecomendacionNutricional.FlatAppearance.BorderSize = 0;
-            this.botonRecomendacionNutricional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonRecomendacionNutricional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRecomendacionNutricional.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRecomendacionNutricional.ForeColor = System.Drawing.Color.White;
-            this.botonRecomendacionNutricional.Location = new System.Drawing.Point(50, 245);
-            this.botonRecomendacionNutricional.Name = "botonRecomendacionNutricional";
-            this.botonRecomendacionNutricional.Size = new System.Drawing.Size(150, 32);
-            this.botonRecomendacionNutricional.TabIndex = 5;
-            this.botonRecomendacionNutricional.Text = "Recomendacion Nutricional";
-            this.botonRecomendacionNutricional.UseVisualStyleBackColor = false;
-            this.botonRecomendacionNutricional.Visible = false;
             // 
             // PresentacionPrincipal
             // 

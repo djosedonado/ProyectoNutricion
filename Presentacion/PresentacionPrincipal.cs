@@ -92,5 +92,10 @@ namespace Presentacion
             botonRecomendacionNutricional.Visible = true;
             botonConsultaBasal.Visible = true;
         }
+
+        private void botonRecomendacionNutricional_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new RecomendacionNutricional());
+        }
     }
 }
