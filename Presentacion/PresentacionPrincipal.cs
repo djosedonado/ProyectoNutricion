@@ -86,5 +86,11 @@ namespace Presentacion
         {
             abrirFormatoHija(new TasaMetablistica());
         }
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            botonRecomendacionNutricional.Visible = true;
+            botonConsultaBasal.Visible = true;
+        }
     }
 }

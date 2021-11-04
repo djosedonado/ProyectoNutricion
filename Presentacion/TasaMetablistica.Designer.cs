@@ -29,9 +29,9 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.PanelFondoTasa = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.LabelIdentificacion = new System.Windows.Forms.Label();
@@ -55,16 +55,16 @@ namespace Presentacion
             this.textBoxSemana4 = new System.Windows.Forms.TextBox();
             this.textBoxSemana5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDiagramaBarra = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.PanelFondoTasa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDiagramaBarra)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFondoTasa
             // 
             this.PanelFondoTasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.PanelFondoTasa.Controls.Add(this.chart1);
+            this.PanelFondoTasa.Controls.Add(this.chartDiagramaBarra);
             this.PanelFondoTasa.Controls.Add(this.label2);
             this.PanelFondoTasa.Controls.Add(this.textBoxSemana5);
             this.PanelFondoTasa.Controls.Add(this.textBoxSemana4);
@@ -291,21 +291,31 @@ namespace Presentacion
             this.label2.TabIndex = 23;
             this.label2.Text = "Peso por Semana";
             // 
-            // chart1
+            // chartDiagramaBarra
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
-            this.chart1.Location = new System.Drawing.Point(496, 38);
-            this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(416, 403);
-            this.chart1.TabIndex = 24;
-            this.chart1.Text = "chart1";
+            this.chartDiagramaBarra.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.InterlacedColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartDiagramaBarra.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chartDiagramaBarra.Legends.Add(legend1);
+            this.chartDiagramaBarra.Location = new System.Drawing.Point(506, 85);
+            this.chartDiagramaBarra.Name = "chartDiagramaBarra";
+            this.chartDiagramaBarra.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartDiagramaBarra.Series.Add(series1);
+            this.chartDiagramaBarra.Size = new System.Drawing.Size(300, 300);
+            this.chartDiagramaBarra.TabIndex = 24;
+            this.chartDiagramaBarra.Text = "chart1";
             // 
             // TasaMetablistica
             // 
@@ -319,7 +329,7 @@ namespace Presentacion
             this.PanelFondoTasa.ResumeLayout(false);
             this.PanelFondoTasa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDiagramaBarra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,7 +348,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn MetabolicaBasal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxGastoEnergetico;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSemana5;
         private System.Windows.Forms.TextBox textBoxSemana4;
@@ -350,5 +359,6 @@ namespace Presentacion
         private System.Windows.Forms.CheckBox checkBoxSemana3;
         private System.Windows.Forms.CheckBox checkBoxSemana2;
         private System.Windows.Forms.CheckBox checkBoxSemana1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDiagramaBarra;
     }
 }

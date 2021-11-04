@@ -41,6 +41,7 @@ namespace Presentacion
             this.LogoHome = new System.Windows.Forms.PictureBox();
             this.botonRegistarPaciente = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.botonRecomendacionNutricional = new System.Windows.Forms.Button();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
@@ -112,6 +113,7 @@ namespace Presentacion
             // VentanaMenu
             // 
             this.VentanaMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.VentanaMenu.Controls.Add(this.botonRecomendacionNutricional);
             this.VentanaMenu.Controls.Add(this.botonConsultaBasal);
             this.VentanaMenu.Controls.Add(this.button1);
             this.VentanaMenu.Controls.Add(this.LogoHome);
@@ -136,6 +138,7 @@ namespace Presentacion
             this.botonConsultaBasal.TabIndex = 4;
             this.botonConsultaBasal.Text = "Tasa Metabolistica Basal";
             this.botonConsultaBasal.UseVisualStyleBackColor = false;
+            this.botonConsultaBasal.Visible = false;
             this.botonConsultaBasal.Click += new System.EventHandler(this.botonConsultaBasal_Click);
             // 
             // button1
@@ -155,6 +158,7 @@ namespace Presentacion
             this.button1.Text = " Consultar Paciente";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // LogoHome
             // 
@@ -195,6 +199,22 @@ namespace Presentacion
             this.PanelContenedor.Size = new System.Drawing.Size(880, 615);
             this.PanelContenedor.TabIndex = 2;
             // 
+            // botonRecomendacionNutricional
+            // 
+            this.botonRecomendacionNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonRecomendacionNutricional.FlatAppearance.BorderSize = 0;
+            this.botonRecomendacionNutricional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonRecomendacionNutricional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRecomendacionNutricional.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRecomendacionNutricional.ForeColor = System.Drawing.Color.White;
+            this.botonRecomendacionNutricional.Location = new System.Drawing.Point(50, 245);
+            this.botonRecomendacionNutricional.Name = "botonRecomendacionNutricional";
+            this.botonRecomendacionNutricional.Size = new System.Drawing.Size(150, 32);
+            this.botonRecomendacionNutricional.TabIndex = 5;
+            this.botonRecomendacionNutricional.Text = "Recomendacion Nutricional";
+            this.botonRecomendacionNutricional.UseVisualStyleBackColor = false;
+            this.botonRecomendacionNutricional.Visible = false;
+            // 
             // PresentacionPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +251,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox LogoHome;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button botonConsultaBasal;
+        private System.Windows.Forms.Button botonRecomendacionNutricional;
     }
 }

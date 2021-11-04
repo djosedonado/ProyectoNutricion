@@ -16,6 +16,8 @@ namespace Entidad
         
         public double AcciónDinámicaEspecíficaAlimentos { get; set; }
         public double GastoEnergeticoDiario { get; set; }
+        public string RecomendacionNutriccional { get; set; }
+        public string RecomendacionAlimentaria { get; set; }
 
         public abstract void CalculoPorSexo();
 
