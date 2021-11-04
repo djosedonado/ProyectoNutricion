@@ -31,7 +31,9 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.ContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.botonSiguiente = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboSexo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,20 +50,20 @@ namespace Presentacion
             this.ContenedorSegundario = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxDeporte = new System.Windows.Forms.TextBox();
+            this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimeRegistar = new System.Windows.Forms.DateTimePicker();
             this.textBoxAlturaRegistar = new System.Windows.Forms.TextBox();
             this.textBoxPesoRegistar = new System.Windows.Forms.TextBox();
-            this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
-            this.botonSiguiente = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.ContenedorPrincipal.SuspendLayout();
-            this.ContenedorSegundario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonSiguiente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ContenedorSegundario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
             this.SuspendLayout();
             // 
             // ContenedorPrincipal
@@ -89,6 +91,16 @@ namespace Presentacion
             this.ContenedorPrincipal.Size = new System.Drawing.Size(974, 672);
             this.ContenedorPrincipal.TabIndex = 25;
             // 
+            // botonSiguiente
+            // 
+            this.botonSiguiente.Image = global::Presentacion.Properties.Resources.next_page;
+            this.botonSiguiente.Location = new System.Drawing.Point(333, 251);
+            this.botonSiguiente.Name = "botonSiguiente";
+            this.botonSiguiente.Size = new System.Drawing.Size(64, 64);
+            this.botonSiguiente.TabIndex = 25;
+            this.botonSiguiente.TabStop = false;
+            this.botonSiguiente.Click += new System.EventHandler(this.botonSiguiente_Click_1);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -97,6 +109,16 @@ namespace Presentacion
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(292, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 59);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // label8
             // 
@@ -241,6 +263,8 @@ namespace Presentacion
             // ContenedorSegundario
             // 
             this.ContenedorSegundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorSegundario.Controls.Add(this.label9);
+            this.ContenedorSegundario.Controls.Add(this.comboBoxTipoEntrenamiento);
             this.ContenedorSegundario.Controls.Add(this.label17);
             this.ContenedorSegundario.Controls.Add(this.textBoxDeporte);
             this.ContenedorSegundario.Controls.Add(this.BotonGuardarRegistro);
@@ -275,6 +299,16 @@ namespace Presentacion
             this.textBoxDeporte.Size = new System.Drawing.Size(96, 20);
             this.textBoxDeporte.TabIndex = 7;
             this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
+            // 
+            // BotonGuardarRegistro
+            // 
+            this.BotonGuardarRegistro.Image = global::Presentacion.Properties.Resources.salvar;
+            this.BotonGuardarRegistro.Location = new System.Drawing.Point(350, 353);
+            this.BotonGuardarRegistro.Name = "BotonGuardarRegistro";
+            this.BotonGuardarRegistro.Size = new System.Drawing.Size(64, 64);
+            this.BotonGuardarRegistro.TabIndex = 6;
+            this.BotonGuardarRegistro.TabStop = false;
+            this.BotonGuardarRegistro.Click += new System.EventHandler(this.BotonGuardarRegistro_Click_1);
             // 
             // label16
             // 
@@ -333,35 +367,30 @@ namespace Presentacion
             this.textBoxPesoRegistar.TextChanged += new System.EventHandler(this.textBoxPesoRegistar_TextChanged);
             this.textBoxPesoRegistar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPesoRegistar_KeyPress);
             // 
-            // BotonGuardarRegistro
+            // comboBoxTipoEntrenamiento
             // 
-            this.BotonGuardarRegistro.Image = global::Presentacion.Properties.Resources.salvar;
-            this.BotonGuardarRegistro.Location = new System.Drawing.Point(350, 353);
-            this.BotonGuardarRegistro.Name = "BotonGuardarRegistro";
-            this.BotonGuardarRegistro.Size = new System.Drawing.Size(64, 64);
-            this.BotonGuardarRegistro.TabIndex = 6;
-            this.BotonGuardarRegistro.TabStop = false;
-            this.BotonGuardarRegistro.Click += new System.EventHandler(this.BotonGuardarRegistro_Click_1);
+            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
+            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
+            "Leve",
+            "Moderada",
+            "Intensa",
+            "Extrema"});
+            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(244, 144);
+            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
+            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxTipoEntrenamiento.TabIndex = 12;
             // 
-            // botonSiguiente
+            // label9
             // 
-            this.botonSiguiente.Image = global::Presentacion.Properties.Resources.next_page;
-            this.botonSiguiente.Location = new System.Drawing.Point(333, 251);
-            this.botonSiguiente.Name = "botonSiguiente";
-            this.botonSiguiente.Size = new System.Drawing.Size(64, 64);
-            this.botonSiguiente.TabIndex = 25;
-            this.botonSiguiente.TabStop = false;
-            this.botonSiguiente.Click += new System.EventHandler(this.botonSiguiente_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(292, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 59);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(232, 125);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 16);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tipo de Entrenamiento";
             // 
             // Registro
             // 
@@ -376,11 +405,11 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Registro_Load);
             this.ContenedorPrincipal.ResumeLayout(false);
             this.ContenedorPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.botonSiguiente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ContenedorSegundario.ResumeLayout(false);
             this.ContenedorSegundario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botonSiguiente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,5 +443,7 @@ namespace Presentacion
         private System.Windows.Forms.DateTimePicker dateTimeRegistar;
         private System.Windows.Forms.TextBox textBoxAlturaRegistar;
         private System.Windows.Forms.TextBox textBoxPesoRegistar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxTipoEntrenamiento;
     }
 }

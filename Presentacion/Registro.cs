@@ -26,10 +26,9 @@ namespace Presentacion
         private void botonSiguiente_Click_1(object sender, EventArgs e)
         {
             
-            if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals(""))
+            if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
             }
             else
             {
@@ -96,7 +95,7 @@ namespace Presentacion
 
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
-            if (textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals(""))
+            if (textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -104,6 +103,18 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Se a Guardado los datos correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textNombre.Text = "";
+                textApellido.Text = "";
+                textIdentificacion.Text = "";
+                textEdad.Text = "";
+                textTelefono.Text = "";
+                comboSexo.SelectedIndex = -1;
+                textBoxAlturaRegistar.Text = "";
+                textBoxPesoRegistar.Text = "";
+                textBoxDeporte.Text = "";
+                comboBoxTipoEntrenamiento.SelectedIndex = -1;
+                ContenedorPrincipal.Visible = true;
+                ContenedorSegundario.Visible = false;
             }
         }
 
