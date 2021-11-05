@@ -72,6 +72,7 @@ namespace Presentacion
         {
             SubMenuAlimentos.Visible = false;
             SubMenuConsultar.Visible = false;
+            subMenuDieta.Visible = false;
         }
 
         private void ValidarAnimacionSubMenu()
@@ -136,10 +137,15 @@ namespace Presentacion
             OcultarSubMenu();
         }
 
-        private void subBotonConsultarRecomendacionNutricional_Click(object sender, EventArgs e)
+        private void botonRecomendacionNutricional_Click(object sender, EventArgs e)
         {
             abrirFormatoHija(new RecomendacionNutricional());
             OcultarSubMenu();
+        }
+
+        private void botonAsignarDieta_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenus(subMenuDieta);
         }
     }
 }

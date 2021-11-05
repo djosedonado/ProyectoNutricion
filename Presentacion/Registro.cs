@@ -26,7 +26,7 @@ namespace Presentacion
         private void botonSiguiente_Click_1(object sender, EventArgs e)
         {
             
-            if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1))
+            if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -107,6 +107,7 @@ namespace Presentacion
                 textBoxPesoRegistar.Text = "";
                 textBoxDeporte.Text = "";
                 comboBoxTipoEntrenamiento.SelectedIndex = -1;
+                comboBoxTipoIdentidad.SelectedIndex = -1;
                 ContenedorPrincipal.Visible = true;
                 ContenedorSegundario.Visible = false;
             }

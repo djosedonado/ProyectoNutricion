@@ -59,6 +59,8 @@ namespace Presentacion
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
+            this.comboBoxTipoIdentidad = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.ContenedorPrincipal.SuspendLayout();
             this.ContenedorSegundario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
@@ -70,6 +72,8 @@ namespace Presentacion
             // 
             this.ContenedorPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.ContenedorPrincipal.Controls.Add(this.ContenedorSegundario);
+            this.ContenedorPrincipal.Controls.Add(this.label10);
+            this.ContenedorPrincipal.Controls.Add(this.comboBoxTipoIdentidad);
             this.ContenedorPrincipal.Controls.Add(this.botonSiguiente);
             this.ContenedorPrincipal.Controls.Add(this.label4);
             this.ContenedorPrincipal.Controls.Add(this.pictureBox1);
@@ -285,7 +289,7 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(214, 67);
+            this.label7.Location = new System.Drawing.Point(327, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 13;
@@ -391,6 +395,31 @@ namespace Presentacion
             this.textIdentificacion.TabIndex = 1;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress_1);
             // 
+            // comboBoxTipoIdentidad
+            // 
+            this.comboBoxTipoIdentidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoIdentidad.FormattingEnabled = true;
+            this.comboBoxTipoIdentidad.Items.AddRange(new object[] {
+            "Cedula",
+            "Tarjeta Identidad",
+            "Cedula Extrangeria",
+            "Pasaporte"});
+            this.comboBoxTipoIdentidad.Location = new System.Drawing.Point(257, 71);
+            this.comboBoxTipoIdentidad.Name = "comboBoxTipoIdentidad";
+            this.comboBoxTipoIdentidad.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxTipoIdentidad.TabIndex = 30;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(158, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 15);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Tipo Identificacion";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,5 +472,7 @@ namespace Presentacion
         private System.Windows.Forms.DateTimePicker dateTimeRegistar;
         private System.Windows.Forms.TextBox textBoxAlturaRegistar;
         private System.Windows.Forms.TextBox textBoxPesoRegistar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxTipoIdentidad;
     }
 }
