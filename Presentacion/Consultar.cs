@@ -36,5 +36,17 @@ namespace Presentacion
                 return;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (textNombrePaciente.Text.Equals("") || TextboxIdentificacion.Text.Equals(""))
+            {
+                MessageBox.Show("Los Campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

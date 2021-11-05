@@ -30,7 +30,6 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.PanelPrincipal = new System.Windows.Forms.Panel();
-            this.botonConsultar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ConsultaIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,8 @@ namespace Presentacion
             this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
+            this.textNombrePaciente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,8 @@ namespace Presentacion
             // PanelPrincipal
             // 
             this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.PanelPrincipal.Controls.Add(this.botonConsultar);
+            this.PanelPrincipal.Controls.Add(this.label1);
+            this.PanelPrincipal.Controls.Add(this.textNombrePaciente);
             this.PanelPrincipal.Controls.Add(this.dataGridView1);
             this.PanelPrincipal.Controls.Add(this.Identificacion);
             this.PanelPrincipal.Controls.Add(this.TextboxIdentificacion);
@@ -56,15 +58,6 @@ namespace Presentacion
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(800, 450);
             this.PanelPrincipal.TabIndex = 0;
-            // 
-            // botonConsultar
-            // 
-            this.botonConsultar.Location = new System.Drawing.Point(222, 43);
-            this.botonConsultar.Name = "botonConsultar";
-            this.botonConsultar.Size = new System.Drawing.Size(86, 24);
-            this.botonConsultar.TabIndex = 3;
-            this.botonConsultar.Text = "Buscar";
-            this.botonConsultar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -114,10 +107,11 @@ namespace Presentacion
             // Identificacion
             // 
             this.Identificacion.AutoSize = true;
+            this.Identificacion.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Identificacion.ForeColor = System.Drawing.Color.White;
-            this.Identificacion.Location = new System.Drawing.Point(98, 31);
+            this.Identificacion.Location = new System.Drawing.Point(78, 24);
             this.Identificacion.Name = "Identificacion";
-            this.Identificacion.Size = new System.Drawing.Size(70, 13);
+            this.Identificacion.Size = new System.Drawing.Size(100, 20);
             this.Identificacion.TabIndex = 1;
             this.Identificacion.Text = "Identificacion";
             // 
@@ -128,6 +122,24 @@ namespace Presentacion
             this.TextboxIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
+            // 
+            // textNombrePaciente
+            // 
+            this.textNombrePaciente.Location = new System.Drawing.Point(263, 47);
+            this.textNombrePaciente.Name = "textNombrePaciente";
+            this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
+            this.textNombrePaciente.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(272, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nombre Paciente";
             // 
             // Consultar
             // 
@@ -150,7 +162,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Label Identificacion;
         private System.Windows.Forms.TextBox TextboxIdentificacion;
-        private System.Windows.Forms.Button botonConsultar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaIdentificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaNombre;
@@ -158,5 +169,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaEdad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaDeporte;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textNombrePaciente;
     }
 }
