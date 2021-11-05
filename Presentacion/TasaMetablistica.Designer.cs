@@ -62,30 +62,30 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(388, 225);
+            this.label1.Location = new System.Drawing.Point(389, 251);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(115, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "Gasto Energetico";
             // 
             // textBoxGastoEnergetico
             // 
             this.textBoxGastoEnergetico.Enabled = false;
-            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(367, 244);
+            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(381, 273);
             this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
-            this.textBoxGastoEnergetico.Size = new System.Drawing.Size(122, 20);
+            this.textBoxGastoEnergetico.Size = new System.Drawing.Size(132, 20);
             this.textBoxGastoEnergetico.TabIndex = 11;
             // 
             // LabelIdentificacion
             // 
             this.LabelIdentificacion.AutoSize = true;
-            this.LabelIdentificacion.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelIdentificacion.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.LabelIdentificacion.Location = new System.Drawing.Point(286, 62);
+            this.LabelIdentificacion.Location = new System.Drawing.Point(286, 58);
             this.LabelIdentificacion.Name = "LabelIdentificacion";
-            this.LabelIdentificacion.Size = new System.Drawing.Size(75, 16);
+            this.LabelIdentificacion.Size = new System.Drawing.Size(96, 19);
             this.LabelIdentificacion.TabIndex = 3;
             this.LabelIdentificacion.Text = "Identificacion";
             // 
@@ -99,12 +99,20 @@ namespace Presentacion
             // 
             // botonBuscarIdentificacion
             // 
-            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(507, 58);
+            this.botonBuscarIdentificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.botonBuscarIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscarIdentificacion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.botonBuscarIdentificacion.FlatAppearance.BorderSize = 7;
+            this.botonBuscarIdentificacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.botonBuscarIdentificacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.botonBuscarIdentificacion.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonBuscarIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(524, 53);
             this.botonBuscarIdentificacion.Name = "botonBuscarIdentificacion";
-            this.botonBuscarIdentificacion.Size = new System.Drawing.Size(75, 23);
+            this.botonBuscarIdentificacion.Size = new System.Drawing.Size(75, 29);
             this.botonBuscarIdentificacion.TabIndex = 1;
             this.botonBuscarIdentificacion.Text = "Buscar";
-            this.botonBuscarIdentificacion.UseVisualStyleBackColor = true;
+            this.botonBuscarIdentificacion.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 

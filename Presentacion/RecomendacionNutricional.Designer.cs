@@ -30,6 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRecomendacioNutricional = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.FachaAsignacionDieta = new System.Windows.Forms.DateTimePicker();
+            this.ListasDiasSemana = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxDieta = new System.Windows.Forms.ComboBox();
             this.botonBuscarPaciente = new System.Windows.Forms.Button();
@@ -42,9 +45,6 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.TextRecomendacionNutricional = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ListasDiasSemana = new System.Windows.Forms.CheckedListBox();
-            this.FachaAsignacionDieta = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.ContenedorRecomendacioNutricional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarRecomendacion)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,48 @@ namespace Presentacion
             this.ContenedorRecomendacioNutricional.Name = "ContenedorRecomendacioNutricional";
             this.ContenedorRecomendacioNutricional.Size = new System.Drawing.Size(853, 548);
             this.ContenedorRecomendacioNutricional.TabIndex = 0;
+            this.ContenedorRecomendacioNutricional.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenedorRecomendacioNutricional_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(625, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Fecha de Asignacion Dieta";
+            // 
+            // FachaAsignacionDieta
+            // 
+            this.FachaAsignacionDieta.CalendarForeColor = System.Drawing.Color.White;
+            this.FachaAsignacionDieta.CalendarMonthBackground = System.Drawing.Color.White;
+            this.FachaAsignacionDieta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FachaAsignacionDieta.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FachaAsignacionDieta.Location = new System.Drawing.Point(603, 140);
+            this.FachaAsignacionDieta.Name = "FachaAsignacionDieta";
+            this.FachaAsignacionDieta.Size = new System.Drawing.Size(217, 22);
+            this.FachaAsignacionDieta.TabIndex = 25;
+            // 
+            // ListasDiasSemana
+            // 
+            this.ListasDiasSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ListasDiasSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListasDiasSemana.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ListasDiasSemana.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListasDiasSemana.ForeColor = System.Drawing.Color.White;
+            this.ListasDiasSemana.FormattingEnabled = true;
+            this.ListasDiasSemana.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes"});
+            this.ListasDiasSemana.Location = new System.Drawing.Point(72, 165);
+            this.ListasDiasSemana.Name = "ListasDiasSemana";
+            this.ListasDiasSemana.Size = new System.Drawing.Size(86, 107);
+            this.ListasDiasSemana.TabIndex = 24;
             // 
             // label6
             // 
@@ -86,6 +128,7 @@ namespace Presentacion
             // 
             // comboBoxDieta
             // 
+            this.comboBoxDieta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDieta.FormattingEnabled = true;
             this.comboBoxDieta.Items.AddRange(new object[] {
@@ -97,12 +140,20 @@ namespace Presentacion
             // 
             // botonBuscarPaciente
             // 
-            this.botonBuscarPaciente.Location = new System.Drawing.Point(553, 42);
+            this.botonBuscarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.botonBuscarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscarPaciente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.botonBuscarPaciente.FlatAppearance.BorderSize = 7;
+            this.botonBuscarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.botonBuscarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.botonBuscarPaciente.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonBuscarPaciente.ForeColor = System.Drawing.Color.White;
+            this.botonBuscarPaciente.Location = new System.Drawing.Point(544, 34);
             this.botonBuscarPaciente.Name = "botonBuscarPaciente";
-            this.botonBuscarPaciente.Size = new System.Drawing.Size(75, 23);
+            this.botonBuscarPaciente.Size = new System.Drawing.Size(76, 31);
             this.botonBuscarPaciente.TabIndex = 9;
             this.botonBuscarPaciente.Text = "Buscar";
-            this.botonBuscarPaciente.UseVisualStyleBackColor = true;
+            this.botonBuscarPaciente.UseVisualStyleBackColor = false;
             this.botonBuscarPaciente.Click += new System.EventHandler(this.botonBuscarPaciente_Click);
             // 
             // textNombrePaciente
@@ -145,6 +196,7 @@ namespace Presentacion
             // 
             // botonGuardarRecomendacion
             // 
+            this.botonGuardarRecomendacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonGuardarRecomendacion.Image = global::Presentacion.Properties.Resources.salvar;
             this.botonGuardarRecomendacion.Location = new System.Drawing.Point(688, 351);
             this.botonGuardarRecomendacion.Name = "botonGuardarRecomendacion";
@@ -190,39 +242,6 @@ namespace Presentacion
             this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recomendacion Nutricional";
-            // 
-            // ListasDiasSemana
-            // 
-            this.ListasDiasSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ListasDiasSemana.FormattingEnabled = true;
-            this.ListasDiasSemana.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miercoles",
-            "Jueves",
-            "Viernes"});
-            this.ListasDiasSemana.Location = new System.Drawing.Point(72, 165);
-            this.ListasDiasSemana.Name = "ListasDiasSemana";
-            this.ListasDiasSemana.Size = new System.Drawing.Size(71, 77);
-            this.ListasDiasSemana.TabIndex = 24;
-            // 
-            // FachaAsignacionDieta
-            // 
-            this.FachaAsignacionDieta.Location = new System.Drawing.Point(603, 140);
-            this.FachaAsignacionDieta.Name = "FachaAsignacionDieta";
-            this.FachaAsignacionDieta.Size = new System.Drawing.Size(200, 20);
-            this.FachaAsignacionDieta.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(614, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Fecha de Asignacion Dieta";
             // 
             // RecomendacionNutricional
             // 

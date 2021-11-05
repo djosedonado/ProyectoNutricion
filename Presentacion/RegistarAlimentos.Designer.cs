@@ -30,17 +30,17 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRegistarAlimentos = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textAlimento = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textCalorias = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textCarbohidratos = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textProteinas = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textLiquidos = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textProteinas = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textCarbohidratos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textCalorias = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textAlimento = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.botonGuardarAlimentos = new System.Windows.Forms.PictureBox();
             this.ContenedorRegistarAlimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,32 +68,62 @@ namespace Presentacion
             this.ContenedorRegistarAlimentos.Size = new System.Drawing.Size(800, 450);
             this.ContenedorRegistarAlimentos.TabIndex = 0;
             // 
-            // dataGridView1
+            // label5
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(142, 218);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 181);
-            this.dataGridView1.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(283, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 19);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Liquidos";
             // 
-            // textAlimento
+            // textLiquidos
             // 
-            this.textAlimento.Location = new System.Drawing.Point(154, 64);
-            this.textAlimento.Name = "textAlimento";
-            this.textAlimento.Size = new System.Drawing.Size(125, 20);
-            this.textAlimento.TabIndex = 2;
-            this.textAlimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAlimento_KeyPress);
+            this.textLiquidos.Location = new System.Drawing.Point(287, 170);
+            this.textLiquidos.Name = "textLiquidos";
+            this.textLiquidos.Size = new System.Drawing.Size(60, 20);
+            this.textLiquidos.TabIndex = 10;
+            this.textLiquidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textLiquidos_KeyPress);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(150, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre Alimento";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(283, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Proteinas";
+            // 
+            // textProteinas
+            // 
+            this.textProteinas.Location = new System.Drawing.Point(287, 120);
+            this.textProteinas.Name = "textProteinas";
+            this.textProteinas.Size = new System.Drawing.Size(60, 20);
+            this.textProteinas.TabIndex = 8;
+            this.textProteinas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textProteinas_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(150, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Carbohidratos";
+            // 
+            // textCarbohidratos
+            // 
+            this.textCarbohidratos.Location = new System.Drawing.Point(154, 170);
+            this.textCarbohidratos.Name = "textCarbohidratos";
+            this.textCarbohidratos.Size = new System.Drawing.Size(60, 20);
+            this.textCarbohidratos.TabIndex = 6;
+            this.textCarbohidratos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCarbohidratos_KeyPress);
             // 
             // label2
             // 
@@ -114,65 +144,36 @@ namespace Presentacion
             this.textCalorias.TabIndex = 4;
             this.textCalorias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCalorias_KeyPress);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(150, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Carbohidratos";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(150, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre Alimento";
             // 
-            // textCarbohidratos
+            // textAlimento
             // 
-            this.textCarbohidratos.Location = new System.Drawing.Point(154, 170);
-            this.textCarbohidratos.Name = "textCarbohidratos";
-            this.textCarbohidratos.Size = new System.Drawing.Size(60, 20);
-            this.textCarbohidratos.TabIndex = 6;
-            this.textCarbohidratos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCarbohidratos_KeyPress);
+            this.textAlimento.Location = new System.Drawing.Point(154, 64);
+            this.textAlimento.Name = "textAlimento";
+            this.textAlimento.Size = new System.Drawing.Size(125, 20);
+            this.textAlimento.TabIndex = 2;
+            this.textAlimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAlimento_KeyPress);
             // 
-            // label4
+            // dataGridView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(283, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 19);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Proteinas";
-            // 
-            // textProteinas
-            // 
-            this.textProteinas.Location = new System.Drawing.Point(287, 120);
-            this.textProteinas.Name = "textProteinas";
-            this.textProteinas.Size = new System.Drawing.Size(60, 20);
-            this.textProteinas.TabIndex = 8;
-            this.textProteinas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textProteinas_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(283, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Liquidos";
-            // 
-            // textLiquidos
-            // 
-            this.textLiquidos.Location = new System.Drawing.Point(287, 170);
-            this.textLiquidos.Name = "textLiquidos";
-            this.textLiquidos.Size = new System.Drawing.Size(60, 20);
-            this.textLiquidos.TabIndex = 10;
-            this.textLiquidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textLiquidos_KeyPress);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(142, 218);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(553, 181);
+            this.dataGridView1.TabIndex = 1;
             // 
             // botonGuardarAlimentos
             // 
+            this.botonGuardarAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonGuardarAlimentos.Image = global::Presentacion.Properties.Resources.salvar;
             this.botonGuardarAlimentos.Location = new System.Drawing.Point(448, 125);
             this.botonGuardarAlimentos.Name = "botonGuardarAlimentos";

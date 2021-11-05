@@ -65,5 +65,10 @@ namespace Presentacion
                 return;
             }
         }
+
+        private void ContenedorRecomendacioNutricional_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

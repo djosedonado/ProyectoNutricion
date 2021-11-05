@@ -36,6 +36,9 @@ namespace Presentacion
             this.botonMaximizar = new System.Windows.Forms.PictureBox();
             this.botonCerrar = new System.Windows.Forms.PictureBox();
             this.VentanaMenu = new System.Windows.Forms.Panel();
+            this.subMenuDieta = new System.Windows.Forms.Panel();
+            this.botonRecomendacionNutricional = new System.Windows.Forms.Button();
+            this.botonAsignarDieta = new System.Windows.Forms.Button();
             this.SubMenuConsultar = new System.Windows.Forms.Panel();
             this.subBotonConsultarTasaMetabolicaBasal = new System.Windows.Forms.Button();
             this.subBotonConsultarDatosPacientes = new System.Windows.Forms.Button();
@@ -48,20 +51,17 @@ namespace Presentacion
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.LogoHome = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.botonAsignarDieta = new System.Windows.Forms.Button();
-            this.subMenuDieta = new System.Windows.Forms.Panel();
-            this.botonRecomendacionNutricional = new System.Windows.Forms.Button();
             this.panelCabeza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
             this.VentanaMenu.SuspendLayout();
+            this.subMenuDieta.SuspendLayout();
             this.SubMenuConsultar.SuspendLayout();
             this.SubMenuAlimentos.SuspendLayout();
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).BeginInit();
-            this.subMenuDieta.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabeza
@@ -140,6 +140,50 @@ namespace Presentacion
             this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
             this.VentanaMenu.TabIndex = 1;
             // 
+            // subMenuDieta
+            // 
+            this.subMenuDieta.Controls.Add(this.botonRecomendacionNutricional);
+            this.subMenuDieta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenuDieta.Location = new System.Drawing.Point(0, 412);
+            this.subMenuDieta.Name = "subMenuDieta";
+            this.subMenuDieta.Size = new System.Drawing.Size(200, 38);
+            this.subMenuDieta.TabIndex = 15;
+            // 
+            // botonRecomendacionNutricional
+            // 
+            this.botonRecomendacionNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
+            this.botonRecomendacionNutricional.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRecomendacionNutricional.Dock = System.Windows.Forms.DockStyle.Top;
+            this.botonRecomendacionNutricional.FlatAppearance.BorderSize = 0;
+            this.botonRecomendacionNutricional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonRecomendacionNutricional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRecomendacionNutricional.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRecomendacionNutricional.ForeColor = System.Drawing.Color.White;
+            this.botonRecomendacionNutricional.Location = new System.Drawing.Point(0, 0);
+            this.botonRecomendacionNutricional.Name = "botonRecomendacionNutricional";
+            this.botonRecomendacionNutricional.Size = new System.Drawing.Size(200, 35);
+            this.botonRecomendacionNutricional.TabIndex = 0;
+            this.botonRecomendacionNutricional.Text = "Recomendacion Nutricional";
+            this.botonRecomendacionNutricional.UseVisualStyleBackColor = false;
+            this.botonRecomendacionNutricional.Click += new System.EventHandler(this.botonRecomendacionNutricional_Click);
+            // 
+            // botonAsignarDieta
+            // 
+            this.botonAsignarDieta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonAsignarDieta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.botonAsignarDieta.FlatAppearance.BorderSize = 0;
+            this.botonAsignarDieta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
+            this.botonAsignarDieta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonAsignarDieta.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAsignarDieta.ForeColor = System.Drawing.Color.White;
+            this.botonAsignarDieta.Location = new System.Drawing.Point(0, 372);
+            this.botonAsignarDieta.Name = "botonAsignarDieta";
+            this.botonAsignarDieta.Size = new System.Drawing.Size(200, 40);
+            this.botonAsignarDieta.TabIndex = 14;
+            this.botonAsignarDieta.Text = "Dieta";
+            this.botonAsignarDieta.UseVisualStyleBackColor = true;
+            this.botonAsignarDieta.Click += new System.EventHandler(this.botonAsignarDieta_Click);
+            // 
             // SubMenuConsultar
             // 
             this.SubMenuConsultar.Controls.Add(this.subBotonConsultarTasaMetabolicaBasal);
@@ -152,6 +196,7 @@ namespace Presentacion
             // 
             // subBotonConsultarTasaMetabolicaBasal
             // 
+            this.subBotonConsultarTasaMetabolicaBasal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subBotonConsultarTasaMetabolicaBasal.Dock = System.Windows.Forms.DockStyle.Top;
             this.subBotonConsultarTasaMetabolicaBasal.FlatAppearance.BorderSize = 0;
             this.subBotonConsultarTasaMetabolicaBasal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -168,6 +213,7 @@ namespace Presentacion
             // 
             // subBotonConsultarDatosPacientes
             // 
+            this.subBotonConsultarDatosPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subBotonConsultarDatosPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.subBotonConsultarDatosPacientes.FlatAppearance.BorderSize = 0;
             this.subBotonConsultarDatosPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -184,6 +230,7 @@ namespace Presentacion
             // 
             // botonConsultar
             // 
+            this.botonConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonConsultar.Dock = System.Windows.Forms.DockStyle.Top;
             this.botonConsultar.FlatAppearance.BorderSize = 0;
             this.botonConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -211,6 +258,7 @@ namespace Presentacion
             // 
             // subBotonRegistarDietas
             // 
+            this.subBotonRegistarDietas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subBotonRegistarDietas.Dock = System.Windows.Forms.DockStyle.Top;
             this.subBotonRegistarDietas.FlatAppearance.BorderSize = 0;
             this.subBotonRegistarDietas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -227,6 +275,7 @@ namespace Presentacion
             // 
             // subBotonRegistarAlimentos
             // 
+            this.subBotonRegistarAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subBotonRegistarAlimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.subBotonRegistarAlimentos.FlatAppearance.BorderSize = 0;
             this.subBotonRegistarAlimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -243,6 +292,7 @@ namespace Presentacion
             // 
             // botonAlimentos
             // 
+            this.botonAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonAlimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.botonAlimentos.FlatAppearance.BorderSize = 0;
             this.botonAlimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -259,6 +309,7 @@ namespace Presentacion
             // 
             // botonRegistarPacinetes
             // 
+            this.botonRegistarPacinetes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonRegistarPacinetes.Dock = System.Windows.Forms.DockStyle.Top;
             this.botonRegistarPacinetes.FlatAppearance.BorderSize = 0;
             this.botonRegistarPacinetes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
@@ -284,6 +335,7 @@ namespace Presentacion
             // 
             // LogoHome
             // 
+            this.LogoHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogoHome.Image = global::Presentacion.Properties.Resources.Logo_NutriSoft;
             this.LogoHome.Location = new System.Drawing.Point(0, 0);
@@ -301,48 +353,6 @@ namespace Presentacion
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(880, 615);
             this.PanelContenedor.TabIndex = 2;
-            // 
-            // botonAsignarDieta
-            // 
-            this.botonAsignarDieta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.botonAsignarDieta.FlatAppearance.BorderSize = 0;
-            this.botonAsignarDieta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonAsignarDieta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonAsignarDieta.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonAsignarDieta.ForeColor = System.Drawing.Color.White;
-            this.botonAsignarDieta.Location = new System.Drawing.Point(0, 372);
-            this.botonAsignarDieta.Name = "botonAsignarDieta";
-            this.botonAsignarDieta.Size = new System.Drawing.Size(200, 40);
-            this.botonAsignarDieta.TabIndex = 14;
-            this.botonAsignarDieta.Text = "Dieta";
-            this.botonAsignarDieta.UseVisualStyleBackColor = true;
-            this.botonAsignarDieta.Click += new System.EventHandler(this.botonAsignarDieta_Click);
-            // 
-            // subMenuDieta
-            // 
-            this.subMenuDieta.Controls.Add(this.botonRecomendacionNutricional);
-            this.subMenuDieta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuDieta.Location = new System.Drawing.Point(0, 412);
-            this.subMenuDieta.Name = "subMenuDieta";
-            this.subMenuDieta.Size = new System.Drawing.Size(200, 38);
-            this.subMenuDieta.TabIndex = 15;
-            // 
-            // botonRecomendacionNutricional
-            // 
-            this.botonRecomendacionNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(164)))));
-            this.botonRecomendacionNutricional.Dock = System.Windows.Forms.DockStyle.Top;
-            this.botonRecomendacionNutricional.FlatAppearance.BorderSize = 0;
-            this.botonRecomendacionNutricional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(133)))));
-            this.botonRecomendacionNutricional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRecomendacionNutricional.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRecomendacionNutricional.ForeColor = System.Drawing.Color.White;
-            this.botonRecomendacionNutricional.Location = new System.Drawing.Point(0, 0);
-            this.botonRecomendacionNutricional.Name = "botonRecomendacionNutricional";
-            this.botonRecomendacionNutricional.Size = new System.Drawing.Size(200, 35);
-            this.botonRecomendacionNutricional.TabIndex = 0;
-            this.botonRecomendacionNutricional.Text = "Recomendacion Nutricional";
-            this.botonRecomendacionNutricional.UseVisualStyleBackColor = false;
-            this.botonRecomendacionNutricional.Click += new System.EventHandler(this.botonRecomendacionNutricional_Click);
             // 
             // PresentacionPrincipal
             // 
@@ -362,11 +372,11 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.botonMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).EndInit();
             this.VentanaMenu.ResumeLayout(false);
+            this.subMenuDieta.ResumeLayout(false);
             this.SubMenuConsultar.ResumeLayout(false);
             this.SubMenuAlimentos.ResumeLayout(false);
             this.PanelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoHome)).EndInit();
-            this.subMenuDieta.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
