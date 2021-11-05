@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_archivo {
+            get {
+                object obj = ResourceManager.GetObject("agregar-archivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregue_el_simbolo_de_la_interfaz_de_personas_de_la_persona_negra_de_cerca_con_el_signo_mas_en_un_circulo_pequeno {
             get {
                 object obj = ResourceManager.GetObject("agregue-el-simbolo-de-la-interfaz-de-personas-de-la-persona-negra-de-cerca-con-el" +

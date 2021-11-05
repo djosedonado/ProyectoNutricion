@@ -64,7 +64,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(243, 201);
+            this.label1.Location = new System.Drawing.Point(388, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 12;
@@ -73,7 +73,7 @@ namespace Presentacion
             // textBoxGastoEnergetico
             // 
             this.textBoxGastoEnergetico.Enabled = false;
-            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(229, 220);
+            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(367, 244);
             this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
             this.textBoxGastoEnergetico.Size = new System.Drawing.Size(122, 20);
             this.textBoxGastoEnergetico.TabIndex = 11;
@@ -83,7 +83,7 @@ namespace Presentacion
             this.LabelIdentificacion.AutoSize = true;
             this.LabelIdentificacion.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.LabelIdentificacion.Location = new System.Drawing.Point(181, 38);
+            this.LabelIdentificacion.Location = new System.Drawing.Point(286, 62);
             this.LabelIdentificacion.Name = "LabelIdentificacion";
             this.LabelIdentificacion.Size = new System.Drawing.Size(75, 16);
             this.LabelIdentificacion.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace Presentacion
             // 
             // textTasaIdentificacion
             // 
-            this.textTasaIdentificacion.Location = new System.Drawing.Point(274, 34);
+            this.textTasaIdentificacion.Location = new System.Drawing.Point(379, 58);
             this.textTasaIdentificacion.Name = "textTasaIdentificacion";
             this.textTasaIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.textTasaIdentificacion.TabIndex = 2;
@@ -99,7 +99,7 @@ namespace Presentacion
             // 
             // botonBuscarIdentificacion
             // 
-            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(402, 34);
+            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(507, 58);
             this.botonBuscarIdentificacion.Name = "botonBuscarIdentificacion";
             this.botonBuscarIdentificacion.Size = new System.Drawing.Size(75, 23);
             this.botonBuscarIdentificacion.TabIndex = 1;
@@ -114,9 +114,9 @@ namespace Presentacion
             this.TasaBasalAltura,
             this.TasaBasalEdad,
             this.MetabolicaBasal});
-            this.dataGridView1.Location = new System.Drawing.Point(114, 76);
+            this.dataGridView1.Location = new System.Drawing.Point(219, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(442, 104);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 122);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

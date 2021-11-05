@@ -18,6 +18,7 @@ namespace Entidad
         public double GastoEnergeticoDiario { get; set; }
         public string RecomendacionNutriccional { get; set; }
         public string RecomendacionAlimentaria { get; set; }
+        public string IdDieta { get; set; }
         public string NombreDieta { get; set; }
         public void CalculoPorSexo()
         {

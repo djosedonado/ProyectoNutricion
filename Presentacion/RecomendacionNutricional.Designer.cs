@@ -39,13 +39,9 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.TextRecomendacionNutricional = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.botonGuardarRecomendacion = new System.Windows.Forms.PictureBox();
-            this.textPorcion = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.comboBoxDieta = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.botonGuardarRecomendacion = new System.Windows.Forms.PictureBox();
             this.ContenedorRecomendacioNutricional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarRecomendacion)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +49,8 @@ namespace Presentacion
             // ContenedorRecomendacioNutricional
             // 
             this.ContenedorRecomendacioNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.label7);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.comboBoxCategoria);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label6);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.comboBoxDieta);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.label5);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.textPorcion);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.botonBuscarPaciente);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.textNombrePaciente);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label4);
@@ -161,35 +153,6 @@ namespace Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Recomendacion Nutricional";
             // 
-            // botonGuardarRecomendacion
-            // 
-            this.botonGuardarRecomendacion.Image = global::Presentacion.Properties.Resources.salvar;
-            this.botonGuardarRecomendacion.Location = new System.Drawing.Point(643, 244);
-            this.botonGuardarRecomendacion.Name = "botonGuardarRecomendacion";
-            this.botonGuardarRecomendacion.Size = new System.Drawing.Size(65, 65);
-            this.botonGuardarRecomendacion.TabIndex = 4;
-            this.botonGuardarRecomendacion.TabStop = false;
-            this.botonGuardarRecomendacion.Click += new System.EventHandler(this.botonGuardarRecomendacion_Click);
-            // 
-            // textPorcion
-            // 
-            this.textPorcion.Location = new System.Drawing.Point(70, 169);
-            this.textPorcion.Name = "textPorcion";
-            this.textPorcion.Size = new System.Drawing.Size(97, 20);
-            this.textPorcion.TabIndex = 20;
-            this.textPorcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPorcion_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(66, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 20);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Porcion Diaria";
-            // 
             // comboBoxDieta
             // 
             this.comboBoxDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -212,29 +175,15 @@ namespace Presentacion
             this.label6.TabIndex = 23;
             this.label6.Text = "Dieta";
             // 
-            // comboBoxCategoria
+            // botonGuardarRecomendacion
             // 
-            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Items.AddRange(new object[] {
-            "Desayuno",
-            "Almuerzo",
-            "Sena"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(70, 225);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(97, 21);
-            this.comboBoxCategoria.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(66, 202);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Categoria";
+            this.botonGuardarRecomendacion.Image = global::Presentacion.Properties.Resources.salvar;
+            this.botonGuardarRecomendacion.Location = new System.Drawing.Point(643, 244);
+            this.botonGuardarRecomendacion.Name = "botonGuardarRecomendacion";
+            this.botonGuardarRecomendacion.Size = new System.Drawing.Size(65, 65);
+            this.botonGuardarRecomendacion.TabIndex = 4;
+            this.botonGuardarRecomendacion.TabStop = false;
+            this.botonGuardarRecomendacion.Click += new System.EventHandler(this.botonGuardarRecomendacion_Click);
             // 
             // RecomendacionNutricional
             // 
@@ -265,11 +214,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textNombrePaciente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button botonBuscarPaciente;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxDieta;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textPorcion;
     }
 }

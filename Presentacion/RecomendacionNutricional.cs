@@ -19,7 +19,7 @@ namespace Presentacion
 
         private void botonGuardarRecomendacion_Click(object sender, EventArgs e)
         {
-            if(textIdentificacionRecomendacion.Text.Equals("") || TextRecomendacionNutricional.Text.Equals("") || TextRecomendacionAlimentario.Text.Equals("") || textPorcion.Text.Equals("") || comboBoxCategoria.SelectedIndex.Equals(-1) || comboBoxDieta.SelectedIndex.Equals(-1))
+            if(textIdentificacionRecomendacion.Text.Equals("") || TextRecomendacionNutricional.Text.Equals("") || TextRecomendacionAlimentario.Text.Equals("") || comboBoxDieta.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
