@@ -77,6 +77,18 @@
     <Compile Include="RecomendacionNutricional.Designer.cs">
       <DependentUpon>RecomendacionNutricional.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistarAlimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistarAlimentos.Designer.cs">
+      <DependentUpon>RegistarAlimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistarDietas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistarDietas.Designer.cs">
+      <DependentUpon>RegistarDietas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </Compile>
     <EmbeddedResource Include="RecomendacionNutricional.resx">
       <DependentUpon>RecomendacionNutricional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistarAlimentos.resx">
+      <DependentUpon>RegistarAlimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistarDietas.resx">
+      <DependentUpon>RegistarDietas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
@@ -195,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comer %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

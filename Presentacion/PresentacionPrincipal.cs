@@ -16,6 +16,7 @@ namespace Presentacion
         public PresentacionPrincipal()
         {
             InitializeComponent();
+            OcultarSubMenu();
             abrirFormatoHija(new Home());
         }
 
@@ -67,35 +68,78 @@ namespace Presentacion
             
         }
 
-        private void botonRegistarPaciente_Click(object sender, EventArgs e)
+        private void OcultarSubMenu()
         {
-            abrirFormatoHija(new Registro());
+            SubMenuAlimentos.Visible = false;
+            SubMenuConsultar.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ValidarAnimacionSubMenu()
         {
-            abrirFormatoHija(new Consultar());
+            if (SubMenuAlimentos.Visible == true) SubMenuAlimentos.Visible = false;
+            if (SubMenuConsultar.Visible == true) SubMenuConsultar.Visible = false;
         }
 
+        private void AbrirSubMenus(Panel subMenu)
+        {
+            if (subMenu.Visible==false)
+            {
+                ValidarAnimacionSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
         private void LogoHome_Click(object sender, EventArgs e)
         {
             abrirFormatoHija(new Home());
         }
 
-        private void botonConsultaBasal_Click(object sender, EventArgs e)
+        private void botonRegistarPacinetes_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new Registro());
+        }
+
+        private void botonAlimentos_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenus(SubMenuAlimentos);
+        }
+
+        private void subBotonRegistarAlimentos_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new RegistarAlimentos());
+            OcultarSubMenu();
+        }
+
+        private void subBotonRegistarDietas_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new RegistarDietas());
+            OcultarSubMenu();
+        }
+
+        private void botonConsultar_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenus(SubMenuConsultar);
+        }
+
+        private void subBotonConsultarDatosPacientes_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new Consultar());
+            OcultarSubMenu();
+        }
+
+        private void subBotonConsultarTasaMetabolicaBasal_Click(object sender, EventArgs e)
         {
             abrirFormatoHija(new TasaMetablistica());
+            OcultarSubMenu();
         }
 
-        private void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-            botonRecomendacionNutricional.Visible = true;
-            botonConsultaBasal.Visible = true;
-        }
-
-        private void botonRecomendacionNutricional_Click(object sender, EventArgs e)
+        private void subBotonConsultarRecomendacionNutricional_Click(object sender, EventArgs e)
         {
             abrirFormatoHija(new RecomendacionNutricional());
+            OcultarSubMenu();
         }
     }
 }

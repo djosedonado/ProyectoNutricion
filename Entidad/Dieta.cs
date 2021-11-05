@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public abstract class Dieta : Deportista
+    public class Dieta : Deportista
     {
         public Dieta()
         {
@@ -18,8 +18,18 @@ namespace Entidad
         public double GastoEnergeticoDiario { get; set; }
         public string RecomendacionNutriccional { get; set; }
         public string RecomendacionAlimentaria { get; set; }
-
-        public abstract void CalculoPorSexo();
-
+        public string NombreDieta { get; set; }
+        public void CalculoPorSexo()
+        {
+            if (Sexo=="Hombre")
+            {
+                GastoEnergeticoDiario = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+            }
+            else
+            {
+                GastoEnergeticoDiario = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+            }
+            
+        }
     }
 }

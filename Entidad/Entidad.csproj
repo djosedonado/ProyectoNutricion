@@ -41,8 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcularGastoEnergeticoHombre.cs" />
-    <Compile Include="CalcularGastoEnergeticoMujer.cs" />
+    <Compile Include="Alimentos.cs" />
     <Compile Include="Deportista.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Persona.cs" />

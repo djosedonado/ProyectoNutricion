@@ -32,7 +32,6 @@ namespace Presentacion
             }
             else
             {
-                ContenedorPrincipal.Visible = false;
                 ContenedorSegundario.Visible = true;
             }
             
@@ -88,12 +87,7 @@ namespace Presentacion
             }
         }
 
-        private void comboSexo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
+        private void BotonGuardarRegistro_Click(object sender, EventArgs e)
         {
             if (textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
@@ -118,7 +112,7 @@ namespace Presentacion
             }
         }
 
-        private void textBoxPesoRegistar_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxPesoRegistar_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
@@ -128,7 +122,7 @@ namespace Presentacion
             }
         }
 
-        private void textBoxAlturaRegistar_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxAlturaRegistar_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
@@ -138,7 +132,7 @@ namespace Presentacion
             }
         }
 
-        private void textBoxDeporte_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxDeporte_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar > 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
@@ -146,11 +140,6 @@ namespace Presentacion
                 e.Handled = true;
                 return;
             }
-        }
-
-        private void textBoxPesoRegistar_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

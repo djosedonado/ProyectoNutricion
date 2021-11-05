@@ -19,7 +19,7 @@ namespace Presentacion
 
         private void botonGuardarRecomendacion_Click(object sender, EventArgs e)
         {
-            if(textIdentificacionRecomendacion.Text.Equals("") || TextRecomendacionNutricional.Text.Equals("") || TextRecomendacionAlimentario.Text.Equals(""))
+            if(textIdentificacionRecomendacion.Text.Equals("") || TextRecomendacionNutricional.Text.Equals("") || TextRecomendacionAlimentario.Text.Equals("") || textPorcion.Text.Equals("") || comboBoxCategoria.SelectedIndex.Equals(-1) || comboBoxDieta.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -54,6 +54,16 @@ namespace Presentacion
                 textNombrePaciente.Text = "Danilo Donado";
             }
             
+        }
+
+        private void textPorcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
