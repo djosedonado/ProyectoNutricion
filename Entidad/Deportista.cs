@@ -24,8 +24,23 @@ namespace Entidad
         public double MetabolismoBasal { get; set; }
         public string TermogenesisActividadFisica { get; set; }
         public double ActividadFisica { get; set; }
+        public Dieta Dieta { get; set; }
+        private void CalculoGastoEnergeticoDiario()
+        {
+            if (Sexo == "Masculino")
+            {
+                Dieta.GastoEnergeticoDiario = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + Dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+            }
+            else
+            {
+                if (Sexo == "Femenino")
+                {
+                    Dieta.GastoEnergeticoDiario = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + Dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                }
 
+            }
 
+        }
 
         private void CalcularMetabolismoBasal()
         {

@@ -15,12 +15,18 @@ namespace Entidad
             Liquidos = 0;
             Calorias = 0;
         }
+
+        public Alimentos(string idAlimento, string nombreAlimento, double caloria, double carbohidratos, double proteinas, double liquidos)
+        {
+
+        }
+
         public string IdAlimentos { get; set; }
         public string NombreAlimento { get; set; }
         public double Calorias { get; set; }
         public double Carbohidratos { get; set; }
         public double Proteinas { get; set; }
         public double Liquidos { get; set; }
-
+        public string IdDietas { get; set; }
     }
 }
