@@ -21,11 +21,10 @@ namespace Entidad
         public string FechaDietaAsignar { get; set; }
         public string IdDieta { get; set; }
         public string NombreDieta { get; set; }
-        public List<Alimentos> alimentos { get; set; }
+        public List<Alimento> alimentos { get; set; }
 
-        public void agregarAlimentos(string idAlimento,string nombreAlimento,double Caloria,double Carbohidratos,double proteinas,double liquidos)
+        public void agregarAlimentos(Alimento alimento)
         {
-            Alimentos alimento = new Alimentos(idAlimento,nombreAlimento,Caloria,Carbohidratos,proteinas,liquidos);
             alimento.IdDietas = IdDieta;
             alimentos.Add(alimento);
         }

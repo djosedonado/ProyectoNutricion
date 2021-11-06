@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class Alimentos
+    public class Alimento
     {
-        public Alimentos()
+        public Alimento()
         {
             Carbohidratos = 0;
             Proteinas = 0;
@@ -16,7 +16,7 @@ namespace Entidad
             Calorias = 0;
         }
 
-        public Alimentos(string idAlimento, string nombreAlimento, double caloria, double carbohidratos, double proteinas, double liquidos)
+        public Alimento(string idAlimento, string nombreAlimento, double caloria, double carbohidratos, double proteinas, double liquidos)
         {
 
         }

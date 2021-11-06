@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alimentos.cs" />
+    <Compile Include="Alimento.cs" />
     <Compile Include="Deportista.cs" />
+    <Compile Include="DetalleDieta.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
