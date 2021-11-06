@@ -16,5 +16,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void textNombrePlantilla_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,7 +21,8 @@ namespace Entidad
         public string FechaDietaAsignar { get; set; }
         public string IdDieta { get; set; }
         public string NombreDieta { get; set; }
-        public void CalculoPorSexo()
+
+        private void CalculoPorSexo()
         {
             if (Sexo=="Masculino")
             {

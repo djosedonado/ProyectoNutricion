@@ -19,7 +19,7 @@ namespace Entidad
         public string Deporte { get; set; }
         public double Peso { get; set; }
         public double Altura { get; set; }
-        public string HorasPracticas { get; set; }
+        public string FechaEgreso { get; set; }
         public double CaloriasDiarias { get; set; }
         public double MetabolismoBasal { get; set; }
         public string TermogenesisActividadFisica { get; set; }

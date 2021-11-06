@@ -330,6 +330,7 @@ namespace Presentacion
             this.textNombrePlantilla.Name = "textNombrePlantilla";
             this.textNombrePlantilla.Size = new System.Drawing.Size(119, 20);
             this.textNombrePlantilla.TabIndex = 0;
+            this.textNombrePlantilla.TextChanged += new System.EventHandler(this.textNombrePlantilla_TextChanged);
             // 
             // RegistarDietas
             // 
