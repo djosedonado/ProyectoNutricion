@@ -298,6 +298,10 @@ namespace Presentacion
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Desayuno",
+            "Almuerzo",
+            "Sena"});
             this.comboBox1.Location = new System.Drawing.Point(256, 71);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
