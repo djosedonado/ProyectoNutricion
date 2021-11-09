@@ -18,15 +18,15 @@ namespace Entidad
         public double GastoEnergeticoDiario { get; set; }
         public string RecomendacionNutriccional { get; set; }
         public string RecomendacionAlimentaria { get; set; }
-        public string FechaDietaAsignar { get; set; }
+        public string FechaDietaAsignada { get; set; }
         public string IdDieta { get; set; }
         public string NombreDieta { get; set; }
-        public List<Alimento> alimentos { get; set; }
+        public List<DetalleDieta> detalleDietas { get; set; }
 
-        public void agregarAlimentos(Alimento alimento)
+        public void agregarDetalleDieta(DetalleDieta detalleDieta)
         {
-            alimento.IdDietas = IdDieta;
-            alimentos.Add(alimento);
+            detalleDieta.idDetalleDieta = IdDieta;
+            detalleDietas.Add(detalleDieta);
         }
     }
 }
