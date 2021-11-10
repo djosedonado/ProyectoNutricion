@@ -55,6 +55,7 @@ namespace Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePlantilla = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ContenedorRegistroDietas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonAgregarListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,6 +66,7 @@ namespace Presentacion
             // ContenedorRegistroDietas
             // 
             this.ContenedorRegistroDietas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorRegistroDietas.Controls.Add(this.label6);
             this.ContenedorRegistroDietas.Controls.Add(this.botonAgregarListado);
             this.ContenedorRegistroDietas.Controls.Add(this.dataGridView1);
             this.ContenedorRegistroDietas.Controls.Add(this.label5);
@@ -88,7 +90,7 @@ namespace Presentacion
             // 
             this.botonAgregarListado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonAgregarListado.Image = global::Presentacion.Properties.Resources.agregar_archivo;
-            this.botonAgregarListado.Location = new System.Drawing.Point(428, 49);
+            this.botonAgregarListado.Location = new System.Drawing.Point(422, 92);
             this.botonAgregarListado.Name = "botonAgregarListado";
             this.botonAgregarListado.Size = new System.Drawing.Size(65, 65);
             this.botonAgregarListado.TabIndex = 16;
@@ -102,7 +104,7 @@ namespace Presentacion
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(77, 239);
+            this.dataGridView1.Location = new System.Drawing.Point(71, 282);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 199);
             this.dataGridView1.TabIndex = 15;
@@ -132,7 +134,7 @@ namespace Presentacion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(671, 27);
+            this.label5.Location = new System.Drawing.Point(665, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 19);
             this.label5.TabIndex = 14;
@@ -143,7 +145,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(98, 109);
+            this.label4.Location = new System.Drawing.Point(92, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 19);
             this.label4.TabIndex = 9;
@@ -151,7 +153,7 @@ namespace Presentacion
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 131);
+            this.textBox1.Location = new System.Drawing.Point(82, 174);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(90, 20);
             this.textBox1.TabIndex = 8;
@@ -168,7 +170,7 @@ namespace Presentacion
             this.panel1.Controls.Add(this.labelCarbohidrato);
             this.panel1.Controls.Add(this.labelCalorias);
             this.panel1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.panel1.Location = new System.Drawing.Point(536, 49);
+            this.panel1.Location = new System.Drawing.Point(530, 92);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 177);
             this.panel1.TabIndex = 7;
@@ -266,7 +268,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(264, 108);
+            this.label3.Location = new System.Drawing.Point(258, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 19);
             this.label3.TabIndex = 6;
@@ -277,7 +279,7 @@ namespace Presentacion
             this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(256, 130);
+            this.comboBox2.Location = new System.Drawing.Point(250, 173);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(92, 21);
             this.comboBox2.TabIndex = 5;
@@ -287,7 +289,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(264, 49);
+            this.label2.Location = new System.Drawing.Point(258, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 4;
@@ -302,7 +304,7 @@ namespace Presentacion
             "Desayuno",
             "Almuerzo",
             "Sena"});
-            this.comboBox1.Location = new System.Drawing.Point(256, 71);
+            this.comboBox1.Location = new System.Drawing.Point(250, 114);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 3;
@@ -311,7 +313,7 @@ namespace Presentacion
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.salvar;
-            this.pictureBox1.Location = new System.Drawing.Point(565, 373);
+            this.pictureBox1.Location = new System.Drawing.Point(559, 416);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 65);
             this.pictureBox1.TabIndex = 2;
@@ -322,7 +324,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(73, 49);
+            this.label1.Location = new System.Drawing.Point(67, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 19);
             this.label1.TabIndex = 1;
@@ -330,11 +332,22 @@ namespace Presentacion
             // 
             // textNombrePlantilla
             // 
-            this.textNombrePlantilla.Location = new System.Drawing.Point(88, 71);
+            this.textNombrePlantilla.Location = new System.Drawing.Point(82, 114);
             this.textNombrePlantilla.Name = "textNombrePlantilla";
             this.textNombrePlantilla.Size = new System.Drawing.Size(119, 20);
             this.textNombrePlantilla.TabIndex = 0;
             this.textNombrePlantilla.TextChanged += new System.EventHandler(this.textNombrePlantilla_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(279, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(235, 37);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "REGISTRAR DIETAS";
             // 
             // RegistarDietas
             // 
@@ -384,5 +397,6 @@ namespace Presentacion
         private System.Windows.Forms.Label labelProteinas;
         private System.Windows.Forms.Label labelCarbohidrato;
         private System.Windows.Forms.Label labelCalorias;
+        private System.Windows.Forms.Label label6;
     }
 }

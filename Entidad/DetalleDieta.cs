@@ -14,7 +14,7 @@ namespace Entidad
         }
         public string idDetalleDieta{get;set;}
         public int cantidad { get; set; }
-        public List<Dieta> dietas { get;set }
+        public List<Dieta> dietas { get; set }
         public List<Alimento> alimentos { get; set; }
 
         public void agregarAlimentos(Alimento alimento)

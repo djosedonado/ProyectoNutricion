@@ -40,6 +40,7 @@ namespace Presentacion
             this.TasaBasalAltura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TasaBasalEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MetabolicaBasal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.PanelFondoTasa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@ namespace Presentacion
             // PanelFondoTasa
             // 
             this.PanelFondoTasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelFondoTasa.Controls.Add(this.label2);
             this.PanelFondoTasa.Controls.Add(this.label1);
             this.PanelFondoTasa.Controls.Add(this.textBoxGastoEnergetico);
             this.PanelFondoTasa.Controls.Add(this.LabelIdentificacion);
@@ -64,7 +66,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(389, 251);
+            this.label1.Location = new System.Drawing.Point(388, 310);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 19);
             this.label1.TabIndex = 12;
@@ -73,7 +75,7 @@ namespace Presentacion
             // textBoxGastoEnergetico
             // 
             this.textBoxGastoEnergetico.Enabled = false;
-            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(381, 273);
+            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(380, 332);
             this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
             this.textBoxGastoEnergetico.Size = new System.Drawing.Size(132, 20);
             this.textBoxGastoEnergetico.TabIndex = 11;
@@ -83,7 +85,7 @@ namespace Presentacion
             this.LabelIdentificacion.AutoSize = true;
             this.LabelIdentificacion.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.LabelIdentificacion.Location = new System.Drawing.Point(286, 58);
+            this.LabelIdentificacion.Location = new System.Drawing.Point(285, 117);
             this.LabelIdentificacion.Name = "LabelIdentificacion";
             this.LabelIdentificacion.Size = new System.Drawing.Size(96, 19);
             this.LabelIdentificacion.TabIndex = 3;
@@ -91,7 +93,7 @@ namespace Presentacion
             // 
             // textTasaIdentificacion
             // 
-            this.textTasaIdentificacion.Location = new System.Drawing.Point(379, 58);
+            this.textTasaIdentificacion.Location = new System.Drawing.Point(378, 117);
             this.textTasaIdentificacion.Name = "textTasaIdentificacion";
             this.textTasaIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.textTasaIdentificacion.TabIndex = 2;
@@ -107,7 +109,7 @@ namespace Presentacion
             this.botonBuscarIdentificacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.botonBuscarIdentificacion.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonBuscarIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(524, 53);
+            this.botonBuscarIdentificacion.Location = new System.Drawing.Point(523, 112);
             this.botonBuscarIdentificacion.Name = "botonBuscarIdentificacion";
             this.botonBuscarIdentificacion.Size = new System.Drawing.Size(75, 29);
             this.botonBuscarIdentificacion.TabIndex = 1;
@@ -122,7 +124,7 @@ namespace Presentacion
             this.TasaBasalAltura,
             this.TasaBasalEdad,
             this.MetabolicaBasal});
-            this.dataGridView1.Location = new System.Drawing.Point(219, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(218, 159);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 122);
             this.dataGridView1.TabIndex = 0;
@@ -147,6 +149,17 @@ namespace Presentacion
             // 
             this.MetabolicaBasal.HeaderText = "Metabolica Basal";
             this.MetabolicaBasal.Name = "MetabolicaBasal";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(291, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(307, 37);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "TASA METABOLICA BASAL";
             // 
             // TasaMetablistica
             // 
@@ -177,5 +190,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn MetabolicaBasal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxGastoEnergetico;
+        private System.Windows.Forms.Label label2;
     }
 }

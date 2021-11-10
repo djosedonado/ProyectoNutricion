@@ -180,11 +180,11 @@ namespace Presentacion
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(269, 30);
+            this.label7.Location = new System.Drawing.Point(250, 30);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(242, 34);
+            this.label7.Size = new System.Drawing.Size(267, 37);
             this.label7.TabIndex = 13;
             this.label7.Text = "Registrar Deportista";
             // 

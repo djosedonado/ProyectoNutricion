@@ -41,6 +41,7 @@ namespace Presentacion
             this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@ namespace Presentacion
             // PanelPrincipal
             // 
             this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelPrincipal.Controls.Add(this.label2);
             this.PanelPrincipal.Controls.Add(this.label1);
             this.PanelPrincipal.Controls.Add(this.textNombrePaciente);
             this.PanelPrincipal.Controls.Add(this.dataGridView1);
@@ -141,6 +143,17 @@ namespace Presentacion
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(266, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 37);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "CONSULTA DEPORTISTA";
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,5 +184,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaDeporte;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombrePaciente;
+        private System.Windows.Forms.Label label2;
     }
 }
