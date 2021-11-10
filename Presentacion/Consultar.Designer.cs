@@ -30,6 +30,8 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textNombrePaciente = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ConsultaIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +41,6 @@ namespace Presentacion
             this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
-            this.textNombrePaciente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,24 @@ namespace Presentacion
             this.PanelPrincipal.Size = new System.Drawing.Size(800, 450);
             this.PanelPrincipal.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(440, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nombre Paciente";
+            // 
+            // textNombrePaciente
+            // 
+            this.textNombrePaciente.Location = new System.Drawing.Point(431, 95);
+            this.textNombrePaciente.Name = "textNombrePaciente";
+            this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
+            this.textNombrePaciente.TabIndex = 4;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,7 +87,7 @@ namespace Presentacion
             this.ConsultaTelefono,
             this.ConsultaEdad,
             this.ConsultaDeporte});
-            this.dataGridView1.Location = new System.Drawing.Point(82, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(84, 145);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(641, 290);
             this.dataGridView1.TabIndex = 2;
@@ -109,7 +127,7 @@ namespace Presentacion
             this.Identificacion.AutoSize = true;
             this.Identificacion.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Identificacion.ForeColor = System.Drawing.Color.White;
-            this.Identificacion.Location = new System.Drawing.Point(244, 39);
+            this.Identificacion.Location = new System.Drawing.Point(246, 72);
             this.Identificacion.Name = "Identificacion";
             this.Identificacion.Size = new System.Drawing.Size(100, 20);
             this.Identificacion.TabIndex = 1;
@@ -117,29 +135,11 @@ namespace Presentacion
             // 
             // TextboxIdentificacion
             // 
-            this.TextboxIdentificacion.Location = new System.Drawing.Point(245, 62);
+            this.TextboxIdentificacion.Location = new System.Drawing.Point(247, 95);
             this.TextboxIdentificacion.Name = "TextboxIdentificacion";
             this.TextboxIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
-            // 
-            // textNombrePaciente
-            // 
-            this.textNombrePaciente.Location = new System.Drawing.Point(429, 62);
-            this.textNombrePaciente.Name = "textNombrePaciente";
-            this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
-            this.textNombrePaciente.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(438, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre Paciente";
             // 
             // Consultar
             // 
