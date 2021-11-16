@@ -28,5 +28,6 @@ namespace Entidad
             detalleDieta.idDetalleDieta = IdDieta;
             detalleDietas.Add(detalleDieta);
         }
+
     }
 }
