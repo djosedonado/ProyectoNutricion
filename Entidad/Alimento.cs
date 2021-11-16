@@ -16,17 +16,17 @@ namespace Entidad
             Calorias = 0;
         }
 
-        public Alimento(string idAlimento, string nombreAlimento, double caloria, double carbohidratos, double proteinas, double liquidos)
+        public Alimento(string idAlimento, string nombreAlimento, decimal caloria, decimal carbohidratos, decimal proteinas, decimal liquidos)
         {
 
         }
 
         public string IdAlimentos { get; set; }
         public string NombreAlimento { get; set; }
-        public double Calorias { get; set; }
-        public double Carbohidratos { get; set; }
-        public double Proteinas { get; set; }
-        public double Liquidos { get; set; }
+        public decimal Calorias { get; set; }
+        public decimal Carbohidratos { get; set; }
+        public decimal Proteinas { get; set; }
+        public decimal Liquidos { get; set; }
         public string IdDietas { get; set; }
     }
 }

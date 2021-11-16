@@ -30,6 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRegistarAlimentos = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textLiquidos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,8 @@ namespace Presentacion
             this.textAlimento = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.botonGuardarAlimentos = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textIdAlimento = new System.Windows.Forms.TextBox();
             this.ContenedorRegistarAlimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarAlimentos)).BeginInit();
@@ -51,6 +53,8 @@ namespace Presentacion
             // ContenedorRegistarAlimentos
             // 
             this.ContenedorRegistarAlimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorRegistarAlimentos.Controls.Add(this.label7);
+            this.ContenedorRegistarAlimentos.Controls.Add(this.textIdAlimento);
             this.ContenedorRegistarAlimentos.Controls.Add(this.label6);
             this.ContenedorRegistarAlimentos.Controls.Add(this.label5);
             this.ContenedorRegistarAlimentos.Controls.Add(this.textLiquidos);
@@ -69,6 +73,17 @@ namespace Presentacion
             this.ContenedorRegistarAlimentos.Name = "ContenedorRegistarAlimentos";
             this.ContenedorRegistarAlimentos.Size = new System.Drawing.Size(800, 450);
             this.ContenedorRegistarAlimentos.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(280, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(269, 37);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "REGISTRO ALIMENTOS";
             // 
             // label5
             // 
@@ -184,16 +199,23 @@ namespace Presentacion
             this.botonGuardarAlimentos.TabStop = false;
             this.botonGuardarAlimentos.Click += new System.EventHandler(this.botonGuardarAlimentos_Click);
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(280, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(269, 37);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "REGISTRO ALIMENTOS";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(325, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 19);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Id Alimento";
+            // 
+            // textIdAlimento
+            // 
+            this.textIdAlimento.Location = new System.Drawing.Point(329, 91);
+            this.textIdAlimento.Name = "textIdAlimento";
+            this.textIdAlimento.Size = new System.Drawing.Size(125, 20);
+            this.textIdAlimento.TabIndex = 13;
             // 
             // RegistarAlimentos
             // 
@@ -228,5 +250,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textAlimento;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textIdAlimento;
     }
 }
