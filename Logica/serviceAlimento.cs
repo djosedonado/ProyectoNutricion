@@ -26,7 +26,7 @@ namespace Logica
             try
             {
                 connection.open();
-                respuesta.Alimentos = alimentoRepository.ConsultarTodo();
+                respuesta.Alimentos = alimentoRepository.Consultar();
                 connection.close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
@@ -60,6 +60,7 @@ namespace Logica
             finally { connection.close(); }
 
         }   
+
 
 
     }

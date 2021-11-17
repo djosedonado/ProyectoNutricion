@@ -177,6 +177,10 @@
       <Project>{ace9fd44-40b6-4fa4-abda-84c500ffb1c0}</Project>
       <Name>Entidad</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{d77ddae5-44f6-4067-bf4a-b21f388b0d5d}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />

@@ -30,6 +30,8 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRegistarAlimentos = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textIdAlimento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textLiquidos = new System.Windows.Forms.TextBox();
@@ -41,12 +43,10 @@ namespace Presentacion
             this.textCalorias = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textAlimento = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAlimentos = new System.Windows.Forms.DataGridView();
             this.botonGuardarAlimentos = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textIdAlimento = new System.Windows.Forms.TextBox();
             this.ContenedorRegistarAlimentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarAlimentos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,13 +66,32 @@ namespace Presentacion
             this.ContenedorRegistarAlimentos.Controls.Add(this.textCalorias);
             this.ContenedorRegistarAlimentos.Controls.Add(this.label1);
             this.ContenedorRegistarAlimentos.Controls.Add(this.textAlimento);
-            this.ContenedorRegistarAlimentos.Controls.Add(this.dataGridView1);
+            this.ContenedorRegistarAlimentos.Controls.Add(this.dgvAlimentos);
             this.ContenedorRegistarAlimentos.Controls.Add(this.botonGuardarAlimentos);
             this.ContenedorRegistarAlimentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorRegistarAlimentos.Location = new System.Drawing.Point(0, 0);
             this.ContenedorRegistarAlimentos.Name = "ContenedorRegistarAlimentos";
             this.ContenedorRegistarAlimentos.Size = new System.Drawing.Size(800, 450);
             this.ContenedorRegistarAlimentos.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(335, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 19);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Id Alimento";
+            // 
+            // textIdAlimento
+            // 
+            this.textIdAlimento.Location = new System.Drawing.Point(329, 91);
+            this.textIdAlimento.Name = "textIdAlimento";
+            this.textIdAlimento.Size = new System.Drawing.Size(96, 20);
+            this.textIdAlimento.TabIndex = 13;
+            this.textIdAlimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdAlimento_KeyPress);
             // 
             // label6
             // 
@@ -180,13 +199,14 @@ namespace Presentacion
             this.textAlimento.TabIndex = 2;
             this.textAlimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAlimento_KeyPress);
             // 
-            // dataGridView1
+            // dgvAlimentos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(142, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 181);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvAlimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlimentos.Location = new System.Drawing.Point(127, 235);
+            this.dgvAlimentos.Name = "dgvAlimentos";
+            this.dgvAlimentos.Size = new System.Drawing.Size(641, 186);
+            this.dgvAlimentos.TabIndex = 1;
+            this.dgvAlimentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlimentos_CellContentClick);
             // 
             // botonGuardarAlimentos
             // 
@@ -199,24 +219,6 @@ namespace Presentacion
             this.botonGuardarAlimentos.TabStop = false;
             this.botonGuardarAlimentos.Click += new System.EventHandler(this.botonGuardarAlimentos_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(325, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 19);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Id Alimento";
-            // 
-            // textIdAlimento
-            // 
-            this.textIdAlimento.Location = new System.Drawing.Point(329, 91);
-            this.textIdAlimento.Name = "textIdAlimento";
-            this.textIdAlimento.Size = new System.Drawing.Size(125, 20);
-            this.textIdAlimento.TabIndex = 13;
-            // 
             // RegistarAlimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,7 +230,7 @@ namespace Presentacion
             this.Text = "RegistarAlimentos";
             this.ContenedorRegistarAlimentos.ResumeLayout(false);
             this.ContenedorRegistarAlimentos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarAlimentos)).EndInit();
             this.ResumeLayout(false);
 
@@ -248,7 +250,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textCalorias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textAlimento;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAlimentos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textIdAlimento;
