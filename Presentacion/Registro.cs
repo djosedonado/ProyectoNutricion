@@ -8,21 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
+using Logica;
 
 namespace Presentacion
 {
     public partial class Registro : Form
     {
-        public Registro()
-        {
-            InitializeComponent();
-        }
 
         private void Registro_Load(object sender, EventArgs e)
         {
 
         }
+        public Registro()
+        {
+            ServiceDeportista = new ServiceDeportista(CadenaConexion.ConnectionString);
+            InitializeComponent();
+            deportistas = new List<Deportista>();
+        }
 
+        public ServiceDeportista ServiceDeportista;
+        List<Deportista> deportistas;
 
         private void textIdentificacion_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -74,7 +79,22 @@ namespace Presentacion
             }
         }
 
-
+        public Deportista MapearDeportista()
+        {
+            Deportista deportista = new Deportista();
+            deportista.TipoIdentificacion = comboBoxTipoIdentidad.Text;
+            deportista.Identificacion = textIdentificacion.Text;
+            deportista.Nombre = textNombre.Text;
+            deportista.Apellidó = textApellido.Text;
+            deportista.Edad = int.Parse(textEdad.Text);
+            deportista.Telefono = textTelefono.Text;
+            deportista.Sexo = comboSexo.Text;
+            deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
+            deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
+            deportista.Deporte = textBoxDeporte.Text;
+            deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
+            deportista.FechaEgreso = dateTimeRegistar.Text;
+        }
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
             if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
