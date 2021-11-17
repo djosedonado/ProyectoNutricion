@@ -94,7 +94,9 @@ namespace Presentacion
             deportista.Deporte = textBoxDeporte.Text;
             deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
             deportista.FechaEgreso = dateTimeRegistar.Text;
+            return deportista;
         }
+
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
             if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
@@ -104,7 +106,9 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Se a Guardado los datos correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Deportista deportista = MapearDeportista();
+                string mensaje = ServiceDeportista.Guardar(deportista);
+                MessageBox.Show(mensaje, "Mensaje de guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 textNombre.Text = "";
                 textApellido.Text = "";
                 textIdentificacion.Text = "";
