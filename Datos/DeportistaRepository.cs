@@ -22,8 +22,8 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Deporte, Peso, Altura, ActividadFisica, FechaEgreso) 
-                                                values ( @Identificacion, @TipoIdentificacion, @Nombre, @Apellido, @Sexo, @Edad, @Telefono, @Deporte, @Peso, @Altura, @ActividadFisica, @FechaEgreso)"; ;
+                command.CommandText = @"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Deporte, Peso, Altura) 
+                                                values ( @Identificacion, @TipoIdentificacion, @Nombre, @Apellido, @Sexo, @Edad, @Telefono, @Deporte, @Peso, @Altura)"; ;
                 command.Parameters.Add(new SqlParameter("@Identificacion", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@TipoIdentificacion", deportista.TipoIdentificacion));
                 command.Parameters.Add(new SqlParameter("@Nombre", deportista.Nombre));
@@ -34,8 +34,6 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@Deporte", deportista.Deporte));
                 command.Parameters.Add(new SqlParameter("@Peso", deportista.Peso));
                 command.Parameters.Add(new SqlParameter("@Altura", deportista.Altura));
-                command.Parameters.Add(new SqlParameter("@ActividadFisica", deportista.ActividadFisica));
-                command.Parameters.Add(new SqlParameter("@FechaEgreso", deportista.FechaEgreso));
                 var fila = command.ExecuteNonQuery();
             }
         }
@@ -45,7 +43,7 @@ namespace Datos
             List<Deportista> deportistas = new List<Deportista>();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select * from Alimento";
+                command.CommandText = "select * from Deportista";
                 var dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -57,8 +55,9 @@ namespace Datos
                     deportista.Edad = dataReader.GetInt32(4);
                     deportista.Sexo = dataReader.GetString(5);
                     deportista.Telefono = dataReader.GetString(6);
-                    deportista.Peso = dataReader.GetDouble(7);
-                    deportista.Altura = dataReader.GetDouble(8);
+                    deportista.Deporte = dataReader.GetString(7);
+                    deportista.Peso = dataReader.GetDouble(8);
+                    deportista.Altura = dataReader.GetDouble(9);
                     deportistas.Add(deportista);
                 }
                 dataReader.Close();
@@ -85,8 +84,9 @@ namespace Datos
                         deportista.Edad = dataReader.GetInt32(4);
                         deportista.Sexo = dataReader.GetString(5);
                         deportista.Telefono = dataReader.GetString(6);
-                        deportista.Peso = dataReader.GetDouble(7);
-                        deportista.Altura = dataReader.GetDouble(8);
+                        deportista.Deporte = dataReader.GetString(7);
+                        deportista.Peso = dataReader.GetDouble(8);
+                        deportista.Altura = dataReader.GetDouble(9);
                         return deportista;
                     }
                 }
