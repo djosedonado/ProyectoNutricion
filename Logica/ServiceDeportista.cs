@@ -43,6 +43,31 @@ namespace Logica
                 connection.close(); 
             }
         }
+
+        public ConsultarDeportistaRespuesta ConsultarTodo()
+        {
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            try
+            {
+                connection.open();
+                respuesta.Deportistas = deportistaRepository.Consultar();
+                connection.close();
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally
+            {
+                connection.close();
+            }
+        }
+
     }
 
     public class ConsultarDeportistaRespuesta

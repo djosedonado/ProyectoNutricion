@@ -51,7 +51,10 @@ namespace Logica
                     alimentoRepository.Guardar(alimento);
                     return $"Se guardaron los datos de satisfactoriamente";
                 }
-                return $"El Ingrediente con esta id ya Existe en la Base de datos";
+                else
+                {
+                    return $"El Ingrediente con esta id ya Existe en la Base de datos";
+                }
             }
             catch(Exception e)
             {
