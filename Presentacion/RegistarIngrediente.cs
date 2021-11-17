@@ -12,12 +12,12 @@ using Logica;
 
 namespace Presentacion
 {
-    public partial class RegistarAlimentos : Form
+    public partial class RegistarIngrediente : Form
     {
         public serviceAlimento serviceAlimento;
         List<Alimento> alimentos;
         
-        public RegistarAlimentos()
+        public RegistarIngrediente()
         {
             serviceAlimento = new serviceAlimento(CadenaConexion.ConnectionString);
             InitializeComponent();

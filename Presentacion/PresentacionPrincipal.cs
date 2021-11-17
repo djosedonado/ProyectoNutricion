@@ -110,13 +110,13 @@ namespace Presentacion
 
         private void subBotonRegistarAlimentos_Click(object sender, EventArgs e)
         {
-            abrirFormatoHija(new RegistarAlimentos());
+            abrirFormatoHija(new RegistarIngrediente());
             OcultarSubMenu();
         }
 
         private void subBotonRegistarDietas_Click(object sender, EventArgs e)
         {
-            abrirFormatoHija(new RegistarDietas());
+            abrirFormatoHija(new RegistarPlantilla());
             OcultarSubMenu();
         }
 

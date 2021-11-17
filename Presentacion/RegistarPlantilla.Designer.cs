@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class RegistarDietas
+    partial class RegistarPlantilla
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRegistroDietas = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.botonAgregarListado = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +56,6 @@ namespace Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePlantilla = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.ContenedorRegistroDietas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonAgregarListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,6 +85,17 @@ namespace Presentacion
             this.ContenedorRegistroDietas.Name = "ContenedorRegistroDietas";
             this.ContenedorRegistroDietas.Size = new System.Drawing.Size(842, 502);
             this.ContenedorRegistroDietas.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(279, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(288, 37);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "REGISTRAR PLANTILLAS";
             // 
             // botonAgregarListado
             // 
@@ -147,9 +158,9 @@ namespace Presentacion
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(92, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Cantidad";
+            this.label4.Text = "Porcion";
             // 
             // textBox1
             // 
@@ -338,25 +349,14 @@ namespace Presentacion
             this.textNombrePlantilla.TabIndex = 0;
             this.textNombrePlantilla.TextChanged += new System.EventHandler(this.textNombrePlantilla_TextChanged);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(279, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 37);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "REGISTRAR DIETAS";
-            // 
-            // RegistarDietas
+            // RegistarPlantilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 502);
             this.Controls.Add(this.ContenedorRegistroDietas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegistarDietas";
+            this.Name = "RegistarPlantilla";
             this.Text = "RegistarDietas";
             this.ContenedorRegistroDietas.ResumeLayout(false);
             this.ContenedorRegistroDietas.PerformLayout();

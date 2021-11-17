@@ -22,9 +22,10 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"Insert into Alimento ( idAlimento, NombreAlimento, Caloria, Carbohidratos, Proteinas, Liquidos) values ( @idAlimento, @NombreAlimento, @Caloria, @Carbohidratos, @Proteinas, @Liquidos)";
-                command.Parameters.Add(new SqlParameter("@idAlimento", alimento.IdAlimentos));
-                command.Parameters.Add(new SqlParameter("@NombreAlimento", alimento.NombreAlimento));
+                command.CommandText = @"Insert into Alimento ( id, Nombre, Caloria, Carbohidratos, Proteinas, Liquidos) 
+                                                values ( @id, @Nombre, @Caloria, @Carbohidratos, @Proteinas, @Liquidos)";
+                command.Parameters.Add(new SqlParameter("@id", alimento.IdAlimentos));
+                command.Parameters.Add(new SqlParameter("@Nombre", alimento.NombreAlimento));
                 command.Parameters.Add(new SqlParameter("@Caloria", alimento.Calorias));
                 command.Parameters.Add(new SqlParameter("@Carbohidratos", alimento.Carbohidratos));
                 command.Parameters.Add(new SqlParameter("@Proteinas", alimento.Proteinas));
@@ -74,8 +75,8 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select * from Alimento where idAlimento=@idAlimento";
-                command.Parameters.Add(new SqlParameter("@idAlimento", idAlimento));
+                command.CommandText = "select * from Alimento where id=@id";
+                command.Parameters.Add(new SqlParameter("@id", idAlimento));
                 var reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {

@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class RegistarAlimentos
+    partial class RegistarIngrediente
     {
         /// <summary>
         /// Required designer variable.
@@ -79,7 +79,7 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(335, 69);
+            this.label7.Location = new System.Drawing.Point(222, 80);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 19);
             this.label7.TabIndex = 14;
@@ -87,7 +87,7 @@ namespace Presentacion
             // 
             // textIdAlimento
             // 
-            this.textIdAlimento.Location = new System.Drawing.Point(329, 91);
+            this.textIdAlimento.Location = new System.Drawing.Point(216, 102);
             this.textIdAlimento.Name = "textIdAlimento";
             this.textIdAlimento.Size = new System.Drawing.Size(96, 20);
             this.textIdAlimento.TabIndex = 13;
@@ -100,16 +100,16 @@ namespace Presentacion
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(280, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(269, 37);
+            this.label6.Size = new System.Drawing.Size(288, 37);
             this.label6.TabIndex = 12;
-            this.label6.Text = "REGISTRO ALIMENTOS";
+            this.label6.Text = "REGISTRO INGREDIENTE";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(283, 175);
+            this.label5.Location = new System.Drawing.Point(574, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 19);
             this.label5.TabIndex = 11;
@@ -117,7 +117,7 @@ namespace Presentacion
             // 
             // textLiquidos
             // 
-            this.textLiquidos.Location = new System.Drawing.Point(287, 197);
+            this.textLiquidos.Location = new System.Drawing.Point(578, 172);
             this.textLiquidos.Name = "textLiquidos";
             this.textLiquidos.Size = new System.Drawing.Size(60, 20);
             this.textLiquidos.TabIndex = 10;
@@ -128,7 +128,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(283, 125);
+            this.label4.Location = new System.Drawing.Point(574, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 19);
             this.label4.TabIndex = 9;
@@ -136,7 +136,7 @@ namespace Presentacion
             // 
             // textProteinas
             // 
-            this.textProteinas.Location = new System.Drawing.Point(287, 147);
+            this.textProteinas.Location = new System.Drawing.Point(578, 122);
             this.textProteinas.Name = "textProteinas";
             this.textProteinas.Size = new System.Drawing.Size(60, 20);
             this.textProteinas.TabIndex = 8;
@@ -147,7 +147,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(150, 175);
+            this.label3.Location = new System.Drawing.Point(441, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 7;
@@ -155,7 +155,7 @@ namespace Presentacion
             // 
             // textCarbohidratos
             // 
-            this.textCarbohidratos.Location = new System.Drawing.Point(154, 197);
+            this.textCarbohidratos.Location = new System.Drawing.Point(445, 172);
             this.textCarbohidratos.Name = "textCarbohidratos";
             this.textCarbohidratos.Size = new System.Drawing.Size(60, 20);
             this.textCarbohidratos.TabIndex = 6;
@@ -166,7 +166,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(150, 125);
+            this.label2.Location = new System.Drawing.Point(441, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 5;
@@ -174,7 +174,7 @@ namespace Presentacion
             // 
             // textCalorias
             // 
-            this.textCalorias.Location = new System.Drawing.Point(154, 147);
+            this.textCalorias.Location = new System.Drawing.Point(445, 122);
             this.textCalorias.Name = "textCalorias";
             this.textCalorias.Size = new System.Drawing.Size(60, 20);
             this.textCalorias.TabIndex = 4;
@@ -185,7 +185,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(150, 69);
+            this.label1.Location = new System.Drawing.Point(212, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 19);
             this.label1.TabIndex = 3;
@@ -193,7 +193,7 @@ namespace Presentacion
             // 
             // textAlimento
             // 
-            this.textAlimento.Location = new System.Drawing.Point(154, 91);
+            this.textAlimento.Location = new System.Drawing.Point(204, 172);
             this.textAlimento.Name = "textAlimento";
             this.textAlimento.Size = new System.Drawing.Size(125, 20);
             this.textAlimento.TabIndex = 2;
@@ -212,21 +212,21 @@ namespace Presentacion
             // 
             this.botonGuardarAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonGuardarAlimentos.Image = global::Presentacion.Properties.Resources.salvar;
-            this.botonGuardarAlimentos.Location = new System.Drawing.Point(448, 152);
+            this.botonGuardarAlimentos.Location = new System.Drawing.Point(703, 57);
             this.botonGuardarAlimentos.Name = "botonGuardarAlimentos";
             this.botonGuardarAlimentos.Size = new System.Drawing.Size(65, 65);
             this.botonGuardarAlimentos.TabIndex = 0;
             this.botonGuardarAlimentos.TabStop = false;
             this.botonGuardarAlimentos.Click += new System.EventHandler(this.botonGuardarAlimentos_Click);
             // 
-            // RegistarAlimentos
+            // RegistarIngrediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ContenedorRegistarAlimentos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegistarAlimentos";
+            this.Name = "RegistarIngrediente";
             this.Text = "RegistarAlimentos";
             this.ContenedorRegistarAlimentos.ResumeLayout(false);
             this.ContenedorRegistarAlimentos.PerformLayout();

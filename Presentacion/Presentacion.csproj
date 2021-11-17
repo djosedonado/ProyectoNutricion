@@ -84,17 +84,17 @@
     <Compile Include="RecomendacionNutricional.Designer.cs">
       <DependentUpon>RecomendacionNutricional.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistarAlimentos.cs">
+    <Compile Include="RegistarIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistarAlimentos.Designer.cs">
-      <DependentUpon>RegistarAlimentos.cs</DependentUpon>
+    <Compile Include="RegistarIngrediente.Designer.cs">
+      <DependentUpon>RegistarIngrediente.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistarDietas.cs">
+    <Compile Include="RegistarPlantilla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistarDietas.Designer.cs">
-      <DependentUpon>RegistarDietas.cs</DependentUpon>
+    <Compile Include="RegistarPlantilla.Designer.cs">
+      <DependentUpon>RegistarPlantilla.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro.cs">
       <SubType>Form</SubType>
@@ -130,11 +130,11 @@
     <EmbeddedResource Include="RecomendacionNutricional.resx">
       <DependentUpon>RecomendacionNutricional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistarAlimentos.resx">
-      <DependentUpon>RegistarAlimentos.cs</DependentUpon>
+    <EmbeddedResource Include="RegistarIngrediente.resx">
+      <DependentUpon>RegistarIngrediente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistarDietas.resx">
-      <DependentUpon>RegistarDietas.cs</DependentUpon>
+    <EmbeddedResource Include="RegistarPlantilla.resx">
+      <DependentUpon>RegistarPlantilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>

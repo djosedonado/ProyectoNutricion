@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class RegistarDietas : Form
+    public partial class RegistarPlantilla : Form
     {
-        public RegistarDietas()
+        public RegistarPlantilla()
         {
             InitializeComponent();
         }
