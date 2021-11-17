@@ -19,7 +19,30 @@ namespace Logica
             deportistaRepository = new DeportistaRepository(connection);
         }
 
+        public string Guardar(Deportista deportista)
+        {
+            try
+            {
+                connection.open();
+                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion)==null)
+                {
+                    deportistaRepository.Guardar(deportista);
+                    return $"Se guardaron los datos sactifactoriamente";
+                }
+                else
+                {
+                    return $"La identificacion que desea registrar ya esta guardada";
+                }
 
+            }catch(Exception e)
+            {
+                return $"Error de aplicacion: {e.Message}";
+            }
+            finally 
+            { 
+                connection.close(); 
+            }
+        }
     }
 
     public class ConsultarDeportistaRespuesta
