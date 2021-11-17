@@ -22,7 +22,20 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "";
+                command.CommandText = ""@"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Deporte, Peso, Altura, ActividadFisica, FechaEgreso) 
+                                                values ( @Identificacion, @TipoIdentificacion, @Nombre, @Apellido, @Sexo, @Edad, @Telefono, @Deporte, @Peso, @Altura, @ActividadFisica, @FechaEgreso)"; ;
+                command.Parameters.Add(new SqlParameter("@Identificacion", deportista.Identificacion));
+                command.Parameters.Add(new SqlParameter("@TipoIdentificacion", deportista.TipoIdentificacion));
+                command.Parameters.Add(new SqlParameter("@Nombre", deportista.Nombre));
+                command.Parameters.Add(new SqlParameter("@Apellido", deportista.Apellidó));
+                command.Parameters.Add(new SqlParameter("@Sexo", deportista.Sexo));
+                command.Parameters.Add(new SqlParameter("@Edad", deportista.Edad));
+                command.Parameters.Add(new SqlParameter("Telefono", deportista.Telefono));
+                command.Parameters.Add(new SqlParameter("@Deporte", deportista.Deporte));
+                command.Parameters.Add(new SqlParameter("@Peso", deportista.Peso));
+                command.Parameters.Add(new SqlParameter("@Altura", deportista.Altura));
+                command.Parameters.Add(new SqlParameter("@ActividadFisica", deportista.ActividadFisica));
+                command.Parameters.Add(new SqlParameter("@FechaEgreso", deportista.FechaEgreso));
                 var fila = command.ExecuteNonQuery();
             }
         }
