@@ -21,4 +21,11 @@ namespace Logica
 
 
     }
+
+    public class ConsultarDeportistaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje  { get; set; }
+        public IList<Deportista> Deportistas { get; set; }
+    }
 }
