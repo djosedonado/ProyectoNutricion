@@ -22,7 +22,7 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = ""@"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Deporte, Peso, Altura, ActividadFisica, FechaEgreso) 
+                command.CommandText = @"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Deporte, Peso, Altura, ActividadFisica, FechaEgreso) 
                                                 values ( @Identificacion, @TipoIdentificacion, @Nombre, @Apellido, @Sexo, @Edad, @Telefono, @Deporte, @Peso, @Altura, @ActividadFisica, @FechaEgreso)"; ;
                 command.Parameters.Add(new SqlParameter("@Identificacion", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@TipoIdentificacion", deportista.TipoIdentificacion));
