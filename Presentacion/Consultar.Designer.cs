@@ -30,9 +30,10 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePaciente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewConsultarDeportista = new System.Windows.Forms.DataGridView();
             this.ConsultaIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultaApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,18 +42,19 @@ namespace Presentacion
             this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonBuscarDeportista = new System.Windows.Forms.Button();
             this.PanelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultarDeportista)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelPrincipal.Controls.Add(this.buttonBuscarDeportista);
             this.PanelPrincipal.Controls.Add(this.label2);
             this.PanelPrincipal.Controls.Add(this.label1);
             this.PanelPrincipal.Controls.Add(this.textNombrePaciente);
-            this.PanelPrincipal.Controls.Add(this.dataGridView1);
+            this.PanelPrincipal.Controls.Add(this.dataGridViewConsultarDeportista);
             this.PanelPrincipal.Controls.Add(this.Identificacion);
             this.PanelPrincipal.Controls.Add(this.TextboxIdentificacion);
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,6 +62,17 @@ namespace Presentacion
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(800, 450);
             this.PanelPrincipal.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(266, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 37);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "CONSULTA DEPORTISTA";
             // 
             // label1
             // 
@@ -79,20 +92,21 @@ namespace Presentacion
             this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
             this.textNombrePaciente.TabIndex = 4;
             // 
-            // dataGridView1
+            // dataGridViewConsultarDeportista
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewConsultarDeportista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewConsultarDeportista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ConsultaIdentificacion,
             this.ConsultaNombre,
             this.ConsultaApellido,
             this.ConsultaTelefono,
             this.ConsultaEdad,
             this.ConsultaDeporte});
-            this.dataGridView1.Location = new System.Drawing.Point(84, 145);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(641, 290);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewConsultarDeportista.Location = new System.Drawing.Point(84, 145);
+            this.dataGridViewConsultarDeportista.Name = "dataGridViewConsultarDeportista";
+            this.dataGridViewConsultarDeportista.Size = new System.Drawing.Size(641, 290);
+            this.dataGridViewConsultarDeportista.TabIndex = 2;
+            this.dataGridViewConsultarDeportista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewConsultarDeportista_CellContentClick);
             // 
             // ConsultaIdentificacion
             // 
@@ -143,16 +157,23 @@ namespace Presentacion
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
             // 
-            // label2
+            // buttonBuscarDeportista
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 37);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "CONSULTA DEPORTISTA";
+            this.buttonBuscarDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonBuscarDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscarDeportista.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonBuscarDeportista.FlatAppearance.BorderSize = 7;
+            this.buttonBuscarDeportista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarDeportista.ForeColor = System.Drawing.Color.White;
+            this.buttonBuscarDeportista.Location = new System.Drawing.Point(626, 86);
+            this.buttonBuscarDeportista.Name = "buttonBuscarDeportista";
+            this.buttonBuscarDeportista.Size = new System.Drawing.Size(75, 29);
+            this.buttonBuscarDeportista.TabIndex = 7;
+            this.buttonBuscarDeportista.Text = "Buscar";
+            this.buttonBuscarDeportista.UseVisualStyleBackColor = false;
+            this.buttonBuscarDeportista.Click += new System.EventHandler(this.buttonBuscarDeportista_Click);
             // 
             // Consultar
             // 
@@ -165,7 +186,7 @@ namespace Presentacion
             this.Text = "Consultar";
             this.PanelPrincipal.ResumeLayout(false);
             this.PanelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultarDeportista)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,7 +196,7 @@ namespace Presentacion
         private System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Label Identificacion;
         private System.Windows.Forms.TextBox TextboxIdentificacion;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewConsultarDeportista;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaIdentificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaApellido;
@@ -185,5 +206,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombrePaciente;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonBuscarDeportista;
     }
 }

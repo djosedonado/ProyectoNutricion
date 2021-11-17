@@ -68,6 +68,7 @@ namespace Logica
             }
         }
 
+
     }
 
     public class ConsultarDeportistaRespuesta

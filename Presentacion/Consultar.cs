@@ -7,25 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
+using Logica;
 
 namespace Presentacion
 {
     public partial class Consultar : Form
     {
+        public ServiceDeportista ServiceDeportista;
+        List<Deportista> deportistas;
+
         public Consultar()
         {
+            ServiceDeportista = new ServiceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
+            deportistas = new List<Deportista>();
+            ConsultarData();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        public void ConsultarData()
         {
-
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            dataGridViewConsultarDeportista.DataSource = null;
+            respuesta = ServiceDeportista.ConsultarTodo();
+            deportistas = respuesta.Deportistas.ToList();
+            dataGridViewConsultarDeportista.DataSource = respuesta.Deportistas;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void TextboxIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -37,16 +45,18 @@ namespace Presentacion
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (textNombrePaciente.Text.Equals("") || TextboxIdentificacion.Text.Equals(""))
-            {
-                MessageBox.Show("Los Campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
 
+        private void buttonBuscarDeportista_Click(object sender, EventArgs e)
+        {
+            if (TextboxIdentificacion.Text.Equals("") && textNombrePaciente.Text.Equals(""))
+            {
+                MessageBox.Show("Los Campos esta Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridViewConsultarDeportista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
