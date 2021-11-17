@@ -57,20 +57,6 @@ namespace Datos
             return alimentos;
         }
 
-        public Alimento MapearAlimento(SqlDataReader dataReader)
-        {
-            if (!dataReader.HasRows) return null;
-            Alimento alimento = new Alimento();
-            alimento.IdAlimentos = dataReader.GetString(0);
-            alimento.NombreAlimento = dataReader.GetString(1);
-            alimento.Calorias = dataReader.GetDecimal(2);
-            alimento.Carbohidratos = dataReader.GetDecimal(3);
-            alimento.Proteinas = dataReader.GetDecimal(4);
-            alimento.Liquidos = dataReader.GetDecimal(5);
-            return alimento;
-        }
-
-
         public Alimento BuscarIdAlimento(string idAlimento)
         {
             using (var command = connection.CreateCommand())

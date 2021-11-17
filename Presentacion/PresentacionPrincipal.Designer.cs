@@ -269,7 +269,7 @@ namespace Presentacion
             this.subBotonRegistarDietas.Name = "subBotonRegistarDietas";
             this.subBotonRegistarDietas.Size = new System.Drawing.Size(200, 35);
             this.subBotonRegistarDietas.TabIndex = 1;
-            this.subBotonRegistarDietas.Text = "Registar Dietas";
+            this.subBotonRegistarDietas.Text = "Registar Plantillas";
             this.subBotonRegistarDietas.UseVisualStyleBackColor = true;
             this.subBotonRegistarDietas.Click += new System.EventHandler(this.subBotonRegistarDietas_Click);
             // 
@@ -286,7 +286,7 @@ namespace Presentacion
             this.subBotonRegistarAlimentos.Name = "subBotonRegistarAlimentos";
             this.subBotonRegistarAlimentos.Size = new System.Drawing.Size(200, 35);
             this.subBotonRegistarAlimentos.TabIndex = 0;
-            this.subBotonRegistarAlimentos.Text = "Registar Alimentos";
+            this.subBotonRegistarAlimentos.Text = "Registar Ingredientes";
             this.subBotonRegistarAlimentos.UseVisualStyleBackColor = true;
             this.subBotonRegistarAlimentos.Click += new System.EventHandler(this.subBotonRegistarAlimentos_Click);
             // 
