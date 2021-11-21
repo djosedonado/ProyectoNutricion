@@ -10,10 +10,14 @@ namespace Entidad
     {
         public DetalleDieta()
         {
-            cantidad = 0;
+            Porcion = 0;
         }
-        public string idDetalleDieta{get;set;}
-        public int cantidad { get; set; }
+
+        public string idDetalleDieta { get; set; }
+        public int Porcion { get; set; }
+        public string nombrePlantilla { get; set; }
+        public string categora { get; set; }
+        public string ingredientes{ get; set; }
         public List<Dieta> dietas { get; set; }
         public List<Alimento> alimentos { get; set; }
 
