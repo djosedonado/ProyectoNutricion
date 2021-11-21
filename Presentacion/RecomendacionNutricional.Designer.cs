@@ -30,10 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.ContenedorRecomendacioNutricional = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textPesoActual = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.FachaAsignacionDieta = new System.Windows.Forms.DateTimePicker();
             this.ListasDiasSemana = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxDieta = new System.Windows.Forms.ComboBox();
@@ -47,7 +46,6 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.TextRecomendacionNutricional = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.ContenedorRecomendacioNutricional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarRecomendacion)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +56,6 @@ namespace Presentacion
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label8);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label7);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.textPesoActual);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.label5);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.FachaAsignacionDieta);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.ListasDiasSemana);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label6);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.comboBoxDieta);
@@ -80,6 +76,17 @@ namespace Presentacion
             this.ContenedorRecomendacioNutricional.TabIndex = 0;
             this.ContenedorRecomendacioNutricional.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenedorRecomendacioNutricional_Paint);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(222, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(378, 37);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "RECOMENDACION NUTRICIONAL";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -98,28 +105,6 @@ namespace Presentacion
             this.textPesoActual.Size = new System.Drawing.Size(100, 20);
             this.textPesoActual.TabIndex = 27;
             this.textPesoActual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPesoActual_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(637, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Fecha de Asignacion Dieta";
-            // 
-            // FachaAsignacionDieta
-            // 
-            this.FachaAsignacionDieta.CalendarForeColor = System.Drawing.Color.White;
-            this.FachaAsignacionDieta.CalendarMonthBackground = System.Drawing.Color.White;
-            this.FachaAsignacionDieta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FachaAsignacionDieta.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FachaAsignacionDieta.Location = new System.Drawing.Point(615, 211);
-            this.FachaAsignacionDieta.Name = "FachaAsignacionDieta";
-            this.FachaAsignacionDieta.Size = new System.Drawing.Size(217, 22);
-            this.FachaAsignacionDieta.TabIndex = 25;
             // 
             // ListasDiasSemana
             // 
@@ -268,17 +253,6 @@ namespace Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Recomendacion Nutricional";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(222, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(378, 37);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "RECOMENDACION NUTRICIONAL";
-            // 
             // RecomendacionNutricional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,8 +285,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxDieta;
         private System.Windows.Forms.CheckedListBox ListasDiasSemana;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker FachaAsignacionDieta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textPesoActual;
         private System.Windows.Forms.Label label8;
