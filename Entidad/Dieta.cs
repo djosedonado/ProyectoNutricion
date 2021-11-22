@@ -11,7 +11,7 @@ namespace Entidad
         public Dieta()
         {
             GastoEnergeticoDiario = 0;
-            AcciónDinámicaEspecíficaAlimentos = 0.1;
+            AcciónDinámicaEspecíficaAlimentos = 0;
         }
 
         public string IdDieta { get; set; }
@@ -21,6 +21,11 @@ namespace Entidad
         public string RecomendacionAlimentaria { get; set; }
         public string DiasAplicados { get; set; }
         public List<DetalleDieta> detalleDietas { get; set; }
+
+        public void MetodoAccinDinamicaEspecificaAlimentos()
+        {
+            AcciónDinámicaEspecíficaAlimentos = 0.1;
+        }
 
         public void agregarDetalleDieta(DetalleDieta detalleDieta)
         {

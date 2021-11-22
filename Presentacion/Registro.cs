@@ -14,13 +14,14 @@ namespace Presentacion
 {
     public partial class Registro : Form
     {
-
+        serviceDeportista service;
         private void Registro_Load(object sender, EventArgs e)
         {
-
+            
         }
         public Registro()
         {
+            service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
         }
 
@@ -83,13 +84,13 @@ namespace Presentacion
             deportista.Nombre = textNombre.Text;
             deportista.Apellidó = textApellido.Text;
             deportista.Edad = int.Parse(textEdad.Text);
-            deportista.Telefono = textTelefono.Text;
             deportista.Sexo = comboSexo.Text;
+            deportista.Telefono = textTelefono.Text;
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text;
             deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
-            deportista.FechaEgreso = dateTimeRegistar.Value.ToShortDateString();
+            deportista.FechaEgreso = dateTimeRegistar.Value;
             return deportista;
         }
 
@@ -102,7 +103,9 @@ namespace Presentacion
             }
             else
             {
-
+                Deportista deportista = MapearDeportista();
+                string mensaje = service.Guardar(deportista);
+                MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 textNombre.Text = "";
                 textApellido.Text = "";
                 textIdentificacion.Text = "";

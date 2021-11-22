@@ -28,7 +28,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
                 command.Parameters.Add(new SqlParameter("@apellido", deportista.Apellidó));
                 command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
-                command.Parameters.Add(new SqlParameter("@edad", deportista.Sexo));
+                command.Parameters.Add(new SqlParameter("@edad", deportista.Edad));
                 command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
                 command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
                 command.Parameters.Add(new SqlParameter("@altura", deportista.Altura));
@@ -48,10 +48,9 @@ namespace Datos
 
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "Select identificacion,nombre,apellido from Deportista";
+                command.CommandText = "select *from Deportista";
                 var Reader = command.ExecuteReader();
-                if (Reader.Read()){
-
+                while (Reader.Read()){
                     Deportista deportista = MaperarDeportistas(Reader);
                     deportistas.Add(deportista);
                 }
@@ -66,6 +65,17 @@ namespace Datos
             deportista.Identificacion = (string)Reader["identificacion"];
             deportista.Nombre = (string)Reader["nombre"];
             deportista.Apellidó = (string)Reader["apellido"];
+            deportista.Sexo = (string)Reader["sexo"];
+            deportista.Edad = (int)Reader["edad"];
+            deportista.Telefono = (string)Reader["telefono"];
+            deportista.Peso = (double)Reader["peso"];
+            deportista.Altura = (double)Reader["altura"];
+            deportista.Deporte = (string)Reader["deporte"];
+            deportista.PesoActual = (double)Reader["pesoActual"];
+            deportista.FechaEgreso = (DateTime)Reader["fechaEgreso"];
+            deportista.CaloriasDiarias = (double)Reader["caloriasDiarias"];
+            deportista.MetabolismoBasal = (double)Reader["metabolismoBasal"];
+            deportista.TermogenesisActividadFisica = (string)Reader["termogenesisActividadFisica"];
             return deportista;
         }
 

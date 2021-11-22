@@ -29,27 +29,31 @@ namespace Entidad
 
         public void CalculoGastoEnergeticoDiario()
         {
-            if (Sexo == "Masculino")
+            Dieta dieta = new Dieta();
+            CalcularMetabolismoBasal();
+            CalcularActividadFisica();
+            dieta.MetodoAccinDinamicaEspecificaAlimentos();
+            if (Sexo == "M")
             {
-                Dieta.GastoEnergeticoDiario = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + Dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                dieta.GastoEnergeticoDiario = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
             }
             else
             {
-                if (Sexo == "Femenino")
+                if (Sexo == "F")
                 {
-                    Dieta.GastoEnergeticoDiario = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + Dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                    dieta.GastoEnergeticoDiario = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
                 }
 
             }
 
         }
 
-        public void CalcularMetabolismoBasal()
+        private void CalcularMetabolismoBasal()
         {
-            MetabolismoBasal = 24 * (float)Peso;
+            MetabolismoBasal = 24 * Peso;
         }
 
-        public void CalcularActividadFisica()
+        private void CalcularActividadFisica()
         {
             if (TermogenesisActividadFisica.Equals("Leve"))
             {

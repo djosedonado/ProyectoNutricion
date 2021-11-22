@@ -19,6 +19,29 @@ namespace Logica
             deportistaRepository = new deportistaRepository(connection);
         }
 
+        public string Guardar(Deportista deportista)
+        {
+            try
+            {
+                deportista.CalculoGastoEnergeticoDiario();
+                connection.open();
+                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion)==null)
+                {
+                    deportistaRepository.Guardar(deportista);
+                    return $"Se guardaron los datos de satisfactoriamente";
+                }
+                else
+                {
+                    return $"El Paciente con esta identificacion {deportista.Identificacion}  ya Existe en la Base de datos";
+                }
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { connection.close(); }
+        }
+
         public ConsultarPersonaRespuesta ConsultarTodos()
         {
             ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
