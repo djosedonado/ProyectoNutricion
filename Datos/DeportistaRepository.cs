@@ -63,6 +63,7 @@ namespace Datos
             if (!Reader.HasRows) return null;
             Deportista deportista = new Deportista();
             deportista.Identificacion = (string)Reader["identificacion"];
+            deportista.TipoIdentificacion = (string)Reader["tipoIdentificacion"];
             deportista.Nombre = (string)Reader["nombre"];
             deportista.Apellidó = (string)Reader["apellido"];
             deportista.Sexo = (string)Reader["sexo"];
@@ -93,6 +94,7 @@ namespace Datos
                     {
                         Deportista deportista = new Deportista();
                         deportista.Identificacion = Reader.GetString(0);
+                        deportista.TipoIdentificacion = Reader.GetString(0);
                         deportista.Nombre = Reader.GetString(1);
                         deportista.Apellidó = Reader.GetString(2);
                         deportista.Sexo = Reader.GetString(3);

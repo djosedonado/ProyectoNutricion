@@ -14,6 +14,7 @@ namespace Entidad
             Altura = 0;
             CaloriasDiarias = 0;
             MetabolismoBasal = 0;
+            ActividadFisica = 0;
 
         }
         public string Deporte { get; set; }
@@ -30,8 +31,8 @@ namespace Entidad
         public void CalculoGastoEnergeticoDiario()
         {
             Dieta dieta = new Dieta();
-            CalcularMetabolismoBasal();
             CalcularActividadFisica();
+            CalcularMetabolismoBasal();
             dieta.MetodoAccinDinamicaEspecificaAlimentos();
             if (Sexo == "M")
             {
