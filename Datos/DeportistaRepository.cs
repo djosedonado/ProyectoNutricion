@@ -8,65 +8,65 @@ using Entidad;
 
 namespace Datos
 {
-    public class DeportistaRepository
+    public class deportistaRepository
     {
-        SqlConnection connection;
+        private readonly SqlConnection connection;
 
-        public DeportistaRepository(ConnectionDB connectionDB)
+        public deportistaRepository(ConnectionDB connectionDB)
         {
             connection = connectionDB.connectionDB;
         }
-
 
         public void Guardar(Deportista deportista)
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"Insert into Deportista (Identificacion, TipoIdentificacion, Nombre, Apellido, Sexo, Edad, Telefono, Peso, Altura, Deporte, TermogenesisActividadFisica, FechaEgreso) 
-                                                values ( @Identificacion, @TipoIdentificacion, @Nombre, @Apellido, @Sexo, @Edad, @Telefono, @Peso, @Altura, @Deporte, @TermogenesisActividadFisica, @FechaEgreso)"; ;
-                command.Parameters.Add(new SqlParameter("@Identificacion", deportista.Identificacion));
-                command.Parameters.Add(new SqlParameter("@TipoIdentificacion", deportista.TipoIdentificacion));
-                command.Parameters.Add(new SqlParameter("@Nombre", deportista.Nombre));
-                command.Parameters.Add(new SqlParameter("@Apellido", deportista.Apellidó));
-                command.Parameters.Add(new SqlParameter("@Sexo", deportista.Sexo));
-                command.Parameters.Add(new SqlParameter("@Edad", deportista.Edad));
-                command.Parameters.Add(new SqlParameter("Telefono", deportista.Telefono));
-                command.Parameters.Add(new SqlParameter("@Peso", deportista.Peso));
-                command.Parameters.Add(new SqlParameter("@Altura", deportista.Altura));
-                command.Parameters.Add(new SqlParameter("@Deporte", deportista.Deporte));
-                command.Parameters.Add(new SqlParameter("@TermogenesisActividadFisica", deportista.TermogenesisActividadFisica));
-                command.Parameters.Add(new SqlParameter("@FechaEgreso", deportista.FechaEgreso));
+                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,edad,telefono,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
+                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@edad,@telefono,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
+                command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
+                command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
+                command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
+                command.Parameters.Add(new SqlParameter("@apellido", deportista.Apellidó));
+                command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
+                command.Parameters.Add(new SqlParameter("@edad", deportista.Sexo));
+                command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
+                command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
+                command.Parameters.Add(new SqlParameter("@altura", deportista.Altura));
+                command.Parameters.Add(new SqlParameter("@deporte", deportista.Deporte));
+                command.Parameters.Add(new SqlParameter("@pesoActual",deportista.PesoActual));
+                command.Parameters.Add(new SqlParameter("@fechaEgreso", deportista.FechaEgreso));
+                command.Parameters.Add(new SqlParameter("@caloriasDiarias", deportista.CaloriasDiarias));
+                command.Parameters.Add(new SqlParameter("@metabolismoBasal", deportista.MetabolismoBasal));
+                command.Parameters.Add(new SqlParameter("@termogenesisActividadFisica", deportista.TermogenesisActividadFisica));
                 var fila = command.ExecuteNonQuery();
             }
         }
 
-        public List<Deportista> Consultar()
+        public List<Deportista> consultarTodo()
         {
             List<Deportista> deportistas = new List<Deportista>();
+
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select * from Deportista";
-                var dataReader = command.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    Deportista deportista = new Deportista();
-                    deportista.Identificacion = dataReader.GetString(0);
-                    deportista.TipoIdentificacion = dataReader.GetString(1);
-                    deportista.Nombre = dataReader.GetString(2);
-                    deportista.Apellidó = dataReader.GetString(3);
-                    deportista.Edad = dataReader.GetInt32(4);
-                    deportista.Sexo = dataReader.GetString(5);
-                    deportista.Telefono = dataReader.GetString(6);
-                    deportista.Peso = dataReader.GetDouble(7);
-                    deportista.Altura = dataReader.GetDouble(8);
-                    deportista.Deporte = dataReader.GetString(9);
-                    deportista.TermogenesisActividadFisica = dataReader.GetString(10);
-                    deportista.FechaEgreso = dataReader.GetString(11);
+                command.CommandText = "Select identificacion,nombre,apellido from Deportista";
+                var Reader = command.ExecuteReader();
+                if (Reader.Read()){
+
+                    Deportista deportista = MaperarDeportistas(Reader);
                     deportistas.Add(deportista);
                 }
-                dataReader.Close();
             }
-            return deportistas;
+                return deportistas;
+        }
+
+        public Deportista MaperarDeportistas(SqlDataReader Reader)
+        {
+            if (!Reader.HasRows) return null;
+            Deportista deportista = new Deportista();
+            deportista.Identificacion = (string)Reader["identificacion"];
+            deportista.Nombre = (string)Reader["nombre"];
+            deportista.Apellidó = (string)Reader["apellido"];
+            return deportista;
         }
 
         public Deportista BuscarPorIdentificacion(string identificacion)
@@ -75,32 +75,35 @@ namespace Datos
             {
                 command.CommandText = "select * from Deportista where identificacion=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
-                var dataReader = command.ExecuteReader();
-                if (dataReader.HasRows)
+                var Reader = command.ExecuteReader();
+                if (Reader.HasRows)
                 {
-                    while (dataReader.Read())
+                    while (Reader.Read())
                     {
                         Deportista deportista = new Deportista();
-                        deportista.Identificacion = dataReader.GetString(0);
-                        deportista.TipoIdentificacion = dataReader.GetString(1);
-                        deportista.Nombre = dataReader.GetString(2);
-                        deportista.Apellidó = dataReader.GetString(3);
-                        deportista.Edad = dataReader.GetInt32(4);
-                        deportista.Sexo = dataReader.GetString(5);
-                        deportista.Telefono = dataReader.GetString(6);
-                        deportista.Peso = dataReader.GetDouble(7);
-                        deportista.Altura = dataReader.GetDouble(8);
-                        deportista.Deporte = dataReader.GetString(9);
-                        deportista.TermogenesisActividadFisica = dataReader.GetString(10);
-                        deportista.FechaEgreso = dataReader.GetString(11);
+                        deportista.Identificacion = Reader.GetString(0);
+                        deportista.Nombre = Reader.GetString(1);
+                        deportista.Apellidó = Reader.GetString(2);
+                        deportista.Sexo = Reader.GetString(3);
+                        deportista.Edad = Reader.GetInt32(4);
+                        deportista.Telefono = Reader.GetString(5);
+                        deportista.Peso = Reader.GetDouble(6);
+                        deportista.Altura = Reader.GetDouble(7);
+                        deportista.Deporte = Reader.GetString(8);
+                        deportista.PesoActual = Reader.GetDouble(9);
+                        deportista.FechaEgreso = Reader.GetDateTime(10);
+                        deportista.CaloriasDiarias = Reader.GetDouble(11);
+                        deportista.MetabolismoBasal = Reader.GetDouble(12);
+                        deportista.TermogenesisActividadFisica = Reader.GetString(13);
                         return deportista;
                     }
                 }
-                dataReader.Close();
+                Reader.Close();
             }
             return null;
         }
 
-
     }
+
+
 }

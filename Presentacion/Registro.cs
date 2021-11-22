@@ -21,13 +21,9 @@ namespace Presentacion
         }
         public Registro()
         {
-            ServiceDeportista = new ServiceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
-            deportistas = new List<Deportista>();
         }
 
-        public ServiceDeportista ServiceDeportista;
-        List<Deportista> deportistas;
 
         private void textIdentificacion_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -93,7 +89,7 @@ namespace Presentacion
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text;
             deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
-            deportista.FechaEgreso = dateTimeRegistar.Text;
+            deportista.FechaEgreso = dateTimeRegistar.Value.ToShortDateString();
             return deportista;
         }
 
@@ -106,9 +102,7 @@ namespace Presentacion
             }
             else
             {
-                Deportista deportista = MapearDeportista();
-                string mensaje = ServiceDeportista.Guardar(deportista);
-                MessageBox.Show(mensaje, "Mensaje de guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
                 textNombre.Text = "";
                 textApellido.Text = "";
                 textIdentificacion.Text = "";

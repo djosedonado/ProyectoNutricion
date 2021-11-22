@@ -14,26 +14,24 @@ namespace Presentacion
 {
     public partial class Consultar : Form
     {
-        public ServiceDeportista ServiceDeportista;
-        List<Deportista> deportistas;
-
+        serviceDeportista service;
+        List<Deportista> deportista;
         public Consultar()
         {
-            ServiceDeportista = new ServiceDeportista(CadenaConexion.ConnectionString);
+            service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
-            deportistas = new List<Deportista>();
-            ConsultarData();
+            deportista = new List<Deportista>();
+            ConsultarDatos();
         }
 
-        public void ConsultarData()
+        private void ConsultarDatos()
         {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
-            dataGridViewConsultarDeportista.DataSource = null;
-            respuesta = ServiceDeportista.ConsultarTodo();
-            deportistas = respuesta.Deportistas.ToList();
-            dataGridViewConsultarDeportista.DataSource = respuesta.Deportistas;
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            dgvConsultaDatosPersonales.DataSource = null;
+            respuesta = service.ConsultarTodos();
+            deportista = respuesta.Deportistas.ToList();
+            dgvConsultaDatosPersonales.DataSource = deportista;
         }
-
 
         private void TextboxIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {

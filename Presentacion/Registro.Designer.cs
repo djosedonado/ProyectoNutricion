@@ -31,6 +31,18 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.ContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxDeporte = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dateTimeRegistar = new System.Windows.Forms.DateTimePicker();
+            this.textBoxAlturaRegistar = new System.Windows.Forms.TextBox();
+            this.textBoxPesoRegistar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxTipoIdentidad = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,22 +60,10 @@ namespace Presentacion
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxDeporte = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dateTimeRegistar = new System.Windows.Forms.DateTimePicker();
-            this.textBoxAlturaRegistar = new System.Windows.Forms.TextBox();
-            this.textBoxPesoRegistar = new System.Windows.Forms.TextBox();
-            this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ContenedorPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContenedorPrincipal
@@ -103,6 +103,130 @@ namespace Presentacion
             this.ContenedorPrincipal.Name = "ContenedorPrincipal";
             this.ContenedorPrincipal.Size = new System.Drawing.Size(797, 529);
             this.ContenedorPrincipal.TabIndex = 25;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(539, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 70);
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BotonGuardarRegistro
+            // 
+            this.BotonGuardarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonGuardarRegistro.Image = global::Presentacion.Properties.Resources.salvar;
+            this.BotonGuardarRegistro.Location = new System.Drawing.Point(616, 341);
+            this.BotonGuardarRegistro.Name = "BotonGuardarRegistro";
+            this.BotonGuardarRegistro.Size = new System.Drawing.Size(64, 64);
+            this.BotonGuardarRegistro.TabIndex = 42;
+            this.BotonGuardarRegistro.TabStop = false;
+            this.BotonGuardarRegistro.Click += new System.EventHandler(this.BotonGuardarRegistro_Click_1);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(585, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 19);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Tipo de Entrenamiento";
+            // 
+            // comboBoxTipoEntrenamiento
+            // 
+            this.comboBoxTipoEntrenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
+            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
+            "Leve",
+            "Moderada",
+            "Intensa",
+            "Extrema"});
+            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(616, 151);
+            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
+            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxTipoEntrenamiento.TabIndex = 40;
+            this.comboBoxTipoEntrenamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxTipoEntrenamiento_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(427, 234);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 19);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Deporte";
+            // 
+            // textBoxDeporte
+            // 
+            this.textBoxDeporte.Location = new System.Drawing.Point(406, 255);
+            this.textBoxDeporte.Name = "textBoxDeporte";
+            this.textBoxDeporte.Size = new System.Drawing.Size(96, 20);
+            this.textBoxDeporte.TabIndex = 38;
+            this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(596, 198);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 19);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Fecha de Egreso";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(435, 185);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 19);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "Altura";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(435, 136);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 19);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Peso";
+            // 
+            // dateTimeRegistar
+            // 
+            this.dateTimeRegistar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimeRegistar.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeRegistar.Location = new System.Drawing.Point(539, 220);
+            this.dateTimeRegistar.Name = "dateTimeRegistar";
+            this.dateTimeRegistar.Size = new System.Drawing.Size(217, 22);
+            this.dateTimeRegistar.TabIndex = 34;
+            // 
+            // textBoxAlturaRegistar
+            // 
+            this.textBoxAlturaRegistar.Location = new System.Drawing.Point(406, 206);
+            this.textBoxAlturaRegistar.Name = "textBoxAlturaRegistar";
+            this.textBoxAlturaRegistar.Size = new System.Drawing.Size(96, 20);
+            this.textBoxAlturaRegistar.TabIndex = 33;
+            this.textBoxAlturaRegistar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlturaRegistar_KeyPress);
+            // 
+            // textBoxPesoRegistar
+            // 
+            this.textBoxPesoRegistar.Location = new System.Drawing.Point(406, 158);
+            this.textBoxPesoRegistar.Name = "textBoxPesoRegistar";
+            this.textBoxPesoRegistar.Size = new System.Drawing.Size(96, 20);
+            this.textBoxPesoRegistar.TabIndex = 32;
+            this.textBoxPesoRegistar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPesoRegistar_KeyPress);
             // 
             // label10
             // 
@@ -169,8 +293,8 @@ namespace Presentacion
             this.comboSexo.FormattingEnabled = true;
             this.comboSexo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
+            "M",
+            "F"});
             this.comboSexo.Location = new System.Drawing.Point(269, 250);
             this.comboSexo.Name = "comboSexo";
             this.comboSexo.Size = new System.Drawing.Size(100, 25);
@@ -288,130 +412,6 @@ namespace Presentacion
             this.textIdentificacion.TabIndex = 1;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress_1);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(585, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 19);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Tipo de Entrenamiento";
-            // 
-            // comboBoxTipoEntrenamiento
-            // 
-            this.comboBoxTipoEntrenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
-            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
-            "Leve",
-            "Moderada",
-            "Intensa",
-            "Extrema"});
-            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(616, 151);
-            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
-            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(90, 21);
-            this.comboBoxTipoEntrenamiento.TabIndex = 40;
-            this.comboBoxTipoEntrenamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxTipoEntrenamiento_KeyPress);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(427, 234);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 19);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Deporte";
-            // 
-            // textBoxDeporte
-            // 
-            this.textBoxDeporte.Location = new System.Drawing.Point(406, 255);
-            this.textBoxDeporte.Name = "textBoxDeporte";
-            this.textBoxDeporte.Size = new System.Drawing.Size(96, 20);
-            this.textBoxDeporte.TabIndex = 38;
-            this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(596, 198);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 19);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Fecha de Egreso";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(435, 185);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 19);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Altura";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(435, 136);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 19);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "Peso";
-            // 
-            // dateTimeRegistar
-            // 
-            this.dateTimeRegistar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimeRegistar.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeRegistar.Location = new System.Drawing.Point(539, 220);
-            this.dateTimeRegistar.Name = "dateTimeRegistar";
-            this.dateTimeRegistar.Size = new System.Drawing.Size(217, 22);
-            this.dateTimeRegistar.TabIndex = 34;
-            // 
-            // textBoxAlturaRegistar
-            // 
-            this.textBoxAlturaRegistar.Location = new System.Drawing.Point(406, 206);
-            this.textBoxAlturaRegistar.Name = "textBoxAlturaRegistar";
-            this.textBoxAlturaRegistar.Size = new System.Drawing.Size(96, 20);
-            this.textBoxAlturaRegistar.TabIndex = 33;
-            this.textBoxAlturaRegistar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlturaRegistar_KeyPress);
-            // 
-            // textBoxPesoRegistar
-            // 
-            this.textBoxPesoRegistar.Location = new System.Drawing.Point(406, 158);
-            this.textBoxPesoRegistar.Name = "textBoxPesoRegistar";
-            this.textBoxPesoRegistar.Size = new System.Drawing.Size(96, 20);
-            this.textBoxPesoRegistar.TabIndex = 32;
-            this.textBoxPesoRegistar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPesoRegistar_KeyPress);
-            // 
-            // BotonGuardarRegistro
-            // 
-            this.BotonGuardarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonGuardarRegistro.Image = global::Presentacion.Properties.Resources.salvar;
-            this.BotonGuardarRegistro.Location = new System.Drawing.Point(616, 341);
-            this.BotonGuardarRegistro.Name = "BotonGuardarRegistro";
-            this.BotonGuardarRegistro.Size = new System.Drawing.Size(64, 64);
-            this.BotonGuardarRegistro.TabIndex = 42;
-            this.BotonGuardarRegistro.TabStop = false;
-            this.BotonGuardarRegistro.Click += new System.EventHandler(this.BotonGuardarRegistro_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(539, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(62, 70);
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,9 +424,9 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Registro_Load);
             this.ContenedorPrincipal.ResumeLayout(false);
             this.ContenedorPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

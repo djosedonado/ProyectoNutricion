@@ -17,17 +17,17 @@ namespace Entidad
 
         }
         public string Deporte { get; set; }
+        public string TermogenesisActividadFisica { get; set; }
+        public DateTime FechaEgreso { get; set; }
         public double Peso { get; set; }
         public double PesoActual { get; set; }
         public double Altura { get; set; }
-        public string FechaEgreso { get; set; }
         public double CaloriasDiarias { get; set; }
         public double MetabolismoBasal { get; set; }
-        public string TermogenesisActividadFisica { get; set; }
         public double ActividadFisica { get; set; }
         public Dieta Dieta { get; set; }
 
-        private void CalculoGastoEnergeticoDiario()
+        public void CalculoGastoEnergeticoDiario()
         {
             if (Sexo == "Masculino")
             {
@@ -44,12 +44,12 @@ namespace Entidad
 
         }
 
-        private void CalcularMetabolismoBasal()
+        public void CalcularMetabolismoBasal()
         {
             MetabolismoBasal = 24 * (float)Peso;
         }
 
-        private void CalcularActividadFisica()
+        public void CalcularActividadFisica()
         {
             if (TermogenesisActividadFisica.Equals("Leve"))
             {

@@ -29,32 +29,31 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.dgvConsultaDatosPersonales = new System.Windows.Forms.DataGridView();
+            this.buttonBuscarDeportista = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePaciente = new System.Windows.Forms.TextBox();
-            this.dataGridViewConsultarDeportista = new System.Windows.Forms.DataGridView();
-            this.ConsultaIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConsultaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConsultaApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConsultaTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConsultaEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConsultaDeporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
-            this.buttonBuscarDeportista = new System.Windows.Forms.Button();
+            this.nutrisoftDataSet = new Presentacion.NutrisoftDataSet();
+            this.nutrisoftDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PanelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultarDeportista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelPrincipal.Controls.Add(this.dgvConsultaDatosPersonales);
             this.PanelPrincipal.Controls.Add(this.buttonBuscarDeportista);
             this.PanelPrincipal.Controls.Add(this.label2);
             this.PanelPrincipal.Controls.Add(this.label1);
             this.PanelPrincipal.Controls.Add(this.textNombrePaciente);
-            this.PanelPrincipal.Controls.Add(this.dataGridViewConsultarDeportista);
             this.PanelPrincipal.Controls.Add(this.Identificacion);
             this.PanelPrincipal.Controls.Add(this.TextboxIdentificacion);
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -62,6 +61,32 @@ namespace Presentacion
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(800, 450);
             this.PanelPrincipal.TabIndex = 0;
+            // 
+            // dgvConsultaDatosPersonales
+            // 
+            this.dgvConsultaDatosPersonales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(128, 153);
+            this.dgvConsultaDatosPersonales.Name = "dgvConsultaDatosPersonales";
+            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(648, 247);
+            this.dgvConsultaDatosPersonales.TabIndex = 8;
+            // 
+            // buttonBuscarDeportista
+            // 
+            this.buttonBuscarDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonBuscarDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscarDeportista.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonBuscarDeportista.FlatAppearance.BorderSize = 7;
+            this.buttonBuscarDeportista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarDeportista.ForeColor = System.Drawing.Color.White;
+            this.buttonBuscarDeportista.Location = new System.Drawing.Point(626, 86);
+            this.buttonBuscarDeportista.Name = "buttonBuscarDeportista";
+            this.buttonBuscarDeportista.Size = new System.Drawing.Size(75, 29);
+            this.buttonBuscarDeportista.TabIndex = 7;
+            this.buttonBuscarDeportista.Text = "Buscar";
+            this.buttonBuscarDeportista.UseVisualStyleBackColor = false;
+            this.buttonBuscarDeportista.Click += new System.EventHandler(this.buttonBuscarDeportista_Click);
             // 
             // label2
             // 
@@ -92,52 +117,6 @@ namespace Presentacion
             this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
             this.textNombrePaciente.TabIndex = 4;
             // 
-            // dataGridViewConsultarDeportista
-            // 
-            this.dataGridViewConsultarDeportista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewConsultarDeportista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ConsultaIdentificacion,
-            this.ConsultaNombre,
-            this.ConsultaApellido,
-            this.ConsultaTelefono,
-            this.ConsultaEdad,
-            this.ConsultaDeporte});
-            this.dataGridViewConsultarDeportista.Location = new System.Drawing.Point(84, 145);
-            this.dataGridViewConsultarDeportista.Name = "dataGridViewConsultarDeportista";
-            this.dataGridViewConsultarDeportista.Size = new System.Drawing.Size(641, 290);
-            this.dataGridViewConsultarDeportista.TabIndex = 2;
-            this.dataGridViewConsultarDeportista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewConsultarDeportista_CellContentClick);
-            // 
-            // ConsultaIdentificacion
-            // 
-            this.ConsultaIdentificacion.HeaderText = "Identificacion";
-            this.ConsultaIdentificacion.Name = "ConsultaIdentificacion";
-            // 
-            // ConsultaNombre
-            // 
-            this.ConsultaNombre.HeaderText = "Nombre";
-            this.ConsultaNombre.Name = "ConsultaNombre";
-            // 
-            // ConsultaApellido
-            // 
-            this.ConsultaApellido.HeaderText = "Apellido";
-            this.ConsultaApellido.Name = "ConsultaApellido";
-            // 
-            // ConsultaTelefono
-            // 
-            this.ConsultaTelefono.HeaderText = "Telefono";
-            this.ConsultaTelefono.Name = "ConsultaTelefono";
-            // 
-            // ConsultaEdad
-            // 
-            this.ConsultaEdad.HeaderText = "Edad";
-            this.ConsultaEdad.Name = "ConsultaEdad";
-            // 
-            // ConsultaDeporte
-            // 
-            this.ConsultaDeporte.HeaderText = "Deporte";
-            this.ConsultaDeporte.Name = "ConsultaDeporte";
-            // 
             // Identificacion
             // 
             this.Identificacion.AutoSize = true;
@@ -157,23 +136,15 @@ namespace Presentacion
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
             // 
-            // buttonBuscarDeportista
+            // nutrisoftDataSet
             // 
-            this.buttonBuscarDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.buttonBuscarDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscarDeportista.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBuscarDeportista.FlatAppearance.BorderSize = 7;
-            this.buttonBuscarDeportista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.buttonBuscarDeportista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.buttonBuscarDeportista.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarDeportista.ForeColor = System.Drawing.Color.White;
-            this.buttonBuscarDeportista.Location = new System.Drawing.Point(626, 86);
-            this.buttonBuscarDeportista.Name = "buttonBuscarDeportista";
-            this.buttonBuscarDeportista.Size = new System.Drawing.Size(75, 29);
-            this.buttonBuscarDeportista.TabIndex = 7;
-            this.buttonBuscarDeportista.Text = "Buscar";
-            this.buttonBuscarDeportista.UseVisualStyleBackColor = false;
-            this.buttonBuscarDeportista.Click += new System.EventHandler(this.buttonBuscarDeportista_Click);
+            this.nutrisoftDataSet.DataSetName = "NutrisoftDataSet";
+            this.nutrisoftDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nutrisoftDataSetBindingSource
+            // 
+            this.nutrisoftDataSetBindingSource.DataSource = this.nutrisoftDataSet;
+            this.nutrisoftDataSetBindingSource.Position = 0;
             // 
             // Consultar
             // 
@@ -186,7 +157,9 @@ namespace Presentacion
             this.Text = "Consultar";
             this.PanelPrincipal.ResumeLayout(false);
             this.PanelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultarDeportista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,16 +169,12 @@ namespace Presentacion
         private System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Label Identificacion;
         private System.Windows.Forms.TextBox TextboxIdentificacion;
-        private System.Windows.Forms.DataGridView dataGridViewConsultarDeportista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaIdentificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaEdad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultaDeporte;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombrePaciente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBuscarDeportista;
+        private System.Windows.Forms.DataGridView dgvConsultaDatosPersonales;
+        private System.Windows.Forms.BindingSource nutrisoftDataSetBindingSource;
+        private NutrisoftDataSet nutrisoftDataSet;
     }
 }

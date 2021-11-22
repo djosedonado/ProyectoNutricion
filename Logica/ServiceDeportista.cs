@@ -4,56 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using Datos;
 using Entidad;
+using Datos;
 
 namespace Logica
 {
-    public class ServiceDeportista
+    public class serviceDeportista
     {
+        private readonly deportistaRepository deportistaRepository;
         private readonly ConnectionDB connection;
-        private readonly DeportistaRepository deportistaRepository;
-        public ServiceDeportista(string connectionDB)
+        public serviceDeportista(string SQLServerExpress)
         {
-            connection = new ConnectionDB(connectionDB);
-            deportistaRepository = new DeportistaRepository(connection);
+            connection = new ConnectionDB(SQLServerExpress);
+            deportistaRepository = new deportistaRepository(connection);
         }
 
-        public string Guardar(Deportista deportista)
+        public ConsultarPersonaRespuesta ConsultarTodos()
         {
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
             try
             {
                 connection.open();
-                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion)==null)
-                {
-                    deportistaRepository.Guardar(deportista);
-                    return $"Se guardaron los datos sactifactoriamente";
-                }
-                else
-                {
-                    return $"La identificacion que desea registrar ya esta guardada";
-                }
-
-            }catch(Exception e)
-            {
-                return $"Error de aplicacion: {e.Message}";
-            }
-            finally 
-            { 
-                connection.close(); 
-            }
-        }
-
-        public ConsultarDeportistaRespuesta ConsultarTodo()
-        {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
-            try
-            {
-                connection.open();
-                respuesta.Deportistas = deportistaRepository.Consultar();
+                respuesta.Deportistas = deportistaRepository.consultarTodo();
                 connection.close();
                 respuesta.Error = false;
-                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                respuesta.Mensaje=(respuesta.Deportistas.Count>0)? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
             }
             catch (Exception e)
@@ -62,19 +37,14 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally
-            {
-                connection.close();
-            }
+            finally { connection.close(); }
         }
-
-
     }
 
-    public class ConsultarDeportistaRespuesta
+    public class ConsultarPersonaRespuesta
     {
         public bool Error { get; set; }
-        public string Mensaje  { get; set; }
+        public string Mensaje { get; set; }
         public IList<Deportista> Deportistas { get; set; }
     }
 }
