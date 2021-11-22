@@ -35,13 +35,13 @@ namespace Entidad
             dieta.MetodoAccinDinamicaEspecificaAlimentos();
             if (Sexo == "M")
             {
-                dieta.GastoEnergeticoDiario = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
             }
             else
             {
                 if (Sexo == "F")
                 {
-                    dieta.GastoEnergeticoDiario = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                    CaloriasDiarias = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
                 }
 
             }

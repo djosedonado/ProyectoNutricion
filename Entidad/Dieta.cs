@@ -10,13 +10,11 @@ namespace Entidad
     {
         public Dieta()
         {
-            GastoEnergeticoDiario = 0;
             AcciónDinámicaEspecíficaAlimentos=0;
         }
 
         public string IdDieta { get; set; }
         public double AcciónDinámicaEspecíficaAlimentos { get; set; }
-        public double GastoEnergeticoDiario { get; set; }
         public string RecomendacionNutriccional { get; set; }
         public string RecomendacionAlimentaria { get; set; }
         public string DiasAplicados { get; set; }
