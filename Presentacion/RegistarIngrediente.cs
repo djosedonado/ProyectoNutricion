@@ -15,13 +15,13 @@ namespace Presentacion
     public partial class RegistarIngrediente : Form
     {
         public serviceAlimento serviceAlimento;
-        List<Alimento> alimentos;
+        List<Alimento> alimento;
         
         public RegistarIngrediente()
         {
             serviceAlimento = new serviceAlimento(CadenaConexion.ConnectionString);
             InitializeComponent();
-            alimentos = new List<Alimento>();
+            alimento = new List<Alimento>();
             ConsultarData();
         }
 
@@ -30,7 +30,7 @@ namespace Presentacion
             ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
             dgvAlimentos.DataSource = null;
             respuesta = serviceAlimento.consultarTodo();
-            alimentos = respuesta.Alimentos.ToList();
+            alimento = respuesta.Alimentos.ToList();
             dgvAlimentos.DataSource = respuesta.Alimentos;
         }
 
@@ -39,10 +39,10 @@ namespace Presentacion
             Alimento alimento = new Alimento();
             alimento.IdAlimentos = textIdAlimento.Text;
             alimento.NombreAlimento = textAlimento.Text;
-            alimento.Calorias = decimal.Parse(textCalorias.Text);
-            alimento.Carbohidratos = decimal.Parse(textCarbohidratos.Text);
-            alimento.Proteinas = decimal.Parse(textProteinas.Text);
-            alimento.Liquidos = decimal.Parse(textLiquidos.Text);
+            alimento.Calorias = double.Parse(textCalorias.Text);
+            alimento.Carbohidratos = double.Parse(textCarbohidratos.Text);
+            alimento.Proteinas = double.Parse(textProteinas.Text);
+            alimento.Liquidos = double.Parse(textLiquidos.Text);
             return alimento;
         }
 

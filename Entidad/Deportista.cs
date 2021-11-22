@@ -26,6 +26,7 @@ namespace Entidad
         public string TermogenesisActividadFisica { get; set; }
         public double ActividadFisica { get; set; }
         public Dieta Dieta { get; set; }
+
         private void CalculoGastoEnergeticoDiario()
         {
             if (Sexo == "Masculino")
@@ -45,7 +46,7 @@ namespace Entidad
 
         private void CalcularMetabolismoBasal()
         {
-            MetabolismoBasal = 24 * Peso;
+            MetabolismoBasal = 24 * (float)Peso;
         }
 
         private void CalcularActividadFisica()

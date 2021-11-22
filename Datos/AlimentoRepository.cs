@@ -22,14 +22,14 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"Insert into Alimento ( id, Nombre, Caloria, Carbohidratos, Proteinas, Liquidos) 
-                                                values ( @id, @Nombre, @Caloria, @Carbohidratos, @Proteinas, @Liquidos)";
+                command.CommandText = @"Insert into Alimento (id,nombre,caloria,carbohidrato,proteinas,liquidos) 
+                                                values ( @id,@nombre,@caloria,@carbohidrato,@proteinas,@liquidos)";
                 command.Parameters.Add(new SqlParameter("@id", alimento.IdAlimentos));
-                command.Parameters.Add(new SqlParameter("@Nombre", alimento.NombreAlimento));
-                command.Parameters.Add(new SqlParameter("@Caloria", alimento.Calorias));
-                command.Parameters.Add(new SqlParameter("@Carbohidratos", alimento.Carbohidratos));
-                command.Parameters.Add(new SqlParameter("@Proteinas", alimento.Proteinas));
-                command.Parameters.Add(new SqlParameter("@Liquidos", alimento.Liquidos));
+                command.Parameters.Add(new SqlParameter("@nombre", alimento.NombreAlimento));
+                command.Parameters.Add(new SqlParameter("@caloria", alimento.Calorias));
+                command.Parameters.Add(new SqlParameter("@carbohidrato", alimento.Carbohidratos));
+                command.Parameters.Add(new SqlParameter("@proteinas", alimento.Proteinas));
+                command.Parameters.Add(new SqlParameter("@liquidos", alimento.Liquidos));
                 var fila = command.ExecuteNonQuery();
             }
         }
@@ -39,17 +39,17 @@ namespace Datos
             List<Alimento> alimentos = new List<Alimento>();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select * from Alimento";
+                command.CommandText = "select *from Alimento";
                 var dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
                     Alimento alimento = new Alimento();
                     alimento.IdAlimentos = dataReader.GetString(0);
                     alimento.NombreAlimento = dataReader.GetString(1);
-                    alimento.Calorias = dataReader.GetDecimal(2);
-                    alimento.Carbohidratos = dataReader.GetDecimal(3);
-                    alimento.Proteinas = dataReader.GetDecimal(4);
-                    alimento.Liquidos = dataReader.GetDecimal(5);
+                    alimento.Calorias = dataReader.GetDouble(2);
+                    alimento.Carbohidratos = dataReader.GetDouble(3);
+                    alimento.Proteinas = dataReader.GetDouble(4);
+                    alimento.Liquidos = dataReader.GetDouble(5);
                     alimentos.Add(alimento);
                 }
                 dataReader.Close();
@@ -71,10 +71,10 @@ namespace Datos
                         Alimento alimento = new Alimento();
                         alimento.IdAlimentos = reader.GetString(0);
                         alimento.NombreAlimento = reader.GetString(1);
-                        alimento.Calorias = reader.GetDecimal(2);
-                        alimento.Carbohidratos = reader.GetDecimal(3);
-                        alimento.Proteinas = reader.GetDecimal(4);
-                        alimento.Liquidos = reader.GetDecimal(5);
+                        alimento.Calorias = reader.GetDouble(2);
+                        alimento.Carbohidratos = reader.GetDouble(3);
+                        alimento.Proteinas = reader.GetDouble(4);
+                        alimento.Liquidos = reader.GetDouble(5);
                         return alimento;
                     }
                 }

@@ -23,10 +23,10 @@ namespace Entidad
 
         public string IdAlimentos { get; set; }
         public string NombreAlimento { get; set; }
-        public decimal Calorias { get; set; }
-        public decimal Carbohidratos { get; set; }
-        public decimal Proteinas { get; set; }
-        public decimal Liquidos { get; set; }
+        public double Calorias { get; set; }
+        public double Carbohidratos { get; set; }
+        public double Proteinas { get; set; }
+        public double Liquidos { get; set; }
         public string IdDietas { get; set; }
     }
 }
