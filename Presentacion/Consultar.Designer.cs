@@ -40,6 +40,12 @@ namespace Presentacion
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
             this.nutrisoftDataSet = new Presentacion.NutrisoftDataSet();
             this.nutrisoftDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
@@ -65,6 +71,13 @@ namespace Presentacion
             // dgvConsultaDatosPersonales
             // 
             this.dgvConsultaDatosPersonales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultaDatosPersonales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(128, 153);
             this.dgvConsultaDatosPersonales.Name = "dgvConsultaDatosPersonales";
             this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(648, 247);
@@ -146,6 +159,36 @@ namespace Presentacion
             this.nutrisoftDataSetBindingSource.DataSource = this.nutrisoftDataSet;
             this.nutrisoftDataSetBindingSource.Position = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Identificacion";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Apellido";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Edad";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Sexo";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Telefono";
+            this.Column6.Name = "Column6";
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +219,11 @@ namespace Presentacion
         private System.Windows.Forms.DataGridView dgvConsultaDatosPersonales;
         private System.Windows.Forms.BindingSource nutrisoftDataSetBindingSource;
         private NutrisoftDataSet nutrisoftDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

@@ -21,7 +21,8 @@ namespace Presentacion
             service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
             deportista = new List<Deportista>();
-            ConsultarDatos();
+            //ConsultarDatos();
+            MostrarDeportista();
         }
 
         private void ConsultarDatos()
@@ -31,6 +32,32 @@ namespace Presentacion
             respuesta = service.ConsultarTodos();
             deportista = respuesta.Deportistas.ToList();
             dgvConsultaDatosPersonales.DataSource = deportista;
+        }
+
+        private void Llenartable(List<Deportista> deportistas)
+        {
+            dgvConsultaDatosPersonales.Rows.Clear();
+            foreach (var item in deportista)
+            {
+                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,item.Nombre,item.Apellidó,item.Edad,item.Sexo,item.Telefono);
+            }
+            dgvConsultaDatosPersonales.Refresh();
+        }
+
+        private void MostrarDeportista()
+        {
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            dgvConsultaDatosPersonales.DataSource = null;
+            respuesta = service.ConsultarTodos();
+            deportista = respuesta.Deportistas.ToList();
+            if (!respuesta.Error)
+            {
+                Llenartable(deportista);
+            }
+            else
+            {
+                MessageBox.Show("Error al consular");
+            }
         }
 
         private void TextboxIdentificacion_KeyPress(object sender, KeyPressEventArgs e)

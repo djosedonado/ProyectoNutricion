@@ -7,14 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
+using Entidad;
 
 namespace Presentacion
 {
     public partial class TasaMetablistica : Form
     {
+        serviceDeportista service;
+        List<Deportista> deportistas;
         public TasaMetablistica()
         {
+            service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
+            deportistas = new List<Deportista>();
+            MostrarDatos();
+        }
+
+        private void llenartabla(List<Deportista> deportistas)
+        {
+            dgvTasaMetabolicaBasal.Rows.Clear();
+            foreach(var item in deportistas)
+            {
+                dgvTasaMetabolicaBasal.Rows.Add(item.Peso, item.Altura, item.Edad, item.MetabolismoBasal);
+            }
+            dgvTasaMetabolicaBasal.Refresh();
+        }
+
+        private void MostrarDatos()
+        {
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            dgvTasaMetabolicaBasal.DataSource = null;
+            respuesta = service.ConsultarTodos();
+            deportistas = respuesta.Deportistas.ToList();
+            if (!respuesta.Error)
+            {
+                llenartabla(deportistas);
+            }
+            else
+            {
+                MessageBox.Show("Error al consultar");
+            }
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +89,28 @@ namespace Presentacion
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void MostrarDatosPorIdentificacion()
+        {
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            dgvTasaMetabolicaBasal.DataSource = null;
+            respuesta = service.ConsultarTodos();
+            deportistas = respuesta.Deportistas.ToList();
+            if (!respuesta.Error)
+            {
+                llenartabla(deportistas);
+            }
+            else
+            {
+                MessageBox.Show("Error al consultar");
+            }
+
+        }
+
+        private void botonBuscarIdentificacion_Click(object sender, EventArgs e)
+        {
+            MostrarDatosPorIdentificacion();
         }
     }
 }
