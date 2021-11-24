@@ -16,6 +16,8 @@ namespace Presentacion
     {
         serviceDeportista service;
         List<Deportista> deportistas;
+        public double GastoEnergetico = 0;
+
         public TasaMetablistica()
         {
             service = new serviceDeportista(CadenaConexion.ConnectionString);
@@ -26,10 +28,12 @@ namespace Presentacion
 
         private void llenartabla(List<Deportista> deportistas)
         {
+            
             dgvTasaMetabolicaBasal.Rows.Clear();
             foreach(var item in deportistas)
             {
                 dgvTasaMetabolicaBasal.Rows.Add(item.Peso, item.Altura, item.Edad, item.MetabolismoBasal);
+                GastoEnergetico = item.CaloriasDiarias;
             }
             dgvTasaMetabolicaBasal.Refresh();
         }
@@ -95,11 +99,13 @@ namespace Presentacion
         {
             ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
             dgvTasaMetabolicaBasal.DataSource = null;
-            respuesta = service.ConsultarTodos();
+            string identificacion = textTasaIdentificacion.Text;
+            respuesta = service.consultarPorIdentificacion(identificacion);
             deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
                 llenartabla(deportistas);
+                textBoxGastoEnergetico.Text = Convert.ToString(GastoEnergetico);
             }
             else
             {
@@ -110,7 +116,16 @@ namespace Presentacion
 
         private void botonBuscarIdentificacion_Click(object sender, EventArgs e)
         {
-            MostrarDatosPorIdentificacion();
+            if (textTasaIdentificacion.Text.Equals(""))
+            {
+                MessageBox.Show("Los datos estan Vacios");
+                MostrarDatos();
+            }
+            else
+            {
+                MostrarDatosPorIdentificacion();
+            }
+            
         }
     }
 }
