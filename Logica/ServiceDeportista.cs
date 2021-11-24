@@ -25,7 +25,7 @@ namespace Logica
             {
                 deportista.CalculoGastoEnergeticoDiario();
                 connection.open();
-                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion)==null)
+                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion) == null)
                 {
                     deportistaRepository.Guardar(deportista);
                     return $"Se guardaron los datos de satisfactoriamente";
@@ -51,7 +51,28 @@ namespace Logica
                 respuesta.Deportistas = deportistaRepository.consultarTodo();
                 connection.close();
                 respuesta.Error = false;
-                respuesta.Mensaje=(respuesta.Deportistas.Count>0)? "Se consultan los Datos" : "No hay datos para consultar";
+                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { connection.close(); }
+        }
+
+        public ConsultarPersonaRespuesta consultarPorIdentificacion(string identificacion)
+        {
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            try
+            {
+                connection.open();
+                respuesta.Deportistas = deportistaRepository.consultarPorIdentificacion(identificacion);
+                connection.close();
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
             }
             catch (Exception e)
@@ -63,6 +84,7 @@ namespace Logica
             finally { connection.close(); }
         }
     }
+
 
     public class ConsultarPersonaRespuesta
     {

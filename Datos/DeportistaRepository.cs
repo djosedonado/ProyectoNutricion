@@ -58,6 +58,24 @@ namespace Datos
                 return deportistas;
         }
 
+        public List<Deportista> consultarPorIdentificacion(string identificacion)
+        {
+            List<Deportista> deportistas = new List<Deportista>();
+
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "select * from Deportista where identificacion=@identificacion";
+                command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
+                var Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Deportista deportista = MaperarDeportistas(Reader);
+                    deportistas.Add(deportista);
+                }
+            }
+            return deportistas;
+        }
+
         public Deportista MaperarDeportistas(SqlDataReader Reader)
         {
             if (!Reader.HasRows) return null;

@@ -73,10 +73,15 @@ namespace Presentacion
 
         private void buttonBuscarDeportista_Click(object sender, EventArgs e)
         {
-            if (TextboxIdentificacion.Text.Equals("") && textNombrePaciente.Text.Equals(""))
+            /*if (TextboxIdentificacion.Text.Equals("") && textNombrePaciente.Text.Equals(""))
             {
                 MessageBox.Show("Los Campos esta Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
+            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            dgvConsultaDatosPersonales.DataSource = null;
+            respuesta = service.consultarPorIdentificacion(TextboxIdentificacion.Text);
+            deportista = respuesta.Deportistas.ToList();
+            dgvConsultaDatosPersonales.DataSource = deportista;
         }
 
         private void dataGridViewConsultarDeportista_CellContentClick(object sender, DataGridViewCellEventArgs e)
