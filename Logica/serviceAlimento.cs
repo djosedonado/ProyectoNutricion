@@ -56,7 +56,7 @@ namespace Logica
                     return $"El Ingrediente con esta id ya Existe en la Base de datos";
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return $"Error de la Aplicacion: {e.Message}";
             }
@@ -85,10 +85,29 @@ namespace Logica
             finally { connection.close(); }
         }
 
+        public ConsultarAlimentoRespuesta FiltrarPorNombre(string nombre)
+        {
+            ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
+            try
+            {
+                connection.open();
+                respuesta.Alimentos = alimentoRepository.FiltrarConsulta(nombre);
+                connection.close();
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { connection.close(); }
+        }
+
+
     }
-
-
-
 
     public class ConsultarAlimentoRespuesta
     {

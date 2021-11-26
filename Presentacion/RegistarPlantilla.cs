@@ -31,7 +31,7 @@ namespace Presentacion
             foreach (var item in alimentos)
             {
                 comboBoxIngrediente.Items.Add(item.NombreAlimento);
-                
+                labelTotalCalorias.Text = item.Calorias.ToString();
             }
             comboBoxIngrediente.Refresh();
         }
@@ -53,9 +53,18 @@ namespace Presentacion
             }
         }
 
+
         private void comboBoxIngrediente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            ConsultarAlimentoRespuesta respuesta = serviceAlimentos.FiltrarPorNombre(comboBoxIngrediente.Text);
+            List<Alimento> alimentos = respuesta.Alimentos.ToList();
+            foreach(var item in alimentos)
+            {
+                labelTotalCalorias.Text = item.Calorias.ToString();
+                labelTotalCarbohidratos.Text = item.Carbohidratos.ToString();
+                labelTotalProteinas.Text = item.Proteinas.ToString();
+                labelTotalLiquidos.Text = item.Liquidos.ToString();
+            }
         }
 
         private void comboBoxIngrediente_Click(object sender, EventArgs e)

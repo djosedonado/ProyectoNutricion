@@ -80,7 +80,7 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select * from Alimento where id=@id";
+                command.CommandText = "select * from Alimento where nombre=@nombre";
                 command.Parameters.Add(new SqlParameter("@nombre", idAlimento));
                 var reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -100,6 +100,11 @@ namespace Datos
                 reader.Close();
             }
             return null;
+        }
+
+        public List<Alimento> FiltrarConsulta(string IdConsulta)
+        {
+            return Consultar().Where(p => p.NombreAlimento.ToString().Contains(IdConsulta)).ToList();
         }
 
 
