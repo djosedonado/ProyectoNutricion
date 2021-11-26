@@ -30,6 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.dgvConsultaDatosPersonales = new System.Windows.Forms.DataGridView();
             this.buttonBuscarDeportista = new System.Windows.Forms.Button();
@@ -73,6 +76,15 @@ namespace Presentacion
             // 
             this.dgvConsultaDatosPersonales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dgvConsultaDatosPersonales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConsultaDatosPersonales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaDatosPersonales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultaDatosPersonales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaDatosPersonales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -82,9 +94,26 @@ namespace Presentacion
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(83, 152);
+            this.dgvConsultaDatosPersonales.EnableHeadersVisualStyles = false;
+            this.dgvConsultaDatosPersonales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(40, 151);
             this.dgvConsultaDatosPersonales.Name = "dgvConsultaDatosPersonales";
-            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(743, 275);
+            this.dgvConsultaDatosPersonales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaDatosPersonales.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvConsultaDatosPersonales.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            this.dgvConsultaDatosPersonales.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(863, 311);
             this.dgvConsultaDatosPersonales.TabIndex = 8;
             // 
             // buttonBuscarDeportista
@@ -168,36 +197,43 @@ namespace Presentacion
             // 
             this.Column1.HeaderText = "Identificacion";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Apellido";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Edad";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Sexo";
             this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Telefono";
             this.Column6.Name = "Column6";
+            this.Column6.Width = 120;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Deporte";
             this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
             // 
             // Consultar
             // 

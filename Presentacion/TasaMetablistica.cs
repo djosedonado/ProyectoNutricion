@@ -114,7 +114,7 @@ namespace Presentacion
 
         }
 
-        private void botonBuscarIdentificacion_Click(object sender, EventArgs e)
+        private void botonBuscarIdentificacion_Click_1(object sender, EventArgs e)
         {
             if (textTasaIdentificacion.Text.Equals(""))
             {
@@ -125,7 +125,6 @@ namespace Presentacion
             {
                 MostrarDatosPorIdentificacion();
             }
-            
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContenedorRegistarAlimentos = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.textIdAlimento = new System.Windows.Forms.TextBox();
@@ -209,6 +211,16 @@ namespace Presentacion
             // 
             this.dgvAlimentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dgvAlimentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAlimentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvAlimentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAlimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlimentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -217,9 +229,18 @@ namespace Presentacion
             this.Column4,
             this.Column5,
             this.Column6});
+            this.dgvAlimentos.EnableHeadersVisualStyles = false;
+            this.dgvAlimentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dgvAlimentos.Location = new System.Drawing.Point(127, 235);
             this.dgvAlimentos.Name = "dgvAlimentos";
-            this.dgvAlimentos.Size = new System.Drawing.Size(674, 196);
+            this.dgvAlimentos.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAlimentos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAlimentos.Size = new System.Drawing.Size(761, 222);
             this.dgvAlimentos.TabIndex = 1;
             this.dgvAlimentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlimentos_CellContentClick);
             // 
@@ -243,26 +264,31 @@ namespace Presentacion
             // 
             this.Column2.HeaderText = "Nombre Ingrediente";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Caloria";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 110;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Carbohidratos";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 110;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Proteinas";
             this.Column5.Name = "Column5";
+            this.Column5.Width = 110;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Liquidos";
             this.Column6.Name = "Column6";
+            this.Column6.Width = 110;
             // 
             // RegistarIngrediente
             // 
