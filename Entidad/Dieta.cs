@@ -25,11 +25,11 @@ namespace Entidad
             AcciónDinámicaEspecíficaAlimentos = 0.1;
         }
 
-        public void agregarDetalleDieta(DetalleDieta detalleDieta)
+        /*public void agregarDetalleDieta(DetalleDieta detalleDieta)
         {
             detalleDieta.idDetalleDieta = IdDieta;
             detalleDietas.Add(detalleDieta);
-        }
+        }*/
 
     }
 }

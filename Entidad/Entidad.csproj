@@ -44,8 +44,10 @@
     <Compile Include="Alimento.cs" />
     <Compile Include="Deportista.cs" />
     <Compile Include="DetalleDieta.cs" />
+    <Compile Include="DetallePlantilla.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="Plantilla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

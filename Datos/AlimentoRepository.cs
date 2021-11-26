@@ -57,6 +57,37 @@ namespace Datos
             return alimentos;
         }
 
+        public Alimento MaperarAlimento(SqlDataReader Reader)
+        {
+            if (!Reader.HasRows) return null;
+            Alimento alimento = new Alimento();
+            alimento.IdAlimentos = (string)Reader["id"];
+            alimento.NombreAlimento = (string)Reader["nombre"];
+            alimento.Calorias = (double)Reader["caloria"];
+            alimento.Carbohidratos = (double)Reader["carbohidrato"];
+            alimento.Proteinas = (double)Reader["proteinas"];
+            alimento.Liquidos = (double)Reader["liquidos"];
+            return alimento;
+        }
+
+        public List<Alimento> consultarPorNombre(string nombre)
+        {
+            List<Alimento> alimentos  = new List<Alimento>();
+
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "select * from Deportista where identificacion=@identificacion";
+                command.Parameters.Add(new SqlParameter("@identificacion", nombre));
+                var Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Alimento alimento = MaperarAlimento(Reader);
+                    alimentos.Add(alimento);
+                }
+            }
+            return alimentos;
+        }
+
         public Alimento BuscarIdAlimento(string idAlimento)
         {
             using (var command = connection.CreateCommand())
