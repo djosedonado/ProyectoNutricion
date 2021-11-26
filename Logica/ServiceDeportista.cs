@@ -23,12 +23,16 @@ namespace Logica
         {
             try
             {
+                string mensajeEmail = string.Empty;
+                CorreoService correo = new CorreoService();
                 deportista.CalculoGastoEnergeticoDiario();
                 connection.open();
                 if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion) == null)
                 {
                     deportistaRepository.Guardar(deportista);
-                    return $"Se guardaron los datos de satisfactoriamente";
+                    mensajeEmail = correo.EnviarEmail(deportista);
+                    //return $"Se guardaron los datos de satisfactoriamente";
+                    return mensajeEmail;
                 }
                 else
                 {

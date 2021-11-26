@@ -21,8 +21,8 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,edad,telefono,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
-                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@edad,@telefono,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
+                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,edad,telefono,correo,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
+                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@edad,@telefono,@correo,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
                 command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
                 command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
@@ -30,6 +30,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
                 command.Parameters.Add(new SqlParameter("@edad", deportista.Edad));
                 command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
+                command.Parameters.Add(new SqlParameter("@correo", deportista.Correo));
                 command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
                 command.Parameters.Add(new SqlParameter("@altura", deportista.Altura));
                 command.Parameters.Add(new SqlParameter("@deporte", deportista.Deporte));
@@ -87,6 +88,7 @@ namespace Datos
             deportista.Sexo = (string)Reader["sexo"];
             deportista.Edad = (int)Reader["edad"];
             deportista.Telefono = (string)Reader["telefono"];
+            deportista.Correo = (string)Reader["correo"];
             deportista.Peso = (double)Reader["peso"];
             deportista.Altura = (double)Reader["altura"];
             deportista.Deporte = (string)Reader["deporte"];
@@ -118,14 +120,15 @@ namespace Datos
                         deportista.Sexo = Reader.GetString(4);
                         deportista.Edad = Reader.GetInt32(5);
                         deportista.Telefono = Reader.GetString(6);
-                        deportista.Peso = Reader.GetDouble(7);
-                        deportista.Altura = Reader.GetDouble(8);
-                        deportista.Deporte = Reader.GetString(9);
-                        deportista.PesoActual = Reader.GetDouble(10);
-                        deportista.FechaEgreso = Reader.GetDateTime(11);
-                        deportista.CaloriasDiarias = Reader.GetDouble(12);
-                        deportista.MetabolismoBasal = Reader.GetDouble(13);
-                        deportista.TermogenesisActividadFisica = Reader.GetString(14);
+                        deportista.Correo = Reader.GetString(7);
+                        deportista.Peso = Reader.GetDouble(8);
+                        deportista.Altura = Reader.GetDouble(9);
+                        deportista.Deporte = Reader.GetString(10);
+                        deportista.PesoActual = Reader.GetDouble(11);
+                        deportista.FechaEgreso = Reader.GetDateTime(12);
+                        deportista.CaloriasDiarias = Reader.GetDouble(13);
+                        deportista.MetabolismoBasal = Reader.GetDouble(14);
+                        deportista.TermogenesisActividadFisica = Reader.GetString(15);
                         return deportista;
                     }
                 }

@@ -60,6 +60,8 @@ namespace Presentacion
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.ContenedorPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
@@ -69,6 +71,8 @@ namespace Presentacion
             // ContenedorPrincipal
             // 
             this.ContenedorPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorPrincipal.Controls.Add(this.label9);
+            this.ContenedorPrincipal.Controls.Add(this.textBoxCorreo);
             this.ContenedorPrincipal.Controls.Add(this.pictureBox2);
             this.ContenedorPrincipal.Controls.Add(this.BotonGuardarRegistro);
             this.ContenedorPrincipal.Controls.Add(this.label11);
@@ -267,7 +271,7 @@ namespace Presentacion
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 346);
+            this.pictureBox1.Location = new System.Drawing.Point(92, 405);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 59);
             this.pictureBox1.TabIndex = 24;
@@ -412,6 +416,24 @@ namespace Presentacion
             this.textIdentificacion.TabIndex = 1;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress_1);
             // 
+            // textBoxCorreo
+            // 
+            this.textBoxCorreo.Location = new System.Drawing.Point(105, 352);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCorreo.TabIndex = 44;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(122, 330);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 19);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Correo";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +485,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textBoxAlturaRegistar;
         private System.Windows.Forms.TextBox textBoxPesoRegistar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxCorreo;
     }
 }

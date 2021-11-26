@@ -86,6 +86,7 @@ namespace Presentacion
             deportista.Edad = int.Parse(textEdad.Text);
             deportista.Sexo = comboSexo.Text;
             deportista.Telefono = textTelefono.Text;
+            deportista.Correo = textBoxCorreo.Text;
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text.ToUpper();
@@ -96,7 +97,7 @@ namespace Presentacion
 
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
-            if (textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
+            if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -115,6 +116,7 @@ namespace Presentacion
                 textBoxAlturaRegistar.Text = "";
                 textBoxPesoRegistar.Text = "";
                 textBoxDeporte.Text = "";
+                textBoxCorreo.Text = "";
                 comboBoxTipoEntrenamiento.SelectedIndex = -1;
                 comboBoxTipoIdentidad.SelectedIndex = -1;
             }

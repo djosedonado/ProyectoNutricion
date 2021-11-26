@@ -50,6 +50,7 @@ namespace Presentacion
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
@@ -93,7 +94,8 @@ namespace Presentacion
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.Column7,
+            this.Column8});
             this.dgvConsultaDatosPersonales.EnableHeadersVisualStyles = false;
             this.dgvConsultaDatosPersonales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(40, 151);
@@ -113,7 +115,7 @@ namespace Presentacion
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             this.dgvConsultaDatosPersonales.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(863, 311);
+            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(972, 358);
             this.dgvConsultaDatosPersonales.TabIndex = 8;
             // 
             // buttonBuscarDeportista
@@ -235,6 +237,12 @@ namespace Presentacion
             this.Column7.Name = "Column7";
             this.Column7.Width = 150;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Correo";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 200;
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,5 +280,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
