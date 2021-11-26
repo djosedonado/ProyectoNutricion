@@ -22,7 +22,7 @@ namespace Presentacion
             serviceAlimento = new serviceAlimento(CadenaConexion.ConnectionString);
             InitializeComponent();
             alimento = new List<Alimento>();
-            ConsultarData();
+            MostarDataAlimentos();
         }
 
         private void ConsultarData()
@@ -38,12 +38,38 @@ namespace Presentacion
         {
             Alimento alimento = new Alimento();
             alimento.IdAlimentos = textIdAlimento.Text;
-            alimento.NombreAlimento = textAlimento.Text;
+            alimento.NombreAlimento = textAlimento.Text.ToUpper();
             alimento.Calorias = double.Parse(textCalorias.Text);
             alimento.Carbohidratos = double.Parse(textCarbohidratos.Text);
             alimento.Proteinas = double.Parse(textProteinas.Text);
             alimento.Liquidos = double.Parse(textLiquidos.Text);
             return alimento;
+        }
+
+        private void LlenarGriv(List<Alimento> alimentos)
+        {
+            dgvAlimentos.Rows.Clear();
+            foreach(var item in alimento)
+            {
+                dgvAlimentos.Rows.Add(item.IdAlimentos, item.NombreAlimento, item.Calorias, item.Carbohidratos, item.Proteinas, item.Liquidos);
+            }
+            dgvAlimentos.Refresh();
+        }
+
+        private void MostarDataAlimentos()
+        {
+            ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
+            dgvAlimentos.DataSource = null;
+            respuesta = serviceAlimento.consultarTodo();
+            alimento = respuesta.Alimentos.ToList();
+            if (!respuesta.Error)
+            {
+                LlenarGriv(alimento);
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void botonGuardarAlimentos_Click(object sender, EventArgs e)
@@ -57,7 +83,7 @@ namespace Presentacion
                 Alimento alimento = MaperarIdAlimentos();
                 string mensaje = serviceAlimento.Guardar(alimento);
                 MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                ConsultarData();
+                MostarDataAlimentos();
                 textAlimento.Text = "";
                 textIdAlimento.Text = "";
                 textCalorias.Text = "";

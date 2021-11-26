@@ -77,7 +77,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(388, 310);
+            this.label1.Location = new System.Drawing.Point(386, 364);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 19);
             this.label1.TabIndex = 12;
@@ -86,7 +86,7 @@ namespace Presentacion
             // textBoxGastoEnergetico
             // 
             this.textBoxGastoEnergetico.Enabled = false;
-            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(380, 332);
+            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(378, 386);
             this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
             this.textBoxGastoEnergetico.Size = new System.Drawing.Size(132, 20);
             this.textBoxGastoEnergetico.TabIndex = 11;
@@ -130,15 +130,17 @@ namespace Presentacion
             // 
             // dgvTasaMetabolicaBasal
             // 
+            this.dgvTasaMetabolicaBasal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.dgvTasaMetabolicaBasal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTasaMetabolicaBasal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTasaMetabolicaBasal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TasaBasalPeso,
             this.TasaBasalAltura,
             this.TasaBasalEdad,
             this.MetabolicaBasal});
-            this.dgvTasaMetabolicaBasal.Location = new System.Drawing.Point(218, 159);
+            this.dgvTasaMetabolicaBasal.Location = new System.Drawing.Point(208, 158);
             this.dgvTasaMetabolicaBasal.Name = "dgvTasaMetabolicaBasal";
-            this.dgvTasaMetabolicaBasal.Size = new System.Drawing.Size(443, 122);
+            this.dgvTasaMetabolicaBasal.Size = new System.Drawing.Size(460, 203);
             this.dgvTasaMetabolicaBasal.TabIndex = 0;
             this.dgvTasaMetabolicaBasal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

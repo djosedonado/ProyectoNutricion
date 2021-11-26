@@ -71,6 +71,8 @@ namespace Presentacion
             // 
             // dgvConsultaDatosPersonales
             // 
+            this.dgvConsultaDatosPersonales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.dgvConsultaDatosPersonales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultaDatosPersonales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaDatosPersonales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

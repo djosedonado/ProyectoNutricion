@@ -142,9 +142,9 @@ namespace Presentacion
             this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
             this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
             "Leve",
-            "Moderada",
-            "Intensa",
-            "Extrema"});
+            "Moderado",
+            "Intenso",
+            "Extremo"});
             this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(616, 151);
             this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
             this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(90, 21);
@@ -245,7 +245,7 @@ namespace Presentacion
             this.comboBoxTipoIdentidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoIdentidad.FormattingEnabled = true;
             this.comboBoxTipoIdentidad.Items.AddRange(new object[] {
-            "Cedula",
+            "Cedula de Ciudadania",
             "Tarjeta Identidad",
             "Cedula Extrangeria",
             "Pasaporte"});
