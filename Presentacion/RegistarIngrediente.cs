@@ -93,44 +93,34 @@ namespace Presentacion
             }
         }
 
-        private void textCalorias_KeyPress(object sender, KeyPressEventArgs e)
+        private void ValidacionNumerico(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar==45 && e.KeyChar==47))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar <= 47 && e.KeyChar >= 45))
             {
                 MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void textCalorias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionNumerico(sender, e);
         }
 
         private void textCarbohidratos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar == 45 && e.KeyChar == 47))
-            {
-                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            ValidacionNumerico(sender, e);
         }
 
         private void textProteinas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar == 45 && e.KeyChar == 47))
-            {
-                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            ValidacionNumerico(sender, e);
         }
 
         private void textLiquidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar == 45 && e.KeyChar == 47))
-            {
-                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            ValidacionNumerico(sender, e);
         }
 
         private void textAlimento_KeyPress(object sender, KeyPressEventArgs e)
@@ -141,11 +131,6 @@ namespace Presentacion
                 e.Handled = true;
                 return;
             }
-        }
-
-        private void dgvAlimentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void textIdAlimento_KeyPress(object sender, KeyPressEventArgs e)

@@ -231,7 +231,7 @@ namespace Presentacion
             this.Column6});
             this.dgvAlimentos.EnableHeadersVisualStyles = false;
             this.dgvAlimentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.dgvAlimentos.Location = new System.Drawing.Point(127, 235);
+            this.dgvAlimentos.Location = new System.Drawing.Point(65, 232);
             this.dgvAlimentos.Name = "dgvAlimentos";
             this.dgvAlimentos.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
@@ -240,9 +240,8 @@ namespace Presentacion
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAlimentos.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAlimentos.Size = new System.Drawing.Size(761, 222);
+            this.dgvAlimentos.Size = new System.Drawing.Size(813, 233);
             this.dgvAlimentos.TabIndex = 1;
-            this.dgvAlimentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlimentos_CellContentClick);
             // 
             // botonGuardarAlimentos
             // 
@@ -264,7 +263,7 @@ namespace Presentacion
             // 
             this.Column2.HeaderText = "Nombre Ingrediente";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
+            this.Column2.Width = 200;
             // 
             // Column3
             // 
@@ -276,7 +275,7 @@ namespace Presentacion
             // 
             this.Column4.HeaderText = "Carbohidratos";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 110;
+            this.Column4.Width = 130;
             // 
             // Column5
             // 
