@@ -46,6 +46,7 @@ namespace Presentacion
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
@@ -65,7 +66,7 @@ namespace Presentacion
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(800, 450);
+            this.PanelPrincipal.Size = new System.Drawing.Size(1067, 594);
             this.PanelPrincipal.TabIndex = 0;
             // 
             // dgvConsultaDatosPersonales
@@ -77,10 +78,11 @@ namespace Presentacion
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
-            this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(128, 153);
+            this.Column6,
+            this.Column7});
+            this.dgvConsultaDatosPersonales.Location = new System.Drawing.Point(83, 152);
             this.dgvConsultaDatosPersonales.Name = "dgvConsultaDatosPersonales";
-            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(648, 247);
+            this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(743, 275);
             this.dgvConsultaDatosPersonales.TabIndex = 8;
             // 
             // buttonBuscarDeportista
@@ -129,6 +131,7 @@ namespace Presentacion
             this.textNombrePaciente.Name = "textNombrePaciente";
             this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
             this.textNombrePaciente.TabIndex = 4;
+            this.textNombrePaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombrePaciente_KeyPress);
             // 
             // Identificacion
             // 
@@ -189,11 +192,16 @@ namespace Presentacion
             this.Column6.HeaderText = "Telefono";
             this.Column6.Name = "Column6";
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Deporte";
+            this.Column7.Name = "Column7";
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 594);
             this.Controls.Add(this.PanelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar";
@@ -225,5 +233,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

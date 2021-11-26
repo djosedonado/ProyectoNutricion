@@ -112,26 +112,33 @@ namespace Datos
                     {
                         Deportista deportista = new Deportista();
                         deportista.Identificacion = Reader.GetString(0);
-                        deportista.TipoIdentificacion = Reader.GetString(0);
-                        deportista.Nombre = Reader.GetString(1);
-                        deportista.Apellidó = Reader.GetString(2);
-                        deportista.Sexo = Reader.GetString(3);
-                        deportista.Edad = Reader.GetInt32(4);
-                        deportista.Telefono = Reader.GetString(5);
-                        deportista.Peso = Reader.GetDouble(6);
-                        deportista.Altura = Reader.GetDouble(7);
-                        deportista.Deporte = Reader.GetString(8);
-                        deportista.PesoActual = Reader.GetDouble(9);
-                        deportista.FechaEgreso = Reader.GetDateTime(10);
-                        deportista.CaloriasDiarias = Reader.GetDouble(11);
-                        deportista.MetabolismoBasal = Reader.GetDouble(12);
-                        deportista.TermogenesisActividadFisica = Reader.GetString(13);
+                        deportista.TipoIdentificacion = Reader.GetString(1);
+                        deportista.Nombre = Reader.GetString(2);
+                        deportista.Apellidó = Reader.GetString(3);
+                        deportista.Sexo = Reader.GetString(4);
+                        deportista.Edad = Reader.GetInt32(5);
+                        deportista.Telefono = Reader.GetString(6);
+                        deportista.Peso = Reader.GetDouble(7);
+                        deportista.Altura = Reader.GetDouble(8);
+                        deportista.Deporte = Reader.GetString(9);
+                        deportista.PesoActual = Reader.GetDouble(10);
+                        deportista.FechaEgreso = Reader.GetDateTime(11);
+                        deportista.CaloriasDiarias = Reader.GetDouble(12);
+                        deportista.MetabolismoBasal = Reader.GetDouble(13);
+                        deportista.TermogenesisActividadFisica = Reader.GetString(14);
                         return deportista;
                     }
                 }
                 Reader.Close();
             }
             return null;
+        }
+
+        public List<Deportista> FiltrarPorNombre(string nombre)
+        {
+            return (from p in consultarTodo()
+                    where p.Nombre.ToLower().Contains(nombre.ToLower())
+                    select p).ToList();
         }
 
     }

@@ -81,14 +81,14 @@ namespace Presentacion
             Deportista deportista = new Deportista();
             deportista.TipoIdentificacion = comboBoxTipoIdentidad.Text;
             deportista.Identificacion = textIdentificacion.Text;
-            deportista.Nombre = textNombre.Text;
-            deportista.Apellidó = textApellido.Text;
+            deportista.Nombre = textNombre.Text.ToUpper();
+            deportista.Apellidó = textApellido.Text.ToUpper();
             deportista.Edad = int.Parse(textEdad.Text);
             deportista.Sexo = comboSexo.Text;
             deportista.Telefono = textTelefono.Text;
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
-            deportista.Deporte = textBoxDeporte.Text;
+            deportista.Deporte = textBoxDeporte.Text.ToUpper();
             deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
             deportista.FechaEgreso = dateTimeRegistar.Value;
             return deportista;

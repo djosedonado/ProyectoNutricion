@@ -40,7 +40,7 @@ namespace Presentacion
 
         private void MostrarDatos()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvTasaMetabolicaBasal.DataSource = null;
             respuesta = service.ConsultarTodos();
             deportistas = respuesta.Deportistas.ToList();
@@ -97,7 +97,7 @@ namespace Presentacion
 
         private void MostrarDatosPorIdentificacion()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvTasaMetabolicaBasal.DataSource = null;
             string identificacion = textTasaIdentificacion.Text;
             respuesta = service.consultarPorIdentificacion(identificacion);

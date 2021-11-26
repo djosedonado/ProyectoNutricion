@@ -27,7 +27,7 @@ namespace Presentacion
 
         private void ConsultarDatos()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             respuesta = service.ConsultarTodos();
             deportista = respuesta.Deportistas.ToList();
@@ -39,14 +39,14 @@ namespace Presentacion
             dgvConsultaDatosPersonales.Rows.Clear();
             foreach (var item in deportista)
             {
-                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,item.Nombre,item.Apellidó,item.Edad,item.Sexo,item.Telefono);
+                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,item.Nombre,item.Apellidó,item.Edad,item.Sexo,item.Telefono,item.Deporte);
             }
             dgvConsultaDatosPersonales.Refresh();
         }
 
         private void MostrarDeportista()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             respuesta = service.ConsultarTodos();
             deportista = respuesta.Deportistas.ToList();
@@ -72,7 +72,7 @@ namespace Presentacion
 
         private void MostrarDeportistaPorIdentificacion()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             string identificacion = TextboxIdentificacion.Text;
             respuesta = service.consultarPorIdentificacion(identificacion);
@@ -87,24 +87,52 @@ namespace Presentacion
             }
         }
 
+        private void MostrarDeportistaPorNombre()
+        {
+            
+            dgvConsultaDatosPersonales.DataSource = null;
+            string nombre = textNombrePaciente.Text;
+            ConsultarDeportista respuesta = new ConsultarDeportista(nombre);
+            respuesta = service.BuscarPorNombreService(nombre);
+            deportista = respuesta.Deportistas.ToList();
+            if (!respuesta.Error)
+            {
+                Llenartable(deportista);
+            }
+            else
+            {
+                MessageBox.Show("Error al consular");
+            }
+        }
+
         private void buttonBuscarDeportista_Click(object sender, EventArgs e)
         {
-            /*if (TextboxIdentificacion.Text.Equals("") && textNombrePaciente.Text.Equals(""))
+            if (TextboxIdentificacion.Text.Equals(""))
             {
-                MessageBox.Show("Los Campos esta Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo de identificacion esta Vacio", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarDeportista();
             }
+            else
+            {
+                MostrarDeportistaPorIdentificacion();
+            }
+            /*
             ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             respuesta = service.consultarPorIdentificacion(TextboxIdentificacion.Text);
             deportista = respuesta.Deportistas.ToList();
             dgvConsultaDatosPersonales.DataSource = deportista;
             */
-            MostrarDeportistaPorIdentificacion();
         }
 
         private void dataGridViewConsultarDeportista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textNombrePaciente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MostrarDeportistaPorNombre();
         }
     }
 }

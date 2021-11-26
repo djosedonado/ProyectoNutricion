@@ -42,9 +42,9 @@ namespace Logica
             finally { connection.close(); }
         }
 
-        public ConsultarPersonaRespuesta ConsultarTodos()
+        public ConsultarDeportistaRespuesta ConsultarTodos()
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             try
             {
                 connection.open();
@@ -63,9 +63,9 @@ namespace Logica
             finally { connection.close(); }
         }
 
-        public ConsultarPersonaRespuesta consultarPorIdentificacion(string identificacion)
+        public ConsultarDeportistaRespuesta consultarPorIdentificacion(string identificacion)
         {
-            ConsultarPersonaRespuesta respuesta = new ConsultarPersonaRespuesta();
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             try
             {
                 connection.open();
@@ -83,13 +83,49 @@ namespace Logica
             }
             finally { connection.close(); }
         }
+
+        public ConsultarDeportista BuscarPorNombreService(string nombre)
+        {
+            try
+            {
+                connection.open();
+                return new ConsultarDeportista(deportistaRepository.FiltrarPorNombre(nombre));
+            }
+            catch(Exception e)
+            {
+
+                return new ConsultarDeportista("Se presento el siguiente Error: " + e.Message);
+            }
+            finally { connection.close(); }
+        }
     }
 
 
-    public class ConsultarPersonaRespuesta
+    public class ConsultarDeportistaRespuesta
     {
         public bool Error { get; set; }
         public string Mensaje { get; set; }
         public IList<Deportista> Deportistas { get; set; }
     }
+
+    public class ConsultarDeportista
+    {
+        public List<Deportista> Deportistas { get; set; }
+        public string Mensaje { get; set; }
+        public bool Error { get; set; }
+
+        public ConsultarDeportista(List<Deportista> deportistas)
+        {
+            Deportistas = deportistas;
+            Error = false;
+        }
+
+        public ConsultarDeportista(string mensaje)
+        {
+            Mensaje = mensaje;
+            Error = true;
+        }
+
+    }
+
 }
