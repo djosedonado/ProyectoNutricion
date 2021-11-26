@@ -29,8 +29,8 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContenedorRegistroDietas = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.botonAgregarListado = new System.Windows.Forms.PictureBox();
@@ -52,9 +52,9 @@ namespace Presentacion
             this.labelCarbohidrato = new System.Windows.Forms.Label();
             this.labelCalorias = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxIngrediente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePlantilla = new System.Windows.Forms.TextBox();
@@ -76,9 +76,9 @@ namespace Presentacion
             this.ContenedorRegistroDietas.Controls.Add(this.textBox1);
             this.ContenedorRegistroDietas.Controls.Add(this.panel1);
             this.ContenedorRegistroDietas.Controls.Add(this.label3);
-            this.ContenedorRegistroDietas.Controls.Add(this.comboBox2);
+            this.ContenedorRegistroDietas.Controls.Add(this.comboBoxIngrediente);
             this.ContenedorRegistroDietas.Controls.Add(this.label2);
-            this.ContenedorRegistroDietas.Controls.Add(this.comboBox1);
+            this.ContenedorRegistroDietas.Controls.Add(this.comboBoxCategoria);
             this.ContenedorRegistroDietas.Controls.Add(this.pictureBox1);
             this.ContenedorRegistroDietas.Controls.Add(this.label1);
             this.ContenedorRegistroDietas.Controls.Add(this.textNombrePlantilla);
@@ -115,14 +115,14 @@ namespace Presentacion
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -135,14 +135,13 @@ namespace Presentacion
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(443, 199);
             this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -309,16 +308,17 @@ namespace Presentacion
             this.label3.TabIndex = 6;
             this.label3.Text = "Ingrediente";
             // 
-            // comboBox2
+            // comboBoxIngrediente
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(250, 173);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 21);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBoxIngrediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxIngrediente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIngrediente.FormattingEnabled = true;
+            this.comboBoxIngrediente.Location = new System.Drawing.Point(250, 173);
+            this.comboBoxIngrediente.Name = "comboBoxIngrediente";
+            this.comboBoxIngrediente.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxIngrediente.TabIndex = 5;
+            this.comboBoxIngrediente.SelectedIndexChanged += new System.EventHandler(this.comboBoxIngrediente_SelectedIndexChanged);
+            this.comboBoxIngrediente.Click += new System.EventHandler(this.comboBoxIngrediente_Click);
             // 
             // label2
             // 
@@ -331,19 +331,19 @@ namespace Presentacion
             this.label2.TabIndex = 4;
             this.label2.Text = "Categoria";
             // 
-            // comboBox1
+            // comboBoxCategoria
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Items.AddRange(new object[] {
             "Desayuno",
             "Almuerzo",
             "Sena"});
-            this.comboBox1.Location = new System.Drawing.Point(250, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxCategoria.Location = new System.Drawing.Point(250, 114);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxCategoria.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -354,7 +354,6 @@ namespace Presentacion
             this.pictureBox1.Size = new System.Drawing.Size(65, 65);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -373,7 +372,6 @@ namespace Presentacion
             this.textNombrePlantilla.Name = "textNombrePlantilla";
             this.textNombrePlantilla.Size = new System.Drawing.Size(119, 20);
             this.textNombrePlantilla.TabIndex = 0;
-            this.textNombrePlantilla.TextChanged += new System.EventHandler(this.textNombrePlantilla_TextChanged);
             // 
             // RegistarPlantilla
             // 
@@ -402,9 +400,9 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxIngrediente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.PictureBox botonAgregarListado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

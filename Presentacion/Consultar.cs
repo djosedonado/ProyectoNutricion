@@ -21,17 +21,8 @@ namespace Presentacion
             service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
             deportista = new List<Deportista>();
-            //ConsultarDatos();
+            
             MostrarDeportista();
-        }
-
-        private void ConsultarDatos()
-        {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
-            dgvConsultaDatosPersonales.DataSource = null;
-            respuesta = service.ConsultarTodos();
-            deportista = respuesta.Deportistas.ToList();
-            dgvConsultaDatosPersonales.DataSource = deportista;
         }
 
         private void Llenartable(List<Deportista> deportistas)

@@ -62,11 +62,33 @@ namespace Logica
             }
             finally { connection.close(); }
 
-        }   
+        }
 
-
+        public ConsultarAlimentoRespuesta consultarPorId(string id)
+        {
+            ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
+            try
+            {
+                connection.open();
+                respuesta.Alimentos = (IList<Alimento>)alimentoRepository.BuscarIdAlimento(id);
+                connection.close();
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { connection.close(); }
+        }
 
     }
+
+
+
 
     public class ConsultarAlimentoRespuesta
     {
@@ -74,4 +96,6 @@ namespace Logica
         public string Mensaje { get; set; }
         public IList<Alimento> Alimentos { get; set; }
     }
+
+
 }

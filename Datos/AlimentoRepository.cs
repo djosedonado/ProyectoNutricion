@@ -57,33 +57,21 @@ namespace Datos
             return alimentos;
         }
 
-        public Alimento MaperarAlimento(SqlDataReader Reader)
+        public List<Alimento> ConsultarNombreAlimentos()
         {
-            if (!Reader.HasRows) return null;
-            Alimento alimento = new Alimento();
-            alimento.IdAlimentos = (string)Reader["id"];
-            alimento.NombreAlimento = (string)Reader["nombre"];
-            alimento.Calorias = (double)Reader["caloria"];
-            alimento.Carbohidratos = (double)Reader["carbohidrato"];
-            alimento.Proteinas = (double)Reader["proteinas"];
-            alimento.Liquidos = (double)Reader["liquidos"];
-            return alimento;
-        }
-
-        public List<Alimento> consultarPorNombre(string nombre)
-        {
-            List<Alimento> alimentos  = new List<Alimento>();
-
-            using (var command = connection.CreateCommand())
+            List<Alimento> alimentos = new List<Alimento>();
+            using (var commnds = connection.CreateCommand())
             {
-                command.CommandText = "select * from Deportista where identificacion=@identificacion";
-                command.Parameters.Add(new SqlParameter("@identificacion", nombre));
-                var Reader = command.ExecuteReader();
+                commnds.CommandText = "select id,nombre from Alimento";
+                var Reader = commnds.ExecuteReader();
                 while (Reader.Read())
                 {
-                    Alimento alimento = MaperarAlimento(Reader);
+                    Alimento alimento = new Alimento();
+                    alimento.NombreAlimento = Reader.GetString(1);
+                    alimento.IdAlimentos = Reader.GetString(0);
                     alimentos.Add(alimento);
                 }
+                Reader.Close();
             }
             return alimentos;
         }
@@ -93,7 +81,7 @@ namespace Datos
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = "select * from Alimento where id=@id";
-                command.Parameters.Add(new SqlParameter("@id", idAlimento));
+                command.Parameters.Add(new SqlParameter("@nombre", idAlimento));
                 var reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
