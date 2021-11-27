@@ -72,7 +72,7 @@ namespace Presentacion
             this.ContenedorRecomendacioNutricional.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorRecomendacioNutricional.Location = new System.Drawing.Point(0, 0);
             this.ContenedorRecomendacioNutricional.Name = "ContenedorRecomendacioNutricional";
-            this.ContenedorRecomendacioNutricional.Size = new System.Drawing.Size(853, 548);
+            this.ContenedorRecomendacioNutricional.Size = new System.Drawing.Size(1055, 678);
             this.ContenedorRecomendacioNutricional.TabIndex = 0;
             this.ContenedorRecomendacioNutricional.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenedorRecomendacioNutricional_Paint);
             // 
@@ -81,7 +81,7 @@ namespace Presentacion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(222, 24);
+            this.label8.Location = new System.Drawing.Point(353, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(378, 37);
             this.label8.TabIndex = 29;
@@ -92,7 +92,7 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(95, 387);
+            this.label7.Location = new System.Drawing.Point(226, 405);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 28;
@@ -100,7 +100,7 @@ namespace Presentacion
             // 
             // textPesoActual
             // 
-            this.textPesoActual.Location = new System.Drawing.Point(84, 410);
+            this.textPesoActual.Location = new System.Drawing.Point(215, 428);
             this.textPesoActual.Name = "textPesoActual";
             this.textPesoActual.Size = new System.Drawing.Size(100, 20);
             this.textPesoActual.TabIndex = 27;
@@ -120,7 +120,7 @@ namespace Presentacion
             "Miercoles",
             "Jueves",
             "Viernes"});
-            this.ListasDiasSemana.Location = new System.Drawing.Point(84, 236);
+            this.ListasDiasSemana.Location = new System.Drawing.Point(215, 254);
             this.ListasDiasSemana.Name = "ListasDiasSemana";
             this.ListasDiasSemana.Size = new System.Drawing.Size(86, 107);
             this.ListasDiasSemana.TabIndex = 24;
@@ -130,7 +130,7 @@ namespace Presentacion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(111, 170);
+            this.label6.Location = new System.Drawing.Point(242, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 23;
@@ -143,7 +143,7 @@ namespace Presentacion
             this.comboBoxDieta.FormattingEnabled = true;
             this.comboBoxDieta.Items.AddRange(new object[] {
             "Semana 1"});
-            this.comboBoxDieta.Location = new System.Drawing.Point(84, 193);
+            this.comboBoxDieta.Location = new System.Drawing.Point(215, 211);
             this.comboBoxDieta.Name = "comboBoxDieta";
             this.comboBoxDieta.Size = new System.Drawing.Size(95, 21);
             this.comboBoxDieta.TabIndex = 22;
@@ -158,7 +158,7 @@ namespace Presentacion
             this.botonBuscarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.botonBuscarPaciente.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonBuscarPaciente.ForeColor = System.Drawing.Color.White;
-            this.botonBuscarPaciente.Location = new System.Drawing.Point(556, 105);
+            this.botonBuscarPaciente.Location = new System.Drawing.Point(687, 123);
             this.botonBuscarPaciente.Name = "botonBuscarPaciente";
             this.botonBuscarPaciente.Size = new System.Drawing.Size(76, 31);
             this.botonBuscarPaciente.TabIndex = 9;
@@ -169,7 +169,7 @@ namespace Presentacion
             // textNombrePaciente
             // 
             this.textNombrePaciente.Enabled = false;
-            this.textNombrePaciente.Location = new System.Drawing.Point(309, 113);
+            this.textNombrePaciente.Location = new System.Drawing.Point(440, 131);
             this.textNombrePaciente.Name = "textNombrePaciente";
             this.textNombrePaciente.Size = new System.Drawing.Size(197, 20);
             this.textNombrePaciente.TabIndex = 8;
@@ -179,7 +179,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(373, 90);
+            this.label4.Location = new System.Drawing.Point(504, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 7;
@@ -190,7 +190,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(95, 90);
+            this.label3.Location = new System.Drawing.Point(226, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 20);
             this.label3.TabIndex = 6;
@@ -198,7 +198,7 @@ namespace Presentacion
             // 
             // textIdentificacionRecomendacion
             // 
-            this.textIdentificacionRecomendacion.Location = new System.Drawing.Point(82, 113);
+            this.textIdentificacionRecomendacion.Location = new System.Drawing.Point(213, 131);
             this.textIdentificacionRecomendacion.Name = "textIdentificacionRecomendacion";
             this.textIdentificacionRecomendacion.Size = new System.Drawing.Size(123, 20);
             this.textIdentificacionRecomendacion.TabIndex = 5;
@@ -208,7 +208,7 @@ namespace Presentacion
             // 
             this.botonGuardarRecomendacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonGuardarRecomendacion.Image = global::Presentacion.Properties.Resources.salvar;
-            this.botonGuardarRecomendacion.Location = new System.Drawing.Point(700, 422);
+            this.botonGuardarRecomendacion.Location = new System.Drawing.Point(831, 440);
             this.botonGuardarRecomendacion.Name = "botonGuardarRecomendacion";
             this.botonGuardarRecomendacion.Size = new System.Drawing.Size(65, 65);
             this.botonGuardarRecomendacion.TabIndex = 4;
@@ -217,7 +217,7 @@ namespace Presentacion
             // 
             // TextRecomendacionAlimentario
             // 
-            this.TextRecomendacionAlimentario.Location = new System.Drawing.Point(266, 379);
+            this.TextRecomendacionAlimentario.Location = new System.Drawing.Point(397, 397);
             this.TextRecomendacionAlimentario.Name = "TextRecomendacionAlimentario";
             this.TextRecomendacionAlimentario.Size = new System.Drawing.Size(302, 108);
             this.TextRecomendacionAlimentario.TabIndex = 3;
@@ -228,7 +228,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(310, 356);
+            this.label2.Location = new System.Drawing.Point(441, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 20);
             this.label2.TabIndex = 2;
@@ -236,7 +236,7 @@ namespace Presentacion
             // 
             // TextRecomendacionNutricional
             // 
-            this.TextRecomendacionNutricional.Location = new System.Drawing.Point(266, 211);
+            this.TextRecomendacionNutricional.Location = new System.Drawing.Point(397, 229);
             this.TextRecomendacionNutricional.Name = "TextRecomendacionNutricional";
             this.TextRecomendacionNutricional.Size = new System.Drawing.Size(302, 102);
             this.TextRecomendacionNutricional.TabIndex = 1;
@@ -247,7 +247,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(310, 188);
+            this.label1.Location = new System.Drawing.Point(441, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 0;
@@ -257,7 +257,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 548);
+            this.ClientSize = new System.Drawing.Size(1055, 678);
             this.Controls.Add(this.ContenedorRecomendacioNutricional);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecomendacionNutricional";

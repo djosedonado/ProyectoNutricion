@@ -45,13 +45,13 @@ namespace Presentacion
             this.ContenedorHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorHome.Location = new System.Drawing.Point(0, 0);
             this.ContenedorHome.Name = "ContenedorHome";
-            this.ContenedorHome.Size = new System.Drawing.Size(800, 600);
+            this.ContenedorHome.Size = new System.Drawing.Size(1070, 653);
             this.ContenedorHome.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.Logo_NutriSoft;
-            this.pictureBox2.Location = new System.Drawing.Point(300, 51);
+            this.pictureBox2.Location = new System.Drawing.Point(408, 64);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(236, 92);
             this.pictureBox2.TabIndex = 5;
@@ -60,7 +60,7 @@ namespace Presentacion
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.HomeImagen1;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(237, 64);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(594, 499);
             this.pictureBox1.TabIndex = 4;
@@ -70,7 +70,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1070, 653);
             this.Controls.Add(this.ContenedorHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";

@@ -23,7 +23,7 @@ namespace Logica
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new System.Net.NetworkCredential("djosedonado@unicesar.edu.co","donado1234");
+            smtp.Credentials = new System.Net.NetworkCredential("djosedonado@unicesar.edu.co",                                                                                                                                                                          "donado1234");
         }
 
         private void ConfigurarEmail(Deportista deportista)
@@ -31,9 +31,9 @@ namespace Logica
             email = new MailMessage();
             email.To.Add(deportista.Correo);
             email.From = new MailAddress("djosedonado@unicesar.edu.co");
-            email.Subject = "VER SI SIRVE";
-            email.Body = $"<b>Sr {deportista.Nombre}</b> <br " +
-                $" > PARA VER SI SIRVE XD";
+            email.Subject = "SUSTENTATCION DE DANILO JOSE DONADO SANDOVAL";
+            email.Body = $"<b>Sr {deportista.Nombre} {deportista.Apellidó}</b> <br " +
+                $" > HOLA QUE HACE";
             email.IsBodyHtml = true;
             email.Priority = MailPriority.Normal;
 
