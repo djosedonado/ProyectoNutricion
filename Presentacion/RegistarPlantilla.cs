@@ -31,7 +31,6 @@ namespace Presentacion
             foreach (var item in alimentos)
             {
                 comboBoxIngrediente.Items.Add(item.NombreAlimento);
-                labelTotalCalorias.Text = item.Calorias.ToString();
             }
             comboBoxIngrediente.Refresh();
         }

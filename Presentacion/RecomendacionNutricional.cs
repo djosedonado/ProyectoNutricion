@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
+using Logica;
 
 namespace Presentacion
 {
     public partial class RecomendacionNutricional : Form
     {
+        public serviceDeportista service;
+        public List<Deportista> deportistas;
         public RecomendacionNutricional()
         {
+            service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
+            deportistas = new List<Deportista>();
+
         }
 
         private void botonGuardarRecomendacion_Click(object sender, EventArgs e)
@@ -25,12 +32,26 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Los datos estan Guardados Correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Dieta dieta = MapearRecomendacion();
+                string mensaje = service.GuardarDieta(dieta);
+                MessageBox.Show(mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textIdentificacionRecomendacion.Text = "";
                 textNombrePaciente.Text = "";
                 TextRecomendacionAlimentario.Text = "";
                 TextRecomendacionNutricional.Text = "";
             }
+        }
+
+        private Dieta MapearRecomendacion()
+        {
+            Dieta dieta = new Dieta();
+            dieta.identificacion = textIdentificacionRecomendacion.Text;
+            dieta.RecomendacionAlimentaria = TextRecomendacionAlimentario.Text;
+            dieta.RecomendacionNutriccional = TextRecomendacionNutricional.Text;
+            dieta.DiasAplicados = ListasDiasSemana.Text;
+            return dieta;
+
         }
 
         private void textIdentificacionRecomendacion_KeyPress(object sender, KeyPressEventArgs e)
@@ -51,7 +72,7 @@ namespace Presentacion
             }
             else
             {
-                textNombrePaciente.Text = "Danilo Donado";
+                MostrarDatosPorIdentificacion();
             }
             
         }
@@ -80,5 +101,34 @@ namespace Presentacion
                 return;
             }
         }
+
+        private void MostrarDatosPorIdentificacion()
+        {
+            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            string identificacion = textIdentificacionRecomendacion.Text;
+            respuesta = service.consultarPorIdentificacion(identificacion);
+            deportistas = respuesta.Deportistas.ToList();
+            if (!respuesta.Error)
+            {
+                llenartabla(deportistas);
+            }
+            else
+            {
+                MessageBox.Show("Error al consultar");
+            }
+
+        }
+
+
+        private void llenartabla(List<Deportista> deportistas)
+        {
+
+            foreach (var item in deportistas)
+            {
+                textNombrePaciente.Text = $"{item.Nombre}  {item.Apellidó}";
+            }
+
+        }
+
     }
 }

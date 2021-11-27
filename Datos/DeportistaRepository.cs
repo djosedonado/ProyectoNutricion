@@ -144,6 +144,31 @@ namespace Datos
                     select p).ToList();
         }
 
+
+        public void Modificar(Deportista deportista)
+        {
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = @"update Deportista set pesoActual=@pesoActual where identificacion=@identificacion";
+                command.Parameters.Add(new SqlParameter("@pesoActual", deportista.PesoActual));
+                var file = command.ExecuteNonQuery();
+            }
+        }
+
+        public void GuardarRecomendaciones(Dieta dieta)
+        {
+            using (var commnad = connection.CreateCommand())
+            {
+                commnad.CommandText = @"insert into Dieta(diasAplicada,recomendacionAlimentaria,recomendacionNutriccional,idDeportista)
+                                                    values(@diasAplicada,@recomendacionAlimentaria,@recomendacionNutriccional,@idDeportista)";
+                commnad.Parameters.Add(new SqlParameter("@diasAplicada",dieta.DiasAplicados));
+                commnad.Parameters.Add(new SqlParameter("@recomendacionAlimentaria", dieta.RecomendacionAlimentaria));
+                commnad.Parameters.Add(new SqlParameter("@recomendacionNutriccional", dieta.RecomendacionNutriccional));
+                commnad.Parameters.Add(new SqlParameter("@idDeportista", dieta.identificacion));
+                var filas = commnad.ExecuteNonQuery();
+            }
+        }
+
     }
 
 

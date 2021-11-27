@@ -102,6 +102,22 @@ namespace Logica
             }
             finally { connection.close(); }
         }
+
+        public string GuardarDieta(Dieta dieta)
+        {
+            try
+            {
+                connection.open();
+                deportistaRepository.GuardarRecomendaciones(dieta);
+                return "DATOS GUARDADOS";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { connection.close(); }
+        }
+
     }
 
 

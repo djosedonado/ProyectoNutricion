@@ -100,7 +100,6 @@ namespace Presentacion
             if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
             }
             else
             {
