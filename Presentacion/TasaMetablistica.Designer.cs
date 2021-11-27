@@ -29,27 +29,27 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelFondoTasa = new System.Windows.Forms.Panel();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LabelIdentificacion = new System.Windows.Forms.Label();
-            this.textTasaIdentificacion = new System.Windows.Forms.TextBox();
-            this.botonBuscarIdentificacion = new System.Windows.Forms.Button();
             this.panelCuerpo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxGastoEnergetico = new System.Windows.Forms.TextBox();
             this.dgvTasaMetabolicaBasal = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxGastoEnergetico = new System.Windows.Forms.TextBox();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LabelIdentificacion = new System.Windows.Forms.Label();
+            this.textTasaIdentificacion = new System.Windows.Forms.TextBox();
+            this.botonBuscarIdentificacion = new System.Windows.Forms.Button();
             this.PanelFondoTasa.SuspendLayout();
-            this.panelSuperior.SuspendLayout();
             this.panelCuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasaMetabolicaBasal)).BeginInit();
+            this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFondoTasa
@@ -62,6 +62,101 @@ namespace Presentacion
             this.PanelFondoTasa.Name = "PanelFondoTasa";
             this.PanelFondoTasa.Size = new System.Drawing.Size(935, 480);
             this.PanelFondoTasa.TabIndex = 0;
+            // 
+            // panelCuerpo
+            // 
+            this.panelCuerpo.Controls.Add(this.label1);
+            this.panelCuerpo.Controls.Add(this.textBoxGastoEnergetico);
+            this.panelCuerpo.Controls.Add(this.dgvTasaMetabolicaBasal);
+            this.panelCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCuerpo.Location = new System.Drawing.Point(0, 135);
+            this.panelCuerpo.Name = "panelCuerpo";
+            this.panelCuerpo.Size = new System.Drawing.Size(935, 345);
+            this.panelCuerpo.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(407, 270);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 19);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Gasto Energetico";
+            // 
+            // textBoxGastoEnergetico
+            // 
+            this.textBoxGastoEnergetico.Enabled = false;
+            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(399, 292);
+            this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
+            this.textBoxGastoEnergetico.Size = new System.Drawing.Size(132, 20);
+            this.textBoxGastoEnergetico.TabIndex = 18;
+            // 
+            // dgvTasaMetabolicaBasal
+            // 
+            this.dgvTasaMetabolicaBasal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTasaMetabolicaBasal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.dgvTasaMetabolicaBasal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTasaMetabolicaBasal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvTasaMetabolicaBasal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTasaMetabolicaBasal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTasaMetabolicaBasal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTasaMetabolicaBasal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTasaMetabolicaBasal.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTasaMetabolicaBasal.EnableHeadersVisualStyles = false;
+            this.dgvTasaMetabolicaBasal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.dgvTasaMetabolicaBasal.Location = new System.Drawing.Point(215, 49);
+            this.dgvTasaMetabolicaBasal.Name = "dgvTasaMetabolicaBasal";
+            this.dgvTasaMetabolicaBasal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTasaMetabolicaBasal.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            this.dgvTasaMetabolicaBasal.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTasaMetabolicaBasal.Size = new System.Drawing.Size(505, 201);
+            this.dgvTasaMetabolicaBasal.TabIndex = 17;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Peso";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Altura";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Edad";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tasa Metabolica Basal";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
             // 
             // panelSuperior
             // 
@@ -122,101 +217,6 @@ namespace Presentacion
             this.botonBuscarIdentificacion.UseVisualStyleBackColor = false;
             this.botonBuscarIdentificacion.Click += new System.EventHandler(this.botonBuscarIdentificacion_Click_1);
             // 
-            // panelCuerpo
-            // 
-            this.panelCuerpo.Controls.Add(this.label1);
-            this.panelCuerpo.Controls.Add(this.textBoxGastoEnergetico);
-            this.panelCuerpo.Controls.Add(this.dgvTasaMetabolicaBasal);
-            this.panelCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCuerpo.Location = new System.Drawing.Point(0, 135);
-            this.panelCuerpo.Name = "panelCuerpo";
-            this.panelCuerpo.Size = new System.Drawing.Size(935, 345);
-            this.panelCuerpo.TabIndex = 16;
-            // 
-            // dgvTasaMetabolicaBasal
-            // 
-            this.dgvTasaMetabolicaBasal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTasaMetabolicaBasal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.dgvTasaMetabolicaBasal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTasaMetabolicaBasal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvTasaMetabolicaBasal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTasaMetabolicaBasal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvTasaMetabolicaBasal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTasaMetabolicaBasal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTasaMetabolicaBasal.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvTasaMetabolicaBasal.EnableHeadersVisualStyles = false;
-            this.dgvTasaMetabolicaBasal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.dgvTasaMetabolicaBasal.Location = new System.Drawing.Point(215, 49);
-            this.dgvTasaMetabolicaBasal.Name = "dgvTasaMetabolicaBasal";
-            this.dgvTasaMetabolicaBasal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTasaMetabolicaBasal.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            this.dgvTasaMetabolicaBasal.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvTasaMetabolicaBasal.Size = new System.Drawing.Size(505, 201);
-            this.dgvTasaMetabolicaBasal.TabIndex = 17;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Peso";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Altura";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Edad";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Tasa Metabolica Basal";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(407, 270);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 19);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Gasto Energetico";
-            // 
-            // textBoxGastoEnergetico
-            // 
-            this.textBoxGastoEnergetico.Enabled = false;
-            this.textBoxGastoEnergetico.Location = new System.Drawing.Point(399, 292);
-            this.textBoxGastoEnergetico.Name = "textBoxGastoEnergetico";
-            this.textBoxGastoEnergetico.Size = new System.Drawing.Size(132, 20);
-            this.textBoxGastoEnergetico.TabIndex = 18;
-            // 
             // TasaMetablistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,11 +227,11 @@ namespace Presentacion
             this.Name = "TasaMetablistica";
             this.Text = "TasaMetablistica";
             this.PanelFondoTasa.ResumeLayout(false);
-            this.panelSuperior.ResumeLayout(false);
-            this.panelSuperior.PerformLayout();
             this.panelCuerpo.ResumeLayout(false);
             this.panelCuerpo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasaMetabolicaBasal)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }

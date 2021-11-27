@@ -74,7 +74,7 @@ namespace Presentacion
             this.panelCabeza.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabeza.Location = new System.Drawing.Point(0, 0);
             this.panelCabeza.Name = "panelCabeza";
-            this.panelCabeza.Size = new System.Drawing.Size(1080, 35);
+            this.panelCabeza.Size = new System.Drawing.Size(1226, 35);
             this.panelCabeza.TabIndex = 0;
             this.panelCabeza.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeza_MouseDown);
             // 
@@ -82,7 +82,7 @@ namespace Presentacion
             // 
             this.botonRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botonRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("botonRestaurar.Image")));
-            this.botonRestaurar.Location = new System.Drawing.Point(1021, 3);
+            this.botonRestaurar.Location = new System.Drawing.Point(1167, 3);
             this.botonRestaurar.Name = "botonRestaurar";
             this.botonRestaurar.Size = new System.Drawing.Size(25, 25);
             this.botonRestaurar.TabIndex = 0;
@@ -94,7 +94,7 @@ namespace Presentacion
             // 
             this.botonMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botonMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMinimizar.Image")));
-            this.botonMinimizar.Location = new System.Drawing.Point(990, 4);
+            this.botonMinimizar.Location = new System.Drawing.Point(1136, 4);
             this.botonMinimizar.Name = "botonMinimizar";
             this.botonMinimizar.Size = new System.Drawing.Size(25, 25);
             this.botonMinimizar.TabIndex = 0;
@@ -105,7 +105,7 @@ namespace Presentacion
             // 
             this.botonMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botonMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("botonMaximizar.Image")));
-            this.botonMaximizar.Location = new System.Drawing.Point(1021, 4);
+            this.botonMaximizar.Location = new System.Drawing.Point(1167, 4);
             this.botonMaximizar.Name = "botonMaximizar";
             this.botonMaximizar.Size = new System.Drawing.Size(25, 25);
             this.botonMaximizar.TabIndex = 0;
@@ -116,7 +116,7 @@ namespace Presentacion
             // 
             this.botonCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("botonCerrar.Image")));
-            this.botonCerrar.Location = new System.Drawing.Point(1052, 4);
+            this.botonCerrar.Location = new System.Drawing.Point(1198, 4);
             this.botonCerrar.Name = "botonCerrar";
             this.botonCerrar.Size = new System.Drawing.Size(25, 25);
             this.botonCerrar.TabIndex = 0;
@@ -137,7 +137,7 @@ namespace Presentacion
             this.VentanaMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.VentanaMenu.Location = new System.Drawing.Point(0, 35);
             this.VentanaMenu.Name = "VentanaMenu";
-            this.VentanaMenu.Size = new System.Drawing.Size(200, 615);
+            this.VentanaMenu.Size = new System.Drawing.Size(200, 679);
             this.VentanaMenu.TabIndex = 1;
             // 
             // subMenuDieta
@@ -351,14 +351,14 @@ namespace Presentacion
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(200, 35);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(880, 615);
+            this.PanelContenedor.Size = new System.Drawing.Size(1026, 679);
             this.PanelContenedor.TabIndex = 2;
             // 
             // PresentacionPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 650);
+            this.ClientSize = new System.Drawing.Size(1226, 714);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.VentanaMenu);
             this.Controls.Add(this.panelCabeza);

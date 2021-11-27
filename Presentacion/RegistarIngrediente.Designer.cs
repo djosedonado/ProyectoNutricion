@@ -46,13 +46,13 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.textAlimento = new System.Windows.Forms.TextBox();
             this.dgvAlimentos = new System.Windows.Forms.DataGridView();
-            this.botonGuardarAlimentos = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botonGuardarAlimentos = new System.Windows.Forms.PictureBox();
             this.ContenedorRegistarAlimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonGuardarAlimentos)).BeginInit();
@@ -216,7 +216,7 @@ namespace Presentacion
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -236,23 +236,12 @@ namespace Presentacion
             this.dgvAlimentos.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAlimentos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAlimentos.Size = new System.Drawing.Size(813, 233);
             this.dgvAlimentos.TabIndex = 1;
-            // 
-            // botonGuardarAlimentos
-            // 
-            this.botonGuardarAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonGuardarAlimentos.Image = global::Presentacion.Properties.Resources.salvar;
-            this.botonGuardarAlimentos.Location = new System.Drawing.Point(703, 57);
-            this.botonGuardarAlimentos.Name = "botonGuardarAlimentos";
-            this.botonGuardarAlimentos.Size = new System.Drawing.Size(65, 65);
-            this.botonGuardarAlimentos.TabIndex = 0;
-            this.botonGuardarAlimentos.TabStop = false;
-            this.botonGuardarAlimentos.Click += new System.EventHandler(this.botonGuardarAlimentos_Click);
             // 
             // Column1
             // 
@@ -288,6 +277,17 @@ namespace Presentacion
             this.Column6.HeaderText = "Liquidos";
             this.Column6.Name = "Column6";
             this.Column6.Width = 110;
+            // 
+            // botonGuardarAlimentos
+            // 
+            this.botonGuardarAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonGuardarAlimentos.Image = global::Presentacion.Properties.Resources.salvar;
+            this.botonGuardarAlimentos.Location = new System.Drawing.Point(703, 57);
+            this.botonGuardarAlimentos.Name = "botonGuardarAlimentos";
+            this.botonGuardarAlimentos.Size = new System.Drawing.Size(65, 65);
+            this.botonGuardarAlimentos.TabIndex = 0;
+            this.botonGuardarAlimentos.TabStop = false;
+            this.botonGuardarAlimentos.Click += new System.EventHandler(this.botonGuardarAlimentos_Click);
             // 
             // RegistarIngrediente
             // 
