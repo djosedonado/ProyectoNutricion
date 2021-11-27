@@ -18,18 +18,12 @@ namespace Entidad
         public string RecomendacionNutriccional { get; set; }
         public string RecomendacionAlimentaria { get; set; }
         public string DiasAplicados { get; set; }
-        public List<DetalleDieta> detalleDietas { get; set; }
+        public Plantilla plantillas { get; set; }
 
         public void MetodoAccinDinamicaEspecificaAlimentos()
         {
             AcciónDinámicaEspecíficaAlimentos = 0.1;
         }
-
-        /*public void agregarDetalleDieta(DetalleDieta detalleDieta)
-        {
-            detalleDieta.idDetalleDieta = IdDieta;
-            detalleDietas.Add(detalleDieta);
-        }*/
 
     }
 }

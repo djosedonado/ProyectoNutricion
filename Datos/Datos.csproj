@@ -44,7 +44,7 @@
     <Compile Include="AlimentoRepository.cs" />
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="deportistaRepository.cs" />
-    <Compile Include="dietaRepository.cs" />
+    <Compile Include="PlantillaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
