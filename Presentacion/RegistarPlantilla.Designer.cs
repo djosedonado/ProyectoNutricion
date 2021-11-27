@@ -29,8 +29,8 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContenedorRegistroDietas = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.botonAgregarListado = new System.Windows.Forms.PictureBox();
@@ -41,7 +41,7 @@ namespace Presentacion
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPorcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTotalLiquidos = new System.Windows.Forms.Label();
             this.labelTotalProteinas = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@ namespace Presentacion
             this.ContenedorRegistroDietas.Controls.Add(this.dataGridView1);
             this.ContenedorRegistroDietas.Controls.Add(this.label5);
             this.ContenedorRegistroDietas.Controls.Add(this.label4);
-            this.ContenedorRegistroDietas.Controls.Add(this.textBox1);
+            this.ContenedorRegistroDietas.Controls.Add(this.textBoxPorcion);
             this.ContenedorRegistroDietas.Controls.Add(this.panel1);
             this.ContenedorRegistroDietas.Controls.Add(this.label3);
             this.ContenedorRegistroDietas.Controls.Add(this.comboBoxIngrediente);
@@ -108,6 +108,7 @@ namespace Presentacion
             this.botonAgregarListado.Size = new System.Drawing.Size(65, 65);
             this.botonAgregarListado.TabIndex = 16;
             this.botonAgregarListado.TabStop = false;
+            this.botonAgregarListado.Click += new System.EventHandler(this.botonAgregarListado_Click);
             // 
             // dataGridView1
             // 
@@ -115,14 +116,14 @@ namespace Presentacion
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -135,11 +136,11 @@ namespace Presentacion
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(443, 199);
             this.dataGridView1.TabIndex = 15;
             // 
@@ -185,12 +186,12 @@ namespace Presentacion
             this.label4.TabIndex = 9;
             this.label4.Text = "Porcion";
             // 
-            // textBox1
+            // textBoxPorcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxPorcion.Location = new System.Drawing.Point(82, 174);
+            this.textBoxPorcion.Name = "textBoxPorcion";
+            this.textBoxPorcion.Size = new System.Drawing.Size(90, 20);
+            this.textBoxPorcion.TabIndex = 8;
             // 
             // panel1
             // 
@@ -411,7 +412,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPorcion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelTotalLiquidos;
         private System.Windows.Forms.Label labelTotalProteinas;
