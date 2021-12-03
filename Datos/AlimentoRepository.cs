@@ -33,7 +33,7 @@ namespace Datos
                 var fila = command.ExecuteNonQuery();
             }
         }
-
+        //sadfsad
         public List<Alimento> Consultar()
         {
             List<Alimento> alimentos = new List<Alimento>();
