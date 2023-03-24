@@ -30,9 +30,8 @@ namespace Logica
                 if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion) == null)
                 {
                     deportistaRepository.Guardar(deportista);
-                    mensajeEmail = correo.EnviarEmail(deportista);
                     //return $"Se guardaron los datos de satisfactoriamente";
-                    return mensajeEmail;
+                    return "Paciente Registrado";
                 }
                 else
                 {

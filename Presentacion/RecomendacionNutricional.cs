@@ -40,6 +40,7 @@ namespace Presentacion
                 textNombrePaciente.Text = "";
                 TextRecomendacionAlimentario.Text = "";
                 TextRecomendacionNutricional.Text = "";
+                textPesoActual.Text = "";
             }
         }
 
