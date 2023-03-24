@@ -32,7 +32,7 @@ namespace Presentacion
             dgvTasaMetabolicaBasal.Rows.Clear();
             foreach(var item in deportistas)
             {
-                dgvTasaMetabolicaBasal.Rows.Add(item.Peso, item.Altura, item.Edad, item.MetabolismoBasal);
+                dgvTasaMetabolicaBasal.Rows.Add(item.Peso, item.Altura, item.Edad- item.Fecha_Nacimiento.Year, item.MetabolismoBasal);
                 GastoEnergetico = item.CaloriasDiarias;
             }
             dgvTasaMetabolicaBasal.Refresh();

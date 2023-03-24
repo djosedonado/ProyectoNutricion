@@ -15,7 +15,7 @@ namespace Entidad
             CaloriasDiarias = 0;
             MetabolismoBasal = 0;
             ActividadFisica = 0;
-
+            CalcularEdad();
         }
         public string Deporte { get; set; }
         public string TermogenesisActividadFisica { get; set; }
@@ -34,9 +34,11 @@ namespace Entidad
             CalcularActividadFisica();
             CalcularMetabolismoBasal();
             dieta.MetodoAccinDinamicaEspecificaAlimentos();
+            
             if (Sexo == "M")
             {
-                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad-Fecha_Nacimiento.Year) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                Console.WriteLine(Edad-Fecha_Nacimiento.Year);
             }
             else
             {
@@ -73,6 +75,11 @@ namespace Entidad
             {
                 ActividadFisica = 1;
             }
+        }
+
+        public void CalcularEdad()
+        {
+            Edad = DateTime.Now.Year;
         }
 
     }

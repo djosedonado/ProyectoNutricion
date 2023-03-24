@@ -49,8 +49,10 @@ namespace Logica
         public ConsultarDeportistaRespuesta ConsultarTodos()
         {
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            Deportista deportista = new Deportista();
             try
             {
+                
                 connection.open();
                 respuesta.Deportistas = deportistaRepository.consultarTodo();
                 connection.close();

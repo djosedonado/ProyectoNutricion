@@ -30,7 +30,7 @@ namespace Presentacion
             dgvConsultaDatosPersonales.Rows.Clear();
             foreach (var item in deportista)
             {
-                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,$"{item.Nombre} {item.Apellidó}",item.Edad,item.Sexo,item.Telefono,item.Deporte,item.Correo);
+                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,$"{item.Nombre} {item.Apellidó}", item.Edad-item.Fecha_Nacimiento.Year, item.Sexo,item.Telefono,item.Deporte,item.Correo);
             }
             dgvConsultaDatosPersonales.Refresh();
         }

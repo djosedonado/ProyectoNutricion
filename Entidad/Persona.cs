@@ -10,17 +10,17 @@ namespace Entidad
     {
         public Persona()
         {
-            Edad = 0;
+            
         }
-
         public string Identificacion { get; set; }
         public string TipoIdentificacion { get; set; }  
         public string Nombre { get; set; }
         public string Apellidó { get; set; }
         public string Sexo { get; set; }
         public string Correo { get; set; }
-        public int Edad { get; set; }
+        public DateTime Fecha_Nacimiento { get; set; }
         public string Telefono { get; set; }
+        public int Edad { get; set; }
       
     }
 

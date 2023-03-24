@@ -21,14 +21,14 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,edad,telefono,correo,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
-                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@edad,@telefono,@correo,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
+                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,correo,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
+                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@correo,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
                 command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
                 command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
                 command.Parameters.Add(new SqlParameter("@apellido", deportista.Apellidó));
                 command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
-                command.Parameters.Add(new SqlParameter("@edad", deportista.Edad));
+                command.Parameters.Add(new SqlParameter("@fecha_Nacimiento", deportista.Fecha_Nacimiento));
                 command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
                 command.Parameters.Add(new SqlParameter("@correo", deportista.Correo));
                 command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
@@ -86,7 +86,7 @@ namespace Datos
             deportista.Nombre = (string)Reader["nombre"];
             deportista.Apellidó = (string)Reader["apellido"];
             deportista.Sexo = (string)Reader["sexo"];
-            deportista.Edad = (int)Reader["edad"];
+            deportista.Fecha_Nacimiento = (DateTime)Reader["fecha_Nacimiento"];
             deportista.Telefono = (string)Reader["telefono"];
             deportista.Correo = (string)Reader["correo"];
             deportista.Peso = (double)Reader["peso"];
@@ -118,7 +118,7 @@ namespace Datos
                         deportista.Nombre = Reader.GetString(2);
                         deportista.Apellidó = Reader.GetString(3);
                         deportista.Sexo = Reader.GetString(4);
-                        deportista.Edad = Reader.GetInt32(5);
+                        deportista.Fecha_Nacimiento = Reader.GetDateTime(5);
                         deportista.Telefono = Reader.GetString(6);
                         deportista.Correo = Reader.GetString(7);
                         deportista.Peso = Reader.GetDouble(8);

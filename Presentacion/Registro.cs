@@ -83,7 +83,7 @@ namespace Presentacion
             deportista.Identificacion = textIdentificacion.Text;
             deportista.Nombre = textNombre.Text.ToUpper();
             deportista.Apellidó = textApellido.Text.ToUpper();
-            deportista.Edad = int.Parse(textEdad.Text);
+            deportista.Fecha_Nacimiento = dateTimeEdad.Value;
             deportista.Sexo = comboSexo.Text;
             deportista.Telefono = textTelefono.Text;
             deportista.Correo = textBoxCorreo.Text;
@@ -91,13 +91,13 @@ namespace Presentacion
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text.ToUpper();
             deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
-            deportista.FechaEgreso = dateTimeRegistar.Value;
+            deportista.FechaEgreso = DateTime.Now;
             return deportista;
         }
 
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
-            if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textEdad.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
+            if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -109,7 +109,6 @@ namespace Presentacion
                 textNombre.Text = "";
                 textApellido.Text = "";
                 textIdentificacion.Text = "";
-                textEdad.Text = "";
                 textTelefono.Text = "";
                 comboSexo.SelectedIndex = -1;
                 textBoxAlturaRegistar.Text = "";

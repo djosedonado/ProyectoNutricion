@@ -31,16 +31,16 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.ContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxDeporte = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dateTimeRegistar = new System.Windows.Forms.DateTimePicker();
             this.textBoxAlturaRegistar = new System.Windows.Forms.TextBox();
             this.textBoxPesoRegistar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,12 +56,10 @@ namespace Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdad = new System.Windows.Forms.TextBox();
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
-            this.textBoxCorreo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimeEdad = new System.Windows.Forms.DateTimePicker();
             this.ContenedorPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
@@ -71,6 +69,7 @@ namespace Presentacion
             // ContenedorPrincipal
             // 
             this.ContenedorPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorPrincipal.Controls.Add(this.dateTimeEdad);
             this.ContenedorPrincipal.Controls.Add(this.label9);
             this.ContenedorPrincipal.Controls.Add(this.textBoxCorreo);
             this.ContenedorPrincipal.Controls.Add(this.pictureBox2);
@@ -79,10 +78,8 @@ namespace Presentacion
             this.ContenedorPrincipal.Controls.Add(this.comboBoxTipoEntrenamiento);
             this.ContenedorPrincipal.Controls.Add(this.label12);
             this.ContenedorPrincipal.Controls.Add(this.textBoxDeporte);
-            this.ContenedorPrincipal.Controls.Add(this.label13);
             this.ContenedorPrincipal.Controls.Add(this.label18);
             this.ContenedorPrincipal.Controls.Add(this.label19);
-            this.ContenedorPrincipal.Controls.Add(this.dateTimeRegistar);
             this.ContenedorPrincipal.Controls.Add(this.textBoxAlturaRegistar);
             this.ContenedorPrincipal.Controls.Add(this.textBoxPesoRegistar);
             this.ContenedorPrincipal.Controls.Add(this.label10);
@@ -98,7 +95,6 @@ namespace Presentacion
             this.ContenedorPrincipal.Controls.Add(this.label3);
             this.ContenedorPrincipal.Controls.Add(this.label2);
             this.ContenedorPrincipal.Controls.Add(this.label1);
-            this.ContenedorPrincipal.Controls.Add(this.textEdad);
             this.ContenedorPrincipal.Controls.Add(this.textApellido);
             this.ContenedorPrincipal.Controls.Add(this.textNombre);
             this.ContenedorPrincipal.Controls.Add(this.textIdentificacion);
@@ -107,6 +103,24 @@ namespace Presentacion
             this.ContenedorPrincipal.Name = "ContenedorPrincipal";
             this.ContenedorPrincipal.Size = new System.Drawing.Size(797, 529);
             this.ContenedorPrincipal.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(122, 330);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 19);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Correo";
+            // 
+            // textBoxCorreo
+            // 
+            this.textBoxCorreo.Location = new System.Drawing.Point(105, 352);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCorreo.TabIndex = 44;
             // 
             // pictureBox2
             // 
@@ -160,7 +174,7 @@ namespace Presentacion
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(427, 234);
+            this.label12.Location = new System.Drawing.Point(452, 234);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 19);
             this.label12.TabIndex = 39;
@@ -168,29 +182,18 @@ namespace Presentacion
             // 
             // textBoxDeporte
             // 
-            this.textBoxDeporte.Location = new System.Drawing.Point(406, 255);
+            this.textBoxDeporte.Location = new System.Drawing.Point(434, 255);
             this.textBoxDeporte.Name = "textBoxDeporte";
             this.textBoxDeporte.Size = new System.Drawing.Size(96, 20);
             this.textBoxDeporte.TabIndex = 38;
             this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(596, 198);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 19);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Fecha de Egreso";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(435, 185);
+            this.label18.Location = new System.Drawing.Point(458, 185);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(46, 19);
             this.label18.TabIndex = 36;
@@ -201,24 +204,15 @@ namespace Presentacion
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(435, 136);
+            this.label19.Location = new System.Drawing.Point(459, 136);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(40, 19);
             this.label19.TabIndex = 35;
             this.label19.Text = "Peso";
             // 
-            // dateTimeRegistar
-            // 
-            this.dateTimeRegistar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimeRegistar.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeRegistar.Location = new System.Drawing.Point(539, 220);
-            this.dateTimeRegistar.Name = "dateTimeRegistar";
-            this.dateTimeRegistar.Size = new System.Drawing.Size(217, 22);
-            this.dateTimeRegistar.TabIndex = 34;
-            // 
             // textBoxAlturaRegistar
             // 
-            this.textBoxAlturaRegistar.Location = new System.Drawing.Point(406, 206);
+            this.textBoxAlturaRegistar.Location = new System.Drawing.Point(434, 206);
             this.textBoxAlturaRegistar.Name = "textBoxAlturaRegistar";
             this.textBoxAlturaRegistar.Size = new System.Drawing.Size(96, 20);
             this.textBoxAlturaRegistar.TabIndex = 33;
@@ -226,7 +220,7 @@ namespace Presentacion
             // 
             // textBoxPesoRegistar
             // 
-            this.textBoxPesoRegistar.Location = new System.Drawing.Point(406, 158);
+            this.textBoxPesoRegistar.Location = new System.Drawing.Point(435, 158);
             this.textBoxPesoRegistar.Name = "textBoxPesoRegistar";
             this.textBoxPesoRegistar.Size = new System.Drawing.Size(96, 20);
             this.textBoxPesoRegistar.TabIndex = 32;
@@ -341,11 +335,11 @@ namespace Presentacion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(297, 136);
+            this.label5.Location = new System.Drawing.Point(265, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 19);
+            this.label5.Size = new System.Drawing.Size(140, 19);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Edad";
+            this.label5.Text = "Fecha de Nacimiento";
             // 
             // label3
             // 
@@ -380,15 +374,6 @@ namespace Presentacion
             this.label1.TabIndex = 5;
             this.label1.Text = "Identicacion";
             // 
-            // textEdad
-            // 
-            this.textEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdad.Location = new System.Drawing.Point(269, 158);
-            this.textEdad.Name = "textEdad";
-            this.textEdad.Size = new System.Drawing.Size(100, 21);
-            this.textEdad.TabIndex = 4;
-            this.textEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdad_KeyPress);
-            // 
             // textApellido
             // 
             this.textApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -416,23 +401,12 @@ namespace Presentacion
             this.textIdentificacion.TabIndex = 1;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress_1);
             // 
-            // textBoxCorreo
+            // dateTimeEdad
             // 
-            this.textBoxCorreo.Location = new System.Drawing.Point(105, 352);
-            this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCorreo.TabIndex = 44;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(122, 330);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 19);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Correo";
+            this.dateTimeEdad.Location = new System.Drawing.Point(269, 159);
+            this.dateTimeEdad.Name = "dateTimeEdad";
+            this.dateTimeEdad.Size = new System.Drawing.Size(100, 20);
+            this.dateTimeEdad.TabIndex = 46;
             // 
             // Registro
             // 
@@ -467,7 +441,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textEdad;
         private System.Windows.Forms.TextBox textApellido;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textIdentificacion;
@@ -478,14 +451,13 @@ namespace Presentacion
         private System.Windows.Forms.ComboBox comboBoxTipoEntrenamiento;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxDeporte;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DateTimePicker dateTimeRegistar;
         private System.Windows.Forms.TextBox textBoxAlturaRegistar;
         private System.Windows.Forms.TextBox textBoxPesoRegistar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxCorreo;
+        private System.Windows.Forms.DateTimePicker dateTimeEdad;
     }
 }
