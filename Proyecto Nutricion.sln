@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{ACE9FD44-40B6-4FA4-ABDA-84C500FFB1C0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{D77DDAE5-44F6-4067-BF4A-B21F388B0D5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{F307F897-2A1C-4723-A2B1-8AB6279FD14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasDeSofoware", "PruebasDeSofoware\PruebasDeSofoware.csproj", "{1EEB94B5-05CD-4877-ABC1-7BDAF3FBC6D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F307F897-2A1C-4723-A2B1-8AB6279FD14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F307F897-2A1C-4723-A2B1-8AB6279FD14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F307F897-2A1C-4723-A2B1-8AB6279FD14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEB94B5-05CD-4877-ABC1-7BDAF3FBC6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEB94B5-05CD-4877-ABC1-7BDAF3FBC6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEB94B5-05CD-4877-ABC1-7BDAF3FBC6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEB94B5-05CD-4877-ABC1-7BDAF3FBC6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
