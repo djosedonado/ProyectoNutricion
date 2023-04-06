@@ -15,13 +15,45 @@ namespace Presentacion
     public partial class RecomendacionNutricional : Form
     {
         public serviceDeportista service;
+        public ServicePlantilla servicePlantilla;
+        public List<Plantilla> plantillas;
         public List<Deportista> deportistas;
         public RecomendacionNutricional()
         {
             service = new serviceDeportista(CadenaConexion.ConnectionString);
+            servicePlantilla = new ServicePlantilla(CadenaConexion.ConnectionString);
             InitializeComponent();
             deportistas = new List<Deportista>();
+            plantillas = new List<Plantilla>();
 
+        }
+
+        private void LlenarCombobox(List<Plantilla> plantillas)
+        {
+
+            comboBoxDieta.Items.Clear();
+            foreach (var item in plantillas)
+            {
+                comboBoxDieta.Items.Add(item.NombrePlantilla);
+            }
+            comboBoxDieta.Refresh();
+        }
+
+        private void MostrarAlimentos()
+        {
+            ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
+            comboBoxDieta.DataSource = null;
+            respuesta = servicePlantilla.Consultar();
+            plantillas = respuesta.Plantillas.ToList();
+            if (!respuesta.Error)
+            {
+                LlenarCombobox(plantillas);
+
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void botonGuardarRecomendacion_Click(object sender, EventArgs e)
@@ -131,5 +163,14 @@ namespace Presentacion
 
         }
 
+        private void comboBoxDieta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBoxDieta_Click(object sender, EventArgs e)
+        {
+            MostrarAlimentos();
+        }
     }
 }

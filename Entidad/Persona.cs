@@ -10,7 +10,7 @@ namespace Entidad
     {
         public Persona()
         {
-            
+            Edad = 0;
         }
         public string Identificacion { get; set; }
         public string TipoIdentificacion { get; set; }  

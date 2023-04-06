@@ -141,12 +141,12 @@ namespace Presentacion
             this.comboBoxDieta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDieta.FormattingEnabled = true;
-            this.comboBoxDieta.Items.AddRange(new object[] {
-            "Semana 1"});
             this.comboBoxDieta.Location = new System.Drawing.Point(215, 211);
             this.comboBoxDieta.Name = "comboBoxDieta";
             this.comboBoxDieta.Size = new System.Drawing.Size(95, 21);
             this.comboBoxDieta.TabIndex = 22;
+            this.comboBoxDieta.SelectedIndexChanged += new System.EventHandler(this.comboBoxDieta_SelectedIndexChanged);
+            this.comboBoxDieta.Click += new System.EventHandler(this.comboBoxDieta_Click);
             // 
             // botonBuscarPaciente
             // 

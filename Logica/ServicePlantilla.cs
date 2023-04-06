@@ -53,14 +53,14 @@ namespace Logica
                 respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
                 respuesta.Error = true;
                 return respuesta;
-            }
+            }finally { connection.close(); }
         }
 
     }
 
     public class ConsultarRespuestaPlantilla
     {
-        public List<Plantilla> Plantillas { get; set; }
+        public IList<Plantilla> Plantillas { get; set; }
         public string Mensaje { get; set; }
         public bool Error { get; set; }
     }

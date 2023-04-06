@@ -21,11 +21,10 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"insert into Plantilla(nombrePlantilla,porcion,categoria,idDieta,idAlimento)
-                                                   values(@nombrePlantilla,@porcion,@categoria,@idDieta,@idAlimento)";
-                command.Parameters.Add(new SqlParameter("@idDieta", plantilla.idDieta));
+                command.CommandText = @"insert into Plantilla(nombrePlantilla,porcion,categoria,idAlimento)
+                                                   values(@nombrePlantilla,@porcion,@categoria,@idAlimento)";
                 command.Parameters.Add(new SqlParameter("@idAlimento", plantilla.idAlimento));
-                command.Parameters.Add(new SqlParameter("@nombre", plantilla.NombrePlantilla));
+                command.Parameters.Add(new SqlParameter("@nombrePlantilla", plantilla.NombrePlantilla));
                 command.Parameters.Add(new SqlParameter("@porcion", plantilla.Porcion));
                 command.Parameters.Add(new SqlParameter("@categoria", plantilla.Categoria));
                 var file = command.ExecuteNonQuery();
@@ -38,18 +37,18 @@ namespace Datos
             List<Plantilla> plantillas = new List<Plantilla>();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select *from Plantilla";
+                command.CommandText = "SELECT Plantilla.nombrePlantilla,Plantilla.porcion,Plantilla.categoria,Alimento.nombre FROM Plantilla INNER JOIN Alimento ON Plantilla.idAlimento=Alimento.id";
                 var Reader = command.ExecuteReader();
                 while (Reader.Read())
                 {
                     Plantilla plantilla = new Plantilla();
                     plantilla.NombrePlantilla = Reader.GetString(0);
-                    plantilla.Ingrediente = Reader.GetString(1);
-                    plantilla.Porcion = Reader.GetInt32(2);
+                    plantilla.Porcion = Reader.GetInt32(1);
+                    plantilla.Categoria = Reader.GetString(2);
                     plantilla.idAlimento = Reader.GetString(3);
-                    plantilla.idDieta = Reader.GetString(4);
+                    plantillas.Add(plantilla);
                 }
-
+                Reader.Close();
             }
             return plantillas;
         }
@@ -69,7 +68,6 @@ namespace Datos
                         plantilla.Ingrediente = Reader.GetString(1);
                         plantilla.Porcion = Reader.GetInt32(2);
                         plantilla.idAlimento = Reader.GetString(3);
-                        plantilla.idDieta = Reader.GetString(4);
                         return plantilla;
                     }
                 }

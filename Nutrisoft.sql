@@ -37,8 +37,8 @@ CREATE TABLE Plantilla(
 nombrePlantilla VARCHAR(50) PRIMARY KEY,
 porcion INT NULL,
 categoria VARCHAR(50),
-idDieta VARCHAR(5),
-idAlimento VARCHAR(5)
+idAlimento VARCHAR(5),
+CONSTRAINT FK_PLANTILLA_ALIMENTO FOREIGN KEY (idAlimento) REFERENCES Alimento(id)
 );
 
 CREATE TABLE Dieta(
@@ -47,5 +47,7 @@ diasAplicada VARCHAR(100),
 recomendacionAlimentaria VARCHAR(MAX),
 recomendacionNutriccional VARCHAR(MAX),
 idDeportista VARCHAR(11),
-CONSTRAINT PK_DIETA_DEPORTISTA FOREIGN KEY (idDeportista) REFERENCES Deportista(identificacion)
+idPlantilla VARCHAR(50),
+CONSTRAINT PK_DIETA_DEPORTISTA FOREIGN KEY (idDeportista) REFERENCES Deportista(identificacion),
+CONSTRAINT FK_DIETA_PLANTILLA FOREIGN KEY (idPlantilla) REFERENCES Plantilla(nombrePlantilla)
 );

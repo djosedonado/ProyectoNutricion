@@ -55,14 +55,12 @@ namespace Presentacion
             this.comboBoxIngrediente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePlantilla = new System.Windows.Forms.TextBox();
             this.ContenedorRegistroDietas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonAgregarListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContenedorRegistroDietas
@@ -79,7 +77,6 @@ namespace Presentacion
             this.ContenedorRegistroDietas.Controls.Add(this.comboBoxIngrediente);
             this.ContenedorRegistroDietas.Controls.Add(this.label2);
             this.ContenedorRegistroDietas.Controls.Add(this.comboBoxCategoria);
-            this.ContenedorRegistroDietas.Controls.Add(this.pictureBox1);
             this.ContenedorRegistroDietas.Controls.Add(this.label1);
             this.ContenedorRegistroDietas.Controls.Add(this.textNombrePlantilla);
             this.ContenedorRegistroDietas.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -346,16 +343,6 @@ namespace Presentacion
             this.comboBoxCategoria.Size = new System.Drawing.Size(92, 21);
             this.comboBoxCategoria.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.salvar;
-            this.pictureBox1.Location = new System.Drawing.Point(559, 416);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -389,7 +376,6 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,7 +385,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel ContenedorRegistroDietas;
         private System.Windows.Forms.TextBox textNombrePlantilla;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxIngrediente;
         private System.Windows.Forms.Label label2;
