@@ -33,12 +33,18 @@ proteinas FLOAT NULL,
 liquidos FLOAT NULL
 );
 
-CREATE TABLE Plantilla(
-nombrePlantilla VARCHAR(50) PRIMARY KEY,
+CREATE TABLE Alimento_Plantilla(
+id int IDENTITY(1,1000) PRIMARY KEY,
+idPlantilla VARCHAR(50),
+idAlimento VARCHAR(5),
 porcion INT NULL,
 categoria VARCHAR(50),
-idAlimento VARCHAR(5),
-CONSTRAINT FK_PLANTILLA_ALIMENTO FOREIGN KEY (idAlimento) REFERENCES Alimento(id)
+CONSTRAINT FK_ALIMPLANTI_PLANTILLA FOREIGN KEY (idPlantilla) REFERENCES Plantilla(nombrePlantilla),
+CONSTRAINT FK_APLIMPLANTI_ALIMENTO FOREIGN KEY (idAlimento) REFERENCES Alimento(id),
+);
+
+CREATE TABLE Plantilla(
+nombrePlantilla VARCHAR(50) PRIMARY KEY
 );
 
 CREATE TABLE Dieta(

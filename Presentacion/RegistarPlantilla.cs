@@ -34,6 +34,7 @@ namespace Presentacion
             foreach (var item in plantillas)
             {
                 dataGridView1.Rows.Add(item.NombrePlantilla,item.idAlimento,item.Categoria,item.Porcion);
+                
             }
             dataGridView1.Refresh();
         }
@@ -52,6 +53,9 @@ namespace Presentacion
             {
                 MessageBox.Show("Error al consular");
             }
+            comboBoxCategoria.Enabled = false;
+            comboBoxIngrediente.Enabled = false;
+            textBoxPorcion.Enabled = false;
         }
 
         private void LlenarCombobox(List<Alimento> alimentos)
@@ -107,16 +111,50 @@ namespace Presentacion
         {
             Plantilla plantilla = new Plantilla();
             plantilla.NombrePlantilla = textNombrePlantilla.Text;
+            return plantilla;
+        }
+
+        private Plantilla MapearDatosPlantillaAlimentos()
+        {
+            Plantilla plantilla = new Plantilla();
+            plantilla.NombrePlantilla = comboBoxPlantillaAdd.Text;
+            plantilla.idAlimento = comboBoxIngrediente.ValueMember;
             plantilla.Porcion = int.Parse(textBoxPorcion.Text);
             plantilla.Categoria = comboBoxCategoria.Text;
-            plantilla.idAlimento = comboBoxIngrediente.ValueMember;
-            Console.WriteLine(comboBoxIngrediente.ValueMember);
             return plantilla;
         }
 
         private void botonAgregarListado_Click(object sender, EventArgs e)
         {
-            if (textNombrePlantilla.Equals("") || textBoxPorcion.Equals("") || comboBoxCategoria.Equals(-1) || comboBoxIngrediente.Equals(-1))
+            if (comboBoxPlantillaAdd.Equals(-1) || textBoxPorcion.Equals("") || comboBoxCategoria.Equals(-1) || comboBoxIngrediente.Equals(-1))
+            {
+                MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Plantilla plantilla = MapearDatosPlantillaAlimentos();
+                string Mensaje = servicePlantilla.AddGuardarPlantilla(plantilla);
+                MessageBox.Show(Mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarTodos();
+                vaciarCampos();
+            }
+        }
+
+        private void vaciarCampos()
+        {
+            textBoxPorcion.Text = "";
+            comboBoxPlantillaAdd.Text = null;
+            comboBoxCategoria.Text = null;
+            comboBoxIngrediente.Text = null;
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BotonGuardarRegistro_Click(object sender, EventArgs e)
+        {
+            if (textNombrePlantilla.Equals(""))
             {
                 MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -125,7 +163,50 @@ namespace Presentacion
                 Plantilla plantilla = MapearDatosPlantillas();
                 string Mensaje = servicePlantilla.Guardar(plantilla);
                 MessageBox.Show(Mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textNombrePlantilla.Text = "";
             }
+        }
+
+        private void LlenarCombobox(List<Plantilla> plantillas)
+        {
+
+            comboBoxPlantillaAdd.Items.Clear();
+            foreach (var item in plantillas)
+            {
+                comboBoxPlantillaAdd.Items.Add(item.NombrePlantilla);
+                
+            }
+            comboBoxPlantillaAdd.Refresh();
+        }
+
+        private void MostrarPlantillasAdd()
+        {
+            ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
+            comboBoxPlantillaAdd.DataSource = null;
+            respuesta = servicePlantilla.ConsultarPlantilla();
+            plantillas = respuesta.Plantillas.ToList();
+            if (!respuesta.Error)
+            {
+                LlenarCombobox(plantillas);
+
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBoxPlantillaAdd_Click(object sender, EventArgs e)
+        {
+            MostrarPlantillasAdd();
+        }
+
+        private void comboBoxPlantillaAdd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxCategoria.Enabled = true;
+            comboBoxIngrediente.Enabled = true;
+            textBoxPorcion.Enabled = true;
+            //colocar selector de valor seleccionado
         }
     }
 }

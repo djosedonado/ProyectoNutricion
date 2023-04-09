@@ -21,15 +21,25 @@ namespace Datos
         {
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"insert into Plantilla(nombrePlantilla,porcion,categoria,idAlimento)
-                                                   values(@nombrePlantilla,@porcion,@categoria,@idAlimento)";
-                command.Parameters.Add(new SqlParameter("@idAlimento", plantilla.idAlimento));
+                command.CommandText = @"insert into Plantilla(nombrePlantilla)
+                                                   values(@nombrePlantilla)";
                 command.Parameters.Add(new SqlParameter("@nombrePlantilla", plantilla.NombrePlantilla));
-                command.Parameters.Add(new SqlParameter("@porcion", plantilla.Porcion));
-                command.Parameters.Add(new SqlParameter("@categoria", plantilla.Categoria));
                 var file = command.ExecuteNonQuery();
             }
 
+        }
+        public void GuardarPlantillaAlimento(Plantilla plantilla)
+        {
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = @"INSERT INTO Alimento_Plantilla(idPlantilla,idAlimento,porcion,categoria)
+                                        VALUES(@idPlantilla,@idAlimento,@porcion,@categoria)";
+                command.Parameters.Add(new SqlParameter("@porcion", plantilla.Porcion));
+                command.Parameters.Add(new SqlParameter("@categoria", plantilla.Categoria));
+                command.Parameters.Add(new SqlParameter("@idPlantilla",plantilla.NombrePlantilla));
+                command.Parameters.Add(new SqlParameter("@idAlimento",plantilla.idAlimento));
+                var file = command.ExecuteNonQuery();
+            }
         }
 
         public List<Plantilla> Consultar()
@@ -37,7 +47,10 @@ namespace Datos
             List<Plantilla> plantillas = new List<Plantilla>();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT Plantilla.nombrePlantilla,Plantilla.porcion,Plantilla.categoria,Alimento.nombre FROM Plantilla INNER JOIN Alimento ON Plantilla.idAlimento=Alimento.id";
+                command.CommandText = @"SELECT Plantilla.nombrePlantilla,Alimento_Plantilla.porcion,Alimento_Plantilla.categoria,Alimento.nombre 
+                                        FROM Alimento_Plantilla
+                                        INNER JOIN Plantilla ON Alimento_Plantilla.idPlantilla=Plantilla.nombrePlantilla
+                                        INNER JOIN Alimento ON Alimento_Plantilla.idAlimento=Alimento.id";
                 var Reader = command.ExecuteReader();
                 while (Reader.Read())
                 {
@@ -46,6 +59,24 @@ namespace Datos
                     plantilla.Porcion = Reader.GetInt32(1);
                     plantilla.Categoria = Reader.GetString(2);
                     plantilla.idAlimento = Reader.GetString(3);
+                    plantillas.Add(plantilla);
+                }
+                Reader.Close();
+            }
+            return plantillas;
+        }
+
+        public List<Plantilla> ConsultarPlantilla()
+        {
+            List<Plantilla> plantillas = new List<Plantilla>();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = @"SELECT *FROM Plantilla";
+                var Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Plantilla plantilla = new Plantilla();
+                    plantilla.NombrePlantilla = Reader.GetString(0);
                     plantillas.Add(plantilla);
                 }
                 Reader.Close();

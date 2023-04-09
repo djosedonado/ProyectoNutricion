@@ -159,12 +159,13 @@ namespace Datos
         {
             using (var commnad = connection.CreateCommand())
             {
-                commnad.CommandText = @"insert into Dieta(diasAplicada,recomendacionAlimentaria,recomendacionNutriccional,idDeportista)
-                                                    values(@diasAplicada,@recomendacionAlimentaria,@recomendacionNutriccional,@idDeportista)";
+                commnad.CommandText = @"insert into Dieta(diasAplicada,recomendacionAlimentaria,recomendacionNutriccional,idDeportista,idPlantilla)
+                                                    values(@diasAplicada,@recomendacionAlimentaria,@recomendacionNutriccional,@idDeportista,@idPlantilla)";
                 commnad.Parameters.Add(new SqlParameter("@diasAplicada",dieta.DiasAplicados));
                 commnad.Parameters.Add(new SqlParameter("@recomendacionAlimentaria", dieta.RecomendacionAlimentaria));
                 commnad.Parameters.Add(new SqlParameter("@recomendacionNutriccional", dieta.RecomendacionNutriccional));
                 commnad.Parameters.Add(new SqlParameter("@idDeportista", dieta.identificacion));
+                commnad.Parameters.Add(new SqlParameter("@idPlantilla", dieta.plantillas));
                 var filas = commnad.ExecuteNonQuery();
             }
         }

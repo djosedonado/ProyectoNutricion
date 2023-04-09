@@ -20,7 +20,7 @@ namespace Entidad
         public string RecomendacionAlimentaria { get; set; }
         public string DiasAplicados { get; set; }
         public string identificacion { get; set; }
-        public Plantilla plantillas { get; set; }
+        public string plantillas { get; set; }
 
         public void MetodoAccinDinamicaEspecificaAlimentos()
         {

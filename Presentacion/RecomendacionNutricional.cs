@@ -39,11 +39,11 @@ namespace Presentacion
             comboBoxDieta.Refresh();
         }
 
-        private void MostrarAlimentos()
+        private void MostrarPlantillas()
         {
             ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
             comboBoxDieta.DataSource = null;
-            respuesta = servicePlantilla.Consultar();
+            respuesta = servicePlantilla.ConsultarPlantilla();
             plantillas = respuesta.Plantillas.ToList();
             if (!respuesta.Error)
             {
@@ -73,6 +73,7 @@ namespace Presentacion
                 TextRecomendacionAlimentario.Text = "";
                 TextRecomendacionNutricional.Text = "";
                 textPesoActual.Text = "";
+                comboBoxDieta.Text = null;
             }
         }
 
@@ -83,6 +84,7 @@ namespace Presentacion
             dieta.RecomendacionAlimentaria = TextRecomendacionAlimentario.Text;
             dieta.RecomendacionNutriccional = TextRecomendacionNutricional.Text;
             dieta.DiasAplicados = ListasDiasSemana.Text;
+            dieta.plantillas = comboBoxDieta.Text;
             return dieta;
 
         }
@@ -170,7 +172,7 @@ namespace Presentacion
 
         private void comboBoxDieta_Click(object sender, EventArgs e)
         {
-            MostrarAlimentos();
+            MostrarPlantillas();
         }
     }
 }

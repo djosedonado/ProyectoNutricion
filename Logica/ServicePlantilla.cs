@@ -28,7 +28,6 @@ namespace Logica
                 connection.open();
                 repository.Guardar(plantilla);
                 return $"Se guardaron los datos de satisfactoriamente";
-
             }
             catch(Exception e)
             {
@@ -36,6 +35,21 @@ namespace Logica
             }
             finally { connection.close(); }
         }
+
+        public string AddGuardarPlantilla(Plantilla plantilla)
+        {
+            try
+            {
+                connection.open();
+                repository.GuardarPlantillaAlimento(plantilla);
+                return "Agregado con Exito";
+            }
+            catch (Exception e)
+            {
+                return "Error"+e.Message;
+            }finally { connection.close(); }
+        }
+
 
         public ConsultarRespuestaPlantilla Consultar()
         {
@@ -54,6 +68,25 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }finally { connection.close(); }
+        }
+        public ConsultarRespuestaPlantilla ConsultarPlantilla()
+        {
+            ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
+            try
+            {
+                connection.open();
+                respuesta.Plantillas = repository.ConsultarPlantilla();
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Plantillas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { connection.close(); }
         }
 
     }

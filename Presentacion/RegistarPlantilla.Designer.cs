@@ -32,6 +32,9 @@ namespace Presentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContenedorRegistroDietas = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxPlantillaAdd = new System.Windows.Forms.ComboBox();
+            this.BotonGuardarRegistro = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.botonAgregarListado = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -58,6 +61,7 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePlantilla = new System.Windows.Forms.TextBox();
             this.ContenedorRegistroDietas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonAgregarListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,6 +70,9 @@ namespace Presentacion
             // ContenedorRegistroDietas
             // 
             this.ContenedorRegistroDietas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ContenedorRegistroDietas.Controls.Add(this.label7);
+            this.ContenedorRegistroDietas.Controls.Add(this.comboBoxPlantillaAdd);
+            this.ContenedorRegistroDietas.Controls.Add(this.BotonGuardarRegistro);
             this.ContenedorRegistroDietas.Controls.Add(this.label6);
             this.ContenedorRegistroDietas.Controls.Add(this.botonAgregarListado);
             this.ContenedorRegistroDietas.Controls.Add(this.dataGridView1);
@@ -85,6 +92,40 @@ namespace Presentacion
             this.ContenedorRegistroDietas.Size = new System.Drawing.Size(842, 502);
             this.ContenedorRegistroDietas.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(391, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 19);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Plantilla";
+            // 
+            // comboBoxPlantillaAdd
+            // 
+            this.comboBoxPlantillaAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxPlantillaAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPlantillaAdd.FormattingEnabled = true;
+            this.comboBoxPlantillaAdd.Location = new System.Drawing.Point(383, 114);
+            this.comboBoxPlantillaAdd.Name = "comboBoxPlantillaAdd";
+            this.comboBoxPlantillaAdd.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxPlantillaAdd.TabIndex = 44;
+            this.comboBoxPlantillaAdd.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlantillaAdd_SelectedIndexChanged);
+            this.comboBoxPlantillaAdd.Click += new System.EventHandler(this.comboBoxPlantillaAdd_Click);
+            // 
+            // BotonGuardarRegistro
+            // 
+            this.BotonGuardarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonGuardarRegistro.Image = global::Presentacion.Properties.Resources.salvar;
+            this.BotonGuardarRegistro.Location = new System.Drawing.Point(679, 361);
+            this.BotonGuardarRegistro.Name = "BotonGuardarRegistro";
+            this.BotonGuardarRegistro.Size = new System.Drawing.Size(64, 64);
+            this.BotonGuardarRegistro.TabIndex = 43;
+            this.BotonGuardarRegistro.TabStop = false;
+            this.BotonGuardarRegistro.Click += new System.EventHandler(this.BotonGuardarRegistro_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -100,7 +141,7 @@ namespace Presentacion
             // 
             this.botonAgregarListado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonAgregarListado.Image = global::Presentacion.Properties.Resources.agregar_archivo;
-            this.botonAgregarListado.Location = new System.Drawing.Point(422, 92);
+            this.botonAgregarListado.Location = new System.Drawing.Point(511, 92);
             this.botonAgregarListado.Name = "botonAgregarListado";
             this.botonAgregarListado.Size = new System.Drawing.Size(65, 65);
             this.botonAgregarListado.TabIndex = 16;
@@ -109,6 +150,8 @@ namespace Presentacion
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -131,6 +174,7 @@ namespace Presentacion
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.dataGridView1.Location = new System.Drawing.Point(71, 251);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
@@ -138,35 +182,40 @@ namespace Presentacion
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(443, 199);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 199);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "id";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Ingrediente";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Categoria";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Cantidad";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(665, 70);
+            this.label5.Location = new System.Drawing.Point(683, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 19);
             this.label5.TabIndex = 14;
@@ -202,9 +251,9 @@ namespace Presentacion
             this.panel1.Controls.Add(this.labelCarbohidrato);
             this.panel1.Controls.Add(this.labelCalorias);
             this.panel1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.panel1.Location = new System.Drawing.Point(530, 92);
+            this.panel1.Location = new System.Drawing.Point(582, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 177);
+            this.panel1.Size = new System.Drawing.Size(257, 145);
             this.panel1.TabIndex = 7;
             // 
             // labelTotalLiquidos
@@ -372,6 +421,7 @@ namespace Presentacion
             this.Text = "RegistarDietas";
             this.ContenedorRegistroDietas.ResumeLayout(false);
             this.ContenedorRegistroDietas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonAgregarListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -408,5 +458,8 @@ namespace Presentacion
         private System.Windows.Forms.Label labelCarbohidrato;
         private System.Windows.Forms.Label labelCalorias;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox BotonGuardarRegistro;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxPlantillaAdd;
     }
 }
