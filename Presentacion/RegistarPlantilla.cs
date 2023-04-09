@@ -126,7 +126,7 @@ namespace Presentacion
 
         private void botonAgregarListado_Click(object sender, EventArgs e)
         {
-            if (comboBoxPlantillaAdd.Equals(-1) || textBoxPorcion.Equals("") || comboBoxCategoria.Equals(-1) || comboBoxIngrediente.Equals(-1))
+            if (textBoxPorcion.Text.Equals("") || comboBoxCategoria.Text.Equals("") || comboBoxIngrediente.Text.Equals("") || comboBoxPlantillaAdd.Text.Equals(""))
             {
                 MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -154,7 +154,7 @@ namespace Presentacion
 
         private void BotonGuardarRegistro_Click(object sender, EventArgs e)
         {
-            if (textNombrePlantilla.Equals(""))
+            if (textNombrePlantilla.Text.Equals(""))
             {
                 MessageBox.Show("Los campos estan Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

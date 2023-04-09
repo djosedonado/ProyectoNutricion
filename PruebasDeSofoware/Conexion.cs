@@ -1,7 +1,4 @@
-﻿using System.Configuration;
-
-
-namespace PruebasDeSofoware
+﻿namespace PruebasDeSofoware
 {
     public static class Conexion
     {
