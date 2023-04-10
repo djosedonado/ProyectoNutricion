@@ -10,16 +10,10 @@ namespace Datos
 {
     public class deportistaRepository
     {
-        private readonly SqlConnection connection;
-
-        public deportistaRepository(ConnectionDB connectionDB)
-        {
-            connection = connectionDB.connectionDB;
-        }
-
+        public ConnectionDB connection = new ConnectionDB();
         public void Guardar(Deportista deportista)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,correo,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
                                                         values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@correo,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
@@ -47,7 +41,7 @@ namespace Datos
         {
             List<Deportista> deportistas = new List<Deportista>();
 
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select *from Deportista";
                 var Reader = command.ExecuteReader();
@@ -63,7 +57,7 @@ namespace Datos
         {
             List<Deportista> deportistas = new List<Deportista>();
 
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select * from Deportista where identificacion=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
@@ -103,7 +97,7 @@ namespace Datos
 
         public Deportista BuscarPorIdentificacion(string identificacion)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select * from Deportista where identificacion=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
@@ -147,7 +141,7 @@ namespace Datos
 
         public void Modificar(Deportista deportista)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"update Deportista set pesoActual=@pesoActual where identificacion=@identificacion";
                 command.Parameters.Add(new SqlParameter("@pesoActual", deportista.PesoActual));
@@ -157,7 +151,7 @@ namespace Datos
 
         public void GuardarRecomendaciones(Dieta dieta)
         {
-            using (var commnad = connection.CreateCommand())
+            using (var commnad = connection.connectionDB.CreateCommand())
             {
                 commnad.CommandText = @"insert into Dieta(diasAplicada,recomendacionAlimentaria,recomendacionNutriccional,idDeportista,idPlantilla)
                                                     values(@diasAplicada,@recomendacionAlimentaria,@recomendacionNutriccional,@idDeportista,@idPlantilla)";

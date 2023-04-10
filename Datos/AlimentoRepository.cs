@@ -11,16 +11,11 @@ namespace Datos
 {
     public class AlimentoRepository
     {
-        SqlConnection connection;
 
-        public AlimentoRepository(ConnectionDB connectionDB)
-        {
-            connection = connectionDB.connectionDB;
-        }
-
+        public ConnectionDB connection = new ConnectionDB();
         public void Guardar(Alimento alimento)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"Insert into Alimento (id,nombre,caloria,carbohidrato,proteinas,liquidos) 
                                                 values ( @id,@nombre,@caloria,@carbohidrato,@proteinas,@liquidos)";
@@ -37,7 +32,7 @@ namespace Datos
         public List<Alimento> Consultar()
         {
             List<Alimento> alimentos = new List<Alimento>();
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select *from Alimento";
                 var dataReader = command.ExecuteReader();
@@ -60,7 +55,7 @@ namespace Datos
         public List<Alimento> ConsultarNombreAlimentos()
         {
             List<Alimento> alimentos = new List<Alimento>();
-            using (var commnds = connection.CreateCommand())
+            using (var commnds = connection.connectionDB.CreateCommand())
             {
                 commnds.CommandText = "select id,nombre from Alimento";
                 var Reader = commnds.ExecuteReader();
@@ -78,7 +73,7 @@ namespace Datos
 
         public Alimento BuscarIdAlimento(string idAlimento)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select * from Alimento where nombre=@nombre";
                 command.Parameters.Add(new SqlParameter("@nombre", idAlimento));

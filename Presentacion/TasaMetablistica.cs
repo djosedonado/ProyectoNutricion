@@ -20,7 +20,7 @@ namespace Presentacion
 
         public TasaMetablistica()
         {
-            service = new serviceDeportista(CadenaConexion.ConnectionString);
+            service = new serviceDeportista();
             InitializeComponent();
             deportistas = new List<Deportista>();
             MostrarDatos();

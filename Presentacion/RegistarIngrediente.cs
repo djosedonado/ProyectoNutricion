@@ -19,7 +19,7 @@ namespace Presentacion
         
         public RegistarIngrediente()
         {
-            serviceAlimento = new serviceAlimento(CadenaConexion.ConnectionString);
+            serviceAlimento = new serviceAlimento();
             InitializeComponent();
             alimento = new List<Alimento>();
             MostarDataAlimentos();

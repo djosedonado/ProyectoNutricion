@@ -1,27 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace Datos
 {
     public class ConnectionDB
     {
-        internal SqlConnection connectionDB;
+        public string connectionString = "Data Source=DONADO\\SQLEXPRESS;Initial Catalog=Nutrisoft; Integrated Security=True";
+        public SqlConnection connectionDB = new SqlConnection();
 
-        public ConnectionDB(string connection)
+        public ConnectionDB()
         {
-            connectionDB = new SqlConnection(connection);
+            connectionDB.ConnectionString = connectionString;
         }
 
-        public void open()
+        public void Open()
         {
-            connectionDB.Open();
+            try
+            {
+                connectionDB.Open();
+                Console.WriteLine("---Connection DataBase---");
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("ERROR" + e.Message);
+            }
         }
 
-        public void close()
+        public void Close()
         {
             connectionDB.Close();
         }

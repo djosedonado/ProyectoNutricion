@@ -18,7 +18,7 @@ namespace Presentacion
         List<Deportista> deportista;
         public Consultar()
         {
-            service = new serviceDeportista(CadenaConexion.ConnectionString);
+            service = new serviceDeportista();
             InitializeComponent();
             deportista = new List<Deportista>();
             

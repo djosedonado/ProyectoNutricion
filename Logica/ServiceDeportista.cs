@@ -7,12 +7,10 @@ namespace Logica
 {
     public class serviceDeportista
     {
-        private readonly deportistaRepository deportistaRepository;
-        private readonly ConnectionDB connection;
-        public serviceDeportista(string SQLServerExpress)
+        public deportistaRepository deportistaRepository;
+        public serviceDeportista()
         {
-            connection = new ConnectionDB(SQLServerExpress);
-            deportistaRepository = new deportistaRepository(connection);
+            deportistaRepository = new deportistaRepository();
         }
 
         public string Guardar(Deportista deportista)
@@ -22,7 +20,7 @@ namespace Logica
                 string mensajeEmail = string.Empty;
                 CorreoService correo = new CorreoService();
                 deportista.CalculoGastoEnergeticoDiario();
-                connection.open();
+                deportistaRepository.connection.Open();
                 if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion) == null)
                 {
                     deportistaRepository.Guardar(deportista);
@@ -38,7 +36,7 @@ namespace Logica
             {
                 return $"Error de la Aplicacion: {e.Message}";
             }
-            finally { connection.close(); }
+            finally { deportistaRepository.connection.Close(); }
         }
 
         public ConsultarDeportistaRespuesta ConsultarTodos()
@@ -48,9 +46,8 @@ namespace Logica
             try
             {
                 
-                connection.open();
+                deportistaRepository.connection.Open();
                 respuesta.Deportistas = deportistaRepository.consultarTodo();
-                connection.close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
@@ -61,7 +58,7 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { deportistaRepository.connection.Close(); }
         }
 
         public ConsultarDeportistaRespuesta consultarPorIdentificacion(string identificacion)
@@ -69,9 +66,9 @@ namespace Logica
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             try
             {
-                connection.open();
+                deportistaRepository.connection.Open();
                 respuesta.Deportistas = deportistaRepository.consultarPorIdentificacion(identificacion);
-                connection.close();
+                deportistaRepository.connection.Close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
@@ -82,14 +79,14 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { deportistaRepository.connection.Close(); }
         }
 
         public ConsultarDeportista BuscarPorNombreService(string nombre)
         {
             try
             {
-                connection.open();
+                deportistaRepository.connection.Open();
                 return new ConsultarDeportista(deportistaRepository.FiltrarPorNombre(nombre));
             }
             catch(Exception e)
@@ -97,14 +94,14 @@ namespace Logica
 
                 return new ConsultarDeportista("Se presento el siguiente Error: " + e.Message);
             }
-            finally { connection.close(); }
+            finally { deportistaRepository.connection.Close(); }
         }
 
         public string GuardarDieta(Dieta dieta)
         {
             try
             {
-                connection.open();
+                deportistaRepository.connection.Open();
                 deportistaRepository.GuardarRecomendaciones(dieta);
                 return "DATOS GUARDADOS";
             }
@@ -112,7 +109,7 @@ namespace Logica
             {
                 return $"Error de la Aplicacion: {e.Message}";
             }
-            finally { connection.close(); }
+            finally { deportistaRepository.connection.Close(); }
         }
 
     }

@@ -10,27 +10,22 @@ namespace Datos
 {
     public class PlantillaRepository
     {
-        private readonly SqlConnection connection;
-
-        public PlantillaRepository(ConnectionDB connectionDB)
-        {
-            connection = connectionDB.connectionDB;
-        }
+        public ConnectionDB connection = new ConnectionDB();
 
         public void Guardar(Plantilla plantilla)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"insert into Plantilla(nombrePlantilla)
                                                    values(@nombrePlantilla)";
-                command.Parameters.Add(new SqlParameter("@nombrePlantilla", plantilla.NombrePlantilla));
+                command.Parameters.Add(new System.Data.SqlClient.SqlParameter("@nombrePlantilla", plantilla.NombrePlantilla));
                 var file = command.ExecuteNonQuery();
             }
 
         }
         public void GuardarPlantillaAlimento(Plantilla plantilla)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"INSERT INTO Alimento_Plantilla(idPlantilla,idAlimento,porcion,categoria)
                                         VALUES(@idPlantilla,@idAlimento,@porcion,@categoria)";
@@ -45,7 +40,7 @@ namespace Datos
         public List<Plantilla> Consultar()
         {
             List<Plantilla> plantillas = new List<Plantilla>();
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"SELECT Plantilla.nombrePlantilla,Alimento_Plantilla.porcion,Alimento_Plantilla.categoria,Alimento.nombre 
                                         FROM Alimento_Plantilla
@@ -69,7 +64,7 @@ namespace Datos
         public List<Plantilla> ConsultarPlantilla()
         {
             List<Plantilla> plantillas = new List<Plantilla>();
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"SELECT *FROM Plantilla";
                 var Reader = command.ExecuteReader();
@@ -86,7 +81,7 @@ namespace Datos
 
         public Plantilla BuscarPorNombre(string nombre)
         {
-            using (var command = connection.CreateCommand())
+            using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = "select * from Alimento where nombre=@nombre";
                 command.Parameters.Add(new SqlParameter("nombre", nombre));

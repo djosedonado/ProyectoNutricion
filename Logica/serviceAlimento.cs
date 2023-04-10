@@ -11,13 +11,11 @@ namespace Logica
 {
     public class serviceAlimento
     {
-        private readonly ConnectionDB connection;
-        private readonly AlimentoRepository alimentoRepository;
+        public AlimentoRepository alimentoRepository;
 
-        public serviceAlimento(string connectionDB)
+        public serviceAlimento()
         {
-            connection = new ConnectionDB(connectionDB);
-            alimentoRepository = new AlimentoRepository(connection);
+            alimentoRepository = new AlimentoRepository();
         }
 
         public ConsultarAlimentoRespuesta consultarTodo()
@@ -25,9 +23,8 @@ namespace Logica
             ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
             try
             {
-                connection.open();
+                alimentoRepository.connection.Open();
                 respuesta.Alimentos = alimentoRepository.Consultar();
-                connection.close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
@@ -38,14 +35,14 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { alimentoRepository.connection.Close(); }
         }
 
         public string Guardar(Alimento alimento)
         {
             try
             {
-                connection.open();
+                alimentoRepository.connection.Open();
                 if (alimentoRepository.BuscarIdAlimento(alimento.IdAlimentos) == null)
                 {
                     alimentoRepository.Guardar(alimento);
@@ -60,7 +57,7 @@ namespace Logica
             {
                 return $"Error de la Aplicacion: {e.Message}";
             }
-            finally { connection.close(); }
+            finally { alimentoRepository.connection.Close(); }
 
         }
 
@@ -69,9 +66,8 @@ namespace Logica
             ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
             try
             {
-                connection.open();
+                alimentoRepository.connection.Open();
                 respuesta.Alimentos = (IList<Alimento>)alimentoRepository.BuscarIdAlimento(id);
-                connection.close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
@@ -82,7 +78,7 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { alimentoRepository.connection.Close(); }
         }
 
         public ConsultarAlimentoRespuesta FiltrarPorNombre(string nombre)
@@ -90,9 +86,8 @@ namespace Logica
             ConsultarAlimentoRespuesta respuesta = new ConsultarAlimentoRespuesta();
             try
             {
-                connection.open();
+                alimentoRepository.connection.Open();
                 respuesta.Alimentos = alimentoRepository.FiltrarConsulta(nombre);
-                connection.close();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Alimentos.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;
@@ -103,7 +98,7 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { alimentoRepository.connection.Close(); }
         }
 
 

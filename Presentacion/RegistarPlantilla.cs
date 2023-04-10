@@ -20,8 +20,8 @@ namespace Presentacion
         List<Plantilla> plantillas;
         public RegistarPlantilla()
         {
-            serviceAlimentos = new serviceAlimento(CadenaConexion.ConnectionString);
-            servicePlantilla = new ServicePlantilla(CadenaConexion.ConnectionString);
+            serviceAlimentos = new serviceAlimento();
+            servicePlantilla = new ServicePlantilla();
             InitializeComponent();
             alimentos = new List<Alimento>();
             plantillas = new List<Plantilla>();

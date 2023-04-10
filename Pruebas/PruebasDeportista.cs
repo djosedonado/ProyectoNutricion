@@ -1,0 +1,47 @@
+﻿using Entidad;
+using Logica;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pruebas
+{
+    public class PruebasDeportista
+    {
+        serviceDeportista service;
+        Deportista deportista;
+        [SetUp]
+        public void Setup()
+        {
+            service = new serviceDeportista();
+            deportista = new Deportista();
+        }
+
+        [Test]
+        public void TestGuardarDeportista()
+        {
+            deportista.TipoIdentificacion = "cedula";
+            deportista.Identificacion = "1063600325";
+            deportista.Nombre = "carlos";
+            deportista.Apellidó = "de la cruz";
+            deportista.Fecha_Nacimiento = DateTime.Parse("12-04-1999");
+            deportista.Correo = "calos@gmail.com";
+            deportista.Telefono = "316554586";
+            deportista.Sexo = "M";
+            deportista.Peso = 65;
+            deportista.Altura = 172.5;
+            deportista.Deporte = "Futball";
+            deportista.TermogenesisActividadFisica = "Extremo";
+            deportista.FechaEgreso = DateTime.Now;
+
+            string result = service.Guardar(deportista);
+            string esperado = "Paciente Registrado";
+            Assert.AreEqual(esperado, result);
+            Assert.Pass();
+        }
+
+    }
+}

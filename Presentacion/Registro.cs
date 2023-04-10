@@ -21,8 +21,8 @@ namespace Presentacion
         }
         public Registro()
         {
-            service = new serviceDeportista(CadenaConexion.ConnectionString);
             InitializeComponent();
+            service = new serviceDeportista();
         }
 
 

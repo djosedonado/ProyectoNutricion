@@ -11,13 +11,10 @@ namespace Logica
 {
     public class ServicePlantilla
     {
-        private readonly PlantillaRepository repository;
-        private readonly ConnectionDB connection;
-
-        public ServicePlantilla(string connectionDB)
+        PlantillaRepository repository;
+        public ServicePlantilla()
         {
-            connection = new ConnectionDB(connectionDB);
-            repository = new PlantillaRepository(connection);
+            repository = new PlantillaRepository();
         }
 
 
@@ -25,29 +22,29 @@ namespace Logica
         {
             try
             {
-                connection.open();
+                repository.connection.Open();
                 repository.Guardar(plantilla);
-                return $"Se guardaron los datos de satisfactoriamente";
+                return "Plantilla Guardada";
             }
             catch(Exception e)
             {
                 return $"Error al guardar los datos {e.Message}";
             }
-            finally { connection.close(); }
+            finally { repository.connection.Close();}
         }
 
         public string AddGuardarPlantilla(Plantilla plantilla)
         {
             try
             {
-                connection.open();
+                repository.connection.Open();
                 repository.GuardarPlantillaAlimento(plantilla);
                 return "Agregado con Exito";
             }
             catch (Exception e)
             {
                 return "Error"+e.Message;
-            }finally { connection.close(); }
+            }finally { repository.connection.Close(); }
         }
 
 
@@ -56,7 +53,7 @@ namespace Logica
             ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
             try
             {
-                connection.open();
+                repository.connection.Open();
                 respuesta.Plantillas = repository.Consultar();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Plantillas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
@@ -67,14 +64,14 @@ namespace Logica
                 respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
                 respuesta.Error = true;
                 return respuesta;
-            }finally { connection.close(); }
+            }finally { repository.connection.Close(); }
         }
         public ConsultarRespuestaPlantilla ConsultarPlantilla()
         {
             ConsultarRespuestaPlantilla respuesta = new ConsultarRespuestaPlantilla();
             try
             {
-                connection.open();
+                repository.connection.Open();
                 respuesta.Plantillas = repository.ConsultarPlantilla();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Plantillas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
@@ -86,7 +83,7 @@ namespace Logica
                 respuesta.Error = true;
                 return respuesta;
             }
-            finally { connection.close(); }
+            finally { repository.connection.Close(); }
         }
 
     }

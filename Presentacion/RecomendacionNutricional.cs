@@ -20,8 +20,8 @@ namespace Presentacion
         public List<Deportista> deportistas;
         public RecomendacionNutricional()
         {
-            service = new serviceDeportista(CadenaConexion.ConnectionString);
-            servicePlantilla = new ServicePlantilla(CadenaConexion.ConnectionString);
+            service = new serviceDeportista();
+            servicePlantilla = new ServicePlantilla();
             InitializeComponent();
             deportistas = new List<Deportista>();
             plantillas = new List<Plantilla>();
