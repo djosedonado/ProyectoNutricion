@@ -19,6 +19,7 @@ namespace Presentacion
         public List<Deportista> deportistas;
         public serviceDeportista service;
         private string id;
+        public static int cont = 0;
         public FormEditarDeportistas(string id)
         {
             
@@ -27,6 +28,7 @@ namespace Presentacion
             deportistas = new List<Deportista>();
             this.id = id;
             MostrarDatosPorIdentificacion();
+
         }
         private void llenartabla(List<Deportista> deportistas)
         {
@@ -97,97 +99,171 @@ namespace Presentacion
 
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
-            var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (respuesta == DialogResult.Yes)
+            if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
-                Deportista deportista = MapearDeportista();
-                string mensaje = service.Modificar(deportista,this.id);
-                MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("ALERTA CAMPOS VACIOS", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    Deportista deportista = MapearDeportista();
+                    string mensaje = service.Modificar(deportista, this.id);
+                    MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
             }
         }
 
         private void textIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionNumerica(e);
+            ValidacionesNumericasRangoAlto(e, pictureBoxIdentidicacion, textIdentificacion);
         }
 
         private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionLetras(e);
-        }
-
-        private void ValidacionLetras(KeyPressEventArgs e)
-        {
-            if ((e.KeyChar > 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo se permiten Letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void ValidacionNumerica(KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            ValidacionesLetras(e, pictureBoxNombre, textNombre);
         }
 
         private void textApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionLetras(e);
+           ValidacionesLetras(e,pictureBoxApellido, textApellido);
         }
 
         private void textTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionNumerica(e);
-        }
-
-        private void ValidarNumerosDecimal(KeyPressEventArgs e)
-        {
-            
-            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar <= 47 && e.KeyChar >= 45))
-            {
-                MessageBox.Show("Solo se permiten Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-            Console.WriteLine();
+            ValidacionesNumericasRangoAlto(e,pictureBoxTelefono, textTelefono);
         }
 
         private void textBoxPesoRegistar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarNumerosDecimal(e);
-            
-            Ragexp(@"^([0-9]{8})$",textBoxPesoRegistar,pictureBoxPeso);
+            ValidacionesNumericasRangoBajo(e,pictureBoxPeso, textBoxPesoRegistar);
         }
 
         private void textBoxAlturaRegistar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarNumerosDecimal(e);
+            ValidacionesNumericasRangoBajo(e, pictureBoxAltura,textBoxAlturaRegistar);
         }
 
         private void textBoxDeporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionLetras(e);
-        }
-        public void Ragexp(string re,TextBox tb,PictureBox pv)
-        {
-            Regex rager = new Regex(re);
-            Console.WriteLine(rager.IsMatch(tb.Text));
-            if (rager.IsMatch(tb.Text))
-            {
-                //pv.Image = Properties.Resources;
+            ValidacionesLetras(e, pictureBoxDeporte, textBoxDeporte);
 
+
+        }
+
+        private void ValidacionesNumericasRangoBajo(KeyPressEventArgs e,PictureBox pictureBox,TextBox textBox)
+        {
+            if (textBox.TextLength >= 6)
+            {
+                e.Handled= true;
+                pictureBox.Image = Properties.Resources.valido__1_;
+                if (e.KeyChar==08) { e.Handled = false; }
             }
             else
             {
-                pv.Image = Properties.Resources.boton_cerrar;
+                if(textBox.TextLength <= 0) { pictureBox.Image = Properties.Resources.boton_x; } else { pictureBox.Image = Properties.Resources.valido__1_; }
+                if (char.IsNumber(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
             }
+            
+        }
+
+        private void ValidacionesNumericasRangoAlto(KeyPressEventArgs e, PictureBox pictureBox, TextBox textBox)
+        {
+            if (textBox.TextLength >= 10)
+            {
+                e.Handled = true;
+                pictureBox.Image = Properties.Resources.valido__1_;
+                if (e.KeyChar == 08) { e.Handled = false; }
+            }
+            else
+            {
+                if (textBox.TextLength <= 5) { pictureBox.Image = Properties.Resources.boton_x; } else { pictureBox.Image = Properties.Resources.valido__1_; }
+                if (char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+
+        }
+
+        private void ValidacionesLetras(KeyPressEventArgs e, PictureBox pictureBox, TextBox textBox)
+        {
+            if (textBox.TextLength >= 30)
+            {
+                e.Handled = true;
+                pictureBox.Image = Properties.Resources.valido__1_;
+                if (e.KeyChar == 08) { e.Handled = false; }
+            }
+            else
+            {
+                if (textBox.TextLength < 6) { pictureBox.Image = Properties.Resources.boton_x; } else { pictureBox.Image = Properties.Resources.valido__1_; }
+                if (char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+
+        }
+
+        private void ValidacionesLetrasConCaracteresExpeciales(KeyPressEventArgs e, PictureBox pictureBox, TextBox textBox)
+        {
+            if (textBox.TextLength >= 30)
+            {
+                e.Handled = true;
+                pictureBox.Image = Properties.Resources.valido__1_;
+                if (e.KeyChar == 08) { e.Handled = false; }
+            }
+            else
+            {
+                if (textBox.TextLength < 6) { pictureBox.Image = Properties.Resources.boton_x; } else { pictureBox.Image = Properties.Resources.valido__1_; }
+                if (char.IsPunctuation(e.KeyChar) || char.IsLetterOrDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+
+        }
+
+        private void textBoxCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionesLetrasConCaracteresExpeciales(e,pictureBoxCorreo,textBoxCorreo);
         }
     }
 }

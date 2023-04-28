@@ -48,6 +48,7 @@ namespace Logica
                 {
                     deportistaRepository.connection.Close();
                     deportistaRepository.connection.Open();
+                    deportista.CalculoGastoEnergeticoDiario();
                     deportistaRepository.EditarDeportista(deportista, id);
                     return $"Se Modificó a la Persona con idnetificacion {id}";
                 }

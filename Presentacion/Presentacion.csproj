@@ -262,7 +262,9 @@
     <None Include="Resources\buscar.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\boton-x.png" />
     <Content Include="Resources\invalido.png" />
+    <Content Include="Resources\valido %281%29.png" />
     <Content Include="Resources\valido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

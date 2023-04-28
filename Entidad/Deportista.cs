@@ -37,14 +37,14 @@ namespace Entidad
             
             if (Sexo == "M")
             {
-                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * (Edad - Fecha_Nacimiento.Year)) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
-                Console.WriteLine(Edad-Fecha_Nacimiento.Year);
+                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * (Edad-Fecha_Nacimiento.Year)) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                
             }
             else
             {
                 if (Sexo == "F")
                 {
-                    CaloriasDiarias = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * Edad) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                    CaloriasDiarias = (65.51 + (9.56 * Peso) + (1.85 * Altura) - (4.68 * (Edad-Fecha_Nacimiento.Year)) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
                 }
 
             }

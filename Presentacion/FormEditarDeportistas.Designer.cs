@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.panelEditarDeportista = new System.Windows.Forms.Panel();
+            this.pictureBoxCorreo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxApellido = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNombre = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIdentidicacion = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTelefono = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSexo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDeporte = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAltura = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPeso = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimeEdad = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,14 +64,29 @@
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
-            this.pictureBoxPeso = new System.Windows.Forms.PictureBox();
             this.panelEditarDeportista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdentidicacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSexo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDeporte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPeso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEditarDeportista
             // 
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxCorreo);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxApellido);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxNombre);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxIdentidicacion);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxTelefono);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxSexo);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxDeporte);
+            this.panelEditarDeportista.Controls.Add(this.pictureBoxAltura);
             this.panelEditarDeportista.Controls.Add(this.pictureBoxPeso);
             this.panelEditarDeportista.Controls.Add(this.label7);
             this.panelEditarDeportista.Controls.Add(this.dateTimeEdad);
@@ -94,6 +118,87 @@
             this.panelEditarDeportista.Name = "panelEditarDeportista";
             this.panelEditarDeportista.Size = new System.Drawing.Size(787, 388);
             this.panelEditarDeportista.TabIndex = 0;
+            // 
+            // pictureBoxCorreo
+            // 
+            this.pictureBoxCorreo.Location = new System.Drawing.Point(282, 308);
+            this.pictureBoxCorreo.Name = "pictureBoxCorreo";
+            this.pictureBoxCorreo.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxCorreo.TabIndex = 107;
+            this.pictureBoxCorreo.TabStop = false;
+            // 
+            // pictureBoxApellido
+            // 
+            this.pictureBoxApellido.Location = new System.Drawing.Point(192, 257);
+            this.pictureBoxApellido.Name = "pictureBoxApellido";
+            this.pictureBoxApellido.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxApellido.TabIndex = 106;
+            this.pictureBoxApellido.TabStop = false;
+            // 
+            // pictureBoxNombre
+            // 
+            this.pictureBoxNombre.Location = new System.Drawing.Point(192, 206);
+            this.pictureBoxNombre.Name = "pictureBoxNombre";
+            this.pictureBoxNombre.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxNombre.TabIndex = 105;
+            this.pictureBoxNombre.TabStop = false;
+            // 
+            // pictureBoxIdentidicacion
+            // 
+            this.pictureBoxIdentidicacion.Location = new System.Drawing.Point(192, 160);
+            this.pictureBoxIdentidicacion.Name = "pictureBoxIdentidicacion";
+            this.pictureBoxIdentidicacion.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxIdentidicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxIdentidicacion.TabIndex = 104;
+            this.pictureBoxIdentidicacion.TabStop = false;
+            // 
+            // pictureBoxTelefono
+            // 
+            this.pictureBoxTelefono.Location = new System.Drawing.Point(359, 158);
+            this.pictureBoxTelefono.Name = "pictureBoxTelefono";
+            this.pictureBoxTelefono.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTelefono.TabIndex = 103;
+            this.pictureBoxTelefono.TabStop = false;
+            // 
+            // pictureBoxSexo
+            // 
+            this.pictureBoxSexo.Location = new System.Drawing.Point(359, 206);
+            this.pictureBoxSexo.Name = "pictureBoxSexo";
+            this.pictureBoxSexo.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxSexo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxSexo.TabIndex = 102;
+            this.pictureBoxSexo.TabStop = false;
+            // 
+            // pictureBoxDeporte
+            // 
+            this.pictureBoxDeporte.Location = new System.Drawing.Point(517, 206);
+            this.pictureBoxDeporte.Name = "pictureBoxDeporte";
+            this.pictureBoxDeporte.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxDeporte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxDeporte.TabIndex = 101;
+            this.pictureBoxDeporte.TabStop = false;
+            // 
+            // pictureBoxAltura
+            // 
+            this.pictureBoxAltura.Location = new System.Drawing.Point(517, 158);
+            this.pictureBoxAltura.Name = "pictureBoxAltura";
+            this.pictureBoxAltura.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxAltura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxAltura.TabIndex = 100;
+            this.pictureBoxAltura.TabStop = false;
+            // 
+            // pictureBoxPeso
+            // 
+            this.pictureBoxPeso.Location = new System.Drawing.Point(518, 115);
+            this.pictureBoxPeso.Name = "pictureBoxPeso";
+            this.pictureBoxPeso.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxPeso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxPeso.TabIndex = 99;
+            this.pictureBoxPeso.TabStop = false;
             // 
             // label7
             // 
@@ -130,6 +235,7 @@
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(185, 20);
             this.textBoxCorreo.TabIndex = 95;
+            this.textBoxCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCorreo_KeyPress);
             // 
             // BotonGuardarRegistro
             // 
@@ -370,14 +476,6 @@
             this.textIdentificacion.TabIndex = 73;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress);
             // 
-            // pictureBoxPeso
-            // 
-            this.pictureBoxPeso.Location = new System.Drawing.Point(518, 107);
-            this.pictureBoxPeso.Name = "pictureBoxPeso";
-            this.pictureBoxPeso.Size = new System.Drawing.Size(27, 27);
-            this.pictureBoxPeso.TabIndex = 99;
-            this.pictureBoxPeso.TabStop = false;
-            // 
             // FormEditarDeportistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,8 +490,16 @@
             this.Load += new System.EventHandler(this.FormEditarDeportistas_Load);
             this.panelEditarDeportista.ResumeLayout(false);
             this.panelEditarDeportista.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdentidicacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSexo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDeporte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAltura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPeso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +534,13 @@
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textIdentificacion;
         private System.Windows.Forms.PictureBox pictureBoxPeso;
+        private System.Windows.Forms.PictureBox pictureBoxCorreo;
+        private System.Windows.Forms.PictureBox pictureBoxApellido;
+        private System.Windows.Forms.PictureBox pictureBoxNombre;
+        private System.Windows.Forms.PictureBox pictureBoxIdentidicacion;
+        private System.Windows.Forms.PictureBox pictureBoxTelefono;
+        private System.Windows.Forms.PictureBox pictureBoxSexo;
+        private System.Windows.Forms.PictureBox pictureBoxDeporte;
+        private System.Windows.Forms.PictureBox pictureBoxAltura;
     }
 }
