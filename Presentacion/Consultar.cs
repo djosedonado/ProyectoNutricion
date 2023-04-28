@@ -21,8 +21,20 @@ namespace Presentacion
             service = new serviceDeportista();
             InitializeComponent();
             deportista = new List<Deportista>();
-            
             MostrarDeportista();
+        }
+
+        private void abrirFormatoHija(object FormatoHija)
+        {
+            if (PanelPrincipal.Controls.Count > 0)
+                PanelPrincipal.Controls.RemoveAt(0);
+
+            Form formatohija = FormatoHija as Form;
+            formatohija.TopLevel = false;
+            formatohija.Dock = DockStyle.Fill;
+            PanelPrincipal.Controls.Add(formatohija);
+            PanelPrincipal.Tag = formatohija;
+            formatohija.Show();
         }
 
         private void Llenartable(List<Deportista> deportistas)
@@ -124,6 +136,30 @@ namespace Presentacion
         private void textNombrePaciente_KeyPress(object sender, KeyPressEventArgs e)
         {
             MostrarDeportistaPorNombre();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (TextboxIdentificacion.Text.Equals(""))
+            {
+                MessageBox.Show("El campo de identificacion esta Vacio", "Mensaje de Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                new FormEditarDeportistas(TextboxIdentificacion.Text).Show();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("Está seguro de Eliminar la información", "Mensaje de Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+                string mensaje = service.Eliminar(TextboxIdentificacion.Text);
+                MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            MostrarDeportista();
         }
     }
 }

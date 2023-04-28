@@ -46,11 +46,11 @@ namespace Logica
                 if (alimentoRepository.BuscarIdAlimento(alimento.IdAlimentos) == null)
                 {
                     alimentoRepository.Guardar(alimento);
-                    return $"Se guardaron los datos de satisfactoriamente";
+                    return "Alimento Guardado";
                 }
                 else
                 {
-                    return $"El Ingrediente con esta id ya Existe en la Base de datos";
+                    return $"Ya Existe este alimento";
                 }
             }
             catch (Exception e)

@@ -37,7 +37,7 @@ namespace Entidad
             
             if (Sexo == "M")
             {
-                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * Edad-Fecha_Nacimiento.Year) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
+                CaloriasDiarias = (66.5 + (13.75 * Peso) + (5.08 * Altura) - (6.78 * (Edad - Fecha_Nacimiento.Year)) + dieta.AcciónDinámicaEspecíficaAlimentos + ActividadFisica);
                 Console.WriteLine(Edad-Fecha_Nacimiento.Year);
             }
             else

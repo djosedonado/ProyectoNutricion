@@ -39,6 +39,58 @@ namespace Logica
             finally { deportistaRepository.connection.Close(); }
         }
 
+        public string Modificar(Deportista deportista, string id)
+        {
+            try
+            {
+                deportistaRepository.connection.Open();
+                if (deportistaRepository.BuscarPorIdentificacion(id) != null)
+                {
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EditarDeportista(deportista, id);
+                    return $"Se Modificó a la Persona con idnetificacion {id}";
+                }
+                return $"No se encontró a la persona con Identificacion {id}";
+            }
+            catch (Exception exception)
+            {
+
+                return "Se presentó el siguiente error:" + exception.Message;
+            }
+            finally
+            {
+                deportistaRepository.connection.Close();
+            }
+
+
+        }
+
+        public string Eliminar(string id)
+        {
+            try
+            {
+                deportistaRepository.connection.Open();
+                if (deportistaRepository.BuscarPorIdentificacion(id) != null)
+                {
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EliminarDieta(id);
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EliminarDeportista(id);
+                    return $"Se Eliminado a la Persona con idnetificacion {id}";
+                }
+                return $"No se encontró a la persona con Identificacion {id}";
+            }
+            catch (Exception e) 
+            {
+
+                return "Se presentó el siguiente error:" + e.Message;
+            }
+            finally { deportistaRepository.connection.Close() ; }
+        }
+
         public ConsultarDeportistaRespuesta ConsultarTodos()
         {
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();

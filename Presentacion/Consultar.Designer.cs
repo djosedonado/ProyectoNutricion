@@ -34,7 +34,16 @@ namespace Presentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.dgvConsultaDatosPersonales = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonBuscarDeportista = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,13 +52,6 @@ namespace Presentacion
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
             this.nutrisoftDataSet = new Presentacion.NutrisoftDataSet();
             this.nutrisoftDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
@@ -59,6 +61,8 @@ namespace Presentacion
             // PanelPrincipal
             // 
             this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.PanelPrincipal.Controls.Add(this.buttonEliminar);
+            this.PanelPrincipal.Controls.Add(this.buttonEditar);
             this.PanelPrincipal.Controls.Add(this.dgvConsultaDatosPersonales);
             this.PanelPrincipal.Controls.Add(this.buttonBuscarDeportista);
             this.PanelPrincipal.Controls.Add(this.label2);
@@ -71,6 +75,42 @@ namespace Presentacion
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(1067, 594);
             this.PanelPrincipal.TabIndex = 0;
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEliminar.FlatAppearance.BorderSize = 7;
+            this.buttonEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonEliminar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminar.Location = new System.Drawing.Point(738, 51);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 29);
+            this.buttonEliminar.TabIndex = 10;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEditar.FlatAppearance.BorderSize = 7;
+            this.buttonEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonEditar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.ForeColor = System.Drawing.Color.White;
+            this.buttonEditar.Location = new System.Drawing.Point(738, 86);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 29);
+            this.buttonEditar.TabIndex = 9;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvConsultaDatosPersonales
             // 
@@ -115,6 +155,48 @@ namespace Presentacion
             this.dgvConsultaDatosPersonales.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsultaDatosPersonales.Size = new System.Drawing.Size(1034, 440);
             this.dgvConsultaDatosPersonales.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Identificacion";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Edad";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Sexo";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Telefono";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 120;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Deporte";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Correo";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 200;
             // 
             // buttonBuscarDeportista
             // 
@@ -193,48 +275,6 @@ namespace Presentacion
             this.nutrisoftDataSetBindingSource.DataSource = this.nutrisoftDataSet;
             this.nutrisoftDataSetBindingSource.Position = 0;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Identificacion";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Edad";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Sexo";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Telefono";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 120;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Deporte";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Correo";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 200;
-            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,5 +312,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonEliminar;
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Entidad;
+using System.Data.Common;
 
 namespace Datos
 {
@@ -34,6 +35,54 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@metabolismoBasal", deportista.MetabolismoBasal));
                 command.Parameters.Add(new SqlParameter("@termogenesisActividadFisica", deportista.TermogenesisActividadFisica));
                 var fila = command.ExecuteNonQuery();
+            }
+        }
+
+        public void EditarDeportista(Deportista deportista,string id)
+        {
+            using (var command = connection.connectionDB.CreateCommand())
+            {
+                command.CommandText = @"UPDATE Deportista SET identificacion=@identificacion,tipoIdentificacion=@tipoIdentificacion,nombre=@nombre,apellido=@apellido,sexo=@sexo,fecha_Nacimiento=@fecha_Nacimiento,telefono=@telefono,correo=@correo,peso=@peso,altura=@altura,deporte=@deporte,pesoActual=@pesoActual,fechaEgreso=@fechaEgreso,caloriasDiarias=@caloriasDiarias,metabolismoBasal=@metabolismoBasal,termogenesisActividadFisica=@termogenesisActividadFisica
+                                        WHERE identificacion=@id";
+                command.Parameters.Add(new SqlParameter("@id",id));
+                command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
+                command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
+                command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
+                command.Parameters.Add(new SqlParameter("@apellido", deportista.Apellidó));
+                command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
+                command.Parameters.Add(new SqlParameter("@fecha_Nacimiento", deportista.Fecha_Nacimiento));
+                command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
+                command.Parameters.Add(new SqlParameter("@correo", deportista.Correo));
+                command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
+                command.Parameters.Add(new SqlParameter("@altura", deportista.Altura));
+                command.Parameters.Add(new SqlParameter("@deporte", deportista.Deporte));
+                command.Parameters.Add(new SqlParameter("@pesoActual", deportista.PesoActual));
+                command.Parameters.Add(new SqlParameter("@fechaEgreso", deportista.FechaEgreso));
+                command.Parameters.Add(new SqlParameter("@caloriasDiarias", deportista.CaloriasDiarias));
+                command.Parameters.Add(new SqlParameter("@metabolismoBasal", deportista.MetabolismoBasal));
+                command.Parameters.Add(new SqlParameter("@termogenesisActividadFisica", deportista.TermogenesisActividadFisica));
+                var fila = command.ExecuteNonQuery();
+            }
+        }
+
+        public void EliminarDeportista(string identificacion)
+        {
+            using (var command = connection.connectionDB.CreateCommand())
+            {
+                command.CommandText = "delete From Deportista where identificacion=@identificacion";
+                command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
+                var fila = command.ExecuteNonQuery();
+
+            }
+        }
+
+        public void EliminarDieta(string idD)
+        {
+            using (var command = connection.connectionDB.CreateCommand())
+            {
+                command.CommandText = @"DELETE Dieta WHERE idDeportista=@identificacion";
+                command.Parameters.Add(new SqlParameter("@identificacion", idD));
+                var file = command.ExecuteNonQuery();
             }
         }
 
