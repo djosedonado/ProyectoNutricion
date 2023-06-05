@@ -50,6 +50,8 @@ namespace Datos
                         UserLoginCache.Id = reader.GetString(0);
                         UserLoginCache.FirstName = reader.GetString(2);
                         UserLoginCache.LastName = reader.GetString(3);
+                        UserLoginCache.Sexo = reader.GetString(4);
+                        UserLoginCache.Fecha_Nacimineto = reader.GetDateTime(5);
                         UserLoginCache.Email = reader.GetString(7);
                         UserLoginCache.Rol = reader.GetInt32(9);
                     }

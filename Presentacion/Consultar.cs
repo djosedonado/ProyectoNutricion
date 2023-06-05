@@ -24,25 +24,12 @@ namespace Presentacion
             MostrarDeportista();
         }
 
-        private void abrirFormatoHija(object FormatoHija)
-        {
-            if (PanelPrincipal.Controls.Count > 0)
-                PanelPrincipal.Controls.RemoveAt(0);
-
-            Form formatohija = FormatoHija as Form;
-            formatohija.TopLevel = false;
-            formatohija.Dock = DockStyle.Fill;
-            PanelPrincipal.Controls.Add(formatohija);
-            PanelPrincipal.Tag = formatohija;
-            formatohija.Show();
-        }
-
-        private void Llenartable(List<Deportista> deportistas)
+        private void Llenartable(List<Deportista> deportista)
         {
             dgvConsultaDatosPersonales.Rows.Clear();
             foreach (var item in deportista)
             {
-                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion,$"{item.Nombre} {item.Apellidó}", item.Edad-item.Fecha_Nacimiento.Year, item.Sexo,item.Telefono,item.Deporte,item.Correo);
+                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion);
             }
             dgvConsultaDatosPersonales.Refresh();
         }

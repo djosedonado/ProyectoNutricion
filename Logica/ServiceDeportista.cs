@@ -21,16 +21,8 @@ namespace Logica
                 CorreoService correo = new CorreoService();
                 deportista.CalculoGastoEnergeticoDiario();
                 deportistaRepository.connection.Open();
-                if (deportistaRepository.BuscarPorIdentificacion(deportista.Identificacion) == null)
-                {
-                    deportistaRepository.Guardar(deportista);
-                    //return $"Se guardaron los datos de satisfactoriamente";
-                    return "Paciente Registrado";
-                }
-                else
-                {
-                    return $"El Paciente con esta identificacion {deportista.Identificacion}  ya Existe en la Base de datos";
-                }
+                deportistaRepository.Guardar(deportista);
+                return "Paciente Registrado";
             }
             catch (Exception e)
             {
@@ -95,12 +87,10 @@ namespace Logica
         public ConsultarDeportistaRespuesta ConsultarTodos()
         {
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
-            Deportista deportista = new Deportista();
             try
             {
-                
-                deportistaRepository.connection.Open();
-                respuesta.Deportistas = deportistaRepository.consultarTodo();
+                deportistaRepository.connection.Open() ;
+                respuesta.Deportistas = deportistaRepository.Consultar();
                 respuesta.Error = false;
                 respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
                 return respuesta;

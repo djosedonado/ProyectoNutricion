@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
+using Entidad.Cache;
 using Logica;
 
 namespace Presentacion
@@ -79,14 +80,9 @@ namespace Presentacion
         public Deportista MapearDeportista()
         {
             Deportista deportista = new Deportista();
-            deportista.TipoIdentificacion = comboBoxTipoIdentidad.Text;
-            deportista.Identificacion = textIdentificacion.Text;
-            deportista.Nombre = textNombre.Text.ToUpper();
-            deportista.Apellidó = textApellido.Text.ToUpper();
-            deportista.Fecha_Nacimiento = dateTimeEdad.Value;
-            deportista.Sexo = comboSexo.Text;
-            deportista.Telefono = textTelefono.Text;
-            deportista.Correo = textBoxCorreo.Text;
+            deportista.Identificacion = UserLoginCache.Id;
+            deportista.Fecha_Nacimiento = UserLoginCache.Fecha_Nacimineto;
+            deportista.Sexo = UserLoginCache.Sexo;
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text.ToUpper();
@@ -97,7 +93,7 @@ namespace Presentacion
 
         private void BotonGuardarRegistro_Click_1(object sender, EventArgs e)
         {
-            if (textBoxCorreo.Text.Equals("") || textIdentificacion.Text.Equals("") || textNombre.Text.Equals("") || textApellido.Text.Equals("") || textTelefono.Text.Equals("") || comboSexo.SelectedIndex.Equals(-1) || comboBoxTipoIdentidad.SelectedIndex.Equals(-1) || textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
+            if (textBoxPesoRegistar.Text.Equals("") || textBoxAlturaRegistar.Text.Equals("") || textBoxDeporte.Text.Equals("") || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
                 MessageBox.Show("Debe llenar todas las casillas ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -106,17 +102,10 @@ namespace Presentacion
                 Deportista deportista = MapearDeportista();
                 string mensaje = service.Guardar(deportista);
                 MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                textNombre.Text = "";
-                textApellido.Text = "";
-                textIdentificacion.Text = "";
-                textTelefono.Text = "";
-                comboSexo.SelectedIndex = -1;
                 textBoxAlturaRegistar.Text = "";
                 textBoxPesoRegistar.Text = "";
                 textBoxDeporte.Text = "";
-                textBoxCorreo.Text = "";
                 comboBoxTipoEntrenamiento.SelectedIndex = -1;
-                comboBoxTipoIdentidad.SelectedIndex = -1;
             }
         }
 

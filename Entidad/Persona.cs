@@ -12,6 +12,7 @@ namespace Entidad
         {
             Edad = 0;
             role = 0;
+            CalcularEdad();
         }
         public string Identificacion { get; set; }
         public string TipoIdentificacion { get; set; }  
@@ -24,7 +25,9 @@ namespace Entidad
         public DateTime Fecha_Nacimiento { get; set; }
         public string Telefono { get; set; }
         public int Edad { get; set; }
-      
+        public void CalcularEdad()
+        {
+            Edad = DateTime.Now.Year;
+        }
     }
-
 }

@@ -147,15 +147,18 @@ namespace Presentacion
                         }
                         else
                         {
-                            if (UserLoginCache.Rol==0) 
+                            if (UserLoginCache.Rol==1) 
                             {
                                 PresentacionPrincipal mainMenu = new PresentacionPrincipal();
                                 mainMenu.Show();
                                 mainMenu.FormClosed += Logoup;
                                 this.Hide();
-                            }else if (UserLoginCache.Rol==1)
+                            }else if (UserLoginCache.Rol==0)
                             {
-
+                                FormCliente formCliente = new FormCliente();
+                                formCliente.Show();
+                                formCliente.FormClosed += Logoup;
+                                this.Hide();
                             }
                             
                         }

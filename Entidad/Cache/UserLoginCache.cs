@@ -12,6 +12,8 @@ namespace Entidad.Cache
         public static string FirstName { get; set; }
         public static string LastName { get; set; }
         public static string Email { get; set; }
+        public static string Sexo { get; set; }
+        public static DateTime Fecha_Nacimineto { get; set; }
         public static int Rol { get; set; }
     }
 }

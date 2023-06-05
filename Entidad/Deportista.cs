@@ -15,7 +15,6 @@ namespace Entidad
             CaloriasDiarias = 0;
             MetabolismoBasal = 0;
             ActividadFisica = 0;
-            CalcularEdad();
         }
         public string Deporte { get; set; }
         public string TermogenesisActividadFisica { get; set; }
@@ -76,11 +75,5 @@ namespace Entidad
                 ActividadFisica = 1;
             }
         }
-
-        public void CalcularEdad()
-        {
-            Edad = DateTime.Now.Year;
-        }
-
     }
 }

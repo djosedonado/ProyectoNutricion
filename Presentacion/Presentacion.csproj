@@ -65,6 +65,12 @@
     <Compile Include="Consultar.Designer.cs">
       <DependentUpon>Consultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="ValidacionesPresentacion.cs" />
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -296,9 +305,14 @@
     <None Include="Resources\continuar.png" />
     <None Include="Resources\cerrar-sesion.png" />
     <None Include="Resources\configuraciones.png" />
+    <None Include="Resources\consulta.png" />
+    <None Include="Resources\consulta %281%29.png" />
+    <None Include="Resources\cerrar-sesion %281%29.png" />
     <Content Include="Resources\invalido.png" />
     <None Include="Resources\perfil-del-usuario.png" />
     <None Include="Resources\usuario1.png" />
+    <None Include="Resources\portafolio-profesional.png" />
+    <None Include="Resources\usuario %281%29.png" />
     <Content Include="Resources\valido %281%29.png" />
     <Content Include="Resources\valido.png" />
   </ItemGroup>

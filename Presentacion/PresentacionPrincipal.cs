@@ -162,5 +162,10 @@ namespace Presentacion
         {
 
         }
+
+        private void labelPerfile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

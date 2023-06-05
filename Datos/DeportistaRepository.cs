@@ -12,20 +12,15 @@ namespace Datos
     public class deportistaRepository
     {
         public ConnectionDB connection = new ConnectionDB();
+
+        //guardar
         public void Guardar(Deportista deportista)
         {
             using (var command = connection.connectionDB.CreateCommand())
             {
-                command.CommandText = @"insert into Deportista(identificacion,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,correo,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
-                                                        values(@identificacion,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@correo,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
-                command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
-                command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
-                command.Parameters.Add(new SqlParameter("@nombre", deportista.Nombre));
-                command.Parameters.Add(new SqlParameter("@apellido", deportista.Apellidó));
-                command.Parameters.Add(new SqlParameter("@sexo", deportista.Sexo));
-                command.Parameters.Add(new SqlParameter("@fecha_Nacimiento", deportista.Fecha_Nacimiento));
-                command.Parameters.Add(new SqlParameter("@telefono", deportista.Telefono));
-                command.Parameters.Add(new SqlParameter("@correo", deportista.Correo));
+                command.CommandText = @"insert into Deportista(id,peso,altura,deporte,pesoActual,fechaEgreso,caloriasDiarias,metabolismoBasal,termogenesisActividadFisica)
+                                                        values(@id,@peso,@altura,@deporte,@pesoActual,@fechaEgreso,@caloriasDiarias,@metabolismoBasal,@termogenesisActividadFisica)";
+                command.Parameters.Add(new SqlParameter("@id", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@peso", deportista.Peso));
                 command.Parameters.Add(new SqlParameter("@altura", deportista.Altura));
                 command.Parameters.Add(new SqlParameter("@deporte", deportista.Deporte));
@@ -42,8 +37,8 @@ namespace Datos
         {
             using (var command = connection.connectionDB.CreateCommand())
             {
-                command.CommandText = @"UPDATE Deportista SET identificacion=@identificacion,tipoIdentificacion=@tipoIdentificacion,nombre=@nombre,apellido=@apellido,sexo=@sexo,fecha_Nacimiento=@fecha_Nacimiento,telefono=@telefono,correo=@correo,peso=@peso,altura=@altura,deporte=@deporte,pesoActual=@pesoActual,fechaEgreso=@fechaEgreso,caloriasDiarias=@caloriasDiarias,metabolismoBasal=@metabolismoBasal,termogenesisActividadFisica=@termogenesisActividadFisica
-                                        WHERE identificacion=@id";
+                command.CommandText = @"UPDATE Deportista SET id=@id,peso=@peso,altura=@altura,deporte=@deporte,pesoActual=@pesoActual,fechaEgreso=@fechaEgreso,caloriasDiarias=@caloriasDiarias,metabolismoBasal=@metabolismoBasal,termogenesisActividadFisica=@termogenesisActividadFisica
+                                        WHERE id=@id";
                 command.Parameters.Add(new SqlParameter("@id",id));
                 command.Parameters.Add(new SqlParameter("@identificacion", deportista.Identificacion));
                 command.Parameters.Add(new SqlParameter("@tipoIdentificacion", deportista.TipoIdentificacion));
@@ -69,7 +64,7 @@ namespace Datos
         {
             using (var command = connection.connectionDB.CreateCommand())
             {
-                command.CommandText = "delete From Deportista where identificacion=@identificacion";
+                command.CommandText = "delete From Deportista where id=@id;delete From Persona where id=@id;";
                 command.Parameters.Add(new SqlParameter("@identificacion", identificacion));
                 var fila = command.ExecuteNonQuery();
 
@@ -86,21 +81,40 @@ namespace Datos
             }
         }
 
-        public List<Deportista> consultarTodo()
+        //consultar todos
+        public List<Deportista> Consultar()
         {
             List<Deportista> deportistas = new List<Deportista>();
-
             using (var command = connection.connectionDB.CreateCommand())
             {
-                command.CommandText = "select *from Deportista";
-                var Reader = command.ExecuteReader();
-                while (Reader.Read()){
-                    Deportista deportista = MaperarDeportistas(Reader);
+                command.CommandText = @"SELECT Persona.id,Persona.tipoIdentificacion,Persona.nombre,Persona.apellido,Persona.sexo,Persona.fecha_Nacimiento,Persona.telefono,Persona.email
+                                        ,Deportista.peso,Deportista.altura,Deportista.deporte,Deportista.pesoActual,Deportista.fechaEgreso,Deportista.caloriasDiarias,Deportista.metabolismoBasal
+                                        ,Deportista.termogenesisActividadFisica FROM Persona FULL OUTER JOIN Deportista ON Persona.id = Deportista.id WHERE role=0";
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    Deportista deportista = new Deportista();
+                    deportista.Identificacion = dataReader.GetString(0);
+                    deportista.Nombre = dataReader.GetString(1);
+                    deportista.Apellidó = dataReader.GetString(2);
+                    deportista.Sexo = dataReader.GetString(3);
+                    deportista.FechaEgreso = dataReader.GetDateTime(4);
+                    deportista.Telefono = dataReader.GetString(5);
+                    deportista.Correo = dataReader.GetString(6);
+                    deportista.Peso = dataReader.GetDouble(7);
+                    deportista.Altura = dataReader.GetDouble(8);
+                    deportista.Deporte = dataReader.GetString(9);
+                    deportista.FechaEgreso = dataReader.GetDateTime(10);
+                    deportista.CaloriasDiarias = dataReader.GetDouble(11);
+                    deportista.MetabolismoBasal = dataReader.GetDouble(12);
+                    deportista.TermogenesisActividadFisica = dataReader.GetString(13);
                     deportistas.Add(deportista);
                 }
+                dataReader.Close();
             }
-                return deportistas;
+            return deportistas;
         }
+
 
         public List<Deportista> consultarPorIdentificacion(string identificacion)
         {
@@ -182,7 +196,7 @@ namespace Datos
 
         public List<Deportista> FiltrarPorNombre(string nombre)
         {
-            return (from p in consultarTodo()
+            return (from p in Consultar()
                     where p.Nombre.ToLower().Contains(nombre.ToLower())
                     select p).ToList();
         }
