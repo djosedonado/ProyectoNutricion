@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CorreoService.cs" />
+    <Compile Include="personServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="serviceAlimento.cs" />
     <Compile Include="serviceDeportista.cs" />

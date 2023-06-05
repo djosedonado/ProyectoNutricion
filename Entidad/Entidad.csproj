@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alimento.cs" />
+    <Compile Include="Cache\UserLoginCache.cs" />
     <Compile Include="Deportista.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Persona.cs" />

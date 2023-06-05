@@ -31,8 +31,6 @@ namespace Presentacion
         {
             this.ContenedorRecomendacioNutricional = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textPesoActual = new System.Windows.Forms.TextBox();
             this.ListasDiasSemana = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxDieta = new System.Windows.Forms.ComboBox();
@@ -54,8 +52,6 @@ namespace Presentacion
             // 
             this.ContenedorRecomendacioNutricional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label8);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.label7);
-            this.ContenedorRecomendacioNutricional.Controls.Add(this.textPesoActual);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.ListasDiasSemana);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.label6);
             this.ContenedorRecomendacioNutricional.Controls.Add(this.comboBoxDieta);
@@ -86,25 +82,6 @@ namespace Presentacion
             this.label8.Size = new System.Drawing.Size(378, 37);
             this.label8.TabIndex = 29;
             this.label8.Text = "RECOMENDACION NUTRICIONAL";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(226, 405);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Peso Actual";
-            // 
-            // textPesoActual
-            // 
-            this.textPesoActual.Location = new System.Drawing.Point(215, 428);
-            this.textPesoActual.Name = "textPesoActual";
-            this.textPesoActual.Size = new System.Drawing.Size(100, 20);
-            this.textPesoActual.TabIndex = 27;
-            this.textPesoActual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPesoActual_KeyPress);
             // 
             // ListasDiasSemana
             // 
@@ -285,8 +262,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxDieta;
         private System.Windows.Forms.CheckedListBox ListasDiasSemana;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textPesoActual;
         private System.Windows.Forms.Label label8;
     }
 }

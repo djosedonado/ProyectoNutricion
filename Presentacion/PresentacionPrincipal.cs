@@ -147,5 +147,20 @@ namespace Presentacion
         {
             AbrirSubMenus(subMenuDieta);
         }
+
+        private void pictureBoxCerrarSession_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void labelCerrarSession_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
