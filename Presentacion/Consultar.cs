@@ -14,35 +14,35 @@ namespace Presentacion
 {
     public partial class Consultar : Form
     {
-        serviceDeportista service;
-        List<Deportista> deportista;
+        public readonly serviceDeportista service;
+        public List<Deportista> deportistas;
         public Consultar()
         {
             service = new serviceDeportista();
             InitializeComponent();
-            deportista = new List<Deportista>();
+            deportistas = new List<Deportista>();
             MostrarDeportista();
         }
 
-        private void Llenartable(List<Deportista> deportista)
+        private void Llenartable(List<Deportista> deportistas)
         {
             dgvConsultaDatosPersonales.Rows.Clear();
-            foreach (var item in deportista)
+            foreach (var item in deportistas)
             {
-                dgvConsultaDatosPersonales.Rows.Add(item.Identificacion);
+                dgvConsultaDatosPersonales.Rows.Add(item.id,$"{item.Nombre} {item.Apellidó }",item.Edad,item.Sexo,item.Telefono,item.Deporte,item.Correo);
             }
             dgvConsultaDatosPersonales.Refresh();
         }
 
-        private void MostrarDeportista()
+        public void MostrarDeportista()
         {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             respuesta = service.ConsultarTodos();
-            deportista = respuesta.Deportistas.ToList();
+            deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
-                Llenartable(deportista);
+                Llenartable(deportistas);
             }
             else
             {
@@ -65,11 +65,11 @@ namespace Presentacion
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             string identificacion = TextboxIdentificacion.Text;
-            respuesta = service.consultarPorIdentificacion(identificacion);
-            deportista = respuesta.Deportistas.ToList();
+            //respuesta = service.consultarPorIdentificacion(identificacion);
+            //deportista = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
-                Llenartable(deportista);
+                //Llenartable(deportista);
             }
             else
             {
@@ -83,11 +83,11 @@ namespace Presentacion
             dgvConsultaDatosPersonales.DataSource = null;
             string nombre = textNombrePaciente.Text;
             ConsultarDeportista respuesta = new ConsultarDeportista(nombre);
-            respuesta = service.BuscarPorNombreService(nombre);
-            deportista = respuesta.Deportistas.ToList();
+            //respuesta = service.bu(nombre);
+            deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
-                Llenartable(deportista);
+                //Llenartable(deportista);
             }
             else
             {
@@ -100,7 +100,7 @@ namespace Presentacion
             if (TextboxIdentificacion.Text.Equals(""))
             {
                 MessageBox.Show("El campo de identificacion esta Vacio", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MostrarDeportista();
+                //MostrarDeportista();
             }
             else
             {
@@ -142,8 +142,8 @@ namespace Presentacion
             var respuesta = MessageBox.Show("Está seguro de Eliminar la información", "Mensaje de Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (respuesta == DialogResult.Yes)
             {
-                string mensaje = service.Eliminar(TextboxIdentificacion.Text);
-                MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //string mensaje = service.Eliminar(TextboxIdentificacion.Text);
+                //MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             MostrarDeportista();

@@ -11,23 +11,19 @@ namespace Entidad
         public Persona()
         {
             Edad = 0;
-            role = 0;
-            CalcularEdad();
+            Rol = 0;
         }
-        public string Identificacion { get; set; }
-        public string TipoIdentificacion { get; set; }  
+        public string id { get; set; }
+        public string TipoId { get; set; }  
         public string Nombre { get; set; }
         public string Apellidó { get; set; }
         public string Sexo { get; set; }
         public string Correo { get; set; }
-        public string password { get; set; }
-        public int role { get; set; }
+        public string Password { get; set; }
+        public int Rol { get; set; }
         public DateTime Fecha_Nacimiento { get; set; }
         public string Telefono { get; set; }
         public int Edad { get; set; }
-        public void CalcularEdad()
-        {
-            Edad = DateTime.Now.Year;
-        }
+        
     }
 }

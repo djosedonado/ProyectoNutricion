@@ -14,25 +14,27 @@ namespace Datos
     {
         public ConnectionDB ConnectionDB = new ConnectionDB();
 
+        //Metodo Guardar
         public void SavePerson(Persona persona)
         {
             using (var commands = ConnectionDB.connectionDB.CreateCommand()) {
                 commands.CommandText = @"INSERT INTO Persona(id,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,email,Password,role) 
                                                     VALUES(@id,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@email,@Password,@role)";
-                commands.Parameters.Add(new SqlParameter("@id",persona.Identificacion));
-                commands.Parameters.Add(new SqlParameter("@tipoIdentificacion",persona.TipoIdentificacion));
+                commands.Parameters.Add(new SqlParameter("@id",persona.id));
+                commands.Parameters.Add(new SqlParameter("@tipoIdentificacion",persona.TipoId));
                 commands.Parameters.Add(new SqlParameter("@nombre", persona.Nombre));
                 commands.Parameters.Add(new SqlParameter("@apellido", persona.Apellidó));
                 commands.Parameters.Add(new SqlParameter("@sexo",persona.Sexo));
                 commands.Parameters.Add(new SqlParameter("@fecha_Nacimiento",persona.Fecha_Nacimiento));
                 commands.Parameters.Add(new SqlParameter("@telefono",persona.Telefono));
                 commands.Parameters.Add(new SqlParameter("@email",persona.Correo));
-                commands.Parameters.Add(new SqlParameter("@Password",persona.password));
-                commands.Parameters.Add(new SqlParameter("@role", persona.role));
+                commands.Parameters.Add(new SqlParameter("@Password",persona.Password));
+                commands.Parameters.Add(new SqlParameter("@role", persona.Rol));
                 var fila = commands.ExecuteNonQuery();
             }
         }
 
+        //Metodo Login
         public bool Login(string email,string password)
         {
             using (var commands = ConnectionDB.connectionDB.CreateCommand()) 
@@ -62,6 +64,28 @@ namespace Datos
                     return false;
                 }
             }
+        }
+
+        //Metodo de consultar
+        public List<Persona> Consultar()
+        {
+            List<Persona> personas = new List<Persona>();
+            using (var command = ConnectionDB.connectionDB.CreateCommand())
+            {
+                command.CommandText = "select *from Persona";
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    Persona persona = new Persona();
+                    persona.id = dataReader.GetString(0);
+                    persona.TipoId = dataReader.GetString(1);
+
+
+                    personas.Add(persona);
+                }
+                dataReader.Close();
+            }
+            return personas;
         }
     }
 }

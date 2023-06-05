@@ -169,15 +169,15 @@ namespace Presentacion
         private Persona MaperarPerson()
         {
             Persona persona = new Persona();
-            persona.Identificacion = textBoxIdentificacion.Text;
-            persona.TipoIdentificacion = comboBoxTipoIndetificacion.Text;
+            persona.id = textBoxIdentificacion.Text;
+            persona.TipoId = comboBoxTipoIndetificacion.Text;
             persona.Nombre = textBoxNombre.Text;
             persona.Apellidó = textBoxApellido.Text;
             persona.Sexo = comboBoxSexo.Text;
             persona.Fecha_Nacimiento = DateTime.Parse(dateTimePickerFechaNacimiento.Text);
             persona.Telefono = textBoxTelefono.Text;
             persona.Correo = textBoxEmial.Text;
-            persona.password = textBoxPassword.Text;
+            persona.Password = textBoxPassword.Text;
             return persona;
         }
 

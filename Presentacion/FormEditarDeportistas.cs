@@ -35,7 +35,7 @@ namespace Presentacion
 
             foreach (var item in deportistas)
             {
-                textIdentificacion.Text = item.Identificacion.ToString();
+                textIdentificacion.Text = item.id.ToString();
                 textNombre.Text = item.Nombre;
                 textApellido.Text = item.Apellidó;
                 textBoxCorreo.Text = item.Correo;
@@ -51,7 +51,7 @@ namespace Presentacion
         {
             ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
             string identificacion = this.id;
-            respuesta = service.consultarPorIdentificacion(identificacion);
+            //respuesta = service.consultarPorIdentificacion(identificacion);
             deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
@@ -67,8 +67,8 @@ namespace Presentacion
         public Deportista MapearDeportista()
         {
             Deportista deportista = new Deportista();
-            deportista.TipoIdentificacion = comboBoxTipoIdentidad.Text;
-            deportista.Identificacion = textIdentificacion.Text;
+            deportista.TipoId = comboBoxTipoIdentidad.Text;
+            deportista.id = textIdentificacion.Text;
             deportista.Nombre = textNombre.Text.ToUpper();
             deportista.Apellidó = textApellido.Text.ToUpper();
             deportista.Fecha_Nacimiento = dateTimeEdad.Value;
@@ -109,8 +109,8 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     Deportista deportista = MapearDeportista();
-                    string mensaje = service.Modificar(deportista, this.id);
-                    MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //string mensaje = service.Modificar(deportista, this.id);
+                    //MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }

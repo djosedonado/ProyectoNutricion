@@ -7,7 +7,7 @@ namespace Logica
 {
     public class serviceDeportista
     {
-        public deportistaRepository deportistaRepository;
+        private readonly deportistaRepository deportistaRepository;
         public serviceDeportista()
         {
             deportistaRepository = new deportistaRepository();
@@ -31,62 +31,9 @@ namespace Logica
             finally { deportistaRepository.connection.Close(); }
         }
 
-        public string Modificar(Deportista deportista, string id)
+        public ConsultarClienteRespuesta ConsultarTodos()
         {
-            try
-            {
-                deportistaRepository.connection.Open();
-                if (deportistaRepository.BuscarPorIdentificacion(id) != null)
-                {
-                    deportistaRepository.connection.Close();
-                    deportistaRepository.connection.Open();
-                    deportista.CalculoGastoEnergeticoDiario();
-                    deportistaRepository.EditarDeportista(deportista, id);
-                    return $"Se Modificó a la Persona con idnetificacion {id}";
-                }
-                return $"No se encontró a la persona con Identificacion {id}";
-            }
-            catch (Exception exception)
-            {
-
-                return "Se presentó el siguiente error:" + exception.Message;
-            }
-            finally
-            {
-                deportistaRepository.connection.Close();
-            }
-
-
-        }
-
-        public string Eliminar(string id)
-        {
-            try
-            {
-                deportistaRepository.connection.Open();
-                if (deportistaRepository.BuscarPorIdentificacion(id) != null)
-                {
-                    deportistaRepository.connection.Close();
-                    deportistaRepository.connection.Open();
-                    deportistaRepository.EliminarDieta(id);
-                    deportistaRepository.connection.Close();
-                    deportistaRepository.connection.Open();
-                    deportistaRepository.EliminarDeportista(id);
-                    return $"Se Eliminado a la Persona con idnetificacion {id}";
-                }
-                return $"No se encontró a la persona con Identificacion {id}";
-            }
-            catch (Exception e) 
-            {
-
-                return "Se presentó el siguiente error:" + e.Message;
-            }
-            finally { deportistaRepository.connection.Close() ; }
-        }
-
-        public ConsultarDeportistaRespuesta ConsultarTodos()
-        {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             try
             {
                 deportistaRepository.connection.Open() ;
@@ -103,43 +50,6 @@ namespace Logica
             }
             finally { deportistaRepository.connection.Close(); }
         }
-
-        public ConsultarDeportistaRespuesta consultarPorIdentificacion(string identificacion)
-        {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
-            try
-            {
-                deportistaRepository.connection.Open();
-                respuesta.Deportistas = deportistaRepository.consultarPorIdentificacion(identificacion);
-                deportistaRepository.connection.Close();
-                respuesta.Error = false;
-                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
-                return respuesta;
-            }
-            catch (Exception e)
-            {
-                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
-                respuesta.Error = true;
-                return respuesta;
-            }
-            finally { deportistaRepository.connection.Close(); }
-        }
-
-        public ConsultarDeportista BuscarPorNombreService(string nombre)
-        {
-            try
-            {
-                deportistaRepository.connection.Open();
-                return new ConsultarDeportista(deportistaRepository.FiltrarPorNombre(nombre));
-            }
-            catch(Exception e)
-            {
-
-                return new ConsultarDeportista("Se presento el siguiente Error: " + e.Message);
-            }
-            finally { deportistaRepository.connection.Close(); }
-        }
-
         public string GuardarDieta(Dieta dieta)
         {
             try
@@ -183,6 +93,13 @@ namespace Logica
             Error = true;
         }
 
+    }
+
+    public class ConsultarClienteRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<Deportista> Deportistas { get; set; }
     }
 
 }

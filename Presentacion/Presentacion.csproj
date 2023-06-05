@@ -299,6 +299,7 @@
     <None Include="Resources\borrar.png" />
     <None Include="Resources\borrar1.png" />
     <None Include="Resources\atras.png" />
+    <None Include="Resources\basura.png" />
     <Content Include="Resources\boton-x.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\guardar-datos.png" />
@@ -308,6 +309,8 @@
     <None Include="Resources\consulta.png" />
     <None Include="Resources\consulta %281%29.png" />
     <None Include="Resources\cerrar-sesion %281%29.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\consulta-de-busqueda.png" />
     <Content Include="Resources\invalido.png" />
     <None Include="Resources\perfil-del-usuario.png" />
     <None Include="Resources\usuario1.png" />

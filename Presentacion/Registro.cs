@@ -80,7 +80,7 @@ namespace Presentacion
         public Deportista MapearDeportista()
         {
             Deportista deportista = new Deportista();
-            deportista.Identificacion = UserLoginCache.Id;
+            deportista.id = UserLoginCache.Id;
             deportista.Fecha_Nacimiento = UserLoginCache.Fecha_Nacimineto;
             deportista.Sexo = UserLoginCache.Sexo;
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
