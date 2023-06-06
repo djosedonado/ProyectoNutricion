@@ -191,6 +191,7 @@
     <EmbeddedResource Include="TasaMetablistica.resx">
       <DependentUpon>TasaMetablistica.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="config\appsettings.Development.json" />
     <None Include="NutrisoftDataSet.xsc">
       <DependentUpon>NutrisoftDataSet.xsd</DependentUpon>
     </None>

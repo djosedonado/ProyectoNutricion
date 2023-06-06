@@ -30,9 +30,20 @@
         {
             this.panelRegisterUser = new System.Windows.Forms.Panel();
             this.panelRegistrarUserNext = new System.Windows.Forms.Panel();
+            this.panelAviso2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labelError2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
+            this.textBoxDeporte = new System.Windows.Forms.TextBox();
+            this.textBoxAltura = new System.Windows.Forms.TextBox();
+            this.textBoxPeso = new System.Windows.Forms.TextBox();
             this.buttonRegistrar = new System.Windows.Forms.Button();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.labelSave = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelError = new System.Windows.Forms.Label();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -44,38 +55,41 @@
             this.comboBoxTipoIndetificacion = new System.Windows.Forms.ComboBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxIdentificacion = new System.Windows.Forms.TextBox();
-            this.buttonNext = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxIdentificacion = new System.Windows.Forms.TextBox();
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBoxCerrar = new System.Windows.Forms.PictureBox();
-            this.textBoxPeso = new System.Windows.Forms.TextBox();
-            this.textBoxAltura = new System.Windows.Forms.TextBox();
-            this.labelpanelNext = new System.Windows.Forms.Label();
-            this.textBoxDeporte = new System.Windows.Forms.TextBox();
-            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panelAviso2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.labelError2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.labelPeso = new System.Windows.Forms.Label();
+            this.labelAltura = new System.Windows.Forms.Label();
+            this.labelDeporte = new System.Windows.Forms.Label();
+            this.labelIdentificacion = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelApellido = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.panelRegisterUser.SuspendLayout();
             this.panelRegistrarUserNext.SuspendLayout();
+            this.panelAviso2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelAviso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelAviso2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRegisterUser
             // 
             this.panelRegisterUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.panelRegisterUser.Controls.Add(this.labelPassword);
+            this.panelRegisterUser.Controls.Add(this.labelEmail);
+            this.panelRegisterUser.Controls.Add(this.labelTelefono);
+            this.panelRegisterUser.Controls.Add(this.labelApellido);
+            this.panelRegisterUser.Controls.Add(this.labelNombre);
+            this.panelRegisterUser.Controls.Add(this.labelIdentificacion);
             this.panelRegisterUser.Controls.Add(this.panelRegistrarUserNext);
             this.panelRegisterUser.Controls.Add(this.panelAviso);
             this.panelRegisterUser.Controls.Add(this.dateTimePickerFechaNacimiento);
@@ -100,19 +114,158 @@
             // 
             // panelRegistrarUserNext
             // 
+            this.panelRegistrarUserNext.Controls.Add(this.labelDeporte);
+            this.panelRegistrarUserNext.Controls.Add(this.labelAltura);
+            this.panelRegistrarUserNext.Controls.Add(this.labelPeso);
             this.panelRegistrarUserNext.Controls.Add(this.panelAviso2);
             this.panelRegistrarUserNext.Controls.Add(this.pictureBox3);
             this.panelRegistrarUserNext.Controls.Add(this.comboBoxTipoEntrenamiento);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxDeporte);
-            this.panelRegistrarUserNext.Controls.Add(this.labelpanelNext);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxAltura);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxPeso);
             this.panelRegistrarUserNext.Controls.Add(this.buttonRegistrar);
-            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 0);
+            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 35);
             this.panelRegistrarUserNext.Name = "panelRegistrarUserNext";
-            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 352);
+            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 391);
             this.panelRegistrarUserNext.TabIndex = 13;
             this.panelRegistrarUserNext.Visible = false;
+            // 
+            // panelAviso2
+            // 
+            this.panelAviso2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.panelAviso2.Controls.Add(this.label2);
+            this.panelAviso2.Controls.Add(this.pictureBox4);
+            this.panelAviso2.Controls.Add(this.labelError2);
+            this.panelAviso2.Controls.Add(this.label4);
+            this.panelAviso2.Location = new System.Drawing.Point(196, 79);
+            this.panelAviso2.Name = "panelAviso2";
+            this.panelAviso2.Size = new System.Drawing.Size(350, 150);
+            this.panelAviso2.TabIndex = 13;
+            this.panelAviso2.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(76, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Presentacion.Properties.Resources.flecha;
+            this.pictureBox4.Location = new System.Drawing.Point(301, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 38);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // labelError2
+            // 
+            this.labelError2.AutoSize = true;
+            this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError2.ForeColor = System.Drawing.Color.Red;
+            this.labelError2.Location = new System.Drawing.Point(44, 80);
+            this.labelError2.Name = "labelError2";
+            this.labelError2.Size = new System.Drawing.Size(44, 20);
+            this.labelError2.TabIndex = 1;
+            this.labelError2.Text = "Error";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Location = new System.Drawing.Point(139, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Aviso";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Presentacion.Properties.Resources.atras;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 42);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // comboBoxTipoEntrenamiento
+            // 
+            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.White;
+            this.comboBoxTipoEntrenamiento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxTipoEntrenamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
+            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
+            "Leve",
+            "Moderado",
+            "Intenso",
+            "Extremo"});
+            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
+            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
+            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 27);
+            this.comboBoxTipoEntrenamiento.TabIndex = 6;
+            // 
+            // textBoxDeporte
+            // 
+            this.textBoxDeporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.textBoxDeporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDeporte.ForeColor = System.Drawing.Color.White;
+            this.textBoxDeporte.Location = new System.Drawing.Point(393, 115);
+            this.textBoxDeporte.MaxLength = 50;
+            this.textBoxDeporte.Name = "textBoxDeporte";
+            this.textBoxDeporte.Size = new System.Drawing.Size(135, 26);
+            this.textBoxDeporte.TabIndex = 5;
+            this.textBoxDeporte.Text = "Deporte";
+            this.textBoxDeporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDeporte.Enter += new System.EventHandler(this.textBoxDeporte_Enter);
+            this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
+            this.textBoxDeporte.Leave += new System.EventHandler(this.textBoxDeporte_Leave);
+            // 
+            // textBoxAltura
+            // 
+            this.textBoxAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.textBoxAltura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAltura.ForeColor = System.Drawing.Color.White;
+            this.textBoxAltura.Location = new System.Drawing.Point(191, 171);
+            this.textBoxAltura.MaxLength = 6;
+            this.textBoxAltura.Name = "textBoxAltura";
+            this.textBoxAltura.Size = new System.Drawing.Size(135, 26);
+            this.textBoxAltura.TabIndex = 3;
+            this.textBoxAltura.Text = "Altura";
+            this.textBoxAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxAltura.Enter += new System.EventHandler(this.textBoxAltura_Enter);
+            this.textBoxAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAltura_KeyPress);
+            this.textBoxAltura.Leave += new System.EventHandler(this.textBoxAltura_Leave);
+            // 
+            // textBoxPeso
+            // 
+            this.textBoxPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.textBoxPeso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPeso.ForeColor = System.Drawing.Color.White;
+            this.textBoxPeso.Location = new System.Drawing.Point(191, 115);
+            this.textBoxPeso.MaxLength = 6;
+            this.textBoxPeso.Name = "textBoxPeso";
+            this.textBoxPeso.Size = new System.Drawing.Size(135, 26);
+            this.textBoxPeso.TabIndex = 2;
+            this.textBoxPeso.Text = "Peso";
+            this.textBoxPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPeso.Enter += new System.EventHandler(this.textBoxPeso_Enter);
+            this.textBoxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPeso_KeyPress);
+            this.textBoxPeso.Leave += new System.EventHandler(this.textBoxPeso_Leave);
             // 
             // buttonRegistrar
             // 
@@ -137,7 +290,7 @@
             this.panelAviso.Controls.Add(this.pictureBox2);
             this.panelAviso.Controls.Add(this.labelError);
             this.panelAviso.Controls.Add(this.labelTitulo);
-            this.panelAviso.Location = new System.Drawing.Point(208, 100);
+            this.panelAviso.Location = new System.Drawing.Point(212, 95);
             this.panelAviso.Name = "panelAviso";
             this.panelAviso.Size = new System.Drawing.Size(350, 150);
             this.panelAviso.TabIndex = 12;
@@ -149,6 +302,17 @@
             this.labelSave.Name = "labelSave";
             this.labelSave.Size = new System.Drawing.Size(0, 13);
             this.labelSave.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentacion.Properties.Resources.continuar;
+            this.pictureBox2.Location = new System.Drawing.Point(293, 106);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // labelError
             // 
@@ -297,12 +461,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(306, 20);
+            this.label1.Location = new System.Drawing.Point(311, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Registrate";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.atras;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // textBoxIdentificacion
             // 
@@ -321,46 +496,6 @@
             this.textBoxIdentificacion.Enter += new System.EventHandler(this.textBoxIdentificacion_Enter);
             this.textBoxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIdentificacion_KeyPress);
             this.textBoxIdentificacion.Leave += new System.EventHandler(this.textBoxIdentificacion_Leave);
-            // 
-            // buttonNext
-            // 
-            this.buttonNext.FlatAppearance.BorderSize = 0;
-            this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.ForeColor = System.Drawing.Color.White;
-            this.buttonNext.Image = global::Presentacion.Properties.Resources.flecha;
-            this.buttonNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNext.Location = new System.Drawing.Point(571, 339);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(144, 49);
-            this.buttonNext.TabIndex = 14;
-            this.buttonNext.Text = "Continuar";
-            this.buttonNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Presentacion.Properties.Resources.continuar;
-            this.pictureBox2.Location = new System.Drawing.Point(293, 106);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.atras;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pictureBoxMinimizar
             // 
@@ -384,145 +519,122 @@
             this.pictureBoxCerrar.TabStop = false;
             this.pictureBoxCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBoxPeso
+            // buttonNext
             // 
-            this.textBoxPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.textBoxPeso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPeso.ForeColor = System.Drawing.Color.White;
-            this.textBoxPeso.Location = new System.Drawing.Point(191, 115);
-            this.textBoxPeso.Name = "textBoxPeso";
-            this.textBoxPeso.Size = new System.Drawing.Size(135, 26);
-            this.textBoxPeso.TabIndex = 2;
-            this.textBoxPeso.Text = "Peso";
-            this.textBoxPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxPeso.Enter += new System.EventHandler(this.textBoxPeso_Enter);
-            this.textBoxPeso.Leave += new System.EventHandler(this.textBoxPeso_Leave);
+            this.buttonNext.FlatAppearance.BorderSize = 0;
+            this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNext.ForeColor = System.Drawing.Color.White;
+            this.buttonNext.Image = global::Presentacion.Properties.Resources.flecha;
+            this.buttonNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNext.Location = new System.Drawing.Point(571, 339);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(144, 49);
+            this.buttonNext.TabIndex = 14;
+            this.buttonNext.Text = "Continuar";
+            this.buttonNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBoxAltura
+            // labelPeso
             // 
-            this.textBoxAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.textBoxAltura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAltura.ForeColor = System.Drawing.Color.White;
-            this.textBoxAltura.Location = new System.Drawing.Point(191, 171);
-            this.textBoxAltura.Name = "textBoxAltura";
-            this.textBoxAltura.Size = new System.Drawing.Size(135, 26);
-            this.textBoxAltura.TabIndex = 3;
-            this.textBoxAltura.Text = "Altura";
-            this.textBoxAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxAltura.Enter += new System.EventHandler(this.textBoxAltura_Enter);
-            this.textBoxAltura.Leave += new System.EventHandler(this.textBoxAltura_Leave);
+            this.labelPeso.AutoSize = true;
+            this.labelPeso.ForeColor = System.Drawing.Color.White;
+            this.labelPeso.Location = new System.Drawing.Point(193, 144);
+            this.labelPeso.Name = "labelPeso";
+            this.labelPeso.Size = new System.Drawing.Size(35, 13);
+            this.labelPeso.TabIndex = 14;
+            this.labelPeso.Text = "label3";
+            this.labelPeso.Visible = false;
             // 
-            // labelpanelNext
+            // labelAltura
             // 
-            this.labelpanelNext.AutoSize = true;
-            this.labelpanelNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelpanelNext.ForeColor = System.Drawing.Color.White;
-            this.labelpanelNext.Location = new System.Drawing.Point(322, 20);
-            this.labelpanelNext.Name = "labelpanelNext";
-            this.labelpanelNext.Size = new System.Drawing.Size(100, 25);
-            this.labelpanelNext.TabIndex = 4;
-            this.labelpanelNext.Text = "Registar";
+            this.labelAltura.AutoSize = true;
+            this.labelAltura.ForeColor = System.Drawing.Color.White;
+            this.labelAltura.Location = new System.Drawing.Point(194, 202);
+            this.labelAltura.Name = "labelAltura";
+            this.labelAltura.Size = new System.Drawing.Size(35, 13);
+            this.labelAltura.TabIndex = 15;
+            this.labelAltura.Text = "label3";
+            this.labelAltura.Visible = false;
             // 
-            // textBoxDeporte
+            // labelDeporte
             // 
-            this.textBoxDeporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.textBoxDeporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeporte.ForeColor = System.Drawing.Color.White;
-            this.textBoxDeporte.Location = new System.Drawing.Point(393, 115);
-            this.textBoxDeporte.Name = "textBoxDeporte";
-            this.textBoxDeporte.Size = new System.Drawing.Size(135, 26);
-            this.textBoxDeporte.TabIndex = 5;
-            this.textBoxDeporte.Text = "Deporte";
-            this.textBoxDeporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelDeporte.AutoSize = true;
+            this.labelDeporte.ForeColor = System.Drawing.Color.White;
+            this.labelDeporte.Location = new System.Drawing.Point(396, 144);
+            this.labelDeporte.Name = "labelDeporte";
+            this.labelDeporte.Size = new System.Drawing.Size(35, 13);
+            this.labelDeporte.TabIndex = 16;
+            this.labelDeporte.Text = "label3";
+            this.labelDeporte.Visible = false;
             // 
-            // comboBoxTipoEntrenamiento
+            // labelIdentificacion
             // 
-            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.comboBoxTipoEntrenamiento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxTipoEntrenamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.White;
-            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
-            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
-            "Leve",
-            "Moderado",
-            "Intenso",
-            "Extremo"});
-            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
-            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
-            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 27);
-            this.comboBoxTipoEntrenamiento.TabIndex = 6;
+            this.labelIdentificacion.AutoSize = true;
+            this.labelIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.labelIdentificacion.Location = new System.Drawing.Point(115, 179);
+            this.labelIdentificacion.Name = "labelIdentificacion";
+            this.labelIdentificacion.Size = new System.Drawing.Size(35, 13);
+            this.labelIdentificacion.TabIndex = 15;
+            this.labelIdentificacion.Text = "label3";
+            this.labelIdentificacion.Visible = false;
             // 
-            // pictureBox3
+            // labelNombre
             // 
-            this.pictureBox3.Image = global::Presentacion.Properties.Resources.atras;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 42);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(115, 232);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(35, 13);
+            this.labelNombre.TabIndex = 16;
+            this.labelNombre.Text = "label3";
+            this.labelNombre.Visible = false;
             // 
-            // panelAviso2
+            // labelApellido
             // 
-            this.panelAviso2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panelAviso2.Controls.Add(this.label2);
-            this.panelAviso2.Controls.Add(this.pictureBox4);
-            this.panelAviso2.Controls.Add(this.labelError2);
-            this.panelAviso2.Controls.Add(this.label4);
-            this.panelAviso2.Location = new System.Drawing.Point(205, 115);
-            this.panelAviso2.Name = "panelAviso2";
-            this.panelAviso2.Size = new System.Drawing.Size(350, 150);
-            this.panelAviso2.TabIndex = 13;
-            this.panelAviso2.Visible = false;
+            this.labelApellido.AutoSize = true;
+            this.labelApellido.ForeColor = System.Drawing.Color.White;
+            this.labelApellido.Location = new System.Drawing.Point(115, 285);
+            this.labelApellido.Name = "labelApellido";
+            this.labelApellido.Size = new System.Drawing.Size(35, 13);
+            this.labelApellido.TabIndex = 17;
+            this.labelApellido.Text = "label3";
+            this.labelApellido.Visible = false;
             // 
-            // label2
+            // labelTelefono
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 3;
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.ForeColor = System.Drawing.Color.White;
+            this.labelTelefono.Location = new System.Drawing.Point(352, 179);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(35, 13);
+            this.labelTelefono.TabIndex = 18;
+            this.labelTelefono.Text = "label3";
+            this.labelTelefono.Visible = false;
             // 
-            // pictureBox4
+            // labelEmail
             // 
-            this.pictureBox4.Image = global::Presentacion.Properties.Resources.continuar;
-            this.pictureBox4.Location = new System.Drawing.Point(293, 106);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(54, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.ForeColor = System.Drawing.Color.White;
+            this.labelEmail.Location = new System.Drawing.Point(352, 232);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(35, 13);
+            this.labelEmail.TabIndex = 19;
+            this.labelEmail.Text = "label3";
+            this.labelEmail.Visible = false;
             // 
-            // labelError2
+            // labelPassword
             // 
-            this.labelError2.AutoSize = true;
-            this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError2.ForeColor = System.Drawing.Color.Red;
-            this.labelError2.Location = new System.Drawing.Point(14, 44);
-            this.labelError2.Name = "labelError2";
-            this.labelError2.Size = new System.Drawing.Size(44, 20);
-            this.labelError2.TabIndex = 1;
-            this.labelError2.Text = "Error";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(139, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Aviso";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.White;
+            this.labelPassword.Location = new System.Drawing.Point(352, 285);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(35, 13);
+            this.labelPassword.TabIndex = 20;
+            this.labelPassword.Text = "label3";
+            this.labelPassword.Visible = false;
             // 
             // FormRegister
             // 
@@ -542,16 +654,16 @@
             this.panelRegisterUser.PerformLayout();
             this.panelRegistrarUserNext.ResumeLayout(false);
             this.panelRegistrarUserNext.PerformLayout();
+            this.panelAviso2.ResumeLayout(false);
+            this.panelAviso2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelAviso.ResumeLayout(false);
             this.panelAviso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelAviso2.ResumeLayout(false);
-            this.panelAviso2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,7 +694,6 @@
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.TextBox textBoxPeso;
         private System.Windows.Forms.TextBox textBoxAltura;
-        private System.Windows.Forms.Label labelpanelNext;
         private System.Windows.Forms.TextBox textBoxDeporte;
         private System.Windows.Forms.ComboBox comboBoxTipoEntrenamiento;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -591,5 +702,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelError2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelDeporte;
+        private System.Windows.Forms.Label labelAltura;
+        private System.Windows.Forms.Label labelPeso;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelTelefono;
+        private System.Windows.Forms.Label labelApellido;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelIdentificacion;
+        private System.Windows.Forms.Label labelPassword;
     }
 }

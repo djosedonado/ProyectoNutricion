@@ -18,14 +18,14 @@ namespace Presentacion
     {
         public readonly ValidacionesPresentacion validaciones;
         public readonly personServices personServices;
-        public static bool register;
+        public static bool continuar;
         public FormRegister()
         {
             InitializeComponent();
             panelAviso.Visible = false;
             validaciones = new ValidacionesPresentacion();
             personServices = new personServices();
-            register = false;
+            continuar = false;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -304,17 +304,33 @@ namespace Presentacion
 
         private void textBoxIdentificacion_TextChanged(object sender, EventArgs e)
         {
-           if(textBoxIdentificacion.Text != "Identificacion" && textBoxIdentificacion.Text != "")
-            {
-                if (textBoxIdentificacion.Text.Length < 6)
-                {
-                    textBoxIdentificacion.BackColor=Color.Red;
-                }
-                else
-                {
-                    textBoxIdentificacion.BackColor = Color.FromArgb(22, 23, 52);
-                }
-            }
+            //changed
+            validaciones.RangoCampos(textBoxIdentificacion,"Identificacion",labelIdentificacion,continuar);
+        }
+
+        private void textBoxDeporte_Enter(object sender, EventArgs e)
+        {
+            StyleTextBox("Deporte", 1, textBoxDeporte);
+        }
+
+        private void textBoxDeporte_Leave(object sender, EventArgs e)
+        {
+            StyleTextBox("Deporte", 2, textBoxDeporte);
+        }
+
+        private void textBoxDeporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validacion(e, 2, panelAviso, labelError);
+        }
+
+        private void textBoxPeso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validacion(e, 3, panelAviso, labelError);
+        }
+
+        private void textBoxAltura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validacion(e, 3, panelAviso, labelError);
         }
     }
 }

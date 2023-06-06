@@ -5,7 +5,7 @@ namespace Datos
 {
     public class ConnectionDB
     {
-        public string connectionString = "Data Source=DONADO\\SQLEXPRESS;Initial Catalog=Nutrisoft; Integrated Security=True";
+        public string connectionString = "Data Source=DESKTOP-14ISCP9\\SQLEXPRESS;Initial Catalog=Nutrisoft; Integrated Security=True";
         public SqlConnection connectionDB = new SqlConnection();
 
         public ConnectionDB()

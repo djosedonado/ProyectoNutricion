@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -33,6 +34,27 @@ namespace Presentacion
             }
         }
 
+        //validacion de rango
+        public void RangoCampos(TextBox textBox,string text,Label label,bool continuar)
+        {
+            
+            if (textBox.Text != text && textBox.Text != "")
+            {
+                continuar = false;
+                if (textBox.Text.Length < 6)
+                {
+                    label.Visible = true;
+                    label.ForeColor = Color.Red;
+                    label.Text = text+ " Rango mino 6";
+                    continuar = true;
+                }
+                else
+                {
+                   label.Visible = false;
+                }
+            }
+        }
+
         //Validaciones por keyPress
         public void validacion(KeyPressEventArgs e, int tipo,Panel panelAviso,Label labelError)
         {
@@ -47,7 +69,7 @@ namespace Presentacion
                     return;
                 }
             }
-            else if (tipo == 2)
+            if (tipo == 2)
             {
                 //tipo 2 solo permite letras
                 if ((e.KeyChar > 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
@@ -58,6 +80,18 @@ namespace Presentacion
                     return;
                 }
             }
+            if (tipo == 3)
+            {
+                //decimales para tomar las comas 
+                if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar <= 47 && e.KeyChar >= 45))
+                {
+                    panelAviso.Visible = true;
+                    labelError.Text = "Solo se permiten Numeros";
+                    e.Handled = true;
+                    return;
+                }
+            }
+
 
         }
     }
