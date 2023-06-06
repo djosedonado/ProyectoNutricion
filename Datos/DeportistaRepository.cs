@@ -32,7 +32,7 @@ namespace Datos
                 var fila = command.ExecuteNonQuery();
             }
         }
-
+        //Metodo de Eliminacion de dieta
         public void EliminarDieta(string idD)
         {
             using (var command = connection.connectionDB.CreateCommand())
@@ -42,6 +42,7 @@ namespace Datos
                 var file = command.ExecuteNonQuery();
             }
         }
+        //Metodo de consulta
         public List<Deportista> Consultar()
         {
             List<Deportista> deportistas = new List<Deportista>();
@@ -75,7 +76,7 @@ namespace Datos
 
         //consultar todos SELECT Persona.id,Persona.tipoIdentificacion,Persona.nombre,Persona.apellido,Persona.sexo,Persona.fecha_Nacimiento,Persona.telefono,Persona.email,Deportista.peso,Deportista.altura,Deportista.deporte,Deportista.pesoActual,Deportista.fechaEgreso,Deportista.caloriasDiarias,Deportista.metabolismoBasal,Deportista.termogenesisActividadFisica FROM Persona FULL OUTER JOIN Deportista ON Persona.id = Deportista.id WHERE role=0
 
-        
+        //Metodo de Buscar por Nombre
         public List<Deportista> FiltrarPorNombre(string nombre)
         {
             return (from p in Consultar()
@@ -96,6 +97,14 @@ namespace Datos
                 commnad.Parameters.Add(new SqlParameter("@idPlantilla", dieta.plantillas));
                 var filas = commnad.ExecuteNonQuery();
             }
+        }
+
+        //Metodo de buscar por id
+        public List<Deportista> FiltrarPorId(string id)
+        {
+            return (from p in Consultar()
+                    where p.id.ToLower().Contains(id.ToLower())
+                    select p).ToList();
         }
 
     }

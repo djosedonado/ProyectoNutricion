@@ -82,11 +82,11 @@ namespace Presentacion
             Deportista deportista = new Deportista();
             deportista.id = UserLoginCache.Id;
             deportista.Fecha_Nacimiento = UserLoginCache.Fecha_Nacimineto;
-            deportista.Sexo = UserLoginCache.Sexo;
+            deportista.Sexo = UserLoginCache.Sexo.ToUpper();
             deportista.Peso = double.Parse(textBoxPesoRegistar.Text);
             deportista.Altura = double.Parse(textBoxAlturaRegistar.Text);
             deportista.Deporte = textBoxDeporte.Text.ToUpper();
-            deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text;
+            deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text.ToUpper();
             deportista.FechaEgreso = DateTime.Now;
             return deportista;
         }

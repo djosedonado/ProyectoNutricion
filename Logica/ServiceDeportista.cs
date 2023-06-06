@@ -50,6 +50,7 @@ namespace Logica
             }
             finally { deportistaRepository.connection.Close(); }
         }
+        //Metodo guardar Dieta
         public string GuardarDieta(Dieta dieta)
         {
             try
@@ -63,6 +64,44 @@ namespace Logica
                 return $"Error de la Aplicacion: {e.Message}";
             }
             finally { deportistaRepository.connection.Close(); }
+        }
+
+        //Metodo Buscar por id
+        public ConsultarClienteRespuesta BuscarPorId(string id)
+        {
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
+            try
+            {
+                deportistaRepository.connection.connectionDB.Open();
+                respuesta.Deportistas = deportistaRepository.FiltrarPorId(id);
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally { deportistaRepository.connection.connectionDB.Close(); }
+        }
+        //Metodo de Busqueda por Nombre
+        public ConsultarClienteRespuesta BuscarPorNombre(string nombre)
+        {
+            ConsultarClienteRespuesta respose = new ConsultarClienteRespuesta();
+            try
+            {
+                deportistaRepository.connection.connectionDB.Open();
+                respose.Deportistas = deportistaRepository.FiltrarPorNombre(nombre);
+                respose.Mensaje = (respose.Deportistas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                respose.Error = false;
+                return respose;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { deportistaRepository.connection.connectionDB.Close(); }
         }
 
     }

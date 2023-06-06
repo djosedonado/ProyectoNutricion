@@ -18,12 +18,14 @@ namespace Presentacion
     {
         public readonly ValidacionesPresentacion validaciones;
         public readonly personServices personServices;
+        public static bool register;
         public FormRegister()
         {
             InitializeComponent();
             panelAviso.Visible = false;
             validaciones = new ValidacionesPresentacion();
             personServices = new personServices();
+            register = false;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -169,21 +171,41 @@ namespace Presentacion
         private Persona MaperarPerson()
         {
             Persona persona = new Persona();
-            persona.id = textBoxIdentificacion.Text;
-            persona.TipoId = comboBoxTipoIndetificacion.Text;
-            persona.Nombre = textBoxNombre.Text;
-            persona.Apellidó = textBoxApellido.Text;
-            persona.Sexo = comboBoxSexo.Text;
+            Deportista deportista = new Deportista();
+            persona.id = textBoxIdentificacion.Text.ToUpper();
+            persona.TipoId = comboBoxTipoIndetificacion.Text.ToUpper();
+            persona.Nombre = textBoxNombre.Text.ToUpper();
+            persona.Apellidó = textBoxApellido.Text.ToUpper();
+            persona.Sexo = comboBoxSexo.Text.ToUpper();
             persona.Fecha_Nacimiento = DateTime.Parse(dateTimePickerFechaNacimiento.Text);
-            persona.Telefono = textBoxTelefono.Text;
-            persona.Correo = textBoxEmial.Text;
+            persona.Telefono = textBoxTelefono.Text.ToUpper();
+            persona.Correo = textBoxEmial.Text.ToUpper();
             persona.Password = textBoxPassword.Text;
+            deportista.Peso = double.Parse(textBoxPeso.Text);
+            deportista.Altura = double.Parse(textBoxAltura.Text);
+            deportista.Deporte = textBoxDeporte.Text.ToUpper();
+            deportista.TipoId = comboBoxTipoEntrenamiento.Text.ToUpper();
             return persona;
         }
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GuardarDatos();
+        }
+
+        private void GuardarDatos()
+        {
             if (validaciones.ValidacionEmail(textBoxEmial.Text) == false)
             {
                 panelAviso.Visible = true;
@@ -205,11 +227,92 @@ namespace Presentacion
                 }
                 else
                 {
-                    Persona persona = MaperarPerson();
-                    var message = personServices.RegisterPerson(persona);
-                    panelAviso.Visible = true;
-                    labelError.Text = message;
-                    labelError.ForeColor = Color.White;
+                    panelRegistrarUserNext.Visible = true;
+                    buttonNext.Visible = false;
+                }
+            }
+        }
+
+        private void buttonRegistrar_Click_1(object sender, EventArgs e)
+        {
+            if (textBoxPeso.Text.Equals("Peso")
+                || textBoxAltura.Text.Equals("Altura")
+                || textBoxDeporte.Text.Equals("Deporte")
+                || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
+            {
+                panelAviso2.Visible = true;
+                labelError2.Text = "Campos Vacios";
+            }
+            else
+            {
+                Persona persona = MaperarPerson();
+                var message = personServices.RegisterPerson(persona);
+                panelAviso2.Visible = true;
+                labelError2.Text = message;
+                labelError2.ForeColor = Color.White;
+                LimpiarCampos();
+            }
+            
+        }
+
+        private void LimpiarCampos()
+        {
+            textBoxIdentificacion.Text = "Identificacion";
+            textBoxNombre.Text = "Nombre";
+            textBoxApellido.Text = "Apellido";
+            textBoxPassword.Text = "Password";
+            textBoxAltura.Text = "Altura";
+            textBoxTelefono.Text = "Telefono";
+            textBoxPeso.Text = "Peso";
+            textBoxEmial.Text = "Email";
+            textBoxDeporte.Text = "Deporte";
+            comboBoxSexo.SelectedIndex = -1;
+            comboBoxTipoEntrenamiento.SelectedIndex = -1;
+            comboBoxTipoIndetificacion.SelectedIndex = -1;
+        }
+
+        private void textBoxPeso_Enter(object sender, EventArgs e)
+        {
+            StyleTextBox("Peso",1,textBoxPeso);
+        }
+
+        private void textBoxPeso_Leave(object sender, EventArgs e)
+        {
+            StyleTextBox("Peso", 2, textBoxPeso);
+        }
+
+        private void textBoxAltura_Enter(object sender, EventArgs e)
+        {
+            StyleTextBox("Altura", 1, textBoxAltura);
+        }
+
+        private void textBoxAltura_Leave(object sender, EventArgs e)
+        {
+            StyleTextBox("Altura", 2, textBoxAltura);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panelRegistrarUserNext.Visible = false;
+            buttonNext.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            panelAviso2.Visible = false;
+        }
+
+        private void textBoxIdentificacion_TextChanged(object sender, EventArgs e)
+        {
+           if(textBoxIdentificacion.Text != "Identificacion" && textBoxIdentificacion.Text != "")
+            {
+                if (textBoxIdentificacion.Text.Length < 6)
+                {
+                    textBoxIdentificacion.BackColor=Color.Red;
+                }
+                else
+                {
+                    textBoxIdentificacion.BackColor = Color.FromArgb(22, 23, 52);
                 }
             }
         }

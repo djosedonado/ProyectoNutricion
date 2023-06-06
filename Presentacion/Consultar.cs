@@ -62,14 +62,14 @@ namespace Presentacion
 
         private void MostrarDeportistaPorIdentificacion()
         {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             dgvConsultaDatosPersonales.DataSource = null;
             string identificacion = TextboxIdentificacion.Text;
-            //respuesta = service.consultarPorIdentificacion(identificacion);
-            //deportista = respuesta.Deportistas.ToList();
+            respuesta = service.BuscarPorId(identificacion);
+            deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
-                //Llenartable(deportista);
+                Llenartable(deportistas);
             }
             else
             {
@@ -82,12 +82,12 @@ namespace Presentacion
             
             dgvConsultaDatosPersonales.DataSource = null;
             string nombre = textNombrePaciente.Text;
-            ConsultarDeportista respuesta = new ConsultarDeportista(nombre);
-            //respuesta = service.bu(nombre);
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
+            respuesta = service.BuscarPorNombre(nombre);
             deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
-                //Llenartable(deportista);
+                Llenartable(deportistas);
             }
             else
             {
