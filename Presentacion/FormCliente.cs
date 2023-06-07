@@ -41,7 +41,6 @@ namespace Presentacion
         //Agregar datos del usuario
         private void buttonAgregarData_Click(object sender, EventArgs e)
         {
-            abrirFormatoHija(new Registro());
         }
 
         private void llenarPerfil()

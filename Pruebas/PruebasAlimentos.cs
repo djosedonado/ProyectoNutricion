@@ -19,11 +19,11 @@ namespace Pruebas
             service = new serviceAlimento();
             alimento = new Alimento();
         }
-
+        //Agregar Alimento
         [Test]
         public void TestAgregarAlimentos()
         {
-            alimento.IdAlimentos = "124";
+            alimento.IdAlimentos = "127";
             alimento.NombreAlimento = "ARINA";
             alimento.Carbohidratos = 23;
             alimento.Proteinas = 21;

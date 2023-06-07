@@ -14,34 +14,14 @@ namespace Datos
     {
         public ConnectionDB ConnectionDB = new ConnectionDB();
 
-        //Metodo Guardar
-        public void SavePerson(Persona persona)
-        {
-            using (var commands = ConnectionDB.connectionDB.CreateCommand()) {
-                commands.CommandText = @"INSERT INTO Persona(id,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,email,Password,role) 
-                                                    VALUES(@id,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@email,@Password,@role)";
-                commands.Parameters.Add(new SqlParameter("@id",persona.id));
-                commands.Parameters.Add(new SqlParameter("@tipoIdentificacion",persona.TipoId));
-                commands.Parameters.Add(new SqlParameter("@nombre", persona.Nombre));
-                commands.Parameters.Add(new SqlParameter("@apellido", persona.Apellidó));
-                commands.Parameters.Add(new SqlParameter("@sexo",persona.Sexo));
-                commands.Parameters.Add(new SqlParameter("@fecha_Nacimiento",persona.Fecha_Nacimiento));
-                commands.Parameters.Add(new SqlParameter("@telefono",persona.Telefono));
-                commands.Parameters.Add(new SqlParameter("@email",persona.Correo));
-                commands.Parameters.Add(new SqlParameter("@Password",persona.Password));
-                commands.Parameters.Add(new SqlParameter("@role", persona.Rol));
-                var fila = commands.ExecuteNonQuery();
-            }
-        }
-
         //Metodo Login
         public bool Login(string email,string password)
         {
             using (var commands = ConnectionDB.connectionDB.CreateCommand()) 
             {
-                commands.CommandText = @"SELECT * FROM Persona WHERE email=@email AND Password=@Password";
-                commands.Parameters.Add(new System.Data.SqlClient.SqlParameter("@email",email));
-                commands.Parameters.Add(new System.Data.SqlClient.SqlParameter("@Password", password));
+                commands.CommandText = @"SELECT * FROM Persona WHERE email=@email AND Password=@pass";
+                commands.Parameters.Add(new SqlParameter("@email",email));
+                commands.Parameters.Add(new SqlParameter("@pass", password));
                 commands.CommandType = CommandType.Text;
                 SqlDataReader reader = commands.ExecuteReader();
                 Persona persona = new Persona();

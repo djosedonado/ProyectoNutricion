@@ -49,6 +49,7 @@
             this.textBoxAltura = new System.Windows.Forms.TextBox();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
             this.buttonRegistrar = new System.Windows.Forms.Button();
+            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.labelSave = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBoxCerrar = new System.Windows.Forms.PictureBox();
             this.buttonNext = new System.Windows.Forms.Button();
-            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
             this.panelRegisterUser.SuspendLayout();
             this.panelRegistrarUserNext.SuspendLayout();
             this.panelAviso2.SuspendLayout();
@@ -266,11 +266,12 @@
             this.labelError2.AutoSize = true;
             this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError2.ForeColor = System.Drawing.Color.Red;
-            this.labelError2.Location = new System.Drawing.Point(44, 80);
+            this.labelError2.Location = new System.Drawing.Point(6, 65);
             this.labelError2.Name = "labelError2";
             this.labelError2.Size = new System.Drawing.Size(44, 20);
             this.labelError2.TabIndex = 1;
             this.labelError2.Text = "Error";
+            this.labelError2.Click += new System.EventHandler(this.labelError2_Click);
             // 
             // label4
             // 
@@ -362,6 +363,21 @@
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = true;
             this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click_1);
+            // 
+            // comboBoxTipoEntrenamiento
+            // 
+            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.White;
+            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
+            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
+            "Leve",
+            "Moderado",
+            "Intenso",
+            "Extremo"});
+            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
+            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
+            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxTipoEntrenamiento.TabIndex = 17;
             // 
             // panelAviso
             // 
@@ -616,21 +632,6 @@
             this.buttonNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBoxTipoEntrenamiento
-            // 
-            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.White;
-            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
-            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
-            "Leve",
-            "Moderado",
-            "Intenso",
-            "Extremo"});
-            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
-            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
-            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 21);
-            this.comboBoxTipoEntrenamiento.TabIndex = 17;
             // 
             // FormRegister
             // 

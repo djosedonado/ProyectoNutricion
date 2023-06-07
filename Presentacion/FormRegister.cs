@@ -17,14 +17,14 @@ namespace Presentacion
     public partial class FormRegister : Form
     {
         public readonly ValidacionesPresentacion validaciones;
-        public readonly personServices personServices;
+        public readonly serviceDeportista serviceDeportista;
         public bool continuar;
         public FormRegister()
         {
             InitializeComponent();
             panelAviso.Visible = false;
             validaciones = new ValidacionesPresentacion();
-            personServices = new personServices();
+            serviceDeportista = new serviceDeportista();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -167,24 +167,24 @@ namespace Presentacion
             validaciones.validacion(e, 1, panelAviso, labelError);
         }
 
-        private Persona MaperarPerson()
+        private Deportista MaperarPerson()
         {
-            Persona persona = new Persona();
             Deportista deportista = new Deportista();
-            persona.id = textBoxIdentificacion.Text.ToUpper();
-            persona.TipoId = comboBoxTipoIndetificacion.Text.ToUpper();
-            persona.Nombre = textBoxNombre.Text.ToUpper();
-            persona.Apellidó = textBoxApellido.Text.ToUpper();
-            persona.Sexo = comboBoxSexo.Text.ToUpper();
-            persona.Fecha_Nacimiento = DateTime.Parse(dateTimePickerFechaNacimiento.Text);
-            persona.Telefono = textBoxTelefono.Text.ToUpper();
-            persona.Correo = textBoxEmial.Text.ToUpper();
-            persona.Password = textBoxPassword.Text;
+            deportista.id = textBoxIdentificacion.Text.ToUpper();
+            deportista.TipoId = comboBoxTipoIndetificacion.Text.ToUpper();
+            deportista.Nombre = textBoxNombre.Text.ToUpper();
+            deportista.Apellidó = textBoxApellido.Text.ToUpper();
+            deportista.Sexo = comboBoxSexo.Text.ToUpper();
+            deportista.Fecha_Nacimiento = DateTime.Parse(dateTimePickerFechaNacimiento.Text);
+            deportista.Telefono = textBoxTelefono.Text.ToUpper();
+            deportista.Correo = textBoxEmial.Text.ToUpper();
+            deportista.Password = textBoxPassword.Text;
             deportista.Peso = double.Parse(textBoxPeso.Text);
             deportista.Altura = double.Parse(textBoxAltura.Text);
             deportista.Deporte = textBoxDeporte.Text.ToUpper();
-            deportista.TipoId = comboBoxTipoEntrenamiento.Text.ToUpper();
-            return persona;
+            deportista.TermogenesisActividadFisica = comboBoxTipoEntrenamiento.Text.ToUpper();
+            deportista.FechaEgreso = DateTime.Now;
+            return deportista;
         }
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
@@ -244,8 +244,8 @@ namespace Presentacion
             }
             else
             {
-                Persona persona = MaperarPerson();
-                var message = personServices.RegisterPerson(persona);
+                Deportista persona = MaperarPerson();
+                var message = serviceDeportista.Guardar(persona);
                 panelAviso2.Visible = true;
                 labelError2.Text = message;
                 labelError2.ForeColor = Color.White;
@@ -330,6 +330,11 @@ namespace Presentacion
         private void textBoxAltura_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.validacion(e, 3, panelAviso, labelError);
+        }
+
+        private void labelError2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

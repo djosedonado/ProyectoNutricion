@@ -11,10 +11,11 @@ namespace Logica
     public class personServices
     {
         public personaRepository personaRepository;
-
+        private readonly deportistaRepository deportistaRepository;
         public personServices()
         {
-                personaRepository = new personaRepository();
+            personaRepository = new personaRepository();
+            deportistaRepository = new deportistaRepository();
         }
 
         //Metodo de servicio de login
@@ -29,21 +30,6 @@ namespace Logica
             {
                 return false;
             }finally { personaRepository.ConnectionDB.Close();}
-        }
-        //Metodo de servicio de registro
-        public string RegisterPerson(Persona persona)
-        {
-            try
-            {
-                personaRepository.ConnectionDB.Open();
-                personaRepository.SavePerson(persona);
-                return "Usuario Registrado";
-            }
-            catch (Exception)
-            {
-                return "Error Identificacion o Email ya existe.";
-            }
-            finally { personaRepository.ConnectionDB.Close();}
         }
         //Metodo de consulta
         public ConsultarPersonaRespuesta consultarTodo()

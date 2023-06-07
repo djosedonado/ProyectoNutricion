@@ -21,6 +21,7 @@ namespace Logica
                 CorreoService correo = new CorreoService();
                 deportista.CalculoGastoEnergeticoDiario();
                 deportistaRepository.connection.Open();
+                deportistaRepository.SavePerson(deportista);
                 deportistaRepository.Guardar(deportista);
                 
                 return "Paciente Registrado";

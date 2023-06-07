@@ -58,20 +58,20 @@ namespace Entidad
 
         private void CalcularActividadFisica()
         {
-            if (TermogenesisActividadFisica.Equals("Leve"))
+            if (TermogenesisActividadFisica.Equals("LEVE"))
             {
                 ActividadFisica = 0.2;
             }
 
-            if (TermogenesisActividadFisica.Equals("Moderada"))
+            if (TermogenesisActividadFisica.Equals("MODERADA"))
             {
                 ActividadFisica = 0.3;
             }
-            if (TermogenesisActividadFisica.Equals("Intensa"))
+            if (TermogenesisActividadFisica.Equals("INTENSA"))
             {
                 ActividadFisica = 0.4;
             }
-            if (TermogenesisActividadFisica.Equals("Extrema"))
+            if (TermogenesisActividadFisica.Equals("EXTREMA"))
             {
                 ActividadFisica = 1;
             }

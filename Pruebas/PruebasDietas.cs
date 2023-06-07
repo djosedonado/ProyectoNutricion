@@ -19,7 +19,7 @@ namespace Pruebas
             service = new serviceDeportista();
             dietas = new Dieta();
         }
-
+        //Crear Recomendacion
         [Test]
         public void AgregarRecomendacion()
         {

@@ -13,7 +13,7 @@ namespace Datos
     {
         public ConnectionDB connection = new ConnectionDB();
 
-        //guardar
+        //Crear Deportista
         public void Guardar(Deportista deportista)
         {
             using (var command = connection.connectionDB.CreateCommand())
@@ -32,12 +32,46 @@ namespace Datos
                 var fila = command.ExecuteNonQuery();
             }
         }
+
+        //Metodo Guardar Persona
+        public void SavePerson(Deportista persona)
+        {
+            using (var commands = connection.connectionDB.CreateCommand())
+            {
+                commands.CommandText = @"INSERT INTO Persona(id,tipoIdentificacion,nombre,apellido,sexo,fecha_Nacimiento,telefono,email,Password,role) 
+                                                    VALUES(@id,@tipoIdentificacion,@nombre,@apellido,@sexo,@fecha_Nacimiento,@telefono,@email,@Password,@role)";
+                commands.Parameters.Add(new SqlParameter("@id", persona.id));
+                commands.Parameters.Add(new SqlParameter("@tipoIdentificacion", persona.TipoId));
+                commands.Parameters.Add(new SqlParameter("@nombre", persona.Nombre));
+                commands.Parameters.Add(new SqlParameter("@apellido", persona.Apellidó));
+                commands.Parameters.Add(new SqlParameter("@sexo", persona.Sexo));
+                commands.Parameters.Add(new SqlParameter("@fecha_Nacimiento", persona.Fecha_Nacimiento));
+                commands.Parameters.Add(new SqlParameter("@telefono", persona.Telefono));
+                commands.Parameters.Add(new SqlParameter("@email", persona.Correo));
+                commands.Parameters.Add(new SqlParameter("@Password", persona.Password));
+                commands.Parameters.Add(new SqlParameter("@role", persona.Rol));
+                var fila = commands.ExecuteNonQuery();
+            }
+        }
+
+
+
         //Metodo de Eliminacion de dieta
         public void EliminarDieta(string idD)
         {
             using (var command = connection.connectionDB.CreateCommand())
             {
                 command.CommandText = @"DELETE Dieta WHERE idDeportista=@identificacion";
+                command.Parameters.Add(new SqlParameter("@identificacion", idD));
+                var file = command.ExecuteNonQuery();
+            }
+        }
+
+        public void EliminarDeportista(string idD)
+        {
+            using (var command = connection.connectionDB.CreateCommand())
+            {
+                command.CommandText = @"DELETE Deportista WHERE idDeportista=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", idD));
                 var file = command.ExecuteNonQuery();
             }

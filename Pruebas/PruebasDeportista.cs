@@ -19,16 +19,17 @@ namespace Pruebas
             service = new serviceDeportista();
             deportista = new Deportista();
         }
-
+        //Crear Deportista
         [Test]
         public void TestGuardarDeportista()
         {
-            deportista.TipoIdentificacion = "cedula";
-            deportista.Identificacion = "1063600325";
+            deportista.TipoId = "cedula";
+            deportista.id = "1063600325";
             deportista.Nombre = "carlos";
             deportista.Apellidó = "de la cruz";
             deportista.Fecha_Nacimiento = DateTime.Parse("12-04-1999");
             deportista.Correo = "calos@gmail.com";
+            deportista.Password = "gdsaysdsa";
             deportista.Telefono = "316554586";
             deportista.Sexo = "M";
             deportista.Peso = 65;
@@ -36,7 +37,6 @@ namespace Pruebas
             deportista.Deporte = "Futball";
             deportista.TermogenesisActividadFisica = "Extremo";
             deportista.FechaEgreso = DateTime.Now;
-
             string result = service.Guardar(deportista);
             string esperado = "Paciente Registrado";
             Assert.AreEqual(esperado, result);
