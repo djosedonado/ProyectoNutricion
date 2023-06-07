@@ -35,25 +35,26 @@ namespace Presentacion
         }
 
         //validacion de rango
-        public void RangoCampos(TextBox textBox,string text,Label label,bool continuar)
+        public bool RangoCampos(TextBox textBox,string text,Label label,bool continuar,int num)
         {
             
             if (textBox.Text != text && textBox.Text != "")
             {
-                continuar = false;
-                if (textBox.Text.Length < 6)
+                if (textBox.Text.Length < num)
                 {
                     label.Visible = true;
                     label.ForeColor = Color.Red;
                     label.Text = text+ " Rango mino 6";
-                    continuar = true;
                 }
                 else
                 {
                    label.Visible = false;
+                   return true;
                 }
             }
+            return false;
         }
+
 
         //Validaciones por keyPress
         public void validacion(KeyPressEventArgs e, int tipo,Panel panelAviso,Label labelError)

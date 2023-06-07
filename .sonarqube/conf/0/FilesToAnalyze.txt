@@ -1,0 +1,8 @@
+﻿C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Alimento.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Cache\UserLoginCache.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Deportista.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Dieta.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Persona.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Plantilla.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\Properties\AssemblyInfo.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Entidad\packages.config

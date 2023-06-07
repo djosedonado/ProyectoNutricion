@@ -1,0 +1,7 @@
+﻿C:\Users\danil\source\repos\ProyectoNutricion\Logica\CorreoService.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\personServices.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\Properties\AssemblyInfo.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\serviceAlimento.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\serviceDeportista.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\ServicePlantilla.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Logica\packages.config

@@ -18,14 +18,13 @@ namespace Presentacion
     {
         public readonly ValidacionesPresentacion validaciones;
         public readonly personServices personServices;
-        public static bool continuar;
+        public bool continuar;
         public FormRegister()
         {
             InitializeComponent();
             panelAviso.Visible = false;
             validaciones = new ValidacionesPresentacion();
             personServices = new personServices();
-            continuar = false;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -305,7 +304,7 @@ namespace Presentacion
         private void textBoxIdentificacion_TextChanged(object sender, EventArgs e)
         {
             //changed
-            validaciones.RangoCampos(textBoxIdentificacion,"Identificacion",labelIdentificacion,continuar);
+            continuar = validaciones.RangoCampos(textBoxIdentificacion,"Identificacion",labelIdentificacion,continuar,6);
         }
 
         private void textBoxDeporte_Enter(object sender, EventArgs e)

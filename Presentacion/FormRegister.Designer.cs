@@ -29,14 +29,22 @@
         private void InitializeComponent()
         {
             this.panelRegisterUser = new System.Windows.Forms.Panel();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.labelApellido = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelIdentificacion = new System.Windows.Forms.Label();
             this.panelRegistrarUserNext = new System.Windows.Forms.Panel();
+            this.labelDeporte = new System.Windows.Forms.Label();
+            this.labelAltura = new System.Windows.Forms.Label();
+            this.labelPeso = new System.Windows.Forms.Label();
             this.panelAviso2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelError2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
             this.textBoxDeporte = new System.Windows.Forms.TextBox();
             this.textBoxAltura = new System.Windows.Forms.TextBox();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
@@ -60,15 +68,7 @@
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBoxCerrar = new System.Windows.Forms.PictureBox();
             this.buttonNext = new System.Windows.Forms.Button();
-            this.labelPeso = new System.Windows.Forms.Label();
-            this.labelAltura = new System.Windows.Forms.Label();
-            this.labelDeporte = new System.Windows.Forms.Label();
-            this.labelIdentificacion = new System.Windows.Forms.Label();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.labelApellido = new System.Windows.Forms.Label();
-            this.labelTelefono = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
+            this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
             this.panelRegisterUser.SuspendLayout();
             this.panelRegistrarUserNext.SuspendLayout();
             this.panelAviso2.SuspendLayout();
@@ -112,6 +112,72 @@
             this.panelRegisterUser.TabIndex = 0;
             this.panelRegisterUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRegisterUser_MouseDown);
             // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.White;
+            this.labelPassword.Location = new System.Drawing.Point(352, 285);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(35, 13);
+            this.labelPassword.TabIndex = 20;
+            this.labelPassword.Text = "label3";
+            this.labelPassword.Visible = false;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.ForeColor = System.Drawing.Color.White;
+            this.labelEmail.Location = new System.Drawing.Point(352, 232);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(35, 13);
+            this.labelEmail.TabIndex = 19;
+            this.labelEmail.Text = "label3";
+            this.labelEmail.Visible = false;
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.ForeColor = System.Drawing.Color.White;
+            this.labelTelefono.Location = new System.Drawing.Point(352, 179);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(35, 13);
+            this.labelTelefono.TabIndex = 18;
+            this.labelTelefono.Text = "label3";
+            this.labelTelefono.Visible = false;
+            // 
+            // labelApellido
+            // 
+            this.labelApellido.AutoSize = true;
+            this.labelApellido.ForeColor = System.Drawing.Color.White;
+            this.labelApellido.Location = new System.Drawing.Point(115, 285);
+            this.labelApellido.Name = "labelApellido";
+            this.labelApellido.Size = new System.Drawing.Size(35, 13);
+            this.labelApellido.TabIndex = 17;
+            this.labelApellido.Text = "label3";
+            this.labelApellido.Visible = false;
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(115, 232);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(35, 13);
+            this.labelNombre.TabIndex = 16;
+            this.labelNombre.Text = "label3";
+            this.labelNombre.Visible = false;
+            // 
+            // labelIdentificacion
+            // 
+            this.labelIdentificacion.AutoSize = true;
+            this.labelIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.labelIdentificacion.Location = new System.Drawing.Point(115, 179);
+            this.labelIdentificacion.Name = "labelIdentificacion";
+            this.labelIdentificacion.Size = new System.Drawing.Size(35, 13);
+            this.labelIdentificacion.TabIndex = 15;
+            this.labelIdentificacion.Text = "label3";
+            this.labelIdentificacion.Visible = false;
+            // 
             // panelRegistrarUserNext
             // 
             this.panelRegistrarUserNext.Controls.Add(this.labelDeporte);
@@ -119,16 +185,49 @@
             this.panelRegistrarUserNext.Controls.Add(this.labelPeso);
             this.panelRegistrarUserNext.Controls.Add(this.panelAviso2);
             this.panelRegistrarUserNext.Controls.Add(this.pictureBox3);
-            this.panelRegistrarUserNext.Controls.Add(this.comboBoxTipoEntrenamiento);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxDeporte);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxAltura);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxPeso);
             this.panelRegistrarUserNext.Controls.Add(this.buttonRegistrar);
-            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 35);
+            this.panelRegistrarUserNext.Controls.Add(this.comboBoxTipoEntrenamiento);
+            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 0);
             this.panelRegistrarUserNext.Name = "panelRegistrarUserNext";
-            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 391);
+            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 426);
             this.panelRegistrarUserNext.TabIndex = 13;
             this.panelRegistrarUserNext.Visible = false;
+            // 
+            // labelDeporte
+            // 
+            this.labelDeporte.AutoSize = true;
+            this.labelDeporte.ForeColor = System.Drawing.Color.White;
+            this.labelDeporte.Location = new System.Drawing.Point(396, 144);
+            this.labelDeporte.Name = "labelDeporte";
+            this.labelDeporte.Size = new System.Drawing.Size(35, 13);
+            this.labelDeporte.TabIndex = 16;
+            this.labelDeporte.Text = "label3";
+            this.labelDeporte.Visible = false;
+            // 
+            // labelAltura
+            // 
+            this.labelAltura.AutoSize = true;
+            this.labelAltura.ForeColor = System.Drawing.Color.White;
+            this.labelAltura.Location = new System.Drawing.Point(194, 202);
+            this.labelAltura.Name = "labelAltura";
+            this.labelAltura.Size = new System.Drawing.Size(35, 13);
+            this.labelAltura.TabIndex = 15;
+            this.labelAltura.Text = "label3";
+            this.labelAltura.Visible = false;
+            // 
+            // labelPeso
+            // 
+            this.labelPeso.AutoSize = true;
+            this.labelPeso.ForeColor = System.Drawing.Color.White;
+            this.labelPeso.Location = new System.Drawing.Point(193, 144);
+            this.labelPeso.Name = "labelPeso";
+            this.labelPeso.Size = new System.Drawing.Size(35, 13);
+            this.labelPeso.TabIndex = 14;
+            this.labelPeso.Text = "label3";
+            this.labelPeso.Visible = false;
             // 
             // panelAviso2
             // 
@@ -137,7 +236,7 @@
             this.panelAviso2.Controls.Add(this.pictureBox4);
             this.panelAviso2.Controls.Add(this.labelError2);
             this.panelAviso2.Controls.Add(this.label4);
-            this.panelAviso2.Location = new System.Drawing.Point(196, 79);
+            this.panelAviso2.Location = new System.Drawing.Point(209, 79);
             this.panelAviso2.Name = "panelAviso2";
             this.panelAviso2.Size = new System.Drawing.Size(350, 150);
             this.panelAviso2.TabIndex = 13;
@@ -196,25 +295,6 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // comboBoxTipoEntrenamiento
-            // 
-            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.White;
-            this.comboBoxTipoEntrenamiento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxTipoEntrenamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
-            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
-            "Leve",
-            "Moderado",
-            "Intenso",
-            "Extremo"});
-            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
-            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
-            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 27);
-            this.comboBoxTipoEntrenamiento.TabIndex = 6;
             // 
             // textBoxDeporte
             // 
@@ -537,104 +617,20 @@
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.button1_Click);
             // 
-            // labelPeso
+            // comboBoxTipoEntrenamiento
             // 
-            this.labelPeso.AutoSize = true;
-            this.labelPeso.ForeColor = System.Drawing.Color.White;
-            this.labelPeso.Location = new System.Drawing.Point(193, 144);
-            this.labelPeso.Name = "labelPeso";
-            this.labelPeso.Size = new System.Drawing.Size(35, 13);
-            this.labelPeso.TabIndex = 14;
-            this.labelPeso.Text = "label3";
-            this.labelPeso.Visible = false;
-            // 
-            // labelAltura
-            // 
-            this.labelAltura.AutoSize = true;
-            this.labelAltura.ForeColor = System.Drawing.Color.White;
-            this.labelAltura.Location = new System.Drawing.Point(194, 202);
-            this.labelAltura.Name = "labelAltura";
-            this.labelAltura.Size = new System.Drawing.Size(35, 13);
-            this.labelAltura.TabIndex = 15;
-            this.labelAltura.Text = "label3";
-            this.labelAltura.Visible = false;
-            // 
-            // labelDeporte
-            // 
-            this.labelDeporte.AutoSize = true;
-            this.labelDeporte.ForeColor = System.Drawing.Color.White;
-            this.labelDeporte.Location = new System.Drawing.Point(396, 144);
-            this.labelDeporte.Name = "labelDeporte";
-            this.labelDeporte.Size = new System.Drawing.Size(35, 13);
-            this.labelDeporte.TabIndex = 16;
-            this.labelDeporte.Text = "label3";
-            this.labelDeporte.Visible = false;
-            // 
-            // labelIdentificacion
-            // 
-            this.labelIdentificacion.AutoSize = true;
-            this.labelIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.labelIdentificacion.Location = new System.Drawing.Point(115, 179);
-            this.labelIdentificacion.Name = "labelIdentificacion";
-            this.labelIdentificacion.Size = new System.Drawing.Size(35, 13);
-            this.labelIdentificacion.TabIndex = 15;
-            this.labelIdentificacion.Text = "label3";
-            this.labelIdentificacion.Visible = false;
-            // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.ForeColor = System.Drawing.Color.White;
-            this.labelNombre.Location = new System.Drawing.Point(115, 232);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(35, 13);
-            this.labelNombre.TabIndex = 16;
-            this.labelNombre.Text = "label3";
-            this.labelNombre.Visible = false;
-            // 
-            // labelApellido
-            // 
-            this.labelApellido.AutoSize = true;
-            this.labelApellido.ForeColor = System.Drawing.Color.White;
-            this.labelApellido.Location = new System.Drawing.Point(115, 285);
-            this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(35, 13);
-            this.labelApellido.TabIndex = 17;
-            this.labelApellido.Text = "label3";
-            this.labelApellido.Visible = false;
-            // 
-            // labelTelefono
-            // 
-            this.labelTelefono.AutoSize = true;
-            this.labelTelefono.ForeColor = System.Drawing.Color.White;
-            this.labelTelefono.Location = new System.Drawing.Point(352, 179);
-            this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(35, 13);
-            this.labelTelefono.TabIndex = 18;
-            this.labelTelefono.Text = "label3";
-            this.labelTelefono.Visible = false;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.ForeColor = System.Drawing.Color.White;
-            this.labelEmail.Location = new System.Drawing.Point(352, 232);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(35, 13);
-            this.labelEmail.TabIndex = 19;
-            this.labelEmail.Text = "label3";
-            this.labelEmail.Visible = false;
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.ForeColor = System.Drawing.Color.White;
-            this.labelPassword.Location = new System.Drawing.Point(352, 285);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(35, 13);
-            this.labelPassword.TabIndex = 20;
-            this.labelPassword.Text = "label3";
-            this.labelPassword.Visible = false;
+            this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.White;
+            this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
+            this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
+            "Leve",
+            "Moderado",
+            "Intenso",
+            "Extremo"});
+            this.comboBoxTipoEntrenamiento.Location = new System.Drawing.Point(393, 171);
+            this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
+            this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxTipoEntrenamiento.TabIndex = 17;
             // 
             // FormRegister
             // 
@@ -695,7 +691,6 @@
         private System.Windows.Forms.TextBox textBoxPeso;
         private System.Windows.Forms.TextBox textBoxAltura;
         private System.Windows.Forms.TextBox textBoxDeporte;
-        private System.Windows.Forms.ComboBox comboBoxTipoEntrenamiento;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panelAviso2;
         private System.Windows.Forms.Label label2;
@@ -711,5 +706,6 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelIdentificacion;
         private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.ComboBox comboBoxTipoEntrenamiento;
     }
 }

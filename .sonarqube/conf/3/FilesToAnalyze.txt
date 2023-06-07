@@ -1,0 +1,96 @@
+﻿C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Consultar.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Consultar.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormCliente.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormCliente.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormLogin.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormLogin.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormEditarDeportistas.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormEditarDeportistas.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormRegister.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormRegister.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Home.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Home.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\PresentacionPrincipal.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\PresentacionPrincipal.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Program.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Properties\AssemblyInfo.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RecomendacionNutricional.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RecomendacionNutricional.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\UserControl1.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\UserControl1.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\ValidacionesPresentacion.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\boton-x.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\invalido.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\valido (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\valido.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Consultar.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormCliente.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormLogin.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormEditarDeportistas.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\FormRegister.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Home.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\PresentacionPrincipal.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Properties\Resources.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RecomendacionNutricional.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.resx
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\config\appsettings.Development.json
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\NutrisoftDataSet.xsc
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\NutrisoftDataSet.xsd
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\NutrisoftDataSet.xss
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\packages.config
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Properties\Settings.settings
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\App.config
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\x.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\lista.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\usuario.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\home (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\home.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\Logo NutriSoft.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\manzana.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\redes.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\agregue-el-simbolo-de-la-interfaz-de-personas-de-la-persona-negra-de-cerca-con-el-signo-mas-en-un-circulo-pequeno.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\dupdo (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\dupdo.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\minimizar (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\minimizar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\maximizar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\boton-cerrar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\HomeImagen.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\HomeImagen1.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\Lupa de Busqueda.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\next-page.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\salvar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\comer (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\agregar-archivo.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\buscar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\borrar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\borrar1.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\atras.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\basura.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\error.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\guardar-datos.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\continuar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\cerrar-sesion.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\configuraciones.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\consulta.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\consulta (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\cerrar-sesion (1).png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\editar.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\consulta-de-busqueda.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\cheque.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\flecha.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\perfil-del-usuario.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\usuario1.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\portafolio-profesional.png
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\usuario (1).png

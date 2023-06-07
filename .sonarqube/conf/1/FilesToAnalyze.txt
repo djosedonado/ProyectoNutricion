@@ -1,0 +1,7 @@
+﻿C:\Users\danil\source\repos\ProyectoNutricion\Datos\AlimentoRepository.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\ConnectionDB.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\deportistaRepository.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\personaRepository.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\PlantillaRepository.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\Properties\AssemblyInfo.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Datos\packages.config

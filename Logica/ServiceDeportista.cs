@@ -22,6 +22,7 @@ namespace Logica
                 deportista.CalculoGastoEnergeticoDiario();
                 deportistaRepository.connection.Open();
                 deportistaRepository.Guardar(deportista);
+                
                 return "Paciente Registrado";
             }
             catch (Exception e)

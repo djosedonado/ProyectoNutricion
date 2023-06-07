@@ -32,7 +32,6 @@
             this.buttonLogoup = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonAgregarData = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             this.panelMenu.Controls.Add(this.buttonLogoup);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Controls.Add(this.buttonAgregarData);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -93,7 +91,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Presentacion.Properties.Resources.portafolio_profesional;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 245);
+            this.button2.Location = new System.Drawing.Point(0, 185);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(250, 60);
@@ -112,7 +110,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Presentacion.Properties.Resources.consulta__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 185);
+            this.button1.Location = new System.Drawing.Point(0, 125);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(250, 60);
@@ -121,26 +119,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonAgregarData
-            // 
-            this.buttonAgregarData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAgregarData.FlatAppearance.BorderSize = 0;
-            this.buttonAgregarData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregarData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregarData.ForeColor = System.Drawing.Color.White;
-            this.buttonAgregarData.Image = global::Presentacion.Properties.Resources.agregar_archivo;
-            this.buttonAgregarData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregarData.Location = new System.Drawing.Point(0, 125);
-            this.buttonAgregarData.Name = "buttonAgregarData";
-            this.buttonAgregarData.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonAgregarData.Size = new System.Drawing.Size(250, 60);
-            this.buttonAgregarData.TabIndex = 1;
-            this.buttonAgregarData.Text = "    Agregar Datos";
-            this.buttonAgregarData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregarData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAgregarData.UseVisualStyleBackColor = true;
-            this.buttonAgregarData.Click += new System.EventHandler(this.buttonAgregarData_Click);
             // 
             // panel1
             // 
@@ -277,7 +255,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonAgregarData;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonLogoup;
