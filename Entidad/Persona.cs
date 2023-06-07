@@ -10,7 +10,6 @@ namespace Entidad
     {
         public Persona()
         {
-            Edad = 0;
             Rol = 0;
         }
         public string id { get; set; }

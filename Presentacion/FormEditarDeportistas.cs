@@ -49,9 +49,9 @@ namespace Presentacion
         }
         private void MostrarDatosPorIdentificacion()
         {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             string identificacion = this.id;
-            //respuesta = service.consultarPorIdentificacion(identificacion);
+            respuesta = service.BuscarPorId(identificacion);
             deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {
@@ -109,8 +109,8 @@ namespace Presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     Deportista deportista = MapearDeportista();
-                    //string mensaje = service.Modificar(deportista, this.id);
-                    //MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string mensaje = service.EditarDeportista(deportista, this.id);
+                    MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
@@ -264,6 +264,11 @@ namespace Presentacion
         private void textBoxCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidacionesLetrasConCaracteresExpeciales(e,pictureBoxCorreo,textBoxCorreo);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

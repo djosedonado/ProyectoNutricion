@@ -12,7 +12,7 @@ namespace Logica
         {
             deportistaRepository = new deportistaRepository();
         }
-
+        //Metodo de Crear Desportista
         public string Guardar(Deportista deportista)
         {
             try
@@ -21,10 +21,16 @@ namespace Logica
                 CorreoService correo = new CorreoService();
                 deportista.CalculoGastoEnergeticoDiario();
                 deportistaRepository.connection.Open();
-                deportistaRepository.SavePerson(deportista);
-                deportistaRepository.Guardar(deportista);
-                
-                return "Paciente Registrado";
+                if (deportistaRepository.ConsultarPorId(deportista.id)==null)
+                {
+                    deportistaRepository.SavePerson(deportista);
+                    deportistaRepository.Guardar(deportista);
+                    return "Paciente Registrado";
+                }
+                else
+                {
+                    return "Paciente Registrado";
+                }
             }
             catch (Exception e)
             {
@@ -32,12 +38,13 @@ namespace Logica
             }
             finally { deportistaRepository.connection.Close(); }
         }
-
+        //Metodo Consultar
         public ConsultarClienteRespuesta ConsultarTodos()
         {
             ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             try
             {
+
                 deportistaRepository.connection.Open() ;
                 respuesta.Deportistas = deportistaRepository.Consultar();
                 respuesta.Error = false;
@@ -105,15 +112,92 @@ namespace Logica
             }
             finally { deportistaRepository.connection.connectionDB.Close(); }
         }
+        //Editar Deportista
+        public string EditarDeportista(Deportista deportista,string id)
+        {
+            try
+            {
+                deportistaRepository.connection.Open();
+                if (deportistaRepository.FiltrarPorId(id)!=null)
+                {
+                    deportistaRepository.EditarPerson(deportista,id);
+                    return "Usuario Editado Correctamente";
+                }
+                else
+                {
+                    return "El usuario no exite";
+                }
+                
+            }
+            catch (Exception e)
+            {
+
+                return "Error de la aplicacion: " + e.Message;
+            }
+            finally { deportistaRepository.connection.Close(); }
+        }
+
+        //Eliminer Deportista
+        public string EliminarDeportista(string id)
+        {
+            try
+            {
+                deportistaRepository.connection.Open();
+                if (deportistaRepository.ConsultarPorId(id)!=null)
+                {
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EliminarDieta(id);
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EliminarDeportista(id);
+                    deportistaRepository.connection.Close();
+                    deportistaRepository.connection.Open();
+                    deportistaRepository.EliminarPersona(id);
+                    return "Usuario Eliminado";
+                }
+                else
+                {
+                    return "Usuario No encontrado";
+                }
+                
+            }
+            catch (Exception e)
+            {
+
+                return "Error de Aplicacion: " + e.Message;
+            }
+            finally { deportistaRepository.connection.Close(); }
+        }
+
+        //Metodo de Consultar Dieta
+        public ConsultarDietaRespuesta ConsultarDieta(string id)
+        {
+            ConsultarDietaRespuesta respuesta = new ConsultarDietaRespuesta();
+            try
+            {
+                deportistaRepository.connection.connectionDB.Open();
+                respuesta.Dietas = (IList<Dieta>)deportistaRepository.ConsultaDieta(id);
+                respuesta.Error = false;
+                respuesta.Mensaje = (respuesta.Dietas.Count > 0) ? "Se consultan los Datos" : "No hay datos para consultar";
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally { deportistaRepository.connection.connectionDB.Close(); }
+        }
+
 
     }
 
 
-    public class ConsultarDeportistaRespuesta
+    public class ConsultarDietaRespuesta
     {
         public bool Error { get; set; }
         public string Mensaje { get; set; }
-        public IList<Deportista> Deportistas { get; set; }
+        public IList<Dieta> Dietas { get; set; }
     }
 
     public class ConsultarDeportista

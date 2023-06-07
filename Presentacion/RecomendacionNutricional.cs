@@ -133,9 +133,9 @@ namespace Presentacion
 
         private void MostrarDatosPorIdentificacion()
         {
-            ConsultarDeportistaRespuesta respuesta = new ConsultarDeportistaRespuesta();
+            ConsultarClienteRespuesta respuesta = new ConsultarClienteRespuesta();
             string identificacion = textIdentificacionRecomendacion.Text;
-            //respuesta = service.consultarPorIdentificacion(identificacion);
+            respuesta = service.BuscarPorId(identificacion);
             deportistas = respuesta.Deportistas.ToList();
             if (!respuesta.Error)
             {

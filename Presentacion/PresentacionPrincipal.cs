@@ -100,7 +100,7 @@ namespace Presentacion
 
         private void botonRegistarPacinetes_Click(object sender, EventArgs e)
         {
-            abrirFormatoHija(new Registro());
+            
         }
 
         private void botonAlimentos_Click(object sender, EventArgs e)

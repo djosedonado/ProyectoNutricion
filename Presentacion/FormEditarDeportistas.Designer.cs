@@ -64,6 +64,7 @@
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textIdentificacion = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEditarDeportista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxApellido)).BeginInit();
@@ -75,10 +76,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEditarDeportista
             // 
+            this.panelEditarDeportista.Controls.Add(this.pictureBox1);
             this.panelEditarDeportista.Controls.Add(this.pictureBoxCorreo);
             this.panelEditarDeportista.Controls.Add(this.pictureBoxApellido);
             this.panelEditarDeportista.Controls.Add(this.pictureBoxNombre);
@@ -116,7 +119,7 @@
             this.panelEditarDeportista.Controls.Add(this.textIdentificacion);
             this.panelEditarDeportista.Location = new System.Drawing.Point(1, -1);
             this.panelEditarDeportista.Name = "panelEditarDeportista";
-            this.panelEditarDeportista.Size = new System.Drawing.Size(787, 388);
+            this.panelEditarDeportista.Size = new System.Drawing.Size(787, 421);
             this.panelEditarDeportista.TabIndex = 0;
             // 
             // pictureBoxCorreo
@@ -205,11 +208,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(217, 28);
+            this.label7.Location = new System.Drawing.Point(262, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(347, 37);
+            this.label7.Size = new System.Drawing.Size(242, 37);
             this.label7.TabIndex = 98;
-            this.label7.Text = "Edicion Campos Deportista";
+            this.label7.Text = "Edicion Deportista";
             // 
             // dateTimeEdad
             // 
@@ -232,6 +235,7 @@
             // textBoxCorreo
             // 
             this.textBoxCorreo.Location = new System.Drawing.Point(86, 308);
+            this.textBoxCorreo.MaxLength = 50;
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(185, 20);
             this.textBoxCorreo.TabIndex = 95;
@@ -288,6 +292,7 @@
             // textBoxDeporte
             // 
             this.textBoxDeporte.Location = new System.Drawing.Point(415, 211);
+            this.textBoxDeporte.MaxLength = 50;
             this.textBoxDeporte.Name = "textBoxDeporte";
             this.textBoxDeporte.Size = new System.Drawing.Size(96, 20);
             this.textBoxDeporte.TabIndex = 90;
@@ -318,6 +323,7 @@
             // textBoxAlturaRegistar
             // 
             this.textBoxAlturaRegistar.Location = new System.Drawing.Point(415, 162);
+            this.textBoxAlturaRegistar.MaxLength = 6;
             this.textBoxAlturaRegistar.Name = "textBoxAlturaRegistar";
             this.textBoxAlturaRegistar.Size = new System.Drawing.Size(96, 20);
             this.textBoxAlturaRegistar.TabIndex = 87;
@@ -326,6 +332,7 @@
             // textBoxPesoRegistar
             // 
             this.textBoxPesoRegistar.Location = new System.Drawing.Point(416, 114);
+            this.textBoxPesoRegistar.MaxLength = 6;
             this.textBoxPesoRegistar.Name = "textBoxPesoRegistar";
             this.textBoxPesoRegistar.Size = new System.Drawing.Size(96, 20);
             this.textBoxPesoRegistar.TabIndex = 86;
@@ -400,6 +407,7 @@
             // 
             this.textTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTelefono.Location = new System.Drawing.Point(250, 160);
+            this.textTelefono.MaxLength = 10;
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(100, 21);
             this.textTelefono.TabIndex = 80;
@@ -453,6 +461,7 @@
             // 
             this.textApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApellido.Location = new System.Drawing.Point(86, 257);
+            this.textApellido.MaxLength = 50;
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(100, 21);
             this.textApellido.TabIndex = 75;
@@ -462,6 +471,7 @@
             // 
             this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNombre.Location = new System.Drawing.Point(86, 210);
+            this.textNombre.MaxLength = 50;
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(100, 21);
             this.textNombre.TabIndex = 74;
@@ -471,10 +481,22 @@
             // 
             this.textIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textIdentificacion.Location = new System.Drawing.Point(86, 164);
+            this.textIdentificacion.MaxLength = 10;
             this.textIdentificacion.Name = "textIdentificacion";
             this.textIdentificacion.Size = new System.Drawing.Size(100, 21);
             this.textIdentificacion.TabIndex = 73;
             this.textIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIdentificacion_KeyPress);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.Invalido;
+            this.pictureBox1.Location = new System.Drawing.Point(748, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 108;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormEditarDeportistas
             // 
@@ -482,9 +504,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(791, 422);
             this.Controls.Add(this.panelEditarDeportista);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditarDeportistas";
             this.Text = "Pantalla de Edicion";
             this.Load += new System.EventHandler(this.FormEditarDeportistas_Load);
@@ -500,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAltura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonGuardarRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,5 +565,6 @@
         private System.Windows.Forms.PictureBox pictureBoxSexo;
         private System.Windows.Forms.PictureBox pictureBoxDeporte;
         private System.Windows.Forms.PictureBox pictureBoxAltura;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

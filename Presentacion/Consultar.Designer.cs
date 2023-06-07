@@ -34,6 +34,8 @@ namespace Presentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.dgvConsultaDatosPersonales = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,20 +44,18 @@ namespace Presentacion
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutrisoftDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nutrisoftDataSet = new Presentacion.NutrisoftDataSet();
+            this.buttonBuscarDeportista = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombrePaciente = new System.Windows.Forms.TextBox();
             this.Identificacion = new System.Windows.Forms.Label();
             this.TextboxIdentificacion = new System.Windows.Forms.TextBox();
-            this.nutrisoftDataSet = new Presentacion.NutrisoftDataSet();
-            this.nutrisoftDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonBuscarDeportista = new System.Windows.Forms.Button();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
@@ -75,6 +75,52 @@ namespace Presentacion
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(1067, 594);
             this.PanelPrincipal.TabIndex = 0;
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEliminar.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminar.Image = global::Presentacion.Properties.Resources.basura;
+            this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEliminar.Location = new System.Drawing.Point(826, 71);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(104, 44);
+            this.buttonEliminar.TabIndex = 10;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonEditar.FlatAppearance.BorderSize = 0;
+            this.buttonEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.ForeColor = System.Drawing.Color.White;
+            this.buttonEditar.Image = global::Presentacion.Properties.Resources.editar;
+            this.buttonEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditar.Location = new System.Drawing.Point(723, 76);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(97, 39);
+            this.buttonEditar.TabIndex = 9;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvConsultaDatosPersonales
             // 
@@ -174,6 +220,39 @@ namespace Presentacion
             this.Column8.ReadOnly = true;
             this.Column8.Width = 200;
             // 
+            // nutrisoftDataSetBindingSource
+            // 
+            this.nutrisoftDataSetBindingSource.DataSource = this.nutrisoftDataSet;
+            this.nutrisoftDataSetBindingSource.Position = 0;
+            // 
+            // nutrisoftDataSet
+            // 
+            this.nutrisoftDataSet.DataSetName = "NutrisoftDataSet";
+            this.nutrisoftDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonBuscarDeportista
+            // 
+            this.buttonBuscarDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.buttonBuscarDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscarDeportista.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonBuscarDeportista.FlatAppearance.BorderSize = 0;
+            this.buttonBuscarDeportista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.buttonBuscarDeportista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscarDeportista.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarDeportista.ForeColor = System.Drawing.Color.White;
+            this.buttonBuscarDeportista.Image = global::Presentacion.Properties.Resources.consulta_de_busqueda;
+            this.buttonBuscarDeportista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarDeportista.Location = new System.Drawing.Point(594, 76);
+            this.buttonBuscarDeportista.Name = "buttonBuscarDeportista";
+            this.buttonBuscarDeportista.Size = new System.Drawing.Size(107, 39);
+            this.buttonBuscarDeportista.TabIndex = 7;
+            this.buttonBuscarDeportista.Text = "Buscar";
+            this.buttonBuscarDeportista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarDeportista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBuscarDeportista.UseVisualStyleBackColor = false;
+            this.buttonBuscarDeportista.Click += new System.EventHandler(this.buttonBuscarDeportista_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -199,6 +278,7 @@ namespace Presentacion
             // textNombrePaciente
             // 
             this.textNombrePaciente.Location = new System.Drawing.Point(431, 95);
+            this.textNombrePaciente.MaxLength = 50;
             this.textNombrePaciente.Name = "textNombrePaciente";
             this.textNombrePaciente.Size = new System.Drawing.Size(140, 20);
             this.textNombrePaciente.TabIndex = 4;
@@ -218,89 +298,11 @@ namespace Presentacion
             // TextboxIdentificacion
             // 
             this.TextboxIdentificacion.Location = new System.Drawing.Point(247, 95);
+            this.TextboxIdentificacion.MaxLength = 10;
             this.TextboxIdentificacion.Name = "TextboxIdentificacion";
             this.TextboxIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.TextboxIdentificacion.TabIndex = 0;
             this.TextboxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxIdentificacion_KeyPress);
-            // 
-            // nutrisoftDataSet
-            // 
-            this.nutrisoftDataSet.DataSetName = "NutrisoftDataSet";
-            this.nutrisoftDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nutrisoftDataSetBindingSource
-            // 
-            this.nutrisoftDataSetBindingSource.DataSource = this.nutrisoftDataSet;
-            this.nutrisoftDataSetBindingSource.Position = 0;
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonEliminar.FlatAppearance.BorderSize = 0;
-            this.buttonEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.buttonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonEliminar.Image = global::Presentacion.Properties.Resources.basura;
-            this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(826, 71);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(104, 44);
-            this.buttonEliminar.TabIndex = 10;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEliminar.UseVisualStyleBackColor = false;
-            this.buttonEliminar.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.buttonEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonEditar.FlatAppearance.BorderSize = 0;
-            this.buttonEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.buttonEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonEditar.Image = global::Presentacion.Properties.Resources.editar;
-            this.buttonEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditar.Location = new System.Drawing.Point(723, 76);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(97, 39);
-            this.buttonEditar.TabIndex = 9;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEditar.UseVisualStyleBackColor = false;
-            this.buttonEditar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonBuscarDeportista
-            // 
-            this.buttonBuscarDeportista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.buttonBuscarDeportista.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscarDeportista.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBuscarDeportista.FlatAppearance.BorderSize = 0;
-            this.buttonBuscarDeportista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.buttonBuscarDeportista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.buttonBuscarDeportista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscarDeportista.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarDeportista.ForeColor = System.Drawing.Color.White;
-            this.buttonBuscarDeportista.Image = global::Presentacion.Properties.Resources.consulta_de_busqueda;
-            this.buttonBuscarDeportista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarDeportista.Location = new System.Drawing.Point(594, 76);
-            this.buttonBuscarDeportista.Name = "buttonBuscarDeportista";
-            this.buttonBuscarDeportista.Size = new System.Drawing.Size(107, 39);
-            this.buttonBuscarDeportista.TabIndex = 7;
-            this.buttonBuscarDeportista.Text = "Buscar";
-            this.buttonBuscarDeportista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarDeportista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBuscarDeportista.UseVisualStyleBackColor = false;
-            this.buttonBuscarDeportista.Click += new System.EventHandler(this.buttonBuscarDeportista_Click);
             // 
             // Consultar
             // 
@@ -314,8 +316,8 @@ namespace Presentacion
             this.PanelPrincipal.ResumeLayout(false);
             this.PanelPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatosPersonales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutrisoftDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -142,8 +142,8 @@ namespace Presentacion
             var respuesta = MessageBox.Show("Está seguro de Eliminar la información", "Mensaje de Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (respuesta == DialogResult.Yes)
             {
-                //string mensaje = service.Eliminar(TextboxIdentificacion.Text);
-                //MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = service.EliminarDeportista(TextboxIdentificacion.Text);
+                MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             MostrarDeportista();
