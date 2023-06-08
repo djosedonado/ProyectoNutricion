@@ -11,7 +11,7 @@ namespace Datos
 {
     public class deportistaRepository
     {
-        public ConnectionDB connection = new ConnectionDB();
+        public readonly ConnectionDB connection = new ConnectionDB();
 
         //Crear Deportista
         public void Guardar(Deportista deportista)
@@ -29,7 +29,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@caloriasDiarias", deportista.CaloriasDiarias));
                 command.Parameters.Add(new SqlParameter("@metabolismoBasal", deportista.MetabolismoBasal));
                 command.Parameters.Add(new SqlParameter("@termogenesisActividadFisica", deportista.TermogenesisActividadFisica));
-                var fila = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
 
@@ -50,7 +50,7 @@ namespace Datos
                 commands.Parameters.Add(new SqlParameter("@email", persona.Correo));
                 commands.Parameters.Add(new SqlParameter("@Password", persona.Password));
                 commands.Parameters.Add(new SqlParameter("@role", persona.Rol));
-                var fila = commands.ExecuteNonQuery();
+                commands.ExecuteNonQuery();
             }
         }
 
@@ -61,7 +61,7 @@ namespace Datos
             {
                 command.CommandText = @"DELETE Persona WHERE id=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", idD));
-                var file = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
 
@@ -72,7 +72,7 @@ namespace Datos
             {
                 command.CommandText = @"DELETE Deportista WHERE id=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", idD));
-                var file = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
 
@@ -83,7 +83,7 @@ namespace Datos
             {
                 command.CommandText = @"DELETE Dieta WHERE idDeportista=@identificacion";
                 command.Parameters.Add(new SqlParameter("@identificacion", idD));
-                var file = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
         //Metodo de consulta
@@ -138,7 +138,7 @@ namespace Datos
                 commnad.Parameters.Add(new SqlParameter("@recomendacionNutriccional", dieta.RecomendacionNutriccional));
                 commnad.Parameters.Add(new SqlParameter("@idDeportista", dieta.identificacion));
                 commnad.Parameters.Add(new SqlParameter("@idPlantilla", dieta.plantillas));
-                var filas = commnad.ExecuteNonQuery();
+                commnad.ExecuteNonQuery();
             }
         }
 
@@ -202,7 +202,7 @@ namespace Datos
                 commands.Parameters.Add(new SqlParameter("@Altura", persona.Altura));
                 commands.Parameters.Add(new SqlParameter("@Deporte", persona.Deporte));
                 commands.Parameters.Add(new SqlParameter("@TipoEntrenamiento", persona.TermogenesisActividadFisica));
-                var fila = commands.ExecuteNonQuery();
+                commands.ExecuteNonQuery();
             }
         }
 

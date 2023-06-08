@@ -10,7 +10,7 @@ namespace Datos
 {
     public class PlantillaRepository
     {
-        public ConnectionDB connection = new ConnectionDB();
+        public readonly ConnectionDB connection = new ConnectionDB();
 
         public void Guardar(Plantilla plantilla)
         {
@@ -19,7 +19,7 @@ namespace Datos
                 command.CommandText = @"insert into Plantilla(nombrePlantilla)
                                                    values(@nombrePlantilla)";
                 command.Parameters.Add(new System.Data.SqlClient.SqlParameter("@nombrePlantilla", plantilla.NombrePlantilla));
-                var file = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
 
         }
@@ -33,7 +33,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@categoria", plantilla.Categoria));
                 command.Parameters.Add(new SqlParameter("@idPlantilla",plantilla.NombrePlantilla));
                 command.Parameters.Add(new SqlParameter("@idAlimento",plantilla.idAlimento));
-                var file = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
 

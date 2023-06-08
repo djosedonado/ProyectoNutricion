@@ -10,7 +10,7 @@ namespace Logica
 {
     public class personServices
     {
-        public personaRepository personaRepository;
+        private readonly personaRepository personaRepository;
         private readonly deportistaRepository deportistaRepository;
         public personServices()
         {

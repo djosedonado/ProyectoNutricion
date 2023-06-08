@@ -12,7 +12,7 @@ namespace Datos
 {
     public class personaRepository
     {
-        public ConnectionDB ConnectionDB = new ConnectionDB();
+        public readonly ConnectionDB ConnectionDB = new ConnectionDB();
 
         //Metodo Login
         public bool Login(string email,string password)

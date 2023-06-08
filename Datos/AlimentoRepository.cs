@@ -12,7 +12,12 @@ namespace Datos
     public class AlimentoRepository
     {
 
-        public ConnectionDB connection = new ConnectionDB();
+        public readonly ConnectionDB connection;
+
+        public AlimentoRepository()
+        {
+            connection = new ConnectionDB();
+        }
         public void Guardar(Alimento alimento)
         {
             using (var command = connection.connectionDB.CreateCommand())
@@ -25,7 +30,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@carbohidrato", alimento.Carbohidratos));
                 command.Parameters.Add(new SqlParameter("@proteinas", alimento.Proteinas));
                 command.Parameters.Add(new SqlParameter("@liquidos", alimento.Liquidos));
-                var fila = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
         //sadfsad

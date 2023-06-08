@@ -20,8 +20,6 @@ C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.c
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.Designer.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.Designer.cs
-C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.cs
-C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.Designer.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.Designer.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\UserControl1.cs
@@ -42,7 +40,6 @@ C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Properties\Resources.
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RecomendacionNutricional.resx
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarIngrediente.resx
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\RegistarPlantilla.resx
-C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Registro.resx
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.resx
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\config\appsettings.Development.json
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\NutrisoftDataSet.xsc
