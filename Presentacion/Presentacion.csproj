@@ -138,6 +138,7 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validacion.cs" />
     <Compile Include="ValidacionesPresentacion.cs" />
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>

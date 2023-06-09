@@ -18,13 +18,13 @@ namespace Presentacion
     {
         public readonly ValidacionesPresentacion validaciones;
         public readonly serviceDeportista serviceDeportista;
-        public bool continuar;
+        public readonly Validacion validacion;
         public FormRegister()
         {
             InitializeComponent();
-            panelAviso.Visible = false;
             validaciones = new ValidacionesPresentacion();
             serviceDeportista = new serviceDeportista();
+            validacion = new Validacion();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -71,19 +71,15 @@ namespace Presentacion
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            panelAviso.Visible = false;
-        }
-
         private void textBoxIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 1,panelAviso,labelError);
+            string message = validaciones.validacion(e, 3,labelIdentificacion);
+            labelIdentificacion.Text = message;
         }
 
         private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 2, panelAviso, labelError);
+            string message = validaciones.validacion(e, 2,labelNombre);
         }
 
         private void textBoxNombre_Enter(object sender, EventArgs e)
@@ -159,12 +155,12 @@ namespace Presentacion
 
         private void textBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 2, panelAviso, labelError);
+            string message = validaciones.validacion(e, 2,labelApellido);
         }
 
         private void textBoxTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 1, panelAviso, labelError);
+            string message = validaciones.validacion(e, 3, labelTelefono);
         }
 
         private Deportista MaperarPerson()
@@ -187,17 +183,6 @@ namespace Presentacion
             return deportista;
         }
 
-        private void buttonRegistrar_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             GuardarDatos();
@@ -205,29 +190,38 @@ namespace Presentacion
 
         private void GuardarDatos()
         {
-            if (validaciones.ValidacionEmail(textBoxEmial.Text) == false)
+            
+            if (validacion.next.Equals(true) 
+                && validacion.next1.Equals(true) 
+                && validacion.next2.Equals(true)
+                && validacion.next3.Equals(true)
+                && validacion.next4.Equals(true)
+                && validacion.next5.Equals(true))
             {
-                panelAviso.Visible = true;
-                labelError.Text = "Error Direccion de correo Invalida";
-            }
-            else
-            {
-                if (textBoxIdentificacion.Text.Equals("Identificacion")
-                    || textBoxNombre.Text.Equals("Nombre")
-                    || textBoxApellido.Text.Equals("Apellido")
-                    || textBoxTelefono.Text.Equals("Telefono")
-                    || textBoxEmial.Text.Equals("Email")
-                    || textBoxPassword.Text.Equals("Password")
-                    || comboBoxSexo.SelectedIndex.Equals(-1)
-                    || comboBoxTipoIndetificacion.SelectedIndex.Equals(-1))
+                if (validaciones.ValidacionEmail(textBoxEmial.Text) == false)
                 {
-                    panelAviso.Visible = true;
-                    labelError.Text = "Error hay campos vacios";
+                    MessageBox.Show("Error Direccion de correo Invalida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    panelRegistrarUserNext.Visible = true;
-                    buttonNext.Visible = false;
+
+                    if (textBoxIdentificacion.Text.Equals("Identificacion")
+                        || textBoxNombre.Text.Equals("Nombre")
+                        || textBoxApellido.Text.Equals("Apellido")
+                        || textBoxTelefono.Text.Equals("Telefono")
+                        || textBoxEmial.Text.Equals("Email")
+                        || textBoxPassword.Text.Equals("Password")
+                        || comboBoxSexo.SelectedIndex.Equals(-1)
+                        || comboBoxTipoIndetificacion.SelectedIndex.Equals(-1))
+                    {
+                        MessageBox.Show("Error hay campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        panelRegistrarUserNext.Visible = true;
+                        buttonNext.Visible = false;
+                    }
                 }
             }
         }
@@ -239,17 +233,25 @@ namespace Presentacion
                 || textBoxDeporte.Text.Equals("Deporte")
                 || comboBoxTipoEntrenamiento.SelectedIndex.Equals(-1))
             {
-                panelAviso2.Visible = true;
-                labelError2.Text = "Campos Vacios";
+                MessageBox.Show("Campos Vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Deportista persona = MaperarPerson();
                 var message = serviceDeportista.Guardar(persona);
-                panelAviso2.Visible = true;
-                labelError2.Text = message;
-                labelError2.ForeColor = Color.White;
-                LimpiarCampos();
+                if (message == "Paciente Registrado")
+                {
+                    MessageBox.Show(message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    FormLogin formLogin = new FormLogin();
+                    formLogin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             
         }
@@ -296,15 +298,10 @@ namespace Presentacion
             buttonNext.Visible = true;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            panelAviso2.Visible = false;
-        }
-
         private void textBoxIdentificacion_TextChanged(object sender, EventArgs e)
         {
             //changed
-            continuar = validaciones.RangoCampos(textBoxIdentificacion,"Identificacion",labelIdentificacion,continuar,6);
+            validacion.next = validaciones.RangoCampos(textBoxIdentificacion,"Identificacion",labelIdentificacion,6);
         }
 
         private void textBoxDeporte_Enter(object sender, EventArgs e)
@@ -319,22 +316,60 @@ namespace Presentacion
 
         private void textBoxDeporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 2, panelAviso, labelError);
+            string message = validaciones.validacion(e, 3,labelDeporte);
+            labelDeporte.Text = message;
         }
 
         private void textBoxPeso_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 3, panelAviso, labelError);
+            string message = validaciones.validacion(e, 3,labelPeso);
+            labelPeso.Text = message;
         }
 
         private void textBoxAltura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.validacion(e, 3, panelAviso, labelError);
+            string message = validaciones.validacion(e, 3,labelAltura);
+            labelAltura.Text = message;
         }
 
-        private void labelError2_Click(object sender, EventArgs e)
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
+            validacion.next1 = validaciones.RangoCampos(textBoxNombre, "Nombre", labelNombre, 3);
+        }
 
+        private void textBoxApellido_TextChanged(object sender, EventArgs e)
+        {
+            validacion.next2 = validaciones.RangoCampos(textBoxApellido, "Apellido", labelApellido, 3);
+        }
+
+        private void textBoxTelefono_TextChanged(object sender, EventArgs e)
+        {
+            validacion.next3 = validaciones.RangoCampos(textBoxTelefono, "Telefono", labelTelefono, 8);
+        }
+
+        private void textBoxEmial_TextChanged(object sender, EventArgs e)
+        {
+            validacion.next4 = validaciones.RangoCampos(textBoxEmial, "Email", labelEmail, 6);
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            validacion.next5 = validaciones.RangoCampos(textBoxPassword, "Password", labelPassword, 6);
+        }
+
+        private void textBoxPeso_TextChanged(object sender, EventArgs e)
+        {
+            bool continuar = validaciones.RangoCampos(textBoxPeso, "Peso", labelPeso, 1);
+        }
+
+        private void textBoxAltura_TextChanged(object sender, EventArgs e)
+        {
+            bool continuar = validaciones.RangoCampos(textBoxAltura, "Altura", labelAltura, 1);
+        }
+
+        private void textBoxDeporte_TextChanged(object sender, EventArgs e)
+        {
+            bool continuar = validaciones.RangoCampos(textBoxDeporte, "Deporte", labelDeporte, 4);
         }
     }
 }

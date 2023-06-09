@@ -23,12 +23,12 @@ namespace Pruebas
         [Test]
         public void TestGuardarDeportista()
         {
-            deportista.TipoId = "cedula";
-            deportista.id = "1063600325";
-            deportista.Nombre = "carlos";
+            deportista.TipoId = "CEDULA CIUDADANIA";
+            deportista.id = "1063600356";
+            deportista.Nombre = "Mario";
             deportista.Apellidó = "de la cruz";
             deportista.Fecha_Nacimiento = DateTime.Parse("12-04-1999");
-            deportista.Correo = "calos@gmail.com";
+            deportista.Correo = "mario2s@gmail.com";
             deportista.Password = "gdsaysdsa";
             deportista.Telefono = "316554586";
             deportista.Sexo = "M";

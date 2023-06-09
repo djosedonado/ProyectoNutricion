@@ -20,7 +20,7 @@ namespace Pruebas
         [Test]
         public void TestAgregarPlantilla()
         {
-            plantilla.NombrePlantilla = "SEMANA 5";
+            plantilla.NombrePlantilla = "SEMANA 1";
             string result = servicePlantilla.Guardar(plantilla);
             string esperado = "Plantilla Guardada";
             Assert.AreEqual(result, esperado);
@@ -31,10 +31,10 @@ namespace Pruebas
         [Test]
         public void TestAgregarAlimentosPlantilla()
         {
-            plantilla.NombrePlantilla = "SEMANA 5";
+            plantilla.NombrePlantilla = "SEMANA 1";
             plantilla.Categoria = "Desayuno";
             plantilla.Porcion = 1;
-            plantilla.idAlimento = "423";
+            plantilla.idAlimento = "142";
             string result = servicePlantilla.AddGuardarPlantilla(plantilla);
             string esperado = "Agregado con Exito";
             Assert.AreEqual (esperado,result);

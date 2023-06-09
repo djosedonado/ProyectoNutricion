@@ -39,22 +39,12 @@
             this.labelDeporte = new System.Windows.Forms.Label();
             this.labelAltura = new System.Windows.Forms.Label();
             this.labelPeso = new System.Windows.Forms.Label();
-            this.panelAviso2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.labelError2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxDeporte = new System.Windows.Forms.TextBox();
             this.textBoxAltura = new System.Windows.Forms.TextBox();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
             this.buttonRegistrar = new System.Windows.Forms.Button();
             this.comboBoxTipoEntrenamiento = new System.Windows.Forms.ComboBox();
-            this.panelAviso = new System.Windows.Forms.Panel();
-            this.labelSave = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelError = new System.Windows.Forms.Label();
-            this.labelTitulo = new System.Windows.Forms.Label();
             this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.comboBoxSexo = new System.Windows.Forms.ComboBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -71,11 +61,7 @@
             this.buttonNext = new System.Windows.Forms.Button();
             this.panelRegisterUser.SuspendLayout();
             this.panelRegistrarUserNext.SuspendLayout();
-            this.panelAviso2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelAviso.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
@@ -91,7 +77,6 @@
             this.panelRegisterUser.Controls.Add(this.labelNombre);
             this.panelRegisterUser.Controls.Add(this.labelIdentificacion);
             this.panelRegisterUser.Controls.Add(this.panelRegistrarUserNext);
-            this.panelRegisterUser.Controls.Add(this.panelAviso);
             this.panelRegisterUser.Controls.Add(this.dateTimePickerFechaNacimiento);
             this.panelRegisterUser.Controls.Add(this.comboBoxSexo);
             this.panelRegisterUser.Controls.Add(this.textBoxPassword);
@@ -183,16 +168,15 @@
             this.panelRegistrarUserNext.Controls.Add(this.labelDeporte);
             this.panelRegistrarUserNext.Controls.Add(this.labelAltura);
             this.panelRegistrarUserNext.Controls.Add(this.labelPeso);
-            this.panelRegistrarUserNext.Controls.Add(this.panelAviso2);
             this.panelRegistrarUserNext.Controls.Add(this.pictureBox3);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxDeporte);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxAltura);
             this.panelRegistrarUserNext.Controls.Add(this.textBoxPeso);
             this.panelRegistrarUserNext.Controls.Add(this.buttonRegistrar);
             this.panelRegistrarUserNext.Controls.Add(this.comboBoxTipoEntrenamiento);
-            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 0);
+            this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 32);
             this.panelRegistrarUserNext.Name = "panelRegistrarUserNext";
-            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 426);
+            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 394);
             this.panelRegistrarUserNext.TabIndex = 13;
             this.panelRegistrarUserNext.Visible = false;
             // 
@@ -229,63 +213,6 @@
             this.labelPeso.Text = "label3";
             this.labelPeso.Visible = false;
             // 
-            // panelAviso2
-            // 
-            this.panelAviso2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panelAviso2.Controls.Add(this.label2);
-            this.panelAviso2.Controls.Add(this.pictureBox4);
-            this.panelAviso2.Controls.Add(this.labelError2);
-            this.panelAviso2.Controls.Add(this.label4);
-            this.panelAviso2.Location = new System.Drawing.Point(209, 79);
-            this.panelAviso2.Name = "panelAviso2";
-            this.panelAviso2.Size = new System.Drawing.Size(350, 150);
-            this.panelAviso2.TabIndex = 13;
-            this.panelAviso2.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Presentacion.Properties.Resources.flecha;
-            this.pictureBox4.Location = new System.Drawing.Point(301, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 38);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // labelError2
-            // 
-            this.labelError2.AutoSize = true;
-            this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError2.ForeColor = System.Drawing.Color.Red;
-            this.labelError2.Location = new System.Drawing.Point(6, 65);
-            this.labelError2.Name = "labelError2";
-            this.labelError2.Size = new System.Drawing.Size(44, 20);
-            this.labelError2.TabIndex = 1;
-            this.labelError2.Text = "Error";
-            this.labelError2.Click += new System.EventHandler(this.labelError2_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(139, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Aviso";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.atras;
@@ -310,6 +237,7 @@
             this.textBoxDeporte.TabIndex = 5;
             this.textBoxDeporte.Text = "Deporte";
             this.textBoxDeporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDeporte.TextChanged += new System.EventHandler(this.textBoxDeporte_TextChanged);
             this.textBoxDeporte.Enter += new System.EventHandler(this.textBoxDeporte_Enter);
             this.textBoxDeporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeporte_KeyPress);
             this.textBoxDeporte.Leave += new System.EventHandler(this.textBoxDeporte_Leave);
@@ -327,6 +255,7 @@
             this.textBoxAltura.TabIndex = 3;
             this.textBoxAltura.Text = "Altura";
             this.textBoxAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxAltura.TextChanged += new System.EventHandler(this.textBoxAltura_TextChanged);
             this.textBoxAltura.Enter += new System.EventHandler(this.textBoxAltura_Enter);
             this.textBoxAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAltura_KeyPress);
             this.textBoxAltura.Leave += new System.EventHandler(this.textBoxAltura_Leave);
@@ -344,6 +273,7 @@
             this.textBoxPeso.TabIndex = 2;
             this.textBoxPeso.Text = "Peso";
             this.textBoxPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPeso.TextChanged += new System.EventHandler(this.textBoxPeso_TextChanged);
             this.textBoxPeso.Enter += new System.EventHandler(this.textBoxPeso_Enter);
             this.textBoxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPeso_KeyPress);
             this.textBoxPeso.Leave += new System.EventHandler(this.textBoxPeso_Leave);
@@ -367,6 +297,9 @@
             // comboBoxTipoEntrenamiento
             // 
             this.comboBoxTipoEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.comboBoxTipoEntrenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxTipoEntrenamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxTipoEntrenamiento.ForeColor = System.Drawing.Color.White;
             this.comboBoxTipoEntrenamiento.FormattingEnabled = true;
             this.comboBoxTipoEntrenamiento.Items.AddRange(new object[] {
@@ -378,61 +311,6 @@
             this.comboBoxTipoEntrenamiento.Name = "comboBoxTipoEntrenamiento";
             this.comboBoxTipoEntrenamiento.Size = new System.Drawing.Size(135, 21);
             this.comboBoxTipoEntrenamiento.TabIndex = 17;
-            // 
-            // panelAviso
-            // 
-            this.panelAviso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panelAviso.Controls.Add(this.labelSave);
-            this.panelAviso.Controls.Add(this.pictureBox2);
-            this.panelAviso.Controls.Add(this.labelError);
-            this.panelAviso.Controls.Add(this.labelTitulo);
-            this.panelAviso.Location = new System.Drawing.Point(212, 95);
-            this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(350, 150);
-            this.panelAviso.TabIndex = 12;
-            // 
-            // labelSave
-            // 
-            this.labelSave.AutoSize = true;
-            this.labelSave.Location = new System.Drawing.Point(76, 49);
-            this.labelSave.Name = "labelSave";
-            this.labelSave.Size = new System.Drawing.Size(0, 13);
-            this.labelSave.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Presentacion.Properties.Resources.continuar;
-            this.pictureBox2.Location = new System.Drawing.Point(293, 106);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(14, 44);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(44, 20);
-            this.labelError.TabIndex = 1;
-            this.labelError.Text = "Error";
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.Color.White;
-            this.labelTitulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelTitulo.Location = new System.Drawing.Point(139, 2);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(70, 25);
-            this.labelTitulo.TabIndex = 0;
-            this.labelTitulo.Text = "Aviso";
-            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dateTimePickerFechaNacimiento
             // 
@@ -465,11 +343,13 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(347, 256);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(144, 26);
             this.textBoxPassword.TabIndex = 8;
             this.textBoxPassword.Text = "Password";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
@@ -480,11 +360,13 @@
             this.textBoxEmial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmial.ForeColor = System.Drawing.Color.White;
             this.textBoxEmial.Location = new System.Drawing.Point(347, 203);
+            this.textBoxEmial.MaxLength = 50;
             this.textBoxEmial.Name = "textBoxEmial";
             this.textBoxEmial.Size = new System.Drawing.Size(144, 26);
             this.textBoxEmial.TabIndex = 7;
             this.textBoxEmial.Text = "Email";
             this.textBoxEmial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxEmial.TextChanged += new System.EventHandler(this.textBoxEmial_TextChanged);
             this.textBoxEmial.Enter += new System.EventHandler(this.textBoxEmial_Enter);
             this.textBoxEmial.Leave += new System.EventHandler(this.textBoxEmial_Leave);
             // 
@@ -495,11 +377,13 @@
             this.textBoxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.ForeColor = System.Drawing.Color.White;
             this.textBoxTelefono.Location = new System.Drawing.Point(347, 150);
+            this.textBoxTelefono.MaxLength = 10;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(144, 26);
             this.textBoxTelefono.TabIndex = 6;
             this.textBoxTelefono.Text = "Telefono";
             this.textBoxTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTelefono.TextChanged += new System.EventHandler(this.textBoxTelefono_TextChanged);
             this.textBoxTelefono.Enter += new System.EventHandler(this.textBoxTelefono_Enter);
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             this.textBoxTelefono.Leave += new System.EventHandler(this.textBoxTelefono_Leave);
@@ -511,11 +395,13 @@
             this.textBoxApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellido.ForeColor = System.Drawing.Color.White;
             this.textBoxApellido.Location = new System.Drawing.Point(113, 256);
+            this.textBoxApellido.MaxLength = 50;
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(144, 26);
             this.textBoxApellido.TabIndex = 4;
             this.textBoxApellido.Text = "Apellido";
             this.textBoxApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
             this.textBoxApellido.Enter += new System.EventHandler(this.textBoxApellido_Enter);
             this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             this.textBoxApellido.Leave += new System.EventHandler(this.textBoxApellido_Leave);
@@ -543,11 +429,13 @@
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.ForeColor = System.Drawing.Color.White;
             this.textBoxNombre.Location = new System.Drawing.Point(113, 203);
+            this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(144, 26);
             this.textBoxNombre.TabIndex = 3;
             this.textBoxNombre.Text = "Nombre";
             this.textBoxNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.Enter += new System.EventHandler(this.textBoxNombre_Enter);
             this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             this.textBoxNombre.Leave += new System.EventHandler(this.textBoxNombre_Leave);
@@ -651,13 +539,7 @@
             this.panelRegisterUser.PerformLayout();
             this.panelRegistrarUserNext.ResumeLayout(false);
             this.panelRegistrarUserNext.PerformLayout();
-            this.panelAviso2.ResumeLayout(false);
-            this.panelAviso2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelAviso.ResumeLayout(false);
-            this.panelAviso.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
@@ -681,11 +563,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
         private System.Windows.Forms.ComboBox comboBoxSexo;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Panel panelAviso;
-        private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label labelError;
-        private System.Windows.Forms.Label labelSave;
         private System.Windows.Forms.Panel panelRegistrarUserNext;
         private System.Windows.Forms.Button buttonRegistrar;
         private System.Windows.Forms.Button buttonNext;
@@ -693,11 +570,6 @@
         private System.Windows.Forms.TextBox textBoxAltura;
         private System.Windows.Forms.TextBox textBoxDeporte;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panelAviso2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label labelError2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelDeporte;
         private System.Windows.Forms.Label labelAltura;
         private System.Windows.Forms.Label labelPeso;

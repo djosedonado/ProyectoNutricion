@@ -35,7 +35,7 @@ namespace Presentacion
         }
 
         //validacion de rango
-        public bool RangoCampos(TextBox textBox,string text,Label label,bool continuar,int num)
+        public bool RangoCampos(TextBox textBox,string text,Label label,int num)
         {
             
             if (textBox.Text != text && textBox.Text != "")
@@ -44,7 +44,8 @@ namespace Presentacion
                 {
                     label.Visible = true;
                     label.ForeColor = Color.Red;
-                    label.Text = text+ " Rango mino 6";
+                    label.Text = text+ " Rango mino "+num;
+                    return false;
                 }
                 else
                 {
@@ -52,22 +53,24 @@ namespace Presentacion
                    return true;
                 }
             }
+            label.Visible = false;
             return false;
         }
 
 
         //Validaciones por keyPress
-        public void validacion(KeyPressEventArgs e, int tipo,Panel panelAviso,Label labelError)
+        public string validacion(KeyPressEventArgs e, int tipo,Label label)
         {
+            label.ForeColor= Color.Red;
             if (tipo == 1)
             {
                 //solo permite numeros
                 if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
                 {
-                    panelAviso.Visible = true;
-                    labelError.Text = "ERROR SOLO SE PERMITE NUMEROS";
+                    label.Text = "Solo numeros";
+                    label.Visible = true;
                     e.Handled = true;
-                    return;
+                    return "Solo numeros";
                 }
             }
             if (tipo == 2)
@@ -75,10 +78,10 @@ namespace Presentacion
                 //tipo 2 solo permite letras
                 if ((e.KeyChar > 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
                 {
-                    panelAviso.Visible = true;
-                    labelError.Text = "ERROR SOLO SE PERMITE LETRAS";
+                    label.Text = "Solo Letras";
+                    label.Visible = true;
                     e.Handled = true;
-                    return;
+                    return "Solo Letras";
                 }
             }
             if (tipo == 3)
@@ -86,14 +89,14 @@ namespace Presentacion
                 //decimales para tomar las comas 
                 if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255) || (e.KeyChar <= 47 && e.KeyChar >= 45))
                 {
-                    panelAviso.Visible = true;
-                    labelError.Text = "Solo se permiten Numeros";
+                    label.Text = "Solo numeros y moda";
+                    label.Visible = true;
                     e.Handled = true;
-                    return;
+                    return "Solo numeros y moda";
                 }
             }
-
-
+            label.Visible = false;
+            return "No hay validacion";
         }
     }
 }

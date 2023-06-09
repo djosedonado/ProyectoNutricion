@@ -26,7 +26,7 @@ namespace Pruebas
             dietas.DiasAplicados = "Lunes";
             dietas.RecomendacionAlimentaria = "Tomar mas agua";
             dietas.RecomendacionNutriccional = "Llevar un buen ejercicios";
-            dietas.identificacion = "1063600373";
+            dietas.identificacion = "1063600356";
             dietas.plantillas = "SEMANA 1";
 
             string result = service.GuardarDieta(dietas);

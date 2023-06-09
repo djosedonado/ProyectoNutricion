@@ -23,12 +23,12 @@ namespace Pruebas
         [Test]
         public void TestAgregarAlimentos()
         {
-            alimento.IdAlimentos = "127";
-            alimento.NombreAlimento = "ARINA";
-            alimento.Carbohidratos = 23;
-            alimento.Proteinas = 21;
-            alimento.Calorias = 25;
-            alimento.Liquidos = 3;
+            alimento.IdAlimentos = "148";
+            alimento.NombreAlimento = "Pasta la muñeca";
+            alimento.Carbohidratos = 42;
+            alimento.Proteinas = 20;
+            alimento.Calorias = 2.2;
+            alimento.Liquidos = 3.2;
             string result = service.Guardar(alimento);
             string esperado = "Alimento Guardado";
             Assert.AreEqual(esperado,result);

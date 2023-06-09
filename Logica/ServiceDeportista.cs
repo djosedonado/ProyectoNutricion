@@ -29,7 +29,7 @@ namespace Logica
                 }
                 else
                 {
-                    return "Paciente Registrado";
+                    return "El usuario ya existe";
                 }
             }
             catch (Exception e)
