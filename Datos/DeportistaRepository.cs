@@ -102,6 +102,7 @@ namespace Datos
                     deportista.Nombre = dataReader.GetString(2);
                     deportista.Apellidó = dataReader.GetString(3);
                     deportista.Sexo = dataReader.GetString(4);
+                    deportista.Fecha_Nacimiento = dataReader.GetDateTime(5);//Agregado ultimo momento 
                     deportista.Telefono = dataReader.GetString(6);
                     deportista.Correo = dataReader.GetString(7);
                     deportista.Peso = dataReader.GetDouble(8);
@@ -165,6 +166,7 @@ namespace Datos
                     deportista.Nombre = dataReader.GetString(2);
                     deportista.Apellidó = dataReader.GetString(3);
                     deportista.Sexo = dataReader.GetString(4);
+                    deportista.Fecha_Nacimiento = dataReader.GetDateTime(5);//Agregada ultimo momentos
                     deportista.Telefono = dataReader.GetString(6);
                     deportista.Correo = dataReader.GetString(7);
                     deportista.Peso = dataReader.GetDouble(8);

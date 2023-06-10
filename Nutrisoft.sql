@@ -29,11 +29,11 @@ termogenesisActividadFisica VARCHAR(50) NULL,
 CONSTRAINT FK_Deportista FOREIGN KEY (id) REFERENCES Persona(id),
 );
 
-SELECT *FROM Deportista;
+SELECT *FROM Alimento;
 
 CREATE TABLE Alimento (
-id VARCHAR(5) PRIMARY KEY,
-nombre VARCHAR(50),
+id VARCHAR(10) PRIMARY KEY,
+nombre VARCHAR(10),
 caloria FLOAT NULL,
 carbohidrato FLOAT NULL,
 proteinas FLOAT NULL,
@@ -47,7 +47,7 @@ nombrePlantilla VARCHAR(50) PRIMARY KEY
 CREATE TABLE Alimento_Plantilla(
 id int IDENTITY(1,1000) PRIMARY KEY,
 idPlantilla VARCHAR(50),
-idAlimento VARCHAR(5),
+idAlimento VARCHAR(10),
 porcion INT NULL,
 categoria VARCHAR(50),
 CONSTRAINT FK_ALIMPLANTI_PLANTILLA FOREIGN KEY (idPlantilla) REFERENCES Plantilla(nombrePlantilla),

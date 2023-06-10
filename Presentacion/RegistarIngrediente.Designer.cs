@@ -96,6 +96,7 @@ namespace Presentacion
             // textIdAlimento
             // 
             this.textIdAlimento.Location = new System.Drawing.Point(216, 102);
+            this.textIdAlimento.MaxLength = 10;
             this.textIdAlimento.Name = "textIdAlimento";
             this.textIdAlimento.Size = new System.Drawing.Size(96, 20);
             this.textIdAlimento.TabIndex = 13;
@@ -126,6 +127,7 @@ namespace Presentacion
             // textLiquidos
             // 
             this.textLiquidos.Location = new System.Drawing.Point(578, 172);
+            this.textLiquidos.MaxLength = 3;
             this.textLiquidos.Name = "textLiquidos";
             this.textLiquidos.Size = new System.Drawing.Size(60, 20);
             this.textLiquidos.TabIndex = 10;
@@ -145,6 +147,7 @@ namespace Presentacion
             // textProteinas
             // 
             this.textProteinas.Location = new System.Drawing.Point(578, 122);
+            this.textProteinas.MaxLength = 3;
             this.textProteinas.Name = "textProteinas";
             this.textProteinas.Size = new System.Drawing.Size(60, 20);
             this.textProteinas.TabIndex = 8;
@@ -164,6 +167,7 @@ namespace Presentacion
             // textCarbohidratos
             // 
             this.textCarbohidratos.Location = new System.Drawing.Point(445, 172);
+            this.textCarbohidratos.MaxLength = 3;
             this.textCarbohidratos.Name = "textCarbohidratos";
             this.textCarbohidratos.Size = new System.Drawing.Size(60, 20);
             this.textCarbohidratos.TabIndex = 6;
@@ -183,6 +187,7 @@ namespace Presentacion
             // textCalorias
             // 
             this.textCalorias.Location = new System.Drawing.Point(445, 122);
+            this.textCalorias.MaxLength = 3;
             this.textCalorias.Name = "textCalorias";
             this.textCalorias.Size = new System.Drawing.Size(60, 20);
             this.textCalorias.TabIndex = 4;
@@ -202,6 +207,7 @@ namespace Presentacion
             // textAlimento
             // 
             this.textAlimento.Location = new System.Drawing.Point(204, 172);
+            this.textAlimento.MaxLength = 10;
             this.textAlimento.Name = "textAlimento";
             this.textAlimento.Size = new System.Drawing.Size(125, 20);
             this.textAlimento.TabIndex = 2;

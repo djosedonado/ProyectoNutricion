@@ -23,8 +23,8 @@ namespace Pruebas
         [Test]
         public void TestAgregarAlimentos()
         {
-            alimento.IdAlimentos = "148";
-            alimento.NombreAlimento = "Pasta la muñeca";
+            alimento.IdAlimentos = "1505225";
+            alimento.NombreAlimento = "juan";
             alimento.Carbohidratos = 42;
             alimento.Proteinas = 20;
             alimento.Calorias = 2.2;

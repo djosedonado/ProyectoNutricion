@@ -176,7 +176,7 @@
             this.panelRegistrarUserNext.Controls.Add(this.comboBoxTipoEntrenamiento);
             this.panelRegistrarUserNext.Location = new System.Drawing.Point(0, 32);
             this.panelRegistrarUserNext.Name = "panelRegistrarUserNext";
-            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 394);
+            this.panelRegistrarUserNext.Size = new System.Drawing.Size(776, 397);
             this.panelRegistrarUserNext.TabIndex = 13;
             this.panelRegistrarUserNext.Visible = false;
             // 
@@ -429,7 +429,7 @@
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.ForeColor = System.Drawing.Color.White;
             this.textBoxNombre.Location = new System.Drawing.Point(113, 203);
-            this.textBoxNombre.MaxLength = 50;
+            this.textBoxNombre.MaxLength = 10;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(144, 26);
             this.textBoxNombre.TabIndex = 3;
@@ -527,7 +527,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 453);
             this.Controls.Add(this.panelRegisterUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRegister";

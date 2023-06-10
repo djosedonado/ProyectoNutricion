@@ -334,12 +334,12 @@ namespace Presentacion
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
-            validacion.next1 = validaciones.RangoCampos(textBoxNombre, "Nombre", labelNombre, 3);
+            validacion.next1 = validaciones.RangoCampos(textBoxNombre, "Nombre", labelNombre, 5);
         }
 
         private void textBoxApellido_TextChanged(object sender, EventArgs e)
         {
-            validacion.next2 = validaciones.RangoCampos(textBoxApellido, "Apellido", labelApellido, 3);
+            validacion.next2 = validaciones.RangoCampos(textBoxApellido, "Apellido", labelApellido, 5);
         }
 
         private void textBoxTelefono_TextChanged(object sender, EventArgs e)
@@ -349,7 +349,7 @@ namespace Presentacion
 
         private void textBoxEmial_TextChanged(object sender, EventArgs e)
         {
-            validacion.next4 = validaciones.RangoCampos(textBoxEmial, "Email", labelEmail, 6);
+            validacion.next4 = validaciones.RangoCampos(textBoxEmial, "Email", labelEmail, 5);
         }
 
         private void textBoxPassword_TextChanged(object sender, EventArgs e)

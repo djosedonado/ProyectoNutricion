@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.pictureBoxErrorPassword = new System.Windows.Forms.PictureBox();
-            this.pictureBoxErrorEmail = new System.Windows.Forms.PictureBox();
-            this.labelError = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBoxCerrar = new System.Windows.Forms.PictureBox();
@@ -40,9 +38,8 @@
             this.buttonSession = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
@@ -51,9 +48,8 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.panelLogin.Controls.Add(this.pictureBoxErrorPassword);
-            this.panelLogin.Controls.Add(this.pictureBoxErrorEmail);
-            this.panelLogin.Controls.Add(this.labelError);
+            this.panelLogin.Controls.Add(this.labelEmail);
+            this.panelLogin.Controls.Add(this.labelPassword);
             this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Controls.Add(this.pictureBoxMinimizar);
             this.panelLogin.Controls.Add(this.pictureBoxCerrar);
@@ -68,39 +64,17 @@
             this.panelLogin.TabIndex = 0;
             this.panelLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLogin_MouseDown);
             // 
-            // pictureBoxErrorPassword
+            // labelPassword
             // 
-            this.pictureBoxErrorPassword.Image = global::Presentacion.Properties.Resources.error;
-            this.pictureBoxErrorPassword.Location = new System.Drawing.Point(44, 247);
-            this.pictureBoxErrorPassword.Name = "pictureBoxErrorPassword";
-            this.pictureBoxErrorPassword.Size = new System.Drawing.Size(30, 23);
-            this.pictureBoxErrorPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxErrorPassword.TabIndex = 10;
-            this.pictureBoxErrorPassword.TabStop = false;
-            this.pictureBoxErrorPassword.Visible = false;
-            // 
-            // pictureBoxErrorEmail
-            // 
-            this.pictureBoxErrorEmail.Image = global::Presentacion.Properties.Resources.error;
-            this.pictureBoxErrorEmail.Location = new System.Drawing.Point(44, 195);
-            this.pictureBoxErrorEmail.Name = "pictureBoxErrorEmail";
-            this.pictureBoxErrorEmail.Size = new System.Drawing.Size(30, 23);
-            this.pictureBoxErrorEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxErrorEmail.TabIndex = 9;
-            this.pictureBoxErrorEmail.TabStop = false;
-            this.pictureBoxErrorEmail.Visible = false;
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelError.Location = new System.Drawing.Point(73, 277);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(75, 13);
-            this.labelError.TabIndex = 8;
-            this.labelError.Text = "Error Message";
-            this.labelError.Visible = false;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.Red;
+            this.labelPassword.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.labelPassword.Location = new System.Drawing.Point(80, 272);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(75, 13);
+            this.labelPassword.TabIndex = 8;
+            this.labelPassword.Text = "Error Message";
+            this.labelPassword.Visible = false;
             // 
             // pictureBox1
             // 
@@ -139,7 +113,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.linkLabel1.Location = new System.Drawing.Point(246, 272);
+            this.linkLabel1.Location = new System.Drawing.Point(246, 283);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(77, 20);
             this.linkLabel1.TabIndex = 3;
@@ -166,7 +140,7 @@
             this.buttonSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSession.ForeColor = System.Drawing.Color.White;
-            this.buttonSession.Location = new System.Drawing.Point(111, 310);
+            this.buttonSession.Location = new System.Drawing.Point(103, 330);
             this.buttonSession.Name = "buttonSession";
             this.buttonSession.Size = new System.Drawing.Size(188, 36);
             this.buttonSession.TabIndex = 0;
@@ -182,11 +156,13 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(80, 240);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(243, 26);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.Text = "Password";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
@@ -198,6 +174,7 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.White;
             this.textBoxEmail.Location = new System.Drawing.Point(80, 188);
+            this.textBoxEmail.MaxLength = 50;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(243, 26);
             this.textBoxEmail.TabIndex = 1;
@@ -207,6 +184,18 @@
             this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
             this.textBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEmail_KeyPress);
             this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.ForeColor = System.Drawing.Color.Red;
+            this.labelEmail.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.labelEmail.Location = new System.Drawing.Point(80, 217);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(75, 13);
+            this.labelEmail.TabIndex = 11;
+            this.labelEmail.Text = "Error Message";
+            this.labelEmail.Visible = false;
             // 
             // FormLogin
             // 
@@ -223,8 +212,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormLogin_MouseDown);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
@@ -243,8 +230,7 @@
         private System.Windows.Forms.PictureBox pictureBoxMinimizar;
         private System.Windows.Forms.PictureBox pictureBoxCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelError;
-        private System.Windows.Forms.PictureBox pictureBoxErrorPassword;
-        private System.Windows.Forms.PictureBox pictureBoxErrorEmail;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelEmail;
     }
 }

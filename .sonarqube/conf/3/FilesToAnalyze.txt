@@ -24,6 +24,7 @@ C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\TasaMetablistica.Designer.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\UserControl1.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\UserControl1.Designer.cs
+C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Validacion.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\ValidacionesPresentacion.cs
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\boton-x.png
 C:\Users\danil\source\repos\ProyectoNutricion\Presentacion\Resources\invalido.png

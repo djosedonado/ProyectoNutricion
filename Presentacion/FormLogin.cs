@@ -16,10 +16,12 @@ namespace Presentacion
     public partial class FormLogin : Form
     {
         public readonly ValidacionesPresentacion validaciones;
+        public readonly Validacion validacion;
         public FormLogin()
         {
             InitializeComponent();
             validaciones = new ValidacionesPresentacion();
+            validacion = new Validacion();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -78,7 +80,7 @@ namespace Presentacion
 
         private void textBoxEmail_TextChanged(object sender, EventArgs e)
         {
-
+            validacion.next = validaciones.RangoCampos(textBoxEmail,"Email",labelEmail,6);
         }
 
         private void FormLogin_MouseDown(object sender, MouseEventArgs e)
@@ -100,8 +102,8 @@ namespace Presentacion
 
         private void MessegeError(string message)
         {
-            labelError.Text = "     "+message;
-            labelError.Visible = true;
+            labelPassword.Text = "     "+message;
+            labelPassword.Visible = true;
 
         }
 
@@ -117,7 +119,7 @@ namespace Presentacion
             textBoxEmail.Text = "Email";
             textBoxPassword.UseSystemPasswordChar = false;
             textBoxPassword.Text = "Password";
-            labelError.Visible = false;
+            labelPassword.Visible = false;
             this.Show();
         }
 
@@ -133,32 +135,37 @@ namespace Presentacion
         {
             if (textBoxEmail.Text != "Email")
             {
-                pictureBoxErrorEmail.Visible = false;
+                
                 if (textBoxPassword.Text != "Password")
                 {
-                    pictureBoxErrorPassword.Visible = false;
+                   
                     personServices personServices = new personServices();
                     var respose = personServices.LoginPerson(textBoxEmail.Text, textBoxPassword.Text);
                     if (respose == true)
                     {
                         if (validaciones.ValidacionEmail(textBoxEmail.Text) == false)
                         {
-                            labelError.Text = "Direccion de Correo Invalida";
+                            labelEmail.Visible = true;
+                            labelEmail.Text = "Direccion de Correo Invalida";
                         }
                         else
                         {
-                            if (UserLoginCache.Rol==1) 
+                            if (validacion.next.Equals(true) && validacion.next1.Equals(true))
                             {
-                                PresentacionPrincipal mainMenu = new PresentacionPrincipal();
-                                mainMenu.Show();
-                                mainMenu.FormClosed += Logoup;
-                                this.Hide();
-                            }else if (UserLoginCache.Rol==0)
-                            {
-                                FormCliente formCliente = new FormCliente();
-                                formCliente.Show();
-                                formCliente.FormClosed += Logoup;
-                                this.Hide();
+                                if (UserLoginCache.Rol == 1)
+                                {
+                                    PresentacionPrincipal mainMenu = new PresentacionPrincipal();
+                                    mainMenu.Show();
+                                    mainMenu.FormClosed += Logoup;
+                                    this.Hide();
+                                }
+                                else if (UserLoginCache.Rol == 0)
+                                {
+                                    FormCliente formCliente = new FormCliente();
+                                    formCliente.Show();
+                                    formCliente.FormClosed += Logoup;
+                                    this.Hide();
+                                }
                             }
                             
                         }
@@ -173,14 +180,13 @@ namespace Presentacion
                 else
                 {
                     MessegeError("Ingrese su Password");
-                    pictureBoxErrorPassword.Visible = true;
+                    
                 }
 
             }
             else
             {
                 MessegeError("Ingrese su Email");
-                pictureBoxErrorEmail.Visible = true;
             }
         }
 
@@ -198,6 +204,11 @@ namespace Presentacion
             {
                 Continuar();
             }
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            validacion.next1 = validaciones.RangoCampos(textBoxPassword, "Password", labelPassword, 6);
         }
     }
 }
